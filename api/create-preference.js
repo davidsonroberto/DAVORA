@@ -26,12 +26,15 @@ export default async function handler(req, res) {
         }],
         external_reference: externalReference,
 
-        // Keep Pix available while removing card/boleto options.
-        // Mercado Pago does not accept "pix" as default_payment_method_id.
+        // Pix is a bank-transfer payment in Brazil.
+        // Do not set Pix as default_payment_method_id: Checkout Pro rejects that value.
+        // Remove other payment types so the checkout can offer Pix when enabled
+        // for the Mercado Pago account behind MP_ACCESS_TOKEN.
         payment_methods: {
           excluded_payment_types: [
             { id: "credit_card" },
             { id: "debit_card" },
+            { id: "prepaid_card" },
             { id: "ticket" }
           ]
         },
@@ -47,13 +50,18 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
-    if (!response.ok) return res.status(response.status).json({ error: data.message || "Mercado Pago error" });
+
+    if (!response.ok) {
+      return res.status(response.status).json({
+        error: data.message || "Mercado Pago error"
+      });
+    }
 
     return res.status(200).json({
       checkout_url: data.init_point,
       external_reference: externalReference
     });
-  } catch {
+  } catch (error) {
     return res.status(500).json({ error: "Could not create payment" });
   }
 }
