@@ -5,8 +5,10 @@ export default async function handler(req, res) {
   if (!token) return res.status(500).json({ error: "MP_ACCESS_TOKEN not configured" });
 
   try {
+    const host = req.headers["x-forwarded-host"] || req.headers.host;
+    const proto = req.headers["x-forwarded-proto"] || "https";
+    const origin = proto + "://" + host;
     const externalReference = "DAVORA-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8);
-    const origin = process.env.SITE_URL || "https://davidsonroberto.github.io/DAVORA";
 
     const response = await fetch("https://api.mercadopago.com/checkout/preferences", {
       method: "POST",
@@ -29,7 +31,7 @@ export default async function handler(req, res) {
           failure: origin + "/?payment=failure&ref=" + encodeURIComponent(externalReference)
         },
         auto_return: "approved",
-        notification_url: (process.env.API_BASE_URL || origin) + "/api/webhook"
+        notification_url: origin + "/api/webhook"
       })
     });
 
@@ -40,7 +42,7 @@ export default async function handler(req, res) {
       checkout_url: data.init_point,
       external_reference: externalReference
     });
-  } catch (error) {
+  } catch {
     return res.status(500).json({ error: "Could not create payment" });
   }
 }
