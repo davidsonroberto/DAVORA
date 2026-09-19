@@ -78,7 +78,7 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 const $=id=>document.getElementById(id);
 let paymentRef=null;
 const isGithub=location.hostname.includes('github.io');
-const apiBase=isGithub ? 'https://davora-gules.vercel.app' : '';
+const apiBase='https://davora-gules.vercel.app';
 function showForm(){
   $('dados').style.display='block';
   $('paymentMsg').textContent='Pagamento aprovado! Você pode preencher os dados do currículo.';
