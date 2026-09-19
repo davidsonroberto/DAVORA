@@ -25,6 +25,9 @@ export default async function handler(req, res) {
           unit_price: 9.90
         }],
         external_reference: externalReference,
+        payment_methods: {
+          default_payment_method_id: "pix"
+        },
         back_urls: {
           success: origin + "/?payment=success&ref=" + encodeURIComponent(externalReference),
           pending: origin + "/?payment=pending&ref=" + encodeURIComponent(externalReference),
