@@ -1,13 +1,21 @@
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
+  const requestOrigin = req.headers.origin || "";
+  if (requestOrigin === "https://davidsonroberto.github.io") {
+    res.setHeader("Access-Control-Allow-Origin", requestOrigin);
+    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  }
+  if (req.method === "OPTIONS") return res.status(204).end();
+
   const token = process.env.MP_ACCESS_TOKEN;
   if (!token) return res.status(500).json({ error: "MP_ACCESS_TOKEN not configured" });
 
   try {
     const host = req.headers["x-forwarded-host"] || req.headers.host;
     const proto = req.headers["x-forwarded-proto"] || "https";
-    const origin = proto + "://" + host;
+    const origin = (req.body?.return_to || "").startsWith("https://davidsonroberto.github.io/DAVORA") ? req.body.return_to : (proto + "://" + host);
     const externalReference = "DAVORA-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8);
 
     const response = await fetch("https://api.mercadopago.com/checkout/preferences", {
