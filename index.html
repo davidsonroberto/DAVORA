@@ -35,16 +35,15 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 <div class="card center" id="comprar"><div class="muted">Oferta de lançamento</div><div class="price">R$ 9,90</div>
 <p class="muted">Pagamento único.</p>
 <!-- SUBSTITUA O LINK ABAIXO PELO SEU LINK DE PAGAMENTO -->
-<a class="btn" id="payBtn" href="https://mpago.la/1hBq6wH" target="_blank">Pagar R$ 9,90</a>
-<p class="small">Depois de concluir o pagamento, volte para esta aba e clique em <b>Já paguei</b>.</p>
-<button class="btn" id="paidBtn" type="button" style="margin-top:8px;background:#151b25;border:1px solid #303746">Já paguei → continuar</button>
-<p id="paymentMsg" class="small" style="display:none;color:#c8eee4">Pagamento concluído? Você pode continuar para preencher os dados do currículo.</p></div>
+<button class="btn" id="payBtn" type="button">Pagar R$ 9,90</button>
+<p id="paymentMsg" class="small" style="display:none;color:#c8eee4">Aguardando confirmação do Mercado Pago...</p>
+<button class="btn" id="paidBtn" type="button" style="display:none;margin-top:8px;background:#151b25;border:1px solid #303746">Continuar →</button></div>
 </div>
 
 <section id="dados" style="display:none">
 <div class="card">
 <h2>Formulário do currículo</h2>
-<p class="muted">Este formulário funciona no navegador. Para produção, conecte-o a um formulário/planilha ou backend para receber os pedidos.</p>
+<p class="muted">O formulário é liberado somente depois da confirmação do pagamento.</p>
 <div class="notice">🔒 Não coloque dados extremamente sensíveis. Colete apenas o necessário para montar o currículo.</div><br>
 <form id="cvForm">
 <div class="row"><label>Nome completo<input id="nome" required></label><label>Cidade/UF<input id="cidade"></label></div>
@@ -75,11 +74,53 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 </div>
 <script>
 const $=id=>document.getElementById(id);
-$('paidBtn').addEventListener('click',()=>{
+let paymentRef=null;
+const apiBase=location.hostname.includes('github.io') ? null : '';
+function showForm(){
   $('dados').style.display='block';
+  $('paymentMsg').textContent='Pagamento aprovado! Você pode preencher os dados do currículo.';
   $('paymentMsg').style.display='block';
+  $('paidBtn').style.display='inline-block';
+  $('dados').scrollIntoView({behavior:'smooth'});
+}
+$('paidBtn').addEventListener('click',()=>{
   $('dados').scrollIntoView({behavior:'smooth'});
 });
+$('payBtn').addEventListener('click',async()=>{
+  if(apiBase===null){
+    window.location.href='https://mpago.la/1hBq6wH';
+    return;
+  }
+  $('payBtn').disabled=true;
+  $('payBtn').textContent='Abrindo pagamento...';
+  try{
+    const r=await fetch('/api/create-preference',{method:'POST'});
+    const data=await r.json();
+    if(!r.ok||!data.checkout_url) throw new Error(data.error||'Não foi possível criar o pagamento.');
+    paymentRef=data.external_reference;
+    window.location.href=data.checkout_url;
+  }catch(e){
+    $('payBtn').disabled=false;
+    $('payBtn').textContent='Pagar R$ 9,90';
+    alert(e.message);
+  }
+});
+const params=new URLSearchParams(location.search);
+const ref=params.get('ref');
+if(ref && params.get('payment')==='success'){
+  paymentRef=ref;
+  $('paymentMsg').textContent='Verificando pagamento...';
+  $('paymentMsg').style.display='block';
+  const check=async()=>{
+    try{
+      const r=await fetch('/api/payment-status?ref='+encodeURIComponent(paymentRef));
+      const data=await r.json();
+      if(data.status==='approved'){showForm();return;}
+    }catch{}
+    setTimeout(check,3000);
+  };
+  check();
+}
 $('cvForm').addEventListener('submit',e=>{
  e.preventDefault();
  $('cvNome').textContent=$('nome').value;
