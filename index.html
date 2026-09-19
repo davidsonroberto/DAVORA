@@ -76,7 +76,8 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 <script>
 const $=id=>document.getElementById(id);
 let paymentRef=null;
-const apiBase=location.hostname.includes('github.io') ? null : '';
+const isGithub=location.hostname.includes('github.io');
+const apiBase=isGithub ? 'https://davora-gules.vercel.app' : '';
 function showForm(){
   $('dados').style.display='block';
   $('paymentMsg').textContent='Pagamento aprovado! Você pode preencher os dados do currículo.';
@@ -88,14 +89,14 @@ $('paidBtn').addEventListener('click',()=>{
   $('dados').scrollIntoView({behavior:'smooth'});
 });
 $('payBtn').addEventListener('click',async()=>{
-  if(apiBase===null){
-    window.location.href='https://mpago.la/1hBq6wH';
-    return;
+  if(isGithub){
+    $('payBtn').disabled=true;
+    $('payBtn').textContent='Abrindo pagamento...';
   }
   $('payBtn').disabled=true;
   $('payBtn').textContent='Abrindo pagamento...';
   try{
-    const r=await fetch('/api/create-preference',{method:'POST'});
+    const r=await fetch(apiBase+'/api/create-preference',{method:'POST',headers:{'Content-Type':'application/json'},body:isGithub?JSON.stringify({return_to:location.origin+location.pathname}):undefined});
     const data=await r.json();
     if(!r.ok||!data.checkout_url) throw new Error(data.error||'Não foi possível criar o pagamento.');
     paymentRef=data.external_reference;
@@ -108,13 +109,13 @@ $('payBtn').addEventListener('click',async()=>{
 });
 const params=new URLSearchParams(location.search);
 const ref=params.get('ref');
-if(ref && params.get('payment')==='success'){
+if(ref && (params.get('payment')==='success' || params.get('payment')==='pending')){
   paymentRef=ref;
   $('paymentMsg').textContent='Verificando pagamento...';
   $('paymentMsg').style.display='block';
   const check=async()=>{
     try{
-      const r=await fetch('/api/payment-status?ref='+encodeURIComponent(paymentRef));
+      const r=await fetch(apiBase+'/api/payment-status?ref='+encodeURIComponent(paymentRef));
       const data=await r.json();
       if(data.status==='approved'){showForm();return;}
     }catch{}
