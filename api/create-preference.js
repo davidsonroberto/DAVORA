@@ -25,6 +25,17 @@ export default async function handler(req, res) {
           unit_price: 9.90
         }],
         external_reference: externalReference,
+
+        // Keep Pix available while removing card/boleto options.
+        // Mercado Pago does not accept "pix" as default_payment_method_id.
+        payment_methods: {
+          excluded_payment_types: [
+            { id: "credit_card" },
+            { id: "debit_card" },
+            { id: "ticket" }
+          ]
+        },
+
         back_urls: {
           success: origin + "/?payment=success&ref=" + encodeURIComponent(externalReference),
           pending: origin + "/?payment=pending&ref=" + encodeURIComponent(externalReference),
