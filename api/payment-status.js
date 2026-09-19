@@ -1,6 +1,13 @@
 export default async function handler(req, res) {
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
 
+  const requestOrigin = req.headers.origin || "";
+  if (requestOrigin === "https://davidsonroberto.github.io") {
+    res.setHeader("Access-Control-Allow-Origin", requestOrigin);
+    res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  }
+
   const token = process.env.MP_ACCESS_TOKEN;
   const ref = req.query?.ref;
   if (!token || !ref) return res.status(400).json({ error: "Missing configuration or reference" });
