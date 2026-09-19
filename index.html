@@ -35,11 +35,13 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 <div class="card center" id="comprar"><div class="muted">Oferta de lançamento</div><div class="price">R$ 9,90</div>
 <p class="muted">Pagamento único.</p>
 <!-- SUBSTITUA O LINK ABAIXO PELO SEU LINK DE PAGAMENTO -->
-<a class="btn" href="https://mpago.la/1hBq6wH" target="_blank">Pagar R$ 9,90</a>
-<p class="small">Depois do pagamento, volte a esta página e preencha o formulário abaixo.</p></div>
+<a class="btn" id="payBtn" href="https://mpago.la/1hBq6wH" target="_blank">Pagar R$ 9,90</a>
+<p class="small">Depois de concluir o pagamento, volte para esta aba e clique em <b>Já paguei</b>.</p>
+<button class="btn" id="paidBtn" type="button" style="margin-top:8px;background:#151b25;border:1px solid #303746">Já paguei → continuar</button>
+<p id="paymentMsg" class="small" style="display:none;color:#c8eee4">Pagamento concluído? Você pode continuar para preencher os dados do currículo.</p></div>
 </div>
 
-<section id="dados">
+<section id="dados" style="display:none">
 <div class="card">
 <h2>Formulário do currículo</h2>
 <p class="muted">Este formulário funciona no navegador. Para produção, conecte-o a um formulário/planilha ou backend para receber os pedidos.</p>
@@ -73,6 +75,11 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 </div>
 <script>
 const $=id=>document.getElementById(id);
+$('paidBtn').addEventListener('click',()=>{
+  $('dados').style.display='block';
+  $('paymentMsg').style.display='block';
+  $('dados').scrollIntoView({behavior:'smooth'});
+});
 $('cvForm').addEventListener('submit',e=>{
  e.preventDefault();
  $('cvNome').textContent=$('nome').value;
