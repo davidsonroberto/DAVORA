@@ -18,15 +18,11 @@ export default async function handler(req, res) {
     }
 
     const methods = Array.isArray(data) ? data : [];
-    const pixMethods = methods.filter(method =>
-      method.id === "pix" ||
-      method.payment_type_id === "bank_transfer" ||
-      String(method.name || "").toLowerCase().includes("pix")
-    );
 
     return res.status(200).json({
       ok: true,
-      pix: pixMethods.map(method => ({
+      total: methods.length,
+      methods: methods.map(method => ({
         id: method.id,
         name: method.name,
         payment_type_id: method.payment_type_id,
