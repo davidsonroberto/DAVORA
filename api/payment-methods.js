@@ -17,18 +17,21 @@ export default async function handler(req, res) {
       });
     }
 
-    const pix = Array.isArray(data)
-      ? data.find(method => method.id === "pix" || method.payment_type_id === "bank_transfer")
-      : null;
+    const methods = Array.isArray(data) ? data : [];
+    const pixMethods = methods.filter(method =>
+      method.id === "pix" ||
+      method.payment_type_id === "bank_transfer" ||
+      String(method.name || "").toLowerCase().includes("pix")
+    );
 
     return res.status(200).json({
       ok: true,
-      pix: pix ? {
-        id: pix.id,
-        name: pix.name,
-        payment_type_id: pix.payment_type_id,
-        status: pix.status
-      } : null
+      pix: pixMethods.map(method => ({
+        id: method.id,
+        name: method.name,
+        payment_type_id: method.payment_type_id,
+        status: method.status
+      }))
     });
   } catch {
     return res.status(500).json({ ok: false, error: "Could not check payment methods" });
