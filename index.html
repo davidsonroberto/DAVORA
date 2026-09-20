@@ -36,12 +36,12 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 <p class="muted">Pagamento único.</p>
 <!-- SUBSTITUA O LINK ABAIXO PELO SEU LINK DE PAGAMENTO -->
 <button class="btn" id="payBtn" type="button">Pagar R$ 9,90</button>
-<p class="small">Depois de concluir o pagamento, volte para esta aba e aguarde a confirmação.</p>
+<p class="small">Após pagar, você será redirecionado de volta e o pagamento será verificado automaticamente.</p>
 <button class="btn" id="paidBtn" type="button" style="display:none;margin-top:8px;background:#151b25;border:1px solid #303746">Continuar →</button>
-<p id="paymentMsg" class="small" style="display:none;color:#c8eee4">Pagamento concluído? Você pode continuar para preencher os dados do currículo.</p></div>
+<p id="paymentMsg" class="small" style="display:none;color:#c8eee4"></p></div>
 </div>
 
-<section id="dados">
+<section id="dados" style="display:none">
 <div class="card">
 <h2>Formulário do currículo</h2>
 <p class="muted">Este formulário funciona no navegador. Preencha os dados para gerar a prévia do currículo.</p>
@@ -119,6 +119,7 @@ if(ref && (params.get('payment')==='success' || params.get('payment')==='pending
       const r=await fetch(apiBase+'/api/payment-status?ref='+encodeURIComponent(paymentRef));
       const data=await r.json();
       if(data.status==='approved'){showForm();return;}
+      if(data.status==='rejected' || data.status==='cancelled'){ $('paymentMsg').textContent='Pagamento não aprovado. Tente novamente.'; return; }
     }catch{}
     setTimeout(check,3000);
   };
