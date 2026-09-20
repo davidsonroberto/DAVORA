@@ -40,6 +40,15 @@ export default async function handler(req, res) {
           unit_price: 9.90
         }],
         external_reference: externalReference,
+
+        // Mantém o checkout do Mercado Pago com os meios de pagamento
+        // disponíveis para o comprador, incluindo Pix quando habilitado
+        // na conta Mercado Pago.
+        payment_methods: {
+          installments: 1,
+          default_installments: 1
+        },
+
         back_urls: {
           success: origin + "/?payment=success&ref=" + encodeURIComponent(externalReference),
           pending: origin + "/?payment=pending&ref=" + encodeURIComponent(externalReference),
