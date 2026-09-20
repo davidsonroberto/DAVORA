@@ -58,10 +58,44 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 <div class="row"><label>1. Nome completo<input id="nome" required></label><label>2. Cidade/UF<input id="cidade" required></label></div>
 <div class="row"><label>3. WhatsApp<input id="telefone"></label><label>4. E-mail<input id="email" type="email"></label></div>
 <label>5. Qual cargo ou área você está procurando?<input id="objetivo" placeholder="Ex.: Auxiliar administrativo, vendedor, operador de máquinas..." required></label>
-<label>6. Você já trabalhou? Conte onde, com qual cargo e o que fazia.<textarea id="experiencia" placeholder="Se nunca trabalhou, escreva: primeiro emprego."></textarea></label>
-<label>7. Qual é sua formação escolar/profissional?<textarea id="formacao" placeholder="Ex.: Ensino médio completo; curso de Excel..."></textarea></label>
-<label>8. Quais cursos e certificados você tem?<textarea id="cursos"></textarea></label>
-<label>9. Quais são suas principais habilidades?<textarea id="habilidades" placeholder="Ex.: atendimento, informática, organização, trabalho em equipe..."></textarea></label>
+<label>6. Você já trabalhou?
+<select id="experienciaTipo" required>
+<option value="">Selecione</option>
+<option>Sim, tenho experiência profissional</option>
+<option>Não, é meu primeiro emprego</option>
+<option>Tenho pouca experiência</option>
+</select>
+</label>
+<label id="experienciaDetalhesWrap">Conte onde trabalhou, qual era o cargo e o que fazia.<textarea id="experiencia" placeholder="Ex.: Empresa X — Auxiliar de produção — organização, embalagem e conferência."></textarea></label>
+<label>7. Qual é sua formação?
+<select id="formacao" required>
+<option value="">Selecione</option>
+<option>Ensino fundamental incompleto</option>
+<option>Ensino fundamental completo</option>
+<option>Ensino médio incompleto</option>
+<option>Ensino médio completo</option>
+<option>Curso técnico</option>
+<option>Ensino superior incompleto</option>
+<option>Ensino superior completo</option>
+</select></label>
+<label>8. Você tem cursos ou certificados?
+<select id="cursosTipo" required>
+<option value="">Selecione</option>
+<option>Sim</option>
+<option>Não</option>
+</select></label>
+<label id="cursosDetalhesWrap">Quais cursos ou certificados?<textarea id="cursos" placeholder="Ex.: Excel, informática, operador de máquinas..."></textarea></label>
+<label>9. Quais habilidades você tem? <span class="small">(pode escolher várias)</span></label>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<label><input type="checkbox" name="habilidade" value="Comunicação"> Comunicação</label>
+<label><input type="checkbox" name="habilidade" value="Atendimento ao cliente"> Atendimento ao cliente</label>
+<label><input type="checkbox" name="habilidade" value="Informática"> Informática</label>
+<label><input type="checkbox" name="habilidade" value="Organização"> Organização</label>
+<label><input type="checkbox" name="habilidade" value="Trabalho em equipe"> Trabalho em equipe</label>
+<label><input type="checkbox" name="habilidade" value="Pontualidade"> Pontualidade</label>
+<label><input type="checkbox" name="habilidade" value="Aprendizado rápido"> Aprendizado rápido</label>
+<label><input type="checkbox" name="habilidade" value="Responsabilidade"> Responsabilidade</label>
+</div>
 <label>10. Você quer colocar um resumo sobre você? Se não souber, deixe em branco e nós montamos.<textarea id="resumo"></textarea></label>
 <label>11. Como você quer o estilo do currículo?
 <select id="estilo"><option>Profissional e simples</option><option>Moderno</option><option>Mais formal</option><option>Quero que vocês escolham</option></select></label>
@@ -108,6 +142,9 @@ const wa='5531991339648';
 form.addEventListener('submit',e=>{
  e.preventDefault();
  const v=id=>document.getElementById(id).value.trim();
+ const habilidades=[...document.querySelectorAll('input[name="habilidade"]:checked')].map(x=>x.value).join(', ')||'Não informado';
+ const cursos=v('cursosTipo')==='Não'?'Não possui cursos/certificados':v('cursos');
+ const experiencia=v('experienciaTipo')==='Não, é meu primeiro emprego'?'Primeiro emprego':v('experienciaTipo')+' — '+v('experiencia');
  const msg=
 'Olá! Quero meu currículo pela Davora.%0A%0A'+
 'RESPOSTAS DO CURRÍCULO%0A'+
@@ -116,10 +153,10 @@ form.addEventListener('submit',e=>{
 '3. WhatsApp: '+encodeURIComponent(v('telefone'))+'%0A'+
 '4. E-mail: '+encodeURIComponent(v('email'))+'%0A'+
 '5. Cargo/área desejada: '+encodeURIComponent(v('objetivo'))+'%0A'+
-'6. Experiência: '+encodeURIComponent(v('experiencia'))+'%0A'+
+'6. Experiência: '+encodeURIComponent(experiencia)+'%0A'+
 '7. Formação: '+encodeURIComponent(v('formacao'))+'%0A'+
-'8. Cursos/certificados: '+encodeURIComponent(v('cursos'))+'%0A'+
-'9. Habilidades: '+encodeURIComponent(v('habilidades'))+'%0A'+
+'8. Cursos/certificados: '+encodeURIComponent(cursos)+'%0A'+
+'9. Habilidades: '+encodeURIComponent(habilidades)+'%0A'+
 '10. Resumo: '+encodeURIComponent(v('resumo'))+'%0A'+
 '11. Estilo: '+encodeURIComponent(v('estilo'))+'%0A'+
 '12. Observações: '+encodeURIComponent(v('observacoes'))+'%0A%0A' +
@@ -130,6 +167,8 @@ pagamento.scrollIntoView({behavior:'smooth',block:'center'});
 });
 document.getElementById('copiarPix').addEventListener('click',async()=>{await navigator.clipboard.writeText('31991339648');document.getElementById('copiarPix').textContent='✓ Chave Pix copiada';});
 document.getElementById('enviarComprovante').addEventListener('click',()=>{window.open('https://wa.me/'+wa+'?text='+msgFinal+'%0A%0APAGAMENTO%3A%20R%24%209%2C90%20via%20Pix.%0AComprovante%20ser%C3%A1%20enviado%20nesta%20conversa.','_blank');});
+document.getElementById('experienciaTipo').addEventListener('change',e=>{document.getElementById('experienciaDetalhesWrap').style.display=e.target.value==='Não, é meu primeiro emprego'?'none':'block';});
+document.getElementById('cursosTipo').addEventListener('change',e=>{document.getElementById('cursosDetalhesWrap').style.display=e.target.value==='Não'?'none':'block';});
 </script>
 </body>
 </html>
