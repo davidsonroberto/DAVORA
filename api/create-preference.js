@@ -1,6 +1,10 @@
 export default async function handler(req, res) {
+  const allowedOrigins = new Set([
+    "https://davidsonroberto.github.io",
+    "https://davora-gules.vercel.app"
+  ]);
   const requestOrigin = req.headers.origin || "";
-  if (requestOrigin === "https://davidsonroberto.github.io") {
+  if (allowedOrigins.has(requestOrigin)) {
     res.setHeader("Access-Control-Allow-Origin", requestOrigin);
     res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -14,7 +18,7 @@ export default async function handler(req, res) {
   if (!token) return res.status(500).json({ error: "MP_ACCESS_TOKEN not configured" });
 
   try {
-    const returnTo = req.body?.return_to || "";
+    const returnTo = typeof req.body?.return_to === "string" ? req.body.return_to : "";
     const origin = returnTo.startsWith("https://davidsonroberto.github.io/DAVORA")
       ? returnTo.replace(/\/+$/, "")
       : "https://davora-gules.vercel.app";
@@ -30,7 +34,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         items: [{
           id: "davora-curriculo",
-          title: "Curriculo profissional Davora",
+          title: "Currículo profissional Davora",
           quantity: 1,
           currency_id: "BRL",
           unit_price: 9.90
