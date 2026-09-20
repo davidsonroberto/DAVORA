@@ -55,16 +55,18 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input:not([type=
 <p class="muted">Responda as perguntas sobre o currículo que você quer. No final, envie tudo para nosso WhatsApp e entraremos em contato.</p>
 <div class="notice">🔒 Responda às perguntas abaixo. No final, suas respostas serão enviadas para nosso WhatsApp. Não envie senhas, documentos ou dados bancários.</div><br>
 <form id="pedidoForm">
-<div class="row"><label>1. Nome completo<input id="nome" required></label><label>2. Cidade/UF<input id="cidade" required></label></div>
+<div class="row"><label>1. Nome completo<input id="nome" autocomplete="name" required></label><label>2. Cidade/UF
+<input id="cidade" list="cidades" placeholder="Digite sua cidade..." autocomplete="address-level2" required>
+<datalist id="cidades">
+<option value="São Paulo - SP"><option value="São José dos Campos - SP"><option value="São Bernardo do Campo - SP"><option value="São Caetano do Sul - SP"><option value="São Luís - MA"><option value="São José de Ribamar - MA"><option value="São Gonçalo - RJ"><option value="São João de Meriti - RJ"><option value="São José de Freitas - PI"><option value="São José dos Pinhais - PR"><option value="Santo André - SP"><option value="Santos - SP"><option value="Belo Horizonte - MG"><option value="Contagem - MG"><option value="Betim - MG"><option value="Nova Lima - MG"><option value="Ribeirão das Neves - MG"><option value="Sabará - MG"><option value="Ibirité - MG"><option value="Santa Luzia - MG"><option value="Juiz de Fora - MG"><option value="Uberlândia - MG"><option value="Uberaba - MG"><option value="Montes Claros - MG"><option value="São João del-Rei - MG">
+</datalist></label></div>
 <div class="row"><label>3. WhatsApp<input id="telefone"></label><label>4. E-mail<input id="email" type="email"></label></div>
 <label>5. Qual cargo ou área você está procurando?
-<select id="objetivo" required>
-<option value="">Selecione</option>
-<option>Auxiliar administrativo</option><option>Atendente</option><option>Auxiliar de produção</option><option>Vendedor</option><option>Operador de máquinas</option><option>Operador de máquinas pesadas</option><option>Motorista</option><option>Estoquista</option><option>Serviços gerais</option><option>Eletricista</option><option>Pedreiro</option><option>Auxiliar de logística</option><option>Recepcionista</option><option>Área de informática</option><option>Outra área</option>
-</select>
-</label>
-<label id="objetivoOutroWrap" style="display:none">Digite o cargo/área:
-<input id="objetivoOutro" placeholder="Ex.: Pintor industrial"></label>
+<input id="objetivo" list="cargos" placeholder="Digite o cargo ou área..." autocomplete="off" required>
+<datalist id="cargos">
+<option value="Auxiliar administrativo"><option value="Auxiliar de produção"><option value="Auxiliar de logística"><option value="Auxiliar de serviços gerais"><option value="Atendente"><option value="Vendedor"><option value="Operador de máquinas"><option value="Operador de máquinas pesadas"><option value="Operador de empilhadeira"><option value="Motorista"><option value="Estoquista"><option value="Recepcionista"><option value="Eletricista"><option value="Pedreiro"><option value="Pintor industrial"><option value="Mecânico"><option value="Soldador"><option value="Técnico de enfermagem"><option="Informática"><option value="Desenvolvedor"><option value="Assistente administrativo"><option value="Analista administrativo"><option value="Professor"><option value="Cozinheiro"><option value="Garçom"><option value="Segurança"><option value="Jovem Aprendiz">
+</datalist>
+<span class="small">Digite algumas letras para ver sugestões. Você também pode escrever outra profissão.</span></label>
 <label>6. Você já trabalhou?
 <select id="experienciaTipo" required>
 <option value="">Selecione</option>
@@ -73,7 +75,8 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input:not([type=
 <option>Tenho pouca experiência</option>
 </select>
 </label>
-<label id="experienciaDetalhesWrap">Conte onde trabalhou, qual era o cargo e o que fazia.<textarea id="experiencia" placeholder="Ex.: Empresa X — Auxiliar de produção — organização, embalagem e conferência."></textarea></label>
+<label id="experienciaDetalhesWrap">Conte onde trabalhou, qual era o cargo e o que fazia.<textarea id="experiencia" list="experiencias" placeholder="Comece a digitar para receber sugestões..."></textarea>
+<datalist id="experiencias"><option value="Primeiro emprego"><option value="Auxiliar de produção — organização, embalagem e conferência"><option value="Auxiliar administrativo — atendimento, organização de documentos e planilhas"><option value="Vendedor — atendimento ao cliente, vendas e organização da loja"><option value="Atendente — atendimento ao público e suporte ao cliente"><option value="Estoquista — recebimento, organização e conferência de mercadorias"><option value="Operador de máquinas — operação, limpeza e organização do equipamento"><option value="Auxiliar de logística — separação, conferência e movimentação de produtos"></datalist></label>
 <label>7. Qual é sua formação?
 <select id="formacao" required>
 <option value="">Selecione</option>
@@ -91,7 +94,8 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input:not([type=
 <option>Sim</option>
 <option>Não</option>
 </select></label>
-<label id="cursosDetalhesWrap">Quais cursos ou certificados?<textarea id="cursos" placeholder="Ex.: Excel, informática, operador de máquinas..."></textarea></label>
+<label id="cursosDetalhesWrap">Quais cursos ou certificados?<textarea id="cursos" list="cursosLista" placeholder="Comece a digitar para receber sugestões..."></textarea>
+<datalist id="cursosLista"><option value="Informática básica"><option value="Pacote Office"><option value="Excel"><option value="Word"><option value="Atendimento ao cliente"><option value="Operador de máquinas"><option value="Operador de máquinas pesadas"><option value="Operador de empilhadeira"><option value="NR-10"><option value="NR-11"><option value="NR-12"><option value="NR-35"><option value="Curso técnico"></datalist></label>
 <label>9. Quais habilidades você tem? <span class="small">(pode escolher várias)</span></label>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
 <label><input type="checkbox" name="habilidade" value="Comunicação"> Comunicação</label>
@@ -104,14 +108,15 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input:not([type=
 <label><input type="checkbox" name="habilidade" value="Responsabilidade"> Responsabilidade</label>
 </div>
 <label>10. Escolha um resumo pronto para seu currículo.
-<select id="resumoTipo" required>
-<option value="">Selecione</option>
-<option>Sou uma pessoa responsável, organizada e comprometida, com facilidade para aprender e trabalhar em equipe.</option>
+<input id="resumoTipo" list="resumos" placeholder="Comece a digitar ou escolha uma sugestão..." required>
+<datalist id="resumos">
+<option value="Sou uma pessoa responsável, organizada e comprometida, com facilidade para aprender e trabalhar em equipe."></option>
+<option value="Profissional dedicado, pontual e responsável, buscando uma oportunidade para desenvolver minhas habilidades e contribuir com a empresa."></option>
 <option>Profissional dedicado, pontual e responsável, buscando uma oportunidade para desenvolver minhas habilidades e contribuir com a empresa.</option>
-<option>Busco minha primeira oportunidade profissional, com disposição para aprender, crescer e contribuir com a equipe.</option>
-<option>Tenho experiência profissional e busco uma nova oportunidade para aplicar meus conhecimentos e continuar me desenvolvendo.</option>
-<option>Tenho pouca experiência, mas sou dedicado, aprendo rápido e tenho vontade de crescer profissionalmente.</option>
-</select></label>
+<option value="Busco minha primeira oportunidade profissional, com disposição para aprender, crescer e contribuir com a equipe."></option>
+<option value="Tenho experiência profissional e busco uma nova oportunidade para aplicar meus conhecimentos e continuar me desenvolvendo."></option>
+<option value="Tenho pouca experiência, mas sou dedicado, aprendo rápido e tenho vontade de crescer profissionalmente."></option>
+</datalist></label>
 <label>11. Como você quer o estilo do currículo?
 <select id="estilo"><option>Profissional e simples</option><option>Moderno</option><option>Mais formal</option><option>Quero que vocês escolham</option></select></label>
 <label>12. O que você quer fazer com informações extras?
