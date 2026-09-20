@@ -10,7 +10,7 @@ nav{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:cen
 .hero{text-align:center;padding:70px 0 45px}.badge{display:inline-block;border:1px solid #54317a;background:#180d27;border-radius:999px;padding:7px 12px;color:#e5cfff;font-size:13px}h1{font-size:clamp(42px,7vw,70px);line-height:1.02;letter-spacing:-3px;max-width:850px;margin:20px auto}.grad{color:var(--purple2)}.hero p{color:var(--muted);font-size:18px;max-width:680px;margin:auto auto 25px}
 .btn{display:inline-block;padding:15px 23px;border-radius:13px;font-weight:900;background:linear-gradient(135deg,#8b2cff,#c05cff);color:#fff;text-decoration:none;border:0;cursor:pointer;box-shadow:0 8px 30px #8b2cff33}.micro{font-size:12px;color:#858294;margin-top:12px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:25px 0 55px}.card{background:linear-gradient(180deg,#11101a,#0b0b10);border:1px solid var(--line);border-radius:20px;padding:27px}.card h2{margin-top:0}.list{padding:0;list-style:none}.list li{padding:9px 0;border-bottom:1px solid #211d2c}.price{font-size:52px;font-weight:950}.muted{color:var(--muted)}section{padding:45px 0}.center{text-align:center}
-form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,select{width:100%;margin-top:6px;background:#09090e;border:1px solid #332c45;color:#fff;border-radius:10px;padding:13px;font:inherit}textarea{min-height:100px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input:not([type="checkbox"]),textarea,select{width:100%;margin-top:6px;background:#09090e;border:1px solid #332c45;color:#fff;border-radius:10px;padding:13px;font:inherit}textarea{min-height:100px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .notice{background:#130d1d;border:1px solid #58317c;border-radius:14px;padding:13px;color:#eadbfa;font-size:13px}. strong{color:#d5aaff}.success{display:none;background:#0d1510;border:1px solid #315f45;padding:20px;border-radius:15px}
 .small{font-size:12px;color:#858294}footer{border-top:1px solid var(--line);padding:25px 0;color:#858294;font-size:12px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{padding:22px;border:1px solid var(--line);border-radius:16px;background:#0c0b11}.num{display:inline-flex;width:32px;height:32px;align-items:center;justify-content:center;border-radius:50%;background:#8b2cff;font-weight:900;margin-bottom:8px}
 @media(max-width:700px){.grid,.row,.steps{grid-template-columns:1fr}h1{letter-spacing:-2px}.hero{padding-top:50px}nav{height:auto;padding:18px 0;gap:10px;align-items:flex-start}.muted{font-size:13px}}
@@ -57,7 +57,14 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 <form id="pedidoForm">
 <div class="row"><label>1. Nome completo<input id="nome" required></label><label>2. Cidade/UF<input id="cidade" required></label></div>
 <div class="row"><label>3. WhatsApp<input id="telefone"></label><label>4. E-mail<input id="email" type="email"></label></div>
-<label>5. Qual cargo ou área você está procurando?<input id="objetivo" placeholder="Ex.: Auxiliar administrativo, vendedor, operador de máquinas..." required></label>
+<label>5. Qual cargo ou área você está procurando?
+<select id="objetivo" required>
+<option value="">Selecione</option>
+<option>Auxiliar administrativo</option><option>Atendente</option><option>Auxiliar de produção</option><option>Vendedor</option><option>Operador de máquinas</option><option>Operador de máquinas pesadas</option><option>Motorista</option><option>Estoquista</option><option>Serviços gerais</option><option>Eletricista</option><option>Pedreiro</option><option>Auxiliar de logística</option><option>Recepcionista</option><option>Área de informática</option><option>Outra área</option>
+</select>
+</label>
+<label id="objetivoOutroWrap" style="display:none">Digite o cargo/área:
+<input id="objetivoOutro" placeholder="Ex.: Pintor industrial"></label>
 <label>6. Você já trabalhou?
 <select id="experienciaTipo" required>
 <option value="">Selecione</option>
@@ -96,10 +103,28 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 <label><input type="checkbox" name="habilidade" value="Aprendizado rápido"> Aprendizado rápido</label>
 <label><input type="checkbox" name="habilidade" value="Responsabilidade"> Responsabilidade</label>
 </div>
-<label>10. Você quer colocar um resumo sobre você? Se não souber, deixe em branco e nós montamos.<textarea id="resumo"></textarea></label>
+<label>10. Escolha um resumo pronto para seu currículo.
+<select id="resumoTipo" required>
+<option value="">Selecione</option>
+<option>Sou uma pessoa responsável, organizada e comprometida, com facilidade para aprender e trabalhar em equipe.</option>
+<option>Profissional dedicado, pontual e responsável, buscando uma oportunidade para desenvolver minhas habilidades e contribuir com a empresa.</option>
+<option>Busco minha primeira oportunidade profissional, com disposição para aprender, crescer e contribuir com a equipe.</option>
+<option>Tenho experiência profissional e busco uma nova oportunidade para aplicar meus conhecimentos e continuar me desenvolvendo.</option>
+<option>Tenho pouca experiência, mas sou dedicado, aprendo rápido e tenho vontade de crescer profissionalmente.</option>
+</select></label>
 <label>11. Como você quer o estilo do currículo?
 <select id="estilo"><option>Profissional e simples</option><option>Moderno</option><option>Mais formal</option><option>Quero que vocês escolham</option></select></label>
-<label>12. Tem alguma informação que você quer destacar ou retirar do currículo?<textarea id="observacoes"></textarea></label>
+<label>12. O que você quer fazer com informações extras?
+<select id="observacoesTipo" required>
+<option value="">Selecione</option>
+<option>Não tenho observações</option>
+<option>Quero destacar minha experiência</option>
+<option>Quero destacar meus cursos</option>
+<option>Quero destacar minhas habilidades</option>
+<option>Tenho uma informação diferente para acrescentar</option>
+</select></label>
+<label id="observacoesOutroWrap" style="display:none">Digite a informação:
+<textarea id="observacoes"></textarea></label>
 <button class="btn" type="submit">💜 Continuar para pagamento</button>
 </form>
 <div id="pagamento" class="success" style="margin-top:18px;text-align:center">
@@ -152,14 +177,14 @@ form.addEventListener('submit',e=>{
 '2. Cidade/UF: '+encodeURIComponent(v('cidade'))+'%0A'+
 '3. WhatsApp: '+encodeURIComponent(v('telefone'))+'%0A'+
 '4. E-mail: '+encodeURIComponent(v('email'))+'%0A'+
-'5. Cargo/área desejada: '+encodeURIComponent(v('objetivo'))+'%0A'+
+'5. Cargo/área desejada: '+encodeURIComponent(v('objetivo')==='Outra área'?v('objetivoOutro'):v('objetivo'))+'%0A'+
 '6. Experiência: '+encodeURIComponent(experiencia)+'%0A'+
 '7. Formação: '+encodeURIComponent(v('formacao'))+'%0A'+
 '8. Cursos/certificados: '+encodeURIComponent(cursos)+'%0A'+
 '9. Habilidades: '+encodeURIComponent(habilidades)+'%0A'+
-'10. Resumo: '+encodeURIComponent(v('resumo'))+'%0A'+
+'10. Resumo: '+encodeURIComponent(v('resumoTipo'))+'%0A'+
 '11. Estilo: '+encodeURIComponent(v('estilo'))+'%0A'+
-'12. Observações: '+encodeURIComponent(v('observacoes'))+'%0A%0A' +
+'12. Observações: '+encodeURIComponent(v('observacoesTipo')+(v('observacoesTipo')==='Tenho uma informação diferente para acrescentar'?' — '+v('observacoes'):''))+'%0A%0A' +
 'Quero receber atendimento da Davora pelo WhatsApp.';
 msgFinal=msg;
 pagamento.style.display='block';
@@ -168,6 +193,8 @@ pagamento.scrollIntoView({behavior:'smooth',block:'center'});
 document.getElementById('copiarPix').addEventListener('click',async()=>{await navigator.clipboard.writeText('31991339648');document.getElementById('copiarPix').textContent='✓ Chave Pix copiada';});
 document.getElementById('enviarComprovante').addEventListener('click',()=>{window.open('https://wa.me/'+wa+'?text='+msgFinal+'%0A%0APAGAMENTO%3A%20R%24%209%2C90%20via%20Pix.%0AComprovante%20ser%C3%A1%20enviado%20nesta%20conversa.','_blank');});
 document.getElementById('experienciaTipo').addEventListener('change',e=>{document.getElementById('experienciaDetalhesWrap').style.display=e.target.value==='Não, é meu primeiro emprego'?'none':'block';});
+document.getElementById('objetivo').addEventListener('change',e=>{document.getElementById('objetivoOutroWrap').style.display=e.target.value==='Outra área'?'block':'none';});
+document.getElementById('observacoesTipo').addEventListener('change',e=>{document.getElementById('observacoesOutroWrap').style.display=e.target.value==='Tenho uma informação diferente para acrescentar'?'block':'none';});
 document.getElementById('cursosTipo').addEventListener('change',e=>{document.getElementById('cursosDetalhesWrap').style.display=e.target.value==='Não'?'none':'block';});
 </script>
 </body>
