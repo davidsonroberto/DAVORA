@@ -66,9 +66,19 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 <label>11. Como você quer o estilo do currículo?
 <select id="estilo"><option>Profissional e simples</option><option>Moderno</option><option>Mais formal</option><option>Quero que vocês escolham</option></select></label>
 <label>12. Tem alguma informação que você quer destacar ou retirar do currículo?<textarea id="observacoes"></textarea></label>
-<button class="btn" type="submit">💜 Enviar meu pedido pelo WhatsApp</button>
+<button class="btn" type="submit">💜 Continuar para pagamento</button>
 </form>
-<div id="success" class="success"><b>Mensagem pronta!</b><br>O WhatsApp será aberto com todas as suas respostas preenchidas. Envie a mensagem para a Davora.</div>
+<div id="pagamento" class="success" style="margin-top:18px;text-align:center">
+<b>Pagamento via Pix</b>
+<p class="muted">Faça o Pix de <strong>R$ 9,90</strong> antes de enviar suas respostas.</p>
+<div style="background:#09090e;border:1px solid #58317c;border-radius:12px;padding:16px;margin:14px 0">
+<div class="small">Chave Pix</div>
+<div style="font-size:22px;font-weight:900;word-break:break-all">31991339648</div>
+</div>
+<button type="button" class="btn" id="copiarPix">📋 Copiar chave Pix</button>
+<button type="button" class="btn" id="enviarComprovante" style="margin-top:10px">💜 Já fiz o Pix — enviar comprovante e respostas</button>
+<p class="small">Depois de fazer o Pix, clique no botão acima. O WhatsApp abrirá com todas as suas respostas.</p>
+</div>
 </div>
 </section>
 
@@ -92,6 +102,8 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 <script>
 const form=document.getElementById('pedidoForm');
 const success=document.getElementById('success');
+const pagamento=document.getElementById('pagamento');
+let msgFinal='';
 const wa='5531991339648';
 form.addEventListener('submit',e=>{
  e.preventDefault();
@@ -112,9 +124,12 @@ form.addEventListener('submit',e=>{
 '11. Estilo: '+encodeURIComponent(v('estilo'))+'%0A'+
 '12. Observações: '+encodeURIComponent(v('observacoes'))+'%0A%0A' +
 'Quero receber atendimento da Davora pelo WhatsApp.';
-success.style.display='block';
-window.open('https://wa.me/'+wa+'?text='+msg,'_blank');
+msgFinal=msg;
+pagamento.style.display='block';
+pagamento.scrollIntoView({behavior:'smooth',block:'center'});
 });
+document.getElementById('copiarPix').addEventListener('click',async()=>{await navigator.clipboard.writeText('31991339648');document.getElementById('copiarPix').textContent='✓ Chave Pix copiada';});
+document.getElementById('enviarComprovante').addEventListener('click',()=>{window.open('https://wa.me/'+wa+'?text='+msgFinal+'%0A%0APAGAMENTO%3A%20R%24%209%2C90%20via%20Pix.%0AComprovante%20ser%C3%A1%20enviado%20nesta%20conversa.','_blank');});
 </script>
 </body>
 </html>
