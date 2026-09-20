@@ -4,140 +4,123 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Davora — Currículo profissional por R$ 9,90</title>
 <style>
-:root{--bg:#050505;--card:#101010;--text:#f5f5f5;--muted:#b0b0b0;--line:#2a2a2a;--purple:#e50914;--green:#ff3030}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial;line-height:1.55}.wrap{max-width:980px;margin:auto;padding:0 20px}
-nav{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;font-weight:950}.logo span{color:var(--purple)}
-.hero{text-align:center;padding:70px 0 45px}.badge{display:inline-block;border:1px solid #303746;border-radius:999px;padding:7px 12px;color:#d0d6e1;font-size:13px}h1{font-size:clamp(42px,7vw,70px);line-height:1.02;letter-spacing:-3px;max-width:850px;margin:20px auto}.grad{color:#ff3030}.hero p{color:var(--muted);font-size:18px;max-width:680px;margin:auto auto 25px}
-.btn{display:inline-block;padding:15px 23px;border-radius:13px;font-weight:900;background:linear-gradient(135deg,#e50914,#9b0000);color:#fff;text-decoration:none;border:0;cursor:pointer}.micro{font-size:12px;color:#737c8b;margin-top:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:25px 0 55px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:27px}.card h2{margin-top:0}.list{padding:0;list-style:none}.list li{padding:9px 0;border-bottom:1px solid #1b222d}.price{font-size:52px;font-weight:950}.muted{color:var(--muted)}section{padding:45px 0}.center{text-align:center}
-form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,select{width:100%;margin-top:6px;background:#090d13;border:1px solid #293140;color:#fff;border-radius:10px;padding:13px;font:inherit}textarea{min-height:100px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.notice{background:#0b1116;border:1px solid #5c1515;border-radius:14px;padding:13px;color:#ffd0d0;font-size:13px}.success{display:none;background:#0c1512;border:1px solid #285f50;padding:20px;border-radius:15px}.cv{background:white;color:#171717;padding:36px;border-radius:6px;max-width:800px;margin:25px auto;display:none}.cv h1{font-size:32px;letter-spacing:0;margin:0 0 3px;color:#111}.cv h2{font-size:16px;border-bottom:1px solid #ccc;padding-bottom:5px;margin-top:22px}.cv p{margin:5px 0}.small{font-size:12px;color:#737c8b}footer{border-top:1px solid var(--line);padding:25px 0;color:#737c8b;font-size:12px}
-@media(max-width:700px){.grid,.row{grid-template-columns:1fr}h1{letter-spacing:-2px}.hero{padding-top:50px}}
+:root{--bg:#050505;--card:#101018;--text:#fff;--muted:#b7b7c5;--line:#29243a;--purple:#8b2cff;--purple2:#c05cff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#24103f 0,#050505 35%);color:var(--text);font-family:Inter,system-ui,Arial;line-height:1.55}.wrap{max-width:980px;margin:auto;padding:0 20px}
+nav{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;font-weight:950}.logo span{color:var(--purple2)}nav a{color:#fff;text-decoration:none;font-weight:800;font-size:14px}
+.hero{text-align:center;padding:70px 0 45px}.badge{display:inline-block;border:1px solid #54317a;background:#180d27;border-radius:999px;padding:7px 12px;color:#e5cfff;font-size:13px}h1{font-size:clamp(42px,7vw,70px);line-height:1.02;letter-spacing:-3px;max-width:850px;margin:20px auto}.grad{color:var(--purple2)}.hero p{color:var(--muted);font-size:18px;max-width:680px;margin:auto auto 25px}
+.btn{display:inline-block;padding:15px 23px;border-radius:13px;font-weight:900;background:linear-gradient(135deg,#8b2cff,#c05cff);color:#fff;text-decoration:none;border:0;cursor:pointer;box-shadow:0 8px 30px #8b2cff33}.micro{font-size:12px;color:#858294;margin-top:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:25px 0 55px}.card{background:linear-gradient(180deg,#11101a,#0b0b10);border:1px solid var(--line);border-radius:20px;padding:27px}.card h2{margin-top:0}.list{padding:0;list-style:none}.list li{padding:9px 0;border-bottom:1px solid #211d2c}.price{font-size:52px;font-weight:950}.muted{color:var(--muted)}section{padding:45px 0}.center{text-align:center}
+form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,select{width:100%;margin-top:6px;background:#09090e;border:1px solid #332c45;color:#fff;border-radius:10px;padding:13px;font:inherit}textarea{min-height:100px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.notice{background:#130d1d;border:1px solid #58317c;border-radius:14px;padding:13px;color:#eadbfa;font-size:13px}.pix{background:#0c0813;border:1px solid #603494;border-radius:16px;padding:18px;margin:18px 0;text-align:left}.pix strong{color:#d5aaff}.success{display:none;background:#0d1510;border:1px solid #315f45;padding:20px;border-radius:15px}
+.small{font-size:12px;color:#858294}footer{border-top:1px solid var(--line);padding:25px 0;color:#858294;font-size:12px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{padding:22px;border:1px solid var(--line);border-radius:16px;background:#0c0b11}.num{display:inline-flex;width:32px;height:32px;align-items:center;justify-content:center;border-radius:50%;background:#8b2cff;font-weight:900;margin-bottom:8px}
+@media(max-width:700px){.grid,.row,.steps{grid-template-columns:1fr}h1{letter-spacing:-2px}.hero{padding-top:50px}nav{height:auto;padding:18px 0;gap:10px;align-items:flex-start}.muted{font-size:13px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><div style="display:flex;align-items:center;gap:18px"><div class="logo">DAV<span>ORA</span></div><a href="https://wa.me/5531991339648?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20com%20meu%20curr%C3%ADculo%20no%20Davora." target="_blank" rel="noopener" style="color:#fff;text-decoration:none;font-weight:800;font-size:14px">💬 Precisa de ajuda?</a></div><div class="muted">Currículo profissional • R$ 9,90</div></nav>
+<nav>
+<div style="display:flex;align-items:center;gap:18px"><div class="logo">DAV<span>ORA</span></div>
+<a href="https://wa.me/5531991339648?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20com%20meu%20curr%C3%ADculo%20no%20Davora." target="_blank" rel="noopener">💬 Precisa de ajuda?</a></div>
+<div class="muted">Currículo profissional • R$ 9,90</div>
+</nav>
 
 <section class="hero">
-<div class="badge">⚡ Oferta de lançamento</div>
+<div class="badge">✨ Currículo feito sob medida</div>
 <h1>Seu currículo profissional por <span class="grad">R$ 9,90.</span></h1>
-<p>Você envia suas informações e a Davora organiza tudo em um currículo claro, profissional e pronto para usar.</p>
-<a class="btn" href="#comprar">Quero meu currículo →</a>
-<div class="micro">Sem promessa de contratação. O objetivo é melhorar a apresentação das suas informações.</div>
+<p>Você paga pelo Pix, responde algumas perguntas pelo WhatsApp e a Davora monta seu currículo de acordo com o que você procura.</p>
+<a class="btn" href="#pedido">Quero meu currículo →</a>
+<div class="micro">Atendimento pelo WhatsApp • Currículo personalizado</div>
 </section>
 
 <div class="grid">
 <div class="card"><h2>O que você recebe</h2><ul class="list">
-<li>✓ Estrutura profissional e fácil de ler</li><li>✓ Experiência, formação e habilidades organizadas</li>
-<li>✓ Texto baseado nas informações fornecidas</li><li>✓ Currículo pronto para salvar/imprimir</li>
+<li>✓ Currículo organizado e profissional</li>
+<li>✓ Texto adaptado ao seu objetivo</li>
+<li>✓ Estrutura escolhida com você</li>
+<li>✓ Revisão das informações enviadas</li>
+<li>✓ Entrega do currículo pronto pelo WhatsApp</li>
 </ul></div>
-<div class="card center" id="comprar"><div class="muted">Oferta de lançamento</div><div class="price">R$ 9,90</div>
-<p class="muted">Pagamento único.</p>
-<!-- SUBSTITUA O LINK ABAIXO PELO SEU LINK DE PAGAMENTO -->
-<button class="btn" id="payBtn" type="button">Pagar R$ 9,90</button>
-<p class="small">Após pagar, você será redirecionado de volta e o pagamento será verificado automaticamente.</p>
-<button class="btn" id="paidBtn" type="button" style="display:none;margin-top:8px;background:#151b25;border:1px solid #303746">Continuar →</button>
-<p id="paymentMsg" class="small" style="display:none;color:#c8eee4"></p></div>
+
+<div class="card center" id="pedido">
+<div class="muted">Pagamento único</div><div class="price">R$ 9,90</div>
+<p class="muted">Pague pelo Pix e depois envie seus dados pelo WhatsApp.</p>
+<div class="pix">
+<div><strong>Chave Pix:</strong></div>
+<div style="font-size:18px;font-weight:900;margin:5px 0">COLOQUE_SUA_CHAVE_PIX_AQUI</div>
+<div class="small">Substitua essa chave pela sua chave Pix antes de divulgar o site.</div>
+</div>
+<a class="btn" id="pixBtn" href="https://wa.me/5531991339648?text=Ol%C3%A1%21%20Quero%20meu%20curr%C3%ADculo%20Davora%20por%20R%24%209%2C90.%20Vou%20fazer%20o%20Pix%20e%20enviar%20o%20comprovante." target="_blank" rel="noopener">💜 Pagar e falar no WhatsApp</a>
+<p class="small">Depois do Pix, envie o comprovante e responda às perguntas abaixo.</p>
+</div>
 </div>
 
-<section id="dados" style="display:none">
+<section id="perguntas">
 <div class="card">
-<h2>Formulário do currículo</h2>
-<p class="muted">Este formulário funciona no navegador. Preencha os dados para gerar a prévia do currículo.</p>
-<div class="notice">🔒 Não coloque dados extremamente sensíveis. Colete apenas o necessário para montar o currículo.</div><br>
-<form id="cvForm">
-<div class="row"><label>Nome completo<input id="nome" required></label><label>Cidade/UF<input id="cidade"></label></div>
-<div class="row"><label>Telefone<input id="telefone"></label><label>E-mail<input id="email" type="email"></label></div>
-<label>Cargo/objetivo profissional<input id="objetivo" placeholder="Ex.: Auxiliar administrativo"></label>
-<label>Resumo profissional<textarea id="resumo" placeholder="Conte brevemente sobre você, se quiser."></textarea></label>
-<label>Experiência profissional<textarea id="experiencia" placeholder="Empresa — cargo — período — principais atividades"></textarea></label>
-<label>Formação<textarea id="formacao" placeholder="Curso — instituição — período"></textarea></label>
-<label>Cursos e certificações<textarea id="cursos"></textarea></label>
-<label>Habilidades<textarea id="habilidades" placeholder="Ex.: Excel, atendimento, organização"></textarea></label>
-<button class="btn" type="submit">Gerar prévia do currículo</button>
+<h2>Agora conte como você quer seu currículo</h2>
+<p class="muted">Responda as perguntas. No final, o site monta uma mensagem pronta para você enviar no WhatsApp.</p>
+<div class="notice">🔒 Envie somente informações necessárias para o currículo. Não envie senhas, documentos ou dados bancários.</div><br>
+<form id="pedidoForm">
+<div class="row"><label>1. Nome completo<input id="nome" required></label><label>2. Cidade/UF<input id="cidade" required></label></div>
+<div class="row"><label>3. WhatsApp<input id="telefone"></label><label>4. E-mail<input id="email" type="email"></label></div>
+<label>5. Qual cargo ou área você está procurando?<input id="objetivo" placeholder="Ex.: Auxiliar administrativo, vendedor, operador de máquinas..." required></label>
+<label>6. Você já trabalhou? Conte onde, com qual cargo e o que fazia.<textarea id="experiencia" placeholder="Se nunca trabalhou, escreva: primeiro emprego."></textarea></label>
+<label>7. Qual é sua formação escolar/profissional?<textarea id="formacao" placeholder="Ex.: Ensino médio completo; curso de Excel..."></textarea></label>
+<label>8. Quais cursos e certificados você tem?<textarea id="cursos"></textarea></label>
+<label>9. Quais são suas principais habilidades?<textarea id="habilidades" placeholder="Ex.: atendimento, informática, organização, trabalho em equipe..."></textarea></label>
+<label>10. Você quer colocar um resumo sobre você? Se não souber, deixe em branco e nós montamos.<textarea id="resumo"></textarea></label>
+<label>11. Como você quer o estilo do currículo?
+<select id="estilo"><option>Profissional e simples</option><option>Moderno</option><option>Mais formal</option><option>Quero que vocês escolham</option></select></label>
+<label>12. Tem alguma informação que você quer destacar ou retirar do currículo?<textarea id="observacoes"></textarea></label>
+<button class="btn" type="submit">📲 Enviar minhas respostas pelo WhatsApp</button>
 </form>
-<div id="success" class="success"><b>Prévia criada!</b><br>Revise as informações abaixo. Para vender de verdade, configure o seu processo de entrega após confirmar o pagamento.</div>
+<div id="success" class="success"><b>Mensagem pronta!</b><br>O WhatsApp será aberto com todas as suas respostas preenchidas. Envie a mensagem para a Davora junto com o comprovante do Pix.</div>
 </div>
 </section>
 
-<div id="cv" class="cv">
-<h1 id="cvNome"></h1><p id="cvContato"></p><p><b id="cvObjetivo"></b></p>
-<h2>Resumo profissional</h2><p id="cvResumo"></p>
-<h2>Experiência profissional</h2><p id="cvExperiencia"></p>
-<h2>Formação</h2><p id="cvFormacao"></p>
-<h2>Cursos e certificações</h2><p id="cvCursos"></p>
-<h2>Habilidades</h2><p id="cvHabilidades"></p>
+<section>
+<div class="center"><h2>Como funciona</h2><p class="muted">Você paga → responde as perguntas → recebe o currículo pronto pelo WhatsApp.</p></div>
+<div class="steps">
+<div class="step"><div class="num">1</div><b>Faça o Pix</b><p class="muted">Pague R$ 9,90 usando a chave Pix mostrada acima.</p></div>
+<div class="step"><div class="num">2</div><b>Responda</b><p class="muted">Conte como é sua experiência e como quer o currículo.</p></div>
+<div class="step"><div class="num">3</div><b>Receba</b><p class="muted">A Davora monta o currículo e envia pelo WhatsApp.</p></div>
+</div>
+</section>
+
+<div class="center" style="margin:20px 0 35px;padding:28px 10px;border-top:1px solid #222033">
+<h2 style="margin:0 0 8px">💬 Precisa de ajuda?</h2>
+<p class="muted" style="margin:0 0 15px">Não sabe responder alguma pergunta? Fale com a gente.</p>
+<a class="btn" href="https://wa.me/5531991339648?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20com%20meu%20curr%C3%ADculo%20no%20Davora." target="_blank" rel="noopener">Falar no WhatsApp</a>
+</div>
+<footer>© 2026 Davora • Atendimento e entrega pelo WhatsApp.</footer>
 </div>
 
-<section class="center"><h2>Como funciona</h2><p class="muted">1. Cliente paga → 2. envia os dados → 3. Davora revisa/gera → 4. entrega o currículo.</p></section>
-<div class="center" style="margin:20px 0 35px;padding:28px 10px;border-top:1px solid #222a37"><h2 style="margin:0 0 8px">💬 Precisa de ajuda?</h2><p class="muted" style="margin:0 0 15px">Fale com a gente pelo WhatsApp.</p><a class="btn" href="https://wa.me/5531991339648?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20com%20meu%20curr%C3%ADculo%20no%20Davora." target="_blank" rel="noopener">Falar com a gente no WhatsApp</a></div>
-<footer>© 2026 Davora. Configure preço, pagamento, prazo, política de correção e contato antes de publicar.</footer>
-</div>
 <script>
-const $=id=>document.getElementById(id);
-let paymentRef=null;
-const isGithub=location.hostname.includes('github.io');
-const apiBase='https://davora-gules.vercel.app';
-function showForm(){
-  $('dados').style.display='block';
-  $('paymentMsg').textContent='Pagamento aprovado! Você pode preencher os dados do currículo.';
-  $('paymentMsg').style.display='block';
-  $('paidBtn').style.display='inline-block';
-  $('dados').scrollIntoView({behavior:'smooth'});
-}
-$('paidBtn').addEventListener('click',()=>{
-  $('dados').scrollIntoView({behavior:'smooth'});
-});
-$('payBtn').addEventListener('click',async()=>{
-  if(isGithub){
-    $('payBtn').disabled=true;
-    $('payBtn').textContent='Abrindo pagamento...';
-  }
-  $('payBtn').disabled=true;
-  $('payBtn').textContent='Abrindo pagamento...';
-  try{
-    const r=await fetch(apiBase+'/api/create-preference',{method:'POST',headers:{'Content-Type':'application/json'},body:isGithub?JSON.stringify({return_to:location.origin+location.pathname}):undefined});
-    const data=await r.json();
-    if(!r.ok||!data.checkout_url) throw new Error(data.error||'Não foi possível criar o pagamento.');
-    paymentRef=data.external_reference;
-    window.location.href=data.checkout_url;
-  }catch(e){
-    $('payBtn').disabled=false;
-    $('payBtn').textContent='Pagar R$ 9,90';
-    alert(e.message);
-  }
-});
-const params=new URLSearchParams(location.search);
-const ref=params.get('ref');
-if(ref && (params.get('payment')==='success' || params.get('payment')==='pending')){
-  paymentRef=ref;
-  $('paymentMsg').textContent='Verificando pagamento...';
-  $('paymentMsg').style.display='block';
-  const check=async()=>{
-    try{
-      const r=await fetch(apiBase+'/api/payment-status?ref='+encodeURIComponent(paymentRef));
-      const data=await r.json();
-      if(data.status==='approved'){showForm();return;}
-      if(data.status==='rejected' || data.status==='cancelled'){ $('paymentMsg').textContent='Pagamento não aprovado. Tente novamente.'; return; }
-    }catch{}
-    setTimeout(check,3000);
-  };
-  check();
-}
-$('cvForm').addEventListener('submit',e=>{
+const form=document.getElementById('pedidoForm');
+const success=document.getElementById('success');
+const wa='5531991339648';
+form.addEventListener('submit',e=>{
  e.preventDefault();
- $('cvNome').textContent=$('nome').value;
- $('cvContato').textContent=[$('cidade').value,$('telefone').value,$('email').value].filter(Boolean).join(' • ');
- $('cvObjetivo').textContent=$('objetivo').value;
- $('cvResumo').textContent=$('resumo').value||'—';
- $('cvExperiencia').textContent=$('experiencia').value||'—';
- $('cvFormacao').textContent=$('formacao').value||'—';
- $('cvCursos').textContent=$('cursos').value||'—';
- $('cvHabilidades').textContent=$('habilidades').value||'—';
- $('cv').style.display='block'; $('success').style.display='block';
- $('cv').scrollIntoView({behavior:'smooth'});
+ const v=id=>document.getElementById(id).value.trim();
+ const msg=
+'Olá! Quero meu currículo pela Davora por R$ 9,90.%0A%0A'+
+'COMPROVANTE DO PIX: vou enviar nesta conversa.%0A%0A'+
+'RESPOSTAS DO CURRÍCULO%0A'+
+'1. Nome: '+encodeURIComponent(v('nome'))+'%0A'+
+'2. Cidade/UF: '+encodeURIComponent(v('cidade'))+'%0A'+
+'3. WhatsApp: '+encodeURIComponent(v('telefone'))+'%0A'+
+'4. E-mail: '+encodeURIComponent(v('email'))+'%0A'+
+'5. Cargo/área desejada: '+encodeURIComponent(v('objetivo'))+'%0A'+
+'6. Experiência: '+encodeURIComponent(v('experiencia'))+'%0A'+
+'7. Formação: '+encodeURIComponent(v('formacao'))+'%0A'+
+'8. Cursos/certificados: '+encodeURIComponent(v('cursos'))+'%0A'+
+'9. Habilidades: '+encodeURIComponent(v('habilidades'))+'%0A'+
+'10. Resumo: '+encodeURIComponent(v('resumo'))+'%0A'+
+'11. Estilo: '+encodeURIComponent(v('estilo'))+'%0A'+
+'12. Observações: '+encodeURIComponent(v('observacoes'));
+success.style.display='block';
+window.open('https://wa.me/'+wa+'?text='+msg,'_blank');
 });
 </script>
-</body></html>
-<!-- PAGES_TRIGGER:20260919-1743 -->
+</body>
+</html>
+<!-- PAGES_TRIGGER:20260920-NEW-WHATSAPP -->
