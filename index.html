@@ -43,21 +43,16 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 
 <div class="card center" id="pedido">
 <div class="muted">Pagamento único</div><div class="price">R$ 9,90</div>
-<p class="muted">Pague pelo Pix e depois envie seus dados pelo WhatsApp.</p>
-<div class="pix">
-<div><strong>Chave Pix:</strong></div>
-<div style="font-size:18px;font-weight:900;margin:5px 0">31991339648</div>
-<div class="small">Substitua essa chave pela sua chave Pix antes de divulgar o site.</div>
-</div>
-<a class="btn" id="pixBtn" href="https://wa.me/5531991339648?text=Ol%C3%A1%21%20Quero%20meu%20curr%C3%ADculo%20Davora%20por%20R%24%209%2C90.%20Vou%20fazer%20o%20Pix%20e%20enviar%20o%20comprovante." target="_blank" rel="noopener">💜 Pagar e falar no WhatsApp</a>
-<p class="small">Depois do Pix, envie o comprovante e responda às perguntas abaixo.</p>
+<p class="muted">Primeiro responda as perguntas abaixo. Depois clique em <b>Pagar R$ 9,90</b> e iremos para o WhatsApp para você receber a chave Pix.</p>
+<a class="btn" href="#perguntas">Responder perguntas →</a>
+<p class="small">Você só paga depois de terminar suas respostas.</p>
 </div>
 </div>
 
 <section id="perguntas">
 <div class="card">
 <h2>Agora conte como você quer seu currículo</h2>
-<p class="muted">Responda as perguntas. No final, o site monta uma mensagem pronta para você enviar no WhatsApp.</p>
+<p class="muted">Responda as perguntas sobre o currículo que você quer. No final, clique em <b>Pagar R$ 9,90</b> para enviar tudo para nosso WhatsApp. Lá, você receberá a chave Pix.</p>
 <div class="notice">🔒 Envie somente informações necessárias para o currículo. Não envie senhas, documentos ou dados bancários.</div><br>
 <form id="pedidoForm">
 <div class="row"><label>1. Nome completo<input id="nome" required></label><label>2. Cidade/UF<input id="cidade" required></label></div>
@@ -71,7 +66,7 @@ form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input,textarea,s
 <label>11. Como você quer o estilo do currículo?
 <select id="estilo"><option>Profissional e simples</option><option>Moderno</option><option>Mais formal</option><option>Quero que vocês escolham</option></select></label>
 <label>12. Tem alguma informação que você quer destacar ou retirar do currículo?<textarea id="observacoes"></textarea></label>
-<button class="btn" type="submit">📲 Enviar minhas respostas pelo WhatsApp</button>
+<button class="btn" type="submit">💜 Pagar R$ 9,90 e ir para o WhatsApp</button>
 </form>
 <div id="success" class="success"><b>Mensagem pronta!</b><br>O WhatsApp será aberto com todas as suas respostas preenchidas. Envie a mensagem para a Davora junto com o comprovante do Pix.</div>
 </div>
@@ -103,7 +98,7 @@ form.addEventListener('submit',e=>{
  const v=id=>document.getElementById(id).value.trim();
  const msg=
 'Olá! Quero meu currículo pela Davora por R$ 9,90.%0A%0A'+
-'COMPROVANTE DO PIX: vou enviar nesta conversa.%0A%0A'+
+'Quero receber a chave Pix para fazer o pagamento.%0A%0A'+
 'RESPOSTAS DO CURRÍCULO%0A'+
 '1. Nome: '+encodeURIComponent(v('nome'))+'%0A'+
 '2. Cidade/UF: '+encodeURIComponent(v('cidade'))+'%0A'+
@@ -116,7 +111,8 @@ form.addEventListener('submit',e=>{
 '9. Habilidades: '+encodeURIComponent(v('habilidades'))+'%0A'+
 '10. Resumo: '+encodeURIComponent(v('resumo'))+'%0A'+
 '11. Estilo: '+encodeURIComponent(v('estilo'))+'%0A'+
-'12. Observações: '+encodeURIComponent(v('observacoes'));
+'12. Observações: '+encodeURIComponent(v('observacoes'))+'%0A%0A' +
+'Pagamento: aguardando a chave Pix pelo WhatsApp.';
 success.style.display='block';
 window.open('https://wa.me/'+wa+'?text='+msg,'_blank');
 });
