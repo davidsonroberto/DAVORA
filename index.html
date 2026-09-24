@@ -1,207 +1,57 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Davora — Currículo profissional</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6424c8">
+<title>DAVORA | Achados para o seu dia</title>
+<meta name="description" content="Encontre achados de beleza, bem-estar, casa e presentes na DAVORA. Consulte disponibilidade e entrega pelo WhatsApp.">
 <style>
-:root{--bg:#050505;--card:#101018;--text:#fff;--muted:#b7b7c5;--line:#29243a;--purple:#8b2cff;--purple2:#c05cff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#24103f 0,#050505 35%);color:var(--text);font-family:Inter,system-ui,Arial;line-height:1.55}.wrap{max-width:980px;margin:auto;padding:0 20px}
-nav{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;font-weight:950}.logo span{color:var(--purple2)}nav a{color:#fff;text-decoration:none;font-weight:800;font-size:14px}
-.hero{text-align:center;padding:70px 0 45px}.badge{display:inline-block;border:1px solid #54317a;background:#180d27;border-radius:999px;padding:7px 12px;color:#e5cfff;font-size:13px}h1{font-size:clamp(42px,7vw,70px);line-height:1.02;letter-spacing:-3px;max-width:850px;margin:20px auto}.grad{color:var(--purple2)}.hero p{color:var(--muted);font-size:18px;max-width:680px;margin:auto auto 25px}
-.btn{display:inline-block;padding:15px 23px;border-radius:13px;font-weight:900;background:linear-gradient(135deg,#8b2cff,#c05cff);color:#fff;text-decoration:none;border:0;cursor:pointer;box-shadow:0 8px 30px #8b2cff33}.micro{font-size:12px;color:#858294;margin-top:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:25px 0 55px}.card{background:linear-gradient(180deg,#11101a,#0b0b10);border:1px solid var(--line);border-radius:20px;padding:27px}.card h2{margin-top:0}.list{padding:0;list-style:none}.list li{padding:9px 0;border-bottom:1px solid #211d2c}.price{font-size:52px;font-weight:950}.muted{color:var(--muted)}section{padding:45px 0}.center{text-align:center}
-form{display:grid;gap:14px}label{font-weight:750;font-size:14px}input:not([type="checkbox"]),textarea,select{width:100%;margin-top:6px;background:#09090e;border:1px solid #332c45;color:#fff;border-radius:10px;padding:13px;font:inherit}textarea{min-height:100px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.notice{background:#130d1d;border:1px solid #58317c;border-radius:14px;padding:13px;color:#eadbfa;font-size:13px}. strong{color:#d5aaff}.success{display:none;background:#0d1510;border:1px solid #315f45;padding:20px;border-radius:15px}
-.small{font-size:12px;color:#858294}footer{border-top:1px solid var(--line);padding:25px 0;color:#858294;font-size:12px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{padding:22px;border:1px solid var(--line);border-radius:16px;background:#0c0b11}.num{display:inline-flex;width:32px;height:32px;align-items:center;justify-content:center;border-radius:50%;background:#8b2cff;font-weight:900;margin-bottom:8px}
-@media(max-width:700px){.grid,.row,.steps{grid-template-columns:1fr}h1{letter-spacing:-2px}.hero{padding-top:50px}nav{height:auto;padding:18px 0;gap:10px;align-items:flex-start}.muted{font-size:13px}}
+:root{--purple:#6527ca;--dark:#23133f;--ink:#231c31;--muted:#6e6878;--bg:#f6f4fa;--line:#e9e4f0;--pink:#ef4f94;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--bg);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}button,input{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}.container{width:min(1180px,calc(100% - 36px));margin:auto}
+.topline{background:#25143d;color:#f5eaff;text-align:center;padding:7px 12px;font-size:12px}.mast{background:linear-gradient(110deg,#511ca9,#742bca 55%,#8c36bc);color:white}.mast-inner{min-height:82px;display:flex;align-items:center;gap:28px}.brand{font-size:28px;font-weight:950;letter-spacing:-1.7px;white-space:nowrap}.brand span{color:#ffb6d9}.search{display:flex;align-items:center;background:white;border-radius:12px;padding:5px;flex:1;box-shadow:0 6px 18px #37106b30}.search input{border:0;outline:0;padding:11px 13px;min-width:0;flex:1;color:var(--ink)}.search button,.primary{background:var(--pink);border:0;color:#fff;font-weight:800;border-radius:9px;padding:12px 19px}.cart-toggle{border:1px solid #ffffff65;border-radius:11px;background:#ffffff16;color:white;padding:10px 14px;font-weight:750;white-space:nowrap}.count{display:inline-grid;place-items:center;margin-left:4px;background:var(--pink);border-radius:50%;min-width:21px;height:21px;font-size:12px}.nav{background:white;border-bottom:1px solid var(--line)}.nav-inner{display:flex;gap:28px;overflow:auto;white-space:nowrap;scrollbar-width:none;padding:12px 0;font-weight:700;font-size:13px}.nav a:hover,.nav a:focus-visible{color:var(--purple)}
+.hero{margin-top:25px;border-radius:20px;background:radial-gradient(circle at 84% 35%,#dcb3ff 0,transparent 28%),linear-gradient(115deg,#301052 0,#6630b4 58%,#a24fd0 100%);color:#fff;min-height:306px;display:flex;align-items:center;position:relative;overflow:hidden}.hero-copy{max-width:650px;padding:36px 48px;position:relative;z-index:1}.eyebrow{display:inline-block;padding:7px 12px;border-radius:99px;background:#ffffff24;font-weight:800;font-size:12px;letter-spacing:.3px}.hero h1{font-size:clamp(32px,4vw,51px);letter-spacing:-2px;line-height:1.08;margin:15px 0}.hero p{color:#ede1fa;margin:0 0 23px;font-size:16px}.hero .primary{display:inline-block;background:#fff;color:#5922ad}.hero-art{position:absolute;right:4%;font-size:clamp(100px,15vw,210px);filter:drop-shadow(0 20px 18px #190c4570);transform:rotate(-13deg)}.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px auto 34px}.perk{background:white;border:1px solid var(--line);padding:15px;border-radius:13px;font-size:13px;color:var(--muted)}.perk strong{display:block;color:var(--ink);font-size:14px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:20px 0 14px}.section-head h2{font-size:26px;letter-spacing:-.6px;margin:0}.section-head p{margin:2px 0;color:var(--muted);font-size:13px}.filters{display:flex;gap:9px;overflow:auto;padding-bottom:15px;scrollbar-width:none}.filter{border:1px solid #dfd7ea;background:white;border-radius:99px;padding:9px 15px;white-space:nowrap;color:var(--ink)}.filter.active{background:var(--purple);border-color:var(--purple);color:white;font-weight:800}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.product{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}.product:hover{transform:translateY(-3px);box-shadow:0 12px 30px #2e11531a}.picture{height:202px;display:grid;place-items:center;background:var(--tile);font-size:86px;position:relative}.picture:after{content:'';position:absolute;inset:auto 12% 15px;border-radius:50%;height:12px;background:#28113a18;filter:blur(8px)}.product-body{padding:15px;display:flex;flex:1;flex-direction:column}.tag{color:var(--purple);font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.5px}.product h3{font-size:15px;line-height:1.35;min-height:41px;margin:6px 0 9px}.price{font-size:23px;color:var(--dark);font-weight:900;letter-spacing:-.5px;margin-top:auto}.price small{font-size:12px;font-weight:500;color:var(--muted);letter-spacing:0}.add{width:100%;margin-top:13px;background:#f1eafb;color:var(--purple);border:1px solid #dfcef7;border-radius:9px;padding:10px;font-weight:850}.add:hover{background:var(--purple);color:#fff}.empty{display:none;text-align:center;padding:45px;color:var(--muted);background:white;border-radius:14px}.note{color:var(--muted);font-size:12px;margin:18px 0 45px}.banner{border-radius:18px;background:#eadcfb;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin:32px auto}.banner h2{margin:0 0 4px;font-size:23px}.banner p{margin:0;color:#554768}.banner a{border-radius:9px;background:var(--purple);padding:12px 18px;color:white;font-weight:800;white-space:nowrap}footer{background:#241638;color:#d9d0e4;padding:34px 0;margin-top:45px;font-size:13px}footer .brand{color:white;font-size:24px}footer p{max-width:620px}
+.overlay{position:fixed;inset:0;background:#160c2599;z-index:9;display:none}.overlay.open{display:block}.drawer{position:fixed;inset:0 0 0 auto;background:#fff;width:min(440px,100%);z-index:10;transform:translateX(105%);transition:transform .25s;display:flex;flex-direction:column;box-shadow:-10px 0 40px #160c2533}.drawer.open{transform:none}.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:19px 22px;border-bottom:1px solid var(--line)}.drawer-head h2{margin:0;font-size:22px}.close{background:none;border:0;font-size:28px;line-height:1;color:var(--muted)}.cart-items{flex:1;overflow:auto;padding:8px 22px}.cart-row{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:16px 0}.cart-emoji{background:#f0e8fa;border-radius:10px;display:grid;place-items:center;font-size:28px;height:48px}.cart-row b{font-size:13px}.cart-row small{display:block;color:var(--muted)}.quantity{display:flex;align-items:center;gap:8px}.quantity button{border:1px solid var(--line);background:#fff;border-radius:7px;width:25px;height:25px}.cart-foot{border-top:1px solid var(--line);padding:19px 22px 25px}.subtotal{display:flex;justify-content:space-between;font-size:19px;font-weight:850}.cart-foot p{font-size:12px;color:var(--muted);margin:7px 0 16px}.checkout{width:100%;padding:14px;background:var(--purple);border:0;border-radius:10px;color:#fff;font-weight:850}.checkout:disabled{opacity:.45;cursor:not-allowed}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:800px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-art{right:-4%;opacity:.48}.hero-copy{padding:36px;max-width:600px}}
+@media(max-width:620px){.container{width:min(100% - 24px,1180px)}.mast-inner{flex-wrap:wrap;gap:10px;min-height:0;padding:12px 0}.brand{font-size:25px}.cart-toggle{margin-left:auto}.search{order:3;flex-basis:100%}.search input{padding:8px}.search button{padding:10px 14px}.nav-inner{gap:18px}.hero{min-height:290px;margin-top:12px}.hero-copy{padding:27px}.hero h1{font-size:36px}.hero-art{font-size:125px;right:-20px;bottom:8px;opacity:.32}.perks{grid-template-columns:1fr;gap:7px;margin:12px auto 27px}.perk{padding:10px 13px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.picture{height:148px;font-size:64px}.product-body{padding:11px}.product h3{font-size:13px;min-height:53px}.price{font-size:19px}.section-head h2{font-size:22px}.banner{display:block}.banner a{display:inline-block;margin-top:15px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<nav>
-<div style="display:flex;align-items:center;gap:18px"><div class="logo">DAV<span>ORA</span></div>
-<a href="https://wa.me/5531991339648?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20com%20meu%20curr%C3%ADculo%20no%20Davora." target="_blank" rel="noopener">💬 Precisa de ajuda?</a></div>
-<div class="muted">Currículo profissional</div>
-</nav>
-
-<section class="hero">
-<div class="badge">✨ Currículo feito sob medida</div>
-<h1>Seu currículo profissional <span class="grad">feito para você.</span></h1>
-<p>Você responde algumas perguntas e a Davora monta seu currículo de acordo com o que você procura.</p>
-<a class="btn" href="#pedido">Quero meu currículo →</a>
-<div class="micro">Atendimento pelo WhatsApp • Currículo personalizado</div>
-</section>
-
-<div class="grid">
-<div class="card"><h2>O que você recebe</h2><ul class="list">
-<li>✓ Currículo organizado e profissional</li>
-<li>✓ Texto adaptado ao seu objetivo</li>
-<li>✓ Estrutura escolhida com você</li>
-<li>✓ Revisão das informações enviadas</li>
-<li>✓ Entrega do currículo pronto pelo WhatsApp</li>
-</ul></div>
-
-<div class="card center" id="pedido">
-<div class="muted">Currículo personalizado</div><div class="price">Davora</div>
-<p class="muted">Responda as perguntas do currículo. No final, envie suas respostas diretamente para o WhatsApp da Davora.</p>
-<a class="btn" href="#perguntas">Responder perguntas →</a>
-<p class="small">Depois de receber suas respostas, entraremos em contato pelo WhatsApp para combinar o atendimento.</p>
-</div>
-</div>
-
-<section id="perguntas">
-<div class="card">
-<h2>Monte seu currículo</h2>
-<p class="muted">Responda as perguntas sobre o currículo que você quer. No final, envie tudo para nosso WhatsApp e entraremos em contato.</p>
-<div class="notice">🔒 Responda às perguntas abaixo. No final, suas respostas serão enviadas para nosso WhatsApp. Não envie senhas, documentos ou dados bancários.</div><br>
-<form id="pedidoForm">
-<div class="row"><label>1. Nome completo<input id="nome" autocomplete="name" required></label><label>2. Cidade/UF
-<input id="cidade" list="cidades" placeholder="Digite sua cidade..." autocomplete="address-level2" required>
-<datalist id="cidades">
-<option value="São Paulo - SP"><option value="São José dos Campos - SP"><option value="São Bernardo do Campo - SP"><option value="São Caetano do Sul - SP"><option value="São Luís - MA"><option value="São José de Ribamar - MA"><option value="São Gonçalo - RJ"><option value="São João de Meriti - RJ"><option value="São José de Freitas - PI"><option value="São José dos Pinhais - PR"><option value="Santo André - SP"><option value="Santos - SP"><option value="Belo Horizonte - MG"><option value="Contagem - MG"><option value="Betim - MG"><option value="Nova Lima - MG"><option value="Ribeirão das Neves - MG"><option value="Sabará - MG"><option value="Ibirité - MG"><option value="Santa Luzia - MG"><option value="Juiz de Fora - MG"><option value="Uberlândia - MG"><option value="Uberaba - MG"><option value="Montes Claros - MG"><option value="São João del-Rei - MG">
-</datalist></label></div>
-<div class="row"><label>3. WhatsApp<input id="telefone"></label><label>4. E-mail<input id="email" type="email"></label></div>
-<label>5. Qual cargo ou área você está procurando?
-<input id="objetivo" list="cargos" placeholder="Digite o cargo ou área..." autocomplete="off" required>
-<datalist id="cargos">
-<option value="Auxiliar administrativo"><option value="Auxiliar de produção"><option value="Auxiliar de logística"><option value="Auxiliar de serviços gerais"><option value="Atendente"><option value="Vendedor"><option value="Operador de máquinas"><option value="Operador de máquinas pesadas"><option value="Operador de empilhadeira"><option value="Motorista"><option value="Estoquista"><option value="Recepcionista"><option value="Eletricista"><option value="Pedreiro"><option value="Pintor industrial"><option value="Mecânico"><option value="Soldador"><option value="Técnico de enfermagem"><option="Informática"><option value="Desenvolvedor"><option value="Assistente administrativo"><option value="Analista administrativo"><option value="Professor"><option value="Cozinheiro"><option value="Garçom"><option value="Segurança"><option value="Jovem Aprendiz">
-</datalist>
-<span class="small">Digite algumas letras para ver sugestões. Você também pode escrever outra profissão.</span></label>
-<label>6. Você já trabalhou?
-<select id="experienciaTipo" required>
-<option value="">Selecione</option>
-<option>Sim, tenho experiência profissional</option>
-<option>Não, é meu primeiro emprego</option>
-<option>Tenho pouca experiência</option>
-</select>
-</label>
-<label id="experienciaDetalhesWrap">Conte onde trabalhou, qual era o cargo e o que fazia.<textarea id="experiencia" list="experiencias" placeholder="Comece a digitar para receber sugestões..."></textarea>
-<datalist id="experiencias"><option value="Primeiro emprego"><option value="Auxiliar de produção — organização, embalagem e conferência"><option value="Auxiliar administrativo — atendimento, organização de documentos e planilhas"><option value="Vendedor — atendimento ao cliente, vendas e organização da loja"><option value="Atendente — atendimento ao público e suporte ao cliente"><option value="Estoquista — recebimento, organização e conferência de mercadorias"><option value="Operador de máquinas — operação, limpeza e organização do equipamento"><option value="Auxiliar de logística — separação, conferência e movimentação de produtos"></datalist></label>
-<label>7. Qual é sua formação?
-<select id="formacao" required>
-<option value="">Selecione</option>
-<option>Ensino fundamental incompleto</option>
-<option>Ensino fundamental completo</option>
-<option>Ensino médio incompleto</option>
-<option>Ensino médio completo</option>
-<option>Curso técnico</option>
-<option>Ensino superior incompleto</option>
-<option>Ensino superior completo</option>
-</select></label>
-<label>8. Você tem cursos ou certificados?
-<select id="cursosTipo" required>
-<option value="">Selecione</option>
-<option>Sim</option>
-<option>Não</option>
-</select></label>
-<label id="cursosDetalhesWrap">Quais cursos ou certificados?<textarea id="cursos" list="cursosLista" placeholder="Comece a digitar para receber sugestões..."></textarea>
-<datalist id="cursosLista"><option value="Informática básica"><option value="Pacote Office"><option value="Excel"><option value="Word"><option value="Atendimento ao cliente"><option value="Operador de máquinas"><option value="Operador de máquinas pesadas"><option value="Operador de empilhadeira"><option value="NR-10"><option value="NR-11"><option value="NR-12"><option value="NR-35"><option value="Curso técnico"></datalist></label>
-<label>9. Quais habilidades você tem? <span class="small">(pode escolher várias)</span></label>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-<label><input type="checkbox" name="habilidade" value="Comunicação"> Comunicação</label>
-<label><input type="checkbox" name="habilidade" value="Atendimento ao cliente"> Atendimento ao cliente</label>
-<label><input type="checkbox" name="habilidade" value="Informática"> Informática</label>
-<label><input type="checkbox" name="habilidade" value="Organização"> Organização</label>
-<label><input type="checkbox" name="habilidade" value="Trabalho em equipe"> Trabalho em equipe</label>
-<label><input type="checkbox" name="habilidade" value="Pontualidade"> Pontualidade</label>
-<label><input type="checkbox" name="habilidade" value="Aprendizado rápido"> Aprendizado rápido</label>
-<label><input type="checkbox" name="habilidade" value="Responsabilidade"> Responsabilidade</label>
-</div>
-<label>10. Escolha um resumo pronto para seu currículo.
-<input id="resumoTipo" list="resumos" placeholder="Comece a digitar ou escolha uma sugestão..." required>
-<datalist id="resumos">
-<option value="Sou uma pessoa responsável, organizada e comprometida, com facilidade para aprender e trabalhar em equipe."></option>
-<option value="Profissional dedicado, pontual e responsável, buscando uma oportunidade para desenvolver minhas habilidades e contribuir com a empresa."></option>
-<option>Profissional dedicado, pontual e responsável, buscando uma oportunidade para desenvolver minhas habilidades e contribuir com a empresa.</option>
-<option value="Busco minha primeira oportunidade profissional, com disposição para aprender, crescer e contribuir com a equipe."></option>
-<option value="Tenho experiência profissional e busco uma nova oportunidade para aplicar meus conhecimentos e continuar me desenvolvendo."></option>
-<option value="Tenho pouca experiência, mas sou dedicado, aprendo rápido e tenho vontade de crescer profissionalmente."></option>
-</datalist></label>
-<label>11. Como você quer o estilo do currículo?
-<select id="estilo"><option>Profissional e simples</option><option>Moderno</option><option>Mais formal</option><option>Quero que vocês escolham</option></select></label>
-<label>12. O que você quer fazer com informações extras?
-<select id="observacoesTipo" required>
-<option value="">Selecione</option>
-<option>Não tenho observações</option>
-<option>Quero destacar minha experiência</option>
-<option>Quero destacar meus cursos</option>
-<option>Quero destacar minhas habilidades</option>
-<option>Tenho uma informação diferente para acrescentar</option>
-</select></label>
-<label id="observacoesOutroWrap" style="display:none">Digite a informação:
-<textarea id="observacoes"></textarea></label>
-<button class="btn" type="submit">💜 Continuar para pagamento</button>
-</form>
-<div id="pagamento" class="success" style="margin-top:18px;text-align:center">
-<b>Pagamento via Pix</b>
-<p class="muted">Faça o Pix de <strong>R$ 9,90</strong> antes de enviar suas respostas.</p>
-<div style="background:#09090e;border:1px solid #58317c;border-radius:12px;padding:16px;margin:14px 0">
-<div class="small">Chave Pix</div>
-<div style="font-size:22px;font-weight:900;word-break:break-all">31991339648</div>
-</div>
-<button type="button" class="btn" id="copiarPix">📋 Copiar chave Pix</button>
-<button type="button" class="btn" id="enviarComprovante" style="margin-top:10px">💜 Já fiz o Pix — enviar comprovante e respostas</button>
-<p class="small">Depois de fazer o Pix, clique no botão acima. O WhatsApp abrirá com todas as suas respostas.</p>
-</div>
-</div>
-</section>
-
-<section>
-<div class="center"><h2>Como funciona</h2><p class="muted">Você responde as perguntas → envia pelo WhatsApp → recebe atendimento da Davora.</p></div>
-<div class="steps">
-<div class="step"><div class="num">1</div><b>Responda</b><p class="muted">Conte sua experiência e como quer o currículo.</p></div>
-<div class="step"><div class="num">2</div><b>Envie</b><p class="muted">Envie suas respostas diretamente pelo WhatsApp.</p></div>
-<div class="step"><div class="num">3</div><b>Receba</b><p class="muted">A Davora entra em contato e prepara seu currículo.</p></div>
-</div>
-</section>
-
-<div class="center" style="margin:20px 0 35px;padding:28px 10px;border-top:1px solid #222033">
-<h2 style="margin:0 0 8px">💬 Precisa de ajuda?</h2>
-<p class="muted" style="margin:0 0 15px">Não sabe responder alguma pergunta? Fale com a gente.</p>
-<a class="btn" href="https://wa.me/5531991339648?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20com%20meu%20curr%C3%ADculo%20no%20Davora." target="_blank" rel="noopener">Falar no WhatsApp</a>
-</div>
-<footer>© 2026 Davora • Atendimento e entrega pelo WhatsApp.</footer>
-</div>
-
+<div class="topline">DAVORA • Descubra achados para o seu dia</div>
+<header class="mast"><div class="container mast-inner"><a class="brand" href="#inicio" aria-label="DAVORA, início">DAV<span>ORA</span></a><form id="searchForm" class="search" role="search"><label class="visually-hidden" for="search">Buscar produtos</label><input id="search" type="search" placeholder="O que você está procurando?" autocomplete="off"><button type="submit">Buscar</button></form><button class="cart-toggle" id="openCart" type="button">🛒 Carrinho <span class="count" id="cartCount">0</span></button></div></header>
+<nav class="nav" aria-label="Categorias"><div class="container nav-inner"><a href="#produtos" data-nav="Todos">Todos os produtos</a><a href="#produtos" data-nav="Beleza">Beleza</a><a href="#produtos" data-nav="Bem-estar">Bem-estar</a><a href="#produtos" data-nav="Casa e presentes">Casa e presentes</a><a href="#atendimento">Atendimento</a></div></nav>
+<main id="inicio"><div class="container"><section class="hero"><div class="hero-copy"><span class="eyebrow">SEU NOVO LUGAR DE ACHADOS</span><h1>Produtos para curtir mais cada momento.</h1><p>Explore beleza, cuidados pessoais e ideias para presentear. Escolha seus favoritos e consulte tudo pelo WhatsApp.</p><a class="primary" href="#produtos">Explorar produtos →</a></div><div class="hero-art" aria-hidden="true">🛍️</div></section><div class="perks"><div class="perk">✨ <strong>Escolha seus favoritos</strong>Monte sua lista em poucos cliques.</div><div class="perk">💬 <strong>Atendimento de verdade</strong>Converse com a DAVORA pelo WhatsApp.</div><div class="perk">📦 <strong>Entrega sob consulta</strong>Confirme disponibilidade e frete antes de pagar.</div></div><section id="produtos"><div class="section-head"><div><h2>Descubra na DAVORA</h2><p id="resultLabel">Produtos para explorar</p></div></div><div class="filters" id="filters" aria-label="Filtrar produtos"></div><div class="grid" id="grid"></div><div class="empty" id="empty">Nenhum produto encontrado. Tente outra busca.</div><p class="note">Valores exibidos como referência. Disponibilidade, frete, prazo e valor final devem ser confirmados no atendimento antes de qualquer pagamento.</p></section><section class="banner" id="atendimento"><div><h2>Quer ajuda para escolher?</h2><p>Chame a DAVORA para tirar suas dúvidas sobre os produtos.</p></div><a href="https://wa.me/5531991339648?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20os%20produtos%20da%20DAVORA." target="_blank" rel="noopener noreferrer">Falar no WhatsApp →</a></section></div></main>
+<footer><div class="container"><div class="brand">DAV<span>ORA</span></div><p>Produtos para o seu dia. Pedidos e informações pelo WhatsApp. Confira os detalhes de cada item e as condições de entrega com nossa equipe.</p><small>© 2026 DAVORA</small></div></footer>
+<div class="overlay" id="overlay"></div><aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true"><div class="drawer-head"><h2 id="cartTitle">Seu carrinho</h2><button class="close" id="closeCart" aria-label="Fechar carrinho">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-foot"><div class="subtotal"><span>Subtotal estimado</span><span id="subtotal">R$ 0,00</span></div><p>Frete e disponibilidade serão confirmados no WhatsApp. Nenhum pagamento é feito por este site.</p><button class="checkout" id="checkout" disabled>Consultar pedido no WhatsApp</button></div></aside>
 <script>
-const form=document.getElementById('pedidoForm');
-const success=document.getElementById('success');
-const pagamento=document.getElementById('pagamento');
-let msgFinal='';
-const wa='5531991339648';
-form.addEventListener('submit',e=>{
- e.preventDefault();
- const v=id=>document.getElementById(id).value.trim();
- const habilidades=[...document.querySelectorAll('input[name="habilidade"]:checked')].map(x=>x.value).join(', ')||'Não informado';
- const cursos=v('cursosTipo')==='Não'?'Não possui cursos/certificados':v('cursos');
- const experiencia=v('experienciaTipo')==='Não, é meu primeiro emprego'?'Primeiro emprego':v('experienciaTipo')+' — '+v('experiencia');
- const msg=
-'Olá! Quero meu currículo pela Davora.%0A%0A'+
-'RESPOSTAS DO CURRÍCULO%0A'+
-'1. Nome: '+encodeURIComponent(v('nome'))+'%0A'+
-'2. Cidade/UF: '+encodeURIComponent(v('cidade'))+'%0A'+
-'3. WhatsApp: '+encodeURIComponent(v('telefone'))+'%0A'+
-'4. E-mail: '+encodeURIComponent(v('email'))+'%0A'+
-'5. Cargo/área desejada: '+encodeURIComponent(v('objetivo')==='Outra área'?v('objetivoOutro'):v('objetivo'))+'%0A'+
-'6. Experiência: '+encodeURIComponent(experiencia)+'%0A'+
-'7. Formação: '+encodeURIComponent(v('formacao'))+'%0A'+
-'8. Cursos/certificados: '+encodeURIComponent(cursos)+'%0A'+
-'9. Habilidades: '+encodeURIComponent(habilidades)+'%0A'+
-'10. Resumo: '+encodeURIComponent(v('resumoTipo'))+'%0A'+
-'11. Estilo: '+encodeURIComponent(v('estilo'))+'%0A'+
-'12. Observações: '+encodeURIComponent(v('observacoesTipo')+(v('observacoesTipo')==='Tenho uma informação diferente para acrescentar'?' — '+v('observacoes'):''))+'%0A%0A' +
-'Quero receber atendimento da Davora pelo WhatsApp.';
-msgFinal=msg;
-pagamento.style.display='block';
-pagamento.scrollIntoView({behavior:'smooth',block:'center'});
-});
-document.getElementById('copiarPix').addEventListener('click',async()=>{await navigator.clipboard.writeText('31991339648');document.getElementById('copiarPix').textContent='✓ Chave Pix copiada';});
-document.getElementById('enviarComprovante').addEventListener('click',()=>{window.open('https://wa.me/'+wa+'?text='+msgFinal+'%0A%0APAGAMENTO%3A%20R%24%209%2C90%20via%20Pix.%0AComprovante%20ser%C3%A1%20enviado%20nesta%20conversa.','_blank');});
-document.getElementById('experienciaTipo').addEventListener('change',e=>{document.getElementById('experienciaDetalhesWrap').style.display=e.target.value==='Não, é meu primeiro emprego'?'none':'block';});
-document.getElementById('objetivo').addEventListener('change',e=>{document.getElementById('objetivoOutroWrap').style.display=e.target.value==='Outra área'?'block':'none';});
-document.getElementById('observacoesTipo').addEventListener('change',e=>{document.getElementById('observacoesOutroWrap').style.display=e.target.value==='Tenho uma informação diferente para acrescentar'?'block':'none';});
-document.getElementById('cursosTipo').addEventListener('change',e=>{document.getElementById('cursosDetalhesWrap').style.display=e.target.value==='Não'?'none':'block';});
+const products=[
+ {id:1,name:'Luva esfoliante para banho',price:38.97,category:'Beleza',icon:'🧤',tile:'#f5e2ec'},
+ {id:2,name:'Bronzer natural em pó',price:42.58,category:'Beleza',icon:'✨',tile:'#f8e8d9'},
+ {id:3,name:'Sais para banho e escalda-pés',price:38.97,category:'Bem-estar',icon:'🛁',tile:'#e4f1f2'},
+ {id:4,name:'Shampoo em barra natural',price:34.63,category:'Beleza',icon:'🧼',tile:'#e5f1dd'},
+ {id:5,name:'Massageador corporal',price:36.80,category:'Bem-estar',icon:'💆',tile:'#eee3fa'},
+ {id:6,name:'Escova facial recarregável',price:62.80,category:'Beleza',icon:'🪥',tile:'#deebf9'},
+ {id:7,name:'Curvador de cílios elétrico',price:56.30,category:'Beleza',icon:'👁️',tile:'#f8e4ef'},
+ {id:8,name:'Tapete musical infantil',price:378.97,category:'Casa e presentes',icon:'🎹',tile:'#e3ecff'},
+ {id:9,name:'Cacto musical dançante',price:68.20,category:'Casa e presentes',icon:'🌵',tile:'#e3f2df'},
+ {id:10,name:'Kit de acessórios para cuidados da pele',price:152.29,category:'Bem-estar',icon:'🧴',tile:'#f1e4f8'},
+ {id:11,name:'Sabonete de argila verde e chá verde',price:32.81,category:'Bem-estar',icon:'🌿',tile:'#e2f1df'},
+ {id:12,name:'Kit de acessórios para banho',price:98.19,category:'Casa e presentes',icon:'🎁',tile:'#f7eadd'}
+];
+const money=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(n);
+const $=id=>document.getElementById(id);
+let category='Todos',query='';let cart={};try{const saved=JSON.parse(localStorage.getItem('davora-cart')||'{}');for(const p of products){const n=Number(saved[p.id]);if(Number.isInteger(n)&&n>0&&n<=99)cart[p.id]=n}}catch{}
+function save(){try{localStorage.setItem('davora-cart',JSON.stringify(cart))}catch{}}
+function renderFilters(){const cats=['Todos','Beleza','Bem-estar','Casa e presentes'];$('filters').innerHTML='';for(const cat of cats){const b=document.createElement('button');b.className='filter'+(category===cat?' active':'');b.textContent=cat;b.type='button';b.setAttribute('aria-pressed',String(category===cat));b.onclick=()=>{category=cat;renderFilters();renderProducts()};$('filters').append(b)}}
+function renderProducts(){const q=query.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const found=products.filter(p=>(category==='Todos'||p.category===category)&&p.name.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(q));$('grid').innerHTML='';for(const p of found){const el=document.createElement('article');el.className='product';el.innerHTML=`<div class="picture" style="--tile:${p.tile}" aria-hidden="true">${p.icon}</div><div class="product-body"><span class="tag">${p.category}</span><h3>${p.name}</h3><div class="price">${money(p.price)} <small>referência</small></div><button class="add" type="button" data-id="${p.id}">Adicionar ao carrinho</button></div>`;$('grid').append(el)}$('empty').style.display=found.length?'none':'block';$('resultLabel').textContent=found.length+' produto'+(found.length===1?'':'s')+' encontrado'+(found.length===1?'':'s')}
+function renderCart(){const entries=products.filter(p=>cart[p.id]);$('cartCount').textContent=entries.reduce((a,p)=>a+cart[p.id],0);$('cartItems').innerHTML='';if(!entries.length){$('cartItems').innerHTML='<p style="color:#6e6878;text-align:center;margin-top:42px">Seu carrinho está vazio. Explore os produtos e adicione seus favoritos.</p>'}for(const p of entries){const row=document.createElement('div');row.className='cart-row';row.innerHTML=`<span class="cart-emoji" aria-hidden="true">${p.icon}</span><div><b>${p.name}</b><small>${money(p.price)} cada</small></div><div class="quantity"><button type="button" data-change="-1" data-id="${p.id}" aria-label="Diminuir ${p.name}">−</button><span>${cart[p.id]}</span><button type="button" data-change="1" data-id="${p.id}" aria-label="Aumentar ${p.name}">+</button></div>`;$('cartItems').append(row)}$('subtotal').textContent=money(entries.reduce((a,p)=>a+p.price*cart[p.id],0));$('checkout').disabled=!entries.length;save()}
+function toggleCart(open){$('drawer').classList.toggle('open',open);$('overlay').classList.toggle('open',open);$('drawer').setAttribute('aria-hidden',String(!open));document.body.style.overflow=open?'hidden':'';if(open)$('closeCart').focus();else $('openCart').focus()}
+$('grid').addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(!b)return;const id=b.dataset.id;cart[id]=Math.min((cart[id]||0)+1,99);renderCart();toggleCart(true)});
+$('cartItems').addEventListener('click',e=>{const b=e.target.closest('[data-change]');if(!b)return;const id=b.dataset.id;cart[id]=(cart[id]||0)+Number(b.dataset.change);if(cart[id]<=0)delete cart[id];if(cart[id]>99)cart[id]=99;renderCart()});
+$('searchForm').addEventListener('submit',e=>{e.preventDefault();query=$('search').value.trim();renderProducts();$('produtos').scrollIntoView({behavior:'smooth'})});$('search').addEventListener('input',e=>{query=e.target.value.trim();renderProducts()});
+document.querySelectorAll('[data-nav]').forEach(a=>a.addEventListener('click',()=>{category=a.dataset.nav;renderFilters();renderProducts()}));$('openCart').onclick=()=>toggleCart(true);$('closeCart').onclick=()=>toggleCart(false);$('overlay').onclick=()=>toggleCart(false);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('drawer').classList.contains('open'))toggleCart(false)});
+$('checkout').onclick=()=>{const chosen=products.filter(p=>cart[p.id]);if(!chosen.length)return;const total=chosen.reduce((a,p)=>a+p.price*cart[p.id],0);const message='Olá! Quero consultar disponibilidade, frete e preço final destes produtos da DAVORA:\n\n'+chosen.map(p=>`• ${cart[p.id]}x ${p.name} — ${money(p.price*cart[p.id])}`).join('\n')+'\n\nSubtotal estimado: '+money(total)+'\nAinda não fiz pagamento.';window.open('https://wa.me/5531991339648?text='+encodeURIComponent(message),'_blank','noopener,noreferrer')};renderFilters();renderProducts();renderCart();
 </script>
 </body>
 </html>
-<!-- PAGES_TRIGGER:20260920-NEW-WHATSAPP -->
