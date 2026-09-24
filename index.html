@@ -60,7 +60,7 @@
   </style>
 </head>
 <body>
-  <div class="announcement">🔥 <b>DAVORA Store</b> — produtos com envio nacional e pedido rápido pelo WhatsApp</div>
+  <div class="announcement">🔥 <b>DAVORA Store</b> — produtos selecionados e pedido rápido pelo WhatsApp</div>
   <header>
     <div class="header-main">
       <a class="logo" href="#">DAVORA<span>.</span></a>
@@ -83,7 +83,7 @@
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <span class="eyebrow">⚡ Seleção DAVORA • envio nacional</span>
+        <span class="eyebrow">⚡ Seleção DAVORA • ofertas selecionadas</span>
         <h1>Coisas úteis. Preço bom. Sem complicação.</h1>
         <p>Uma loja direta ao ponto com utilidades, tecnologia, bem-estar e produtos para o dia a dia. Escolha, coloque no carrinho e finalize pelo WhatsApp.</p>
         <div class="hero-actions">
@@ -95,7 +95,7 @@
     </section>
 
     <section class="trust" aria-label="Vantagens">
-      <div class="trust-card"><div class="trust-icon">🇧🇷</div><div><b>Envio nacional</b><span>Produtos despachados no Brasil</span></div></div>
+      <div class="trust-card"><div class="trust-icon">🇧🇷</div><div><b>Frete por CEP</b><span>Prazo e valor confirmados antes do pagamento</span></div></div>
       <div class="trust-card"><div class="trust-icon">📦</div><div><b>Sem estoque parado</b><span>Disponibilidade confirmada no pedido</span></div></div>
       <div class="trust-card"><div class="trust-icon">💬</div><div><b>Atendimento humano</b><span>Pedido finalizado pelo WhatsApp</span></div></div>
       <div class="trust-card"><div class="trust-icon">🔒</div><div><b>Compra acompanhada</b><span>Confirmação antes do pagamento</span></div></div>
@@ -103,7 +103,7 @@
 
     <section id="produtos">
       <div class="section-head">
-        <div><h2>Produtos selecionados</h2><p>Itens de fornecedores nacionais para venda sem estoque próprio.</p></div>
+        <div><h2>Produtos selecionados</h2><p>Produtos de fornecedor de dropshipping sem mensalidade; disponibilidade e frete são confirmados no pedido.</p></div>
         <div class="result-count" id="resultCount"></div>
       </div>
       <div class="grid" id="productGrid"></div>
@@ -152,59 +152,52 @@
   <script>
     const products = [
       {
-        id:'vinho-eletrico', name:'Abridor de Vinhos Elétrico Automático', category:'Lazer', price:89.90, badge:'Prático',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/f595ca99-b55f-472f-8825-a0e4a90dc7a2/1789414756449-0-h9m1su.jpg',
-        note:'Abertura automática e design compacto.', sourceCost:44.90
+        id:'blender-portatil', name:'Liquidificador Portátil Recarregável', category:'Casa', price:79.90, badge:'Destaque',
+        image:'https://cf.cjdropshipping.com/quick/product/f98f952d-08cc-495f-a5ec-066664d7e484.jpg',
+        note:'Compacto, recarregável e prático para sucos e vitaminas.',
+        supplier:'CJdropshipping', supplierSku:'CJYD278208001AZ',
+        supplierUrl:'https://cjdropshipping.com/product/portable-rechargeable-juice-blender-compact-handheld-electric-smoothie-maker-for-travel-office-home-p-2603100340021608800.html',
+        supplierCost:'US$ 5,47 + frete'
       },
       {
-        id:'wifi-usb', name:'Adaptador Wireless USB com Antena Flexível 1200 Mbps', category:'Tecnologia', price:34.90, badge:'Oferta',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/96fdd3d1-8e77-4e4a-8eff-bac437ac0dab/1783803384634-0-dr25hl.jpg',
-        note:'Solução compacta para conexão sem fio.', sourceCost:9.90
+        id:'massageador-pescoco', name:'Massageador Manual de Pescoço com 6 Rolos', category:'Bem-estar', price:39.90, badge:'Popular',
+        image:'https://cf.cjdropshipping.com/08c6bacf-86b5-40e3-9517-f861805c7d9b.jpg',
+        note:'Massageador manual para pescoço, ombros e outras regiões.',
+        supplier:'CJdropshipping', supplierSku:'CJAM130816101AZ',
+        supplierUrl:'https://cjdropshipping.com/product/multifunctional-manual-six-wheel-neck-massager-massage-relieve-roller-massage-tool-p-1444929719182168064.html',
+        supplierCost:'US$ 0,66–3,54 + frete'
       },
       {
-        id:'afiador-3', name:'Afiador Amolador de Facas 3 Etapas', category:'Casa', price:39.90, badge:'Útil',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/8ddf0daf-afd1-4cbc-8ec9-04c54095e37b/1783695352606-0-ewnx5a.jpg',
-        note:'Três opções de afiação em um só acessório.', sourceCost:9.90
+        id:'umidificador-vulcao', name:'Umidificador Difusor Efeito Chama Vulcão', category:'Casa', price:89.90, badge:'Tendência',
+        image:'https://cf.cjdropshipping.com/c4dda15e-a267-442b-b874-af9120980a59.jpg',
+        note:'Umidificador USB com iluminação e efeito visual de chama.',
+        supplier:'CJdropshipping', supplierSku:'CJJT163563001AZ',
+        supplierUrl:'https://cjdropshipping.com/product/volcanic-flame-aroma-essential-oil-diffuser-usb-portable-jellyfish-air-humidifier-night-light-lamp-fragrance-humidifier-p-1602125961166860288.html',
+        supplierCost:'US$ 8,60 + frete'
       },
       {
-        id:'almofada-viagem', name:'Almofada de Pescoço para Viagem', category:'Bem-estar', price:64.90, badge:'Conforto',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/e387fa56-7acf-45c3-bba9-8d2265e8bfc4/1782151709735-0-3gv9mn.jpg',
-        note:'Apoio confortável para carro, ônibus ou avião.', sourceCost:29.30
+        id:'luva-pelos-pet', name:'Luva Removedora de Pelos para Cães e Gatos', category:'Pets', price:29.90, badge:'Pet',
+        image:'https://oss-cf.cjdropshipping.com/product/2025/05/26/06/6b2a1028-7824-48d5-ab95-a342d69ec7cc.jpg',
+        note:'Ajuda a remover pelos soltos durante a escovação.',
+        supplier:'CJdropshipping', supplierSku:'CJYD233200801AZ',
+        supplierUrl:'https://cjdropshipping.com/product/pet-hair-remover-mitt-pet-hair-remover-gloves-deshedding-brush-glove-for-dog-cat-rabbit-with-long-short-curly-hair-p-2503191148021601200.html',
+        supplierCost:'US$ 0,57–6,96 + frete'
       },
       {
-        id:'massagem-pescoco', name:'Almofada Inteligente de Massagem para Pescoço', category:'Bem-estar', price:149.90, badge:'Destaque',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/681fcd4a-4e32-48dc-abf2-196b0363bb69/1787784795580-0-hf9bz0.jpg',
-        note:'Massagem portátil com controles integrados.', sourceCost:74.90
+        id:'vaporizador-roupa', name:'Mini Vaporizador Portátil para Roupas', category:'Casa', price:99.90, badge:'Prático',
+        image:'https://cf.cjdropshipping.com/quick/product/d0b413bf-592e-48fb-a6e6-7f43a1a65333.jpg',
+        note:'Modelo compacto para desamassar roupas em casa ou viagem.',
+        supplier:'CJdropshipping', supplierSku:'CJYD194254021UF',
+        supplierUrl:'https://cjdropshipping.com/product/mini-portable-handheld-garment-steamer-fabric-steam-iron-for-clothes-travel-home-appliances-vertical-us-plug-ironing-machine-p-1744230344494157824.html',
+        supplierCost:'a partir de US$ 4,14 + frete'
       },
       {
-        id:'irrigador-dental', name:'Irrigador Dental Portátil com Jato d’Água', category:'Bem-estar', price:79.90, badge:'Higiene',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/2e957275-f77e-40f8-bb97-077e425406e6/1782151587298-0-astnt2.jpg',
-        note:'Portátil e recarregável para rotina de higiene bucal.', sourceCost:33.50
-      },
-      {
-        id:'aspirador-vertical', name:'Aspirador de Pó Vertical 2 em 1 Sem Fio', category:'Casa', price:179.90, badge:'Casa',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/37292bc9-e91d-4b91-9b81-03cd3b0e2609/1787784797392-0-cxyxl0.jpg',
-        note:'Uso vertical e portátil para limpeza rápida.', sourceCost:86.90
-      },
-      {
-        id:'base-ps5', name:'Base de Carregamento para Controles PS5', category:'Tecnologia', price:84.90, badge:'Gamer',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/d61cc680-17ac-4bad-8936-a94e65b956f7/1782151594757-0-s2qete.jpg',
-        note:'Organiza e carrega controles compatíveis.', sourceCost:34.50
-      },
-      {
-        id:'base-rodinhas', name:'Base Ajustável com Rodinhas para Geladeira e Fogão', category:'Casa', price:79.90, badge:'Organização',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/4f1f9fc0-9719-4a7c-b53a-17b4bce80b31/1780504668084-0-9o0vvs.jpg',
-        note:'Facilita movimentação e limpeza de eletrodomésticos.', sourceCost:34.80
-      },
-      {
-        id:'bico-alta-pressao', name:'Kit Bico de Alta Pressão para Mangueira — 4 Peças', category:'Casa', price:49.90, badge:'Limpeza',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/ec16a03b-565d-4dcd-90b9-c7990620f65c/1787164952977-0-hukrxe.webp',
-        note:'Kit prático para quintal, calçada e carro.', sourceCost:19.90
-      },
-      {
-        id:'catnip-abacate', name:'Brinquedo Abacate com Catnip para Gatos', category:'Pets', price:39.90, badge:'Pet',
-        image:'https://api.onedrop.com.br/storage/v1/object/public/product-images/0bb2a40d-194a-40a7-972b-34c89c154cb5/products/359678ee-c061-4811-add4-87c45810fa1c/1787784815778-0-o7uthu.jpg',
-        note:'Brinquedo com catnip para estimular o gato.', sourceCost:10.90
+        id:'porta-saco-pet-led', name:'Porta-Sacos Higiênicos Pet com Luz LED', category:'Pets', price:24.90, badge:'Novidade',
+        image:'https://oss-cf.cjdropshipping.com/product/2024/12/05/03/f7980637-1a74-4c33-8286-0240e7434078.jpg',
+        note:'Portátil, com mosquetão e luz para passeios noturnos.',
+        supplier:'CJdropshipping', supplierSku:'CJYD222274201AZ',
+        supplierUrl:'https://cjdropshipping.com/product/led-light-pet-waste-bag-dispenser-for-dogs-cats-dog-poop-scooper-bags-waste-bags-holder-dispensers-pet-clean-accessories-p-2411240930111626400.html',
+        supplierCost:'US$ 0,64–0,66 + frete'
       }
     ];
 
@@ -227,7 +220,7 @@
           <div class="img-wrap">
             <img src="${p.image}" alt="${safe(p.name)}" loading="lazy">
             <span class="badge">${safe(p.badge)}</span>
-            <span class="shipping-badge">ENVIO NACIONAL</span>
+            <span class="shipping-badge">FRETE A CONFIRMAR</span>
           </div>
           <div class="card-body">
             <span class="cat-label">${safe(p.category)}</span>
@@ -299,9 +292,9 @@
   </script>
 
   <!-- Operação DAVORA:
-       fornecedor-base usado na seleção inicial: OneDrop (catálogo nacional de dropshipping).
-       Custos de referência foram consultados em 24/09/2026 e ficam apenas no JS para controle interno.
-       Antes de confirmar uma venda, validar custo, estoque e frete no fornecedor.
+       fornecedor-base usado na seleção: CJdropshipping (plano básico sem mensalidade).
+       Custos de referência foram consultados em 24/09/2026 e ficam no JS para controle interno.
+       Antes de confirmar uma venda, validar variante, custo, estoque, imposto aplicável, prazo e frete no fornecedor.
   -->
 </body>
 </html>
