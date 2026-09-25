@@ -60,7 +60,7 @@
   </style>
 </head>
 <body>
-  <div class="announcement">🔥 <b>DAVORA Store</b> — produtos selecionados e pedido rápido pelo WhatsApp</div>
+  <div class="announcement">🔥 <b>DAVORA Store</b> — seleção de ofertas do AliExpress com envio nacional</div>
   <header>
     <div class="header-main">
       <a class="logo" href="#">DAVORA<span>.</span></a>
@@ -68,15 +68,15 @@
         <input id="searchInput" type="search" placeholder="Buscar produtos..." aria-label="Buscar produtos">
         <button onclick="applyFilters()">Buscar</button>
       </div>
-      <button class="cart-button" onclick="openCart()">🛒 Carrinho <span class="cart-count" id="cartCount">0</span></button>
+      <button class="cart-button" onclick="document.getElementById('produtos').scrollIntoView()">🇧🇷 Ofertas Brasil</button>
     </div>
     <nav class="categories" id="categoryBar">
       <button class="category active" data-category="Todos">Todos</button>
-      <button class="category" data-category="Bem-estar">Bem-estar</button>
-      <button class="category" data-category="Tecnologia">Tecnologia</button>
       <button class="category" data-category="Casa">Casa</button>
-      <button class="category" data-category="Pets">Pets</button>
-      <button class="category" data-category="Lazer">Lazer</button>
+      <button class="category" data-category="Tecnologia">Tecnologia</button>
+      <button class="category" data-category="Áudio">Áudio</button>
+      <button class="category" data-category="Gamer">Gamer</button>
+      <button class="category" data-category="Bem-estar">Bem-estar</button>
     </nav>
   </header>
 
@@ -85,7 +85,7 @@
       <div class="hero-copy">
         <span class="eyebrow">⚡ Seleção DAVORA • ofertas selecionadas</span>
         <h1>Coisas úteis. Preço bom. Sem complicação.</h1>
-        <p>Uma loja direta ao ponto com utilidades, tecnologia, bem-estar e produtos para o dia a dia. Escolha, coloque no carrinho e finalize pelo WhatsApp.</p>
+        <p>Uma vitrine de ofertas do AliExpress selecionadas para o Brasil. Compare os produtos e compre direto no marketplace pelo seu link de afiliado.</p>
         <div class="hero-actions">
           <button class="primary" onclick="document.getElementById('produtos').scrollIntoView()">Ver produtos</button>
           <a class="secondary" href="https://wa.me/5531991339648?text=Oi%2C%20vim%20pela%20DAVORA%20Store%20e%20quero%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Falar no WhatsApp</a>
@@ -95,15 +95,15 @@
     </section>
 
     <section class="trust" aria-label="Vantagens">
-      <div class="trust-card"><div class="trust-icon">🇧🇷</div><div><b>Frete por CEP</b><span>Prazo e valor confirmados antes do pagamento</span></div></div>
-      <div class="trust-card"><div class="trust-icon">📦</div><div><b>Sem estoque parado</b><span>Disponibilidade confirmada no pedido</span></div></div>
-      <div class="trust-card"><div class="trust-icon">💬</div><div><b>Atendimento humano</b><span>Pedido finalizado pelo WhatsApp</span></div></div>
-      <div class="trust-card"><div class="trust-icon">🔒</div><div><b>Compra acompanhada</b><span>Confirmação antes do pagamento</span></div></div>
+      <div class="trust-card"><div class="trust-icon">🇧🇷</div><div><b>Seleção Brasil</b><span>Ofertas encontradas com estoque/envio nacional anunciado</span></div></div>
+      <div class="trust-card"><div class="trust-icon">📦</div><div><b>Entrega do marketplace</b><span>Pagamento e envio ficam com o AliExpress</span></div></div>
+      <div class="trust-card"><div class="trust-icon">💸</div><div><b>Modelo afiliado</b><span>Você recebe comissão em compras rastreadas</span></div></div>
+      <div class="trust-card"><div class="trust-icon">🔒</div><div><b>Compra no AliExpress</b><span>Checkout acontece dentro do marketplace</span></div></div>
     </section>
 
     <section id="produtos">
       <div class="section-head">
-        <div><h2>Produtos selecionados</h2><p>Produtos de fornecedor de dropshipping sem mensalidade; disponibilidade e frete são confirmados no pedido.</p></div>
+        <div><h2>Produtos selecionados</h2><p>30 produtos selecionados em ofertas que anunciaram estoque ou envio do Brasil. Preços podem mudar no AliExpress.</p></div>
         <div class="result-count" id="resultCount"></div>
       </div>
       <div class="grid" id="productGrid"></div>
@@ -112,26 +112,26 @@
 
     <section class="info-section">
       <div class="info-box">
-        <h3>Como comprar</h3>
+        <h3>Como funciona</h3>
         <ul>
-          <li>Adicione os produtos ao carrinho.</li>
-          <li>Finalize o pedido no WhatsApp.</li>
-          <li>Informe seu CEP para confirmação do frete e disponibilidade.</li>
-          <li>Após a confirmação, você recebe as instruções de pagamento.</li>
+          <li>Você divulga a DAVORA.</li>
+          <li>O cliente escolhe um produto e abre o AliExpress.</li>
+          <li>O pagamento e a entrega são feitos pelo próprio AliExpress.</li>
+          <li>Quando a compra é rastreada pelo seu link de afiliado, a comissão fica para você.</li>
         </ul>
       </div>
       <div class="info-box">
-        <h3>Entrega, trocas e suporte</h3>
-        <p>O prazo e o frete dependem do CEP e são confirmados antes do pagamento. Trocas, devoluções e direito de arrependimento são tratados conforme a legislação aplicável ao comércio eletrônico.</p>
+        <h3>Importante sobre preços e estoque</h3>
+        <p>Os valores exibidos são referências de ofertas encontradas e podem mudar. Antes da compra, o cliente deve conferir no AliExpress se a opção “Envio do Brasil” continua disponível para a variante escolhida.</p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <div><div class="footer-title">DAVORA<span>.</span></div><p>Uma vitrine online simples, prática e feita para facilitar sua compra.</p></div>
+      <div><div class="footer-title">DAVORA<span>.</span></div><p>Uma vitrine de ofertas selecionadas para facilitar a compra no AliExpress.</p></div>
       <div class="footer-col"><b>Atendimento</b><a href="https://wa.me/5531991339648" target="_blank" rel="noopener">WhatsApp</a><p>Respondemos assim que possível.</p></div>
-      <div class="footer-col"><b>Informações</b><p>Preços e disponibilidade podem ser atualizados conforme o fornecedor. Frete calculado antes da confirmação final.</p></div>
+      <div class="footer-col"><b>Informações</b><p>Preços, cupons, estoque e frete podem mudar no AliExpress. Alguns links desta página poderão gerar comissão para a DAVORA.</p></div>
     </div>
   </footer>
 
@@ -152,132 +152,306 @@
   <script>
     const products = [
       {
-        id:'blender-portatil', name:'Liquidificador Portátil Recarregável', category:'Casa', price:79.90, badge:'Destaque',
-        image:'https://cf.cjdropshipping.com/quick/product/f98f952d-08cc-495f-a5ec-066664d7e484.jpg',
-        note:'Compacto, recarregável e prático para sucos e vitaminas.',
-        supplier:'CJdropshipping', supplierSku:'CJYD278208001AZ',
-        supplierUrl:'https://cjdropshipping.com/product/portable-rechargeable-juice-blender-compact-handheld-electric-smoothie-maker-for-travel-office-home-p-2603100340021608800.html',
-        supplierCost:'US$ 5,47 + frete'
+            id: "abridor-inox",
+            name: "Abridor de Latas e Garrafas em Aço Inox",
+            category: "Casa",
+            price: 12.93,
+            badge: "Oferta",
+            icon: "🥫",
+            note: "Utilidade de cozinha com oferta nacional encontrada no AliExpress.",
+            affiliateUrl: ""
       },
       {
-        id:'massageador-pescoco', name:'Massageador Manual de Pescoço com 6 Rolos', category:'Bem-estar', price:39.90, badge:'Popular',
-        image:'https://cf.cjdropshipping.com/08c6bacf-86b5-40e3-9517-f861805c7d9b.jpg',
-        note:'Massageador manual para pescoço, ombros e outras regiões.',
-        supplier:'CJdropshipping', supplierSku:'CJAM130816101AZ',
-        supplierUrl:'https://cjdropshipping.com/product/multifunctional-manual-six-wheel-neck-massager-massage-relieve-roller-massage-tool-p-1444929719182168064.html',
-        supplierCost:'US$ 0,66–3,54 + frete'
+            id: "tabua-retangular",
+            name: "Tábua de Corte Antibacteriana Retangular",
+            category: "Casa",
+            price: 13.19,
+            badge: "Oferta",
+            icon: "🔪",
+            note: "Modelo com alça e anúncio marcado como produto no Brasil.",
+            affiliateUrl: ""
       },
       {
-        id:'umidificador-vulcao', name:'Umidificador Difusor Efeito Chama Vulcão', category:'Casa', price:89.90, badge:'Tendência',
-        image:'https://cf.cjdropshipping.com/c4dda15e-a267-442b-b874-af9120980a59.jpg',
-        note:'Umidificador USB com iluminação e efeito visual de chama.',
-        supplier:'CJdropshipping', supplierSku:'CJJT163563001AZ',
-        supplierUrl:'https://cjdropshipping.com/product/volcanic-flame-aroma-essential-oil-diffuser-usb-portable-jellyfish-air-humidifier-night-light-lamp-fragrance-humidifier-p-1602125961166860288.html',
-        supplierCost:'US$ 8,60 + frete'
+            id: "potes-aluminio",
+            name: "Jogo com 5 Potes de Alumínio",
+            category: "Casa",
+            price: 16.07,
+            badge: "Casa",
+            icon: "🥣",
+            note: "Conjunto para cozinha com oferta nacional encontrada.",
+            affiliateUrl: ""
       },
       {
-        id:'luva-pelos-pet', name:'Luva Removedora de Pelos para Cães e Gatos', category:'Pets', price:29.90, badge:'Pet',
-        image:'https://oss-cf.cjdropshipping.com/product/2025/05/26/06/6b2a1028-7824-48d5-ab95-a342d69ec7cc.jpg',
-        note:'Ajuda a remover pelos soltos durante a escovação.',
-        supplier:'CJdropshipping', supplierSku:'CJYD233200801AZ',
-        supplierUrl:'https://cjdropshipping.com/product/pet-hair-remover-mitt-pet-hair-remover-gloves-deshedding-brush-glove-for-dog-cat-rabbit-with-long-short-curly-hair-p-2503191148021601200.html',
-        supplierCost:'US$ 0,57–6,96 + frete'
+            id: "balanca-bio",
+            name: "Balança de Bioimpedância Bluetooth até 180 kg",
+            category: "Bem-estar",
+            price: 17.62,
+            badge: "Popular",
+            icon: "⚖️",
+            note: "Balança inteligente com Bluetooth e oferta marcada como produto no Brasil.",
+            affiliateUrl: ""
       },
       {
-        id:'vaporizador-roupa', name:'Mini Vaporizador Portátil para Roupas', category:'Casa', price:99.90, badge:'Prático',
-        image:'https://cf.cjdropshipping.com/quick/product/d0b413bf-592e-48fb-a6e6-7f43a1a65333.jpg',
-        note:'Modelo compacto para desamassar roupas em casa ou viagem.',
-        supplier:'CJdropshipping', supplierSku:'CJYD194254021UF',
-        supplierUrl:'https://cjdropshipping.com/product/mini-portable-handheld-garment-steamer-fabric-steam-iron-for-clothes-travel-home-appliances-vertical-us-plug-ironing-machine-p-1744230344494157824.html',
-        supplierCost:'a partir de US$ 4,14 + frete'
+            id: "potes-hermeticos",
+            name: "Kit com 4 Potes Herméticos",
+            category: "Casa",
+            price: 21.15,
+            badge: "Organização",
+            icon: "🫙",
+            note: "Kit para organização de alimentos com estoque/oferta nacional.",
+            affiliateUrl: ""
       },
       {
-        id:'porta-saco-pet-led', name:'Porta-Sacos Higiênicos Pet com Luz LED', category:'Pets', price:24.90, badge:'Novidade',
-        image:'https://oss-cf.cjdropshipping.com/product/2024/12/05/03/f7980637-1a74-4c33-8286-0240e7434078.jpg',
-        note:'Portátil, com mosquetão e luz para passeios noturnos.',
-        supplier:'CJdropshipping', supplierSku:'CJYD222274201AZ',
-        supplierUrl:'https://cjdropshipping.com/product/led-light-pet-waste-bag-dispenser-for-dogs-cats-dog-poop-scooper-bags-waste-bags-holder-dispensers-pet-clean-accessories-p-2411240930111626400.html',
-        supplierCost:'US$ 0,64–0,66 + frete'
+            id: "talheres-24",
+            name: "Jogo com 24 Talheres em Aço Inoxidável",
+            category: "Casa",
+            price: 24.89,
+            badge: "Casa",
+            icon: "🍴",
+            note: "Conjunto de 24 peças com anúncio marcado como produto no Brasil.",
+            affiliateUrl: ""
       },
       {
-        "id": "forma-silicone-airfryer",
-        "name": "Forma de Silicone para Air Fryer",
-        "category": "Casa",
-        "price": 69.9,
-        "badge": "Novidade",
-        "image": "https://cf.cjdropshipping.com/16f1642a-6e7c-43f3-84ee-1f8219675786.jpg",
-        "note": "Forma reutilizável; confirme tamanho e formato da sua fritadeira.",
-        "supplier": "CJdropshipping",
-        "supplierSku": "CJJT127784001AZ",
-        "supplierUrl": "https://cjdropshipping.com/product/air-fryer-silicone-pot-replacement-of-parchment-paper-liners-no-more-cleaning-basket-after-using-the-air-fryer-food-safe-air-fryers-oven-accessories-p-1435061247828692992.html",
-        "supplierCost": "US$ 3,93–5,43 + frete"
+            id: "fone-coibeu",
+            name: "Fone Bluetooth Coibeu",
+            category: "Áudio",
+            price: 45.92,
+            badge: "Barato",
+            icon: "🎧",
+            note: "Fone Bluetooth com oferta nacional e frete anunciado como grátis.",
+            affiliateUrl: ""
       },
       {
-        "id": "luminaria-sensor",
-        "name": "Luminária com Sensor de Movimento",
-        "category": "Casa",
-        "price": 119.9,
-        "badge": "Casa",
-        "image": "https://cf.cjdropshipping.com/17197920/2407010519280321600.jpg",
-        "note": "Luminária de 18 cm com base magnética e carregamento USB.",
-        "supplier": "CJdropshipping",
-        "supplierSku": "CJYD203051401AZ",
-        "supplierUrl": "https://cjdropshipping.com/product/led-wood-grain-magnetic-wall-lamp-motion-sensor-usb-night-light-cabinet-closet-light-staircase-bedroom-table-bedside-lighting-p-1788125563387908096.html",
-        "supplierCost": "US$ 8,13 + frete"
+            id: "soundpeats-t3pro",
+            name: "SoundPEATS T3 Pro Bluetooth 5.4",
+            category: "Áudio",
+            price: 65.07,
+            badge: "Oferta",
+            icon: "🎶",
+            note: "Fone sem fio com anúncio marcado como produto no Brasil.",
+            affiliateUrl: ""
       },
       {
-        "id": "caixa-organizadora-mesa",
-        "name": "Caixa Organizadora de Mesa com Gaveta",
-        "category": "Casa",
-        "price": 49.9,
-        "badge": "Organização",
-        "image": "https://cc-west-usa.oss-accelerate.aliyuncs.com/17217792/2407240201220329200.jpg",
-        "note": "Para guardar acessórios, papelaria ou maquiagem; consulte cor.",
-        "supplier": "CJdropshipping",
-        "supplierSku": "CJJT110132001AZ",
-        "supplierUrl": "https://cjdropshipping.com/product/desktop-storage-box-office-accessories-makeup-plastic-storage-container-bathroom-storage-stackable-organizer-drawer-p-1386883997170274304.html",
-        "supplierCost": "US$ 1,92–5,58 + frete"
+            id: "camera-coibeu",
+            name: "Câmera de Segurança Coibeu A28B Wi‑Fi 360°",
+            category: "Tecnologia",
+            price: 81.48,
+            badge: "Segurança",
+            icon: "📹",
+            note: "Câmera Wi‑Fi com lente dupla e oferta nacional encontrada.",
+            affiliateUrl: ""
       },
       {
-        "id": "suporte-celular",
-        "name": "Suporte Dobrável de Mesa para Celular",
-        "category": "Tecnologia",
-        "price": 59.9,
-        "badge": "Prático",
-        "image": "https://cc-west-usa.oss-accelerate.aliyuncs.com/1622608431103.jpg",
-        "note": "Suporte de mesa ajustável para celular; modelo preto.",
-        "supplier": "CJdropshipping",
-        "supplierSku": "CJSJ115538701AZ",
-        "supplierUrl": "https://cjdropshipping.com/product/multifunctional-lazy-desktop-mobile-phone-holder-foldable-retractable-live-broadcast-stand-p-1399948411737870336.html",
-        "supplierCost": "US$ 3,10 + frete"
+            id: "kootion-ssd",
+            name: "SSD KOOTION 128 GB",
+            category: "Tecnologia",
+            price: 84.56,
+            badge: "PC",
+            icon: "💾",
+            note: "SSD com anúncio marcado como produto no Brasil.",
+            affiliateUrl: ""
       },
       {
-        "id": "escova-banho-pet",
-        "name": "Escova para Banho de Cães e Gatos",
-        "category": "Pets",
-        "price": 29.9,
-        "badge": "Pet",
-        "image": "https://oss-cf.cjdropshipping.com/product/2026/08/17/02/e6c27652-64ba-4d30-86cc-0231e157d849.jpg",
-        "note": "Escova de banho com reservatório para shampoo; consulte cor.",
-        "supplier": "CJdropshipping",
-        "supplierSku": "CJYD226358501AZ",
-        "supplierUrl": "https://www.cjdropshipping.com/product/3-in-1-pets-bath-brush-for-dogs-and-cats-shower-massage-brush-depilation-comb-and-foaming-tool-anti-frizz-beauty-brush-pet-products-p-2501070813491614900.html",
-        "supplierCost": "US$ 1,00 + frete"
+            id: "gamesir-lite",
+            name: "GameSir Tegenaria Lite Gamepad com Fio",
+            category: "Gamer",
+            price: 96.88,
+            badge: "Gamer",
+            icon: "🎮",
+            note: "Controle Hall Effect 1000 Hz com envio do Brasil anunciado.",
+            affiliateUrl: ""
       },
       {
-        "id": "organizadores-mala",
-        "name": "Conjunto de Organizadores para Mala",
-        "category": "Lazer",
-        "price": 69.9,
-        "badge": "Viagem",
-        "image": "https://cf.cjdropshipping.com/18261b2e-21d5-4a95-b947-e531ad7c6dbf.jpg",
-        "note": "Bolsas organizadoras de viagem; confirme quantidade e cor.",
-        "supplier": "CJdropshipping",
-        "supplierSku": "CJNS110086901AZ",
-        "supplierUrl": "https://cjdropshipping.com/product/8-piece-set-luggage-divider-bag-travel-storage-clothes-underwear-shoes-organizer-packing-cube-bag-p-1386852733046362112.html",
-        "supplierCost": "US$ 2,27–4,62 + frete"
+            id: "qcy-n50",
+            name: "QCY MeloBuds N50 Bluetooth 5.4",
+            category: "Áudio",
+            price: 107.82,
+            badge: "Destaque",
+            icon: "🎧",
+            note: "Fone QCY com estoque/oferta nacional e frete grátis anunciado.",
+            affiliateUrl: ""
+      },
+      {
+            id: "suporte-monitor",
+            name: "Suporte Articulado Ajustável para Monitor",
+            category: "Tecnologia",
+            price: 109.33,
+            badge: "Escritório",
+            icon: "🖥️",
+            note: "Suporte de mesa com anúncio marcado como produto no Brasil.",
+            affiliateUrl: ""
+      },
+      {
+            id: "tronsmart-t8mini",
+            name: "Tronsmart T8 Mini Speaker Bluetooth 5.3",
+            category: "Áudio",
+            price: 143.02,
+            badge: "Som",
+            icon: "🔊",
+            note: "Caixa Bluetooth com opção de envio do Brasil anunciada.",
+            affiliateUrl: ""
+      },
+      {
+            id: "qcy-h3lite",
+            name: "QCY H3 Lite Headphone ANC",
+            category: "Áudio",
+            price: 168.93,
+            badge: "ANC",
+            icon: "🎧",
+            note: "Headphone com cancelamento de ruído e produto no Brasil anunciado.",
+            affiliateUrl: ""
+      },
+      {
+            id: "fifine-a8",
+            name: "FIFINE A8 Microfone USB RGB",
+            category: "Tecnologia",
+            price: 180.13,
+            badge: "Creator",
+            icon: "🎙️",
+            note: "Microfone USB RGB com estoque/oferta nacional.",
+            affiliateUrl: ""
+      },
+      {
+            id: "tronsmart-t7",
+            name: "Tronsmart T7 Speaker 30W",
+            category: "Áudio",
+            price: 190.74,
+            badge: "Som",
+            icon: "🔊",
+            note: "Speaker Bluetooth com envio do Brasil anunciado.",
+            affiliateUrl: ""
+      },
+      {
+            id: "haylou-s30",
+            name: "Xiaomi Haylou S30 Headphone Bluetooth 5.4",
+            category: "Áudio",
+            price: 199.74,
+            badge: "Popular",
+            icon: "🎧",
+            note: "Headphone com anúncio marcado como produto no Brasil.",
+            affiliateUrl: ""
+      },
+      {
+            id: "gamesir-cyclone2",
+            name: "GameSir Cyclone 2 Bluetooth Gamepad",
+            category: "Gamer",
+            price: 204.91,
+            badge: "Gamer",
+            icon: "🎮",
+            note: "Controle Bluetooth com opção de envio do Brasil anunciada.",
+            affiliateUrl: ""
+      },
+      {
+            id: "rk-r75",
+            name: "Royal Kludge R75 Teclado Mecânico ABNT",
+            category: "Gamer",
+            price: 227.28,
+            badge: "RGB",
+            icon: "⌨️",
+            note: "Teclado mecânico com opção de envio do Brasil anunciada.",
+            affiliateUrl: ""
+      },
+      {
+            id: "qcy-h3pro",
+            name: "QCY H3 Pro Bluetooth 5.4 ANC",
+            category: "Áudio",
+            price: 241.61,
+            badge: "Premium",
+            icon: "🎧",
+            note: "Headphone QCY com produto no Brasil anunciado.",
+            affiliateUrl: ""
+      },
+      {
+            id: "huawei-band10",
+            name: "Huawei Band 10 AMOLED",
+            category: "Bem-estar",
+            price: 265.01,
+            badge: "Wearable",
+            icon: "⌚",
+            note: "Pulseira inteligente com opção de envio do Brasil anunciada.",
+            affiliateUrl: ""
+      },
+      {
+            id: "emeet-s600",
+            name: "EMEET S600 Webcam 4K 60 FPS",
+            category: "Tecnologia",
+            price: 273.17,
+            badge: "4K",
+            icon: "📷",
+            note: "Webcam 4K com autofoco e envio do Brasil anunciado.",
+            affiliateUrl: ""
+      },
+      {
+            id: "8bitdo-ultimate2",
+            name: "8BitDo Ultimate 2 Controller",
+            category: "Gamer",
+            price: 275.89,
+            badge: "Hall Effect",
+            icon: "🎮",
+            note: "Controle para PC/Android com produto no Brasil anunciado.",
+            affiliateUrl: ""
+      },
+      {
+            id: "amazfit-gts4mini",
+            name: "Amazfit GTS 4 Mini Smartwatch",
+            category: "Bem-estar",
+            price: 407.04,
+            badge: "Smartwatch",
+            icon: "⌚",
+            note: "Smartwatch com estoque/oferta nacional e frete grátis anunciado.",
+            affiliateUrl: ""
+      },
+      {
+            id: "tronsmart-bang2",
+            name: "Tronsmart Bang 2 Speaker 90W",
+            category: "Áudio",
+            price: 528.57,
+            badge: "Potente",
+            icon: "🔊",
+            note: "Caixa de som 90W com produto no Brasil anunciado.",
+            affiliateUrl: ""
+      },
+      {
+            id: "rx6500xt",
+            name: "MOUGOL Radeon RX 6500 XT 4 GB",
+            category: "Tecnologia",
+            price: 648.58,
+            badge: "Hardware",
+            icon: "🖥️",
+            note: "Placa de vídeo com anúncio marcado como produto no Brasil.",
+            affiliateUrl: ""
+      },
+      {
+            id: "ryzen5600",
+            name: "AMD Ryzen 5 5600",
+            category: "Tecnologia",
+            price: 728.24,
+            badge: "Hardware",
+            icon: "⚙️",
+            note: "Processador AM4 com estoque no Brasil anunciado.",
+            affiliateUrl: ""
+      },
+      {
+            id: "byintek-u12",
+            name: "BYINTEK U12 Projetor Full HD 1080p",
+            category: "Tecnologia",
+            price: 796.82,
+            badge: "Cinema",
+            icon: "📽️",
+            note: "Projetor com anúncio marcado como produto no Brasil.",
+            affiliateUrl: ""
+      },
+      {
+            id: "poco-f6",
+            name: "Xiaomi POCO F6 8/256 GB",
+            category: "Tecnologia",
+            price: 1556.47,
+            badge: "Smartphone",
+            icon: "📱",
+            note: "Smartphone com anúncio marcado como produto no Brasil e frete grátis.",
+            affiliateUrl: ""
       }
-    ];
+];
 
     let activeCategory='Todos';
     let cart=JSON.parse(localStorage.getItem('davora-cart')||'{}');
@@ -295,20 +469,19 @@
       const grid=document.getElementById('productGrid');
       grid.innerHTML=list.map(p=>`
         <article class="card">
-          <div class="img-wrap">
-            <img src="${p.image}" alt="${safe(p.name)}" loading="lazy">
+          <div class="img-wrap" style="display:grid;place-items:center">
+            <div style="font-size:86px;filter:drop-shadow(0 12px 18px rgba(17,24,39,.10))">${p.icon||'🛍️'}</div>
             <span class="badge">${safe(p.badge)}</span>
-            <span class="shipping-badge">FRETE A CONFIRMAR</span>
+            <span class="shipping-badge">ENVIO BRASIL*</span>
           </div>
           <div class="card-body">
             <span class="cat-label">${safe(p.category)}</span>
             <h3>${safe(p.name)}</h3>
             <div class="micro">${safe(p.note)}</div>
             <div class="price">${money(p.price)}</div>
-            <div class="pix">Preço do produto • frete calculado à parte</div>
-            <div class="card-actions">
-              <button class="buy" onclick="buyNow('${p.id}')">Comprar agora</button>
-              <button class="add" aria-label="Adicionar ao carrinho" onclick="addToCart('${p.id}')">＋</button>
+            <div class="pix">Preço visto em oferta • pode mudar no AliExpress</div>
+            <div class="card-actions" style="grid-template-columns:1fr">
+              <button class="buy" onclick="buyNow('${p.id}')">Comprar no AliExpress</button>
             </div>
           </div>
         </article>`).join('');
@@ -325,7 +498,15 @@
 
     function persist(){localStorage.setItem('davora-cart',JSON.stringify(cart));updateCart()}
     function addToCart(id,open=false){cart[id]=(cart[id]||0)+1;persist();showToast();if(open)openCart()}
-    function buyNow(id){addToCart(id,true)}
+    function buyNow(id){
+      const p=products.find(x=>x.id===id);
+      if(!p)return;
+      if(p.affiliateUrl){
+        window.open(p.affiliateUrl,'_blank','noopener');
+        return;
+      }
+      showToast('Falta conectar o link de afiliado deste produto');
+    }
     function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];persist()}
     function removeItem(id){delete cart[id];persist()}
     function cartEntries(){return Object.entries(cart).map(([id,qty])=>({p:products.find(x=>x.id===id),qty})).filter(x=>x.p)}
@@ -365,14 +546,15 @@
       ].join('\n');
       window.open('https://wa.me/5531991339648?text='+encodeURIComponent(msg),'_blank');
     }
-    function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)}
+    function showToast(message='Produto adicionado ao carrinho'){const t=document.getElementById('toast');t.textContent=message;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
     renderProducts();updateCart();
   </script>
 
   <!-- Operação DAVORA:
-       fornecedor-base usado na seleção: CJdropshipping (plano básico sem mensalidade).
-       Custos de referência foram consultados em 24/09/2026 e ficam no JS para controle interno.
-       Antes de confirmar uma venda, validar variante, custo, estoque, imposto aplicável, prazo e frete no fornecedor.
+       catálogo convertido para modelo de afiliados AliExpress em 25/09/2026.
+       Os 30 preços são referências de ofertas públicas e podem variar.
+       Os affiliateUrl ficam vazios até serem gerados pela conta de afiliado do proprietário.
+       Nunca usar links de afiliado de terceiros, pois a comissão seria creditada a eles.
   -->
 </body>
 </html>
