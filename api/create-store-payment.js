@@ -1,4 +1,4 @@
-import { readiness, verifyQuote, validateBuyer, sign, guard, replyError, StoreError, paymentMatches } from '../lib/store.js';
+import { readiness, verifyQuote, validateBuyer, sign, guard, replyError, StoreError, paymentMatches, stripePublishableKey } from '../lib/store.js';
 import { sessionPayload, stripeRequest } from '../lib/stripe.js';
 
 export default async function handler(req, res) {
@@ -15,6 +15,6 @@ export default async function handler(req, res) {
     if (!paymentMatches(payment, { paymentId: payment.id, reference, totalCents: order.totalCents, live }) || payment.metadata?.order_fingerprint !== fingerprint) throw new StoreError('Este pedido mudou. Recomece a confirmação antes de pagar.', 409);
     if (!/^cs_/.test(payment.id || '') || !payment.client_secret || payment.status !== 'open') throw new StoreError('Esta sessão de pagamento não está disponível. Confira o estado do pedido.', 409);
     const token = sign({ kind: 'payment', paymentId: payment.id, reference, totalCents: order.totalCents, live, expiresAt: Date.now() + 2 * 3600000 }, process.env.DAVORA_CHECKOUT_SECRET);
-    return res.status(200).json({ provider: 'stripe', reference, token, clientSecret: payment.client_secret, publishableKey: process.env.STRIPE_PUBLISHABLE_KEY });
+    return res.status(200).json({ provider: 'stripe', reference, token, clientSecret: payment.client_secret, publishableKey: stripePublishableKey() });
   } catch (error) { return replyError(res, error); }
 }

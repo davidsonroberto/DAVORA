@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readiness, isPurchasable, normalizeItems, quote, verifyQuote, sign, verify, cpfValid, paymentMatches, products, stripeKeysMatch } from '../lib/store.js';
+import { readiness, isPurchasable, normalizeItems, quote, verifyQuote, sign, verify, cpfValid, paymentMatches, products, stripeKeysMatch, stripePublishableKey } from '../lib/store.js';
 import { restoreCart, filterProducts, summarizeCart } from '../assets/catalog-utils.js';
 import createPayment from '../api/create-store-payment.js';
 import paymentStatus from '../api/store-payment-status.js';
@@ -126,6 +126,14 @@ test('chaves Stripe de ambientes diferentes são recusadas', () => {
   assert.equal(stripeKeysMatch(env), true);
   assert.equal(stripeKeysMatch({ ...env, STRIPE_PUBLISHABLE_KEY: 'pk_live_NOT_A_REAL_CREDENTIAL' }), false);
   assert.equal(readiness({ ...env, STRIPE_PUBLISHABLE_KEY: 'pk_live_NOT_A_REAL_CREDENTIAL' }, fixture, now), false);
+});
+
+test('chave publicável gerenciada pela Vercel funciona e respeita o ambiente', () => {
+  const managed = { ...env, STRIPE_PUBLISHABLE_KEY: '', NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: env.STRIPE_PUBLISHABLE_KEY };
+  assert.equal(stripePublishableKey(managed), env.STRIPE_PUBLISHABLE_KEY);
+  assert.equal(readiness(managed, fixture, now), true);
+  assert.equal(readiness({ ...managed, NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: 'pk_live_NOT_A_REAL_CREDENTIAL' }, fixture, now), false);
+  assert.equal(stripePublishableKey({ ...managed, STRIPE_PUBLISHABLE_KEY: 'pk_test_EXPLICIT_NOT_REAL' }), 'pk_test_EXPLICIT_NOT_REAL');
 });
 test('Pix só entra na sessão depois de habilitação explícita', () => {
   const q = quote(items, '30000001', env, fixture, now);

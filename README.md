@@ -26,7 +26,7 @@ Cada produto está com `supplierApproved: false`, `availability: pending_confirm
 
 O repositório pode continuar no GitHub. **GitHub Pages não permite hospedar uma operação de comércio eletrônico**, conforme https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits . O código usa funções Node para a parte de pagamento e precisa de hospedagem compatível, com plano que permita uso comercial.
 
-O projeto Vercel `davora` foi localizado. A consulta detalhada retornou 403 por falta de acesso ao escopo da conta, mas a conexão automática GitHub–Vercel gerou uma prévia ao receber esta branch. O status do commit confirmou a publicação como Ready. Prévia: https://davora-git-codex-davora-brasil-20261015-davidsonroberto.vercel.app . Não foi possível administrar as configurações do projeto. O Opera retornou navegador desconectado. O site principal e os domínios não foram alterados; a prévia permanece sem compras ativas.
+O projeto Vercel `davora` está acessível pela conexão. O erro 403 anterior foi resolvido usando a consulta direta ao projeto, sem o parâmetro de escopo que falhava. A listagem de variáveis foi consultada sem descriptografar valores: as chaves Stripe ainda não estão cadastradas. A conexão automática GitHub–Vercel gerou a prévia desta branch, com status Ready: https://davora-git-codex-davora-brasil-20261015-davidsonroberto.vercel.app . O Opera retornou navegador desconectado. O site principal e os domínios não foram alterados; a prévia permanece sem compras ativas.
 
 ## Dependências antes de vender
 
@@ -52,7 +52,7 @@ npm run check
 git diff --check
 ```
 
-Os 14 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência inclusive em repetições após atraso, configuração de Pix, separação teste/produção, confirmação autoritativa e recusa do webhook antigo. A chamada à Stripe é simulada; nenhuma cobrança foi realizada. As 16 imagens retornaram HTTP 200 na conferência de 15/10/2026. Sem teste visual em navegador nesta sessão.
+Os 15 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência inclusive em repetições após atraso, configuração de Pix, separação teste/produção, chave publicável gerenciada pela Vercel, confirmação autoritativa e recusa do webhook antigo. A chamada à Stripe é simulada; nenhuma cobrança foi realizada. As 16 imagens retornaram HTTP 200 na conferência de 15/10/2026. Sem teste visual em navegador nesta sessão.
 
 Documentação do pagamento:
 - https://docs.stripe.com/checkout/embedded/quickstart
@@ -67,7 +67,8 @@ Os endpoints antigos de currículo, consulta de pagamento e webhook estão desat
 ## Ativação da Stripe
 
 - `STRIPE_SECRET_KEY`: preferir chave restrita (`rk_`) com as permissões mínimas necessárias, somente no servidor, em variável sensível da Vercel. Não enviar por mensagem nem incluir no repositório.
-- `STRIPE_PUBLISHABLE_KEY`: chave publicável correspondente ao mesmo ambiente de teste ou produção.
+- `STRIPE_PUBLISHABLE_KEY`: chave publicável correspondente ao mesmo ambiente de teste ou produção. Também aceita `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`, nome fornecido pela integração nativa Stripe–Vercel. Se ambos estiverem preenchidos, o primeiro tem prioridade.
+- Conexão gerenciada: https://vercel.com/marketplace/stripe . Para uma conta já existente, escolher **Install → Import Existing Stripe Account**, concluir o login/consentimento na Stripe e conectar o recurso ao projeto **davora**. A integração entrega as chaves à Vercel sem copiá-las por mensagem. Uma nova publicação é necessária para usar as variáveis. Importar a conta não autoriza ativar as compras antes de concluir os requisitos comerciais e de pedidos.
 - `STRIPE_PIX_ENABLED`: permanece `false` até verificar a elegibilidade e ativar Pix nesta conta.
 - Cadastrar o domínio definitivo e os domínios de teste usados para Google Pay em https://dashboard.stripe.com/settings/payment_method_domains . Ativar as formas de pagamento desejadas na conta. O botão Google Pay só aparece quando os requisitos de conta, domínio, navegador e carteira são atendidos.
 - Na consulta ao ambiente de teste em 15/10/2026, Google Pay e Pix estavam indisponíveis na configuração padrão e não havia domínios cadastrados. Nenhuma forma de pagamento ou configuração da conta foi alterada nesta verificação.
