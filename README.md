@@ -7,8 +7,8 @@ Versão de preparação de 15/10/2026, em português e BRL. Conserva as cores e 
 - Busca por nome, marca ou categoria, inclusive sem acentos.
 - Fotos dos produtos, detalhes, seleção de itens, quantidades e remoção.
 - Seleção persistida no navegador; dados pessoais não são guardados no localStorage.
-- Formulário de entrega e fluxo de Pix na própria página, condicionado à ativação do servidor.
-- APIs de cotação assinada, criação idempotente de Pix e consulta do status no Mercado Pago. Valores são calculados no servidor, nunca aceitos do navegador.
+- Formulário de entrega e Stripe Checkout embutido na própria página, condicionado à ativação do servidor. Cartões e Google Pay dependem da conta/dispositivo; Pix só é incluído quando habilitado explicitamente.
+- APIs de cotação assinada, criação idempotente de sessão Stripe Checkout e consulta autoritativa do pagamento na Stripe. Valores são calculados no servidor, nunca aceitos do navegador.
 
 **As compras estão desativadas.** Produtos identificados em catálogos públicos não equivalem a acordo de fornecimento. Preços de revenda, estoque e regras comerciais são ocultos sem acesso à conta Dropi. Não houve contratação, importação para uma conta de lojista, pagamento nem pedido ao fornecedor. Não há comissão garantida de 50%.
 
@@ -33,7 +33,7 @@ O projeto Vercel `davora` foi localizado. A consulta detalhada retornou 403 por 
 1. Acessar a conta Dropi/DropNacional e obter a autorização de revenda dos fornecedores, confirmando SKU, cor, quantidade, custo, estoque e uso de fotos.
 2. Confirmar frete e prazo por pedido completo, inclusive pedidos com fornecedores diferentes. Não copiar custos do AliExpress antigo.
 3. Definir preços em `priceCents`, em centavos. Margem de 50% antes das demais despesas exige preço de venda igual a duas vezes o custo considerado; taxas, frete subsidiado, impostos, anúncios e devoluções diminuem o lucro. Fazer a conta com custos reais antes de escolher o preço.
-4. Conectar a hospedagem e o Mercado Pago por configuração segura do servidor. Nenhuma chave deve ser enviada por mensagem ou incluída no GitHub.
+4. Conectar a hospedagem e a conta Stripe por configuração segura do servidor. O lojista informou que já tem conta Stripe; a conexão e as credenciais do servidor ainda não foram verificadas. Nenhuma chave deve ser enviada por mensagem ou incluída no GitHub.
 5. Completar identificação comercial da loja, condições de entrega, atendimento, privacidade, trocas e devoluções com dados reais do responsável.
 6. Integrar registro durável de pedidos, acompanhamento/recuperação de pagamento, controle de estoque e rotina de repasse ao fornecedor. Esta versão **não** envia pedidos automaticamente ao Dropi nem reserva/decrementa estoque. As APIs são uma base de integração; não representam um sistema de pedidos concluído.
 7. Testar compra, atualização de estoque, cobrança repetida, indisponibilidade, expiração, reembolso, registro do pedido e despacho em ambiente de teste antes de liberar vendas reais.
@@ -44,7 +44,7 @@ Depois destas etapas, a ativação exige todas as condições de `lib/store.js`,
 
 ## Verificação
 
-Node 22 ou superior. Sem dependências externas para a aplicação.
+Node 22 ou superior. Sem dependências npm para a aplicação. Stripe.js é carregado diretamente de https://js.stripe.com/endive/stripe.js ao abrir um pagamento, e a API usa a versão 2026-09-30.endive.
 
 ```sh
 npm test
@@ -52,10 +52,24 @@ npm run check
 git diff --check
 ```
 
-Os testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência e confirmação autoritativa. A chamada ao Mercado Pago é simulada; nenhuma cobrança foi realizada. As 16 imagens retornaram HTTP 200 na conferência de 15/10/2026. Sem teste visual em navegador nesta sessão.
+Os 12 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência, configuração de Pix, separação teste/produção e confirmação autoritativa. A chamada à Stripe é simulada; nenhuma cobrança foi realizada. As 16 imagens retornaram HTTP 200 na conferência de 15/10/2026. Sem teste visual em navegador nesta sessão.
 
 Documentação do pagamento:
-- https://www.mercadopago.com.br/developers/pt/docs/checkout-api-payments/integration-configuration/integrate-pix
-- https://www.mercadopago.com.br/developers/en/reference/online-payments/subscriptions/create-payment/post
+- https://docs.stripe.com/checkout/embedded/quickstart
+- https://docs.stripe.com/api/checkout/sessions/create
+- https://docs.stripe.com/google-pay?platform=web
+- https://docs.stripe.com/payments/pix
+- https://docs.stripe.com/api/versioning
 
-Os arquivos antigos de currículo (`api/create-preference.js` e companhia) não são usados por esta vitrine. O checkout de currículo permanece desativado.
+Os endpoints antigos de currículo e consulta de pagamento estão desativados (HTTP 410). A loja não usa Mercado Pago. O arquivo antigo de webhook não é um consumidor de eventos Stripe e não deve ser cadastrado como destino. O registro durável de pedidos, recuperação de sessão, webhooks e repasse ao fornecedor permanecem pendentes antes de vendas reais.
+
+
+## Ativação da Stripe
+
+- `STRIPE_SECRET_KEY`: chave secreta ou restrita, somente no servidor. Não enviar por mensagem nem incluir no repositório.
+- `STRIPE_PUBLISHABLE_KEY`: chave publicável correspondente ao mesmo ambiente de teste ou produção.
+- `STRIPE_PIX_ENABLED`: permanece `false` até verificar a elegibilidade e ativar Pix nesta conta.
+- Cadastrar o domínio definitivo e os domínios de teste usados para Google Pay em https://dashboard.stripe.com/settings/payment_method_domains . Ativar as formas de pagamento desejadas na conta. O botão Google Pay só aparece quando os requisitos de conta, domínio, navegador e carteira são atendidos.
+- A sugestão de adicionar a Stripe ao ChatGPT permite autorizar a conexão à conta; isso não transfere credenciais secretas para a hospedagem nem ativa o site automaticamente.
+- A sessão usa `ui_mode: embedded_page`, `redirect_on_completion: never` e somente as formas permitidas por `allowed_payment_method_types`. A confirmação exibida pela loja depende da consulta ao servidor e exige `status: complete` e `payment_status: paid`, com valor, moeda, referência e ambiente compatíveis.
+- Nenhuma chave real foi adicionada e nenhuma sessão real de pagamento foi criada nesta alteração. Manter compras bloqueadas até concluir as dependências comerciais e operacionais acima.

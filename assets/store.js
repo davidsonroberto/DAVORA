@@ -2,7 +2,7 @@ import { money, filterProducts, restoreCart, summarizeCart } from './catalog-uti
 
 const $ = id => document.getElementById(id);
 const safe = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[c]));
-let products = [], cart = {}, activeCategory = 'Todos', checkoutEnabled = false, shippingQuote = null, attempt = null, paymentToken = null, toastTimer;
+let products = [], cart = {}, activeCategory = 'Todos', checkoutEnabled = false, shippingQuote = null, attempt = null, paymentToken = null, toastTimer, stripeController = null, stripeScriptPromise = null;
 const STORAGE = 'davora-brasil-selection-v1';
 const api = async (name, body) => {
   const response = await fetch(new URL('api/' + name, document.baseURI), body === undefined ? { cache: 'no-store' } : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
@@ -70,7 +70,7 @@ $('openCart').addEventListener('click', () => modal('cartDialog'));
 $('clearCart').addEventListener('click', () => { cart = {}; persist(); });
 $('checkoutBtn').addEventListener('click', () => {
   if (!checkoutEnabled || !summarizeCart(cart, products).purchasable) return;
-  $('cartDialog').close(); $('checkoutForm').hidden = false; $('pixPanel').hidden = true; invalidateQuote(); modal('checkoutDialog');
+  $('cartDialog').close(); $('checkoutForm').hidden = false; $('stripePanel').hidden = true; if (stripeController) { stripeController.destroy(); stripeController = null; } invalidateQuote(); modal('checkoutDialog');
 });
 $('checkoutForm').elements.cep.addEventListener('input', invalidateQuote);
 for (const key of ['cpf', 'phone', 'cep']) $('checkoutForm').elements[key].addEventListener('input', event => { event.target.value = event.target.value.replace(/\D/g, ''); });
@@ -82,33 +82,47 @@ $('quoteShipping').addEventListener('click', async () => {
   try {
     shippingQuote = await api('shipping-quote', { items: Object.entries(cart).map(([id, quantity]) => ({ id, quantity })), cep }); attempt = crypto.randomUUID();
     $('quoteSummary').textContent = `Produtos: ${money(shippingQuote.subtotalCents)} · Frete: ${money(shippingQuote.shippingCents)} · Total: ${money(shippingQuote.totalCents)} · Prazo: até ${shippingQuote.deliveryDays} dias úteis após confirmação.`;
-    $('payButton').textContent = 'Gerar Pix de ' + money(shippingQuote.totalCents); $('payButton').disabled = false; $('checkoutMessage').textContent = '';
+    $('payButton').textContent = 'Continuar: ' + money(shippingQuote.totalCents); $('payButton').disabled = false; $('checkoutMessage').textContent = '';
   } catch (error) { $('checkoutMessage').textContent = error.message; }
   finally { $('quoteShipping').disabled = false; }
 });
+async function loadStripeScript() {
+  if (window.Stripe) return;
+  if (!stripeScriptPromise) stripeScriptPromise = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'https://js.stripe.com/endive/stripe.js'; script.async = true;
+    const timeout = setTimeout(() => { script.remove(); stripeScriptPromise = null; reject(new Error('O formulário não carregou. Tente novamente.')); }, 20000);
+    script.onload = () => { clearTimeout(timeout); resolve(); };
+    script.onerror = () => { clearTimeout(timeout); script.remove(); stripeScriptPromise = null; reject(new Error('Não foi possível carregar o pagamento.')); };
+    document.head.appendChild(script);
+  });
+  return stripeScriptPromise;
+}
 $('checkoutForm').addEventListener('submit', async event => {
   event.preventDefault(); if (!shippingQuote || !attempt || !checkoutEnabled) return;
   if (shippingQuote.expiresAt <= Date.now()) { invalidateQuote(); $('checkoutMessage').textContent = 'Recalcule o frete antes de continuar.'; return; }
   if (!$('checkoutForm').reportValidity()) return;
-  $('payButton').disabled = true; $('checkoutMessage').textContent = 'Gerando seu Pix…';
+  $('payButton').disabled = true; $('checkoutMessage').textContent = 'Preparando o pagamento…';
   try {
+    await loadStripeScript();
     const buyer = Object.fromEntries(new FormData($('checkoutForm'))); delete buyer.consent;
     const payment = await api('create-store-payment', { quoteToken: shippingQuote.token, buyer, attempt }); paymentToken = payment.token;
-    $('pixCode').value = payment.qrCode; $('pixImage').src = 'data:image/png;base64,' + payment.qrImage; $('pixReference').textContent = 'Pedido ' + payment.reference;
-    $('checkoutForm').reset(); $('checkoutForm').hidden = true; $('pixPanel').hidden = false; $('paymentMessage').textContent = 'Aguardando o pagamento. Use seu aplicativo bancário para pagar.';
+    const stripe = window.Stripe(payment.publishableKey, { locale: 'pt-BR' });
+    if (stripeController) stripeController.destroy();
+    stripeController = await stripe.createEmbeddedCheckoutPage({ fetchClientSecret: async () => payment.clientSecret });
+    $('paymentReference').textContent = 'Pedido ' + payment.reference;
+    $('stripePanel').hidden = false; stripeController.mount('#stripeCheckout');
+    $('checkoutForm').reset(); $('checkoutForm').hidden = true;
+    $('paymentMessage').textContent = 'Conclua o pagamento no formulário. Depois, confira a confirmação do pedido.';
   } catch (error) { $('checkoutMessage').textContent = error.message; $('payButton').disabled = false; }
-});
-$('copyPix').addEventListener('click', async () => {
-  try { await navigator.clipboard.writeText($('pixCode').value); showToast('Código Pix copiado.'); }
-  catch { $('pixCode').focus(); $('pixCode').select(); $('paymentMessage').textContent = 'Selecione e copie o código Pix.'; }
 });
 $('checkPayment').addEventListener('click', async () => {
   if (!paymentToken) return; $('checkPayment').disabled = true;
   try {
     const payment = await api('store-payment-status', { token: paymentToken });
-    const messages = { approved: 'Pagamento confirmado. Seu pedido foi recebido para processamento.', pending: 'O pagamento ainda não foi confirmado. Confira novamente em instantes.', in_process: 'Seu pagamento está em análise.', rejected: 'Pagamento recusado. Entre em contato com a DAVORA.', cancelled: 'Pagamento cancelado ou expirado.', refunded: 'Pagamento reembolsado.', charged_back: 'Pagamento contestado.' };
+    const messages = { approved: 'Pagamento confirmado. Seu pedido foi recebido para processamento.', pending: 'O pagamento ainda não foi confirmado. Confira novamente em instantes.', cancelled: 'Sessão de pagamento expirada. Entre em contato com a DAVORA se já pagou.' };
     $('paymentMessage').textContent = messages[payment.status] || 'O pagamento ainda não foi confirmado.';
-    if (payment.status === 'approved') { cart = {}; persist(); }
+    if (payment.status === 'approved') { cart = {}; persist(); if (stripeController) { stripeController.destroy(); stripeController = null; } }
   } catch (error) { $('paymentMessage').textContent = error.message; }
   finally { $('checkPayment').disabled = false; }
 });
@@ -126,7 +140,7 @@ async function init() {
     renderProducts(); renderCart();
     $('heroBack').src = products.find(p => p.id === 'bitarra-7908496403905').image; $('heroFront').src = products.find(p => p.id === 'vitamedica-3146').image;
     const config = await api('store-config').catch(() => ({ checkoutEnabled: false })); checkoutEnabled = config.checkoutEnabled === true;
-    if (checkoutEnabled) { $('storeNotice').textContent = 'DAVORA Store · Beleza e autocuidado para o Brasil'; $('purchaseInfo').textContent = 'Escolha os produtos disponíveis, confira o frete e faça o pagamento com Pix na DAVORA. Consulte o total e o prazo antes de pagar.'; $('footerStatus').textContent = 'Valores em reais. Frete calculado antes do pagamento.'; }
+    if (checkoutEnabled) { $('storeNotice').textContent = config.testMode ? 'AMBIENTE DE TESTE · Pagamentos de teste, sem venda real' : 'DAVORA Store · Beleza e autocuidado para o Brasil'; $('purchaseInfo').textContent = 'Escolha os produtos disponíveis, confira o frete e faça o pagamento pela Stripe na DAVORA. Consulte o total e o prazo antes de pagar.'; $('footerStatus').textContent = 'Valores em reais. Frete calculado antes do pagamento.'; }
     renderCart();
   } catch { $('productGrid').setAttribute('aria-busy', 'false'); $('productGrid').innerHTML = '<div class="catalog-error"><h3>O catálogo não carregou.</h3><p>Recarregue a página ou fale com a DAVORA pelo WhatsApp.</p></div>'; }
 }
