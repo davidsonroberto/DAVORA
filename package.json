@@ -1,0 +1,8 @@
+{
+  "name": "davora-brasil",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=22 <25" },
+  "scripts": { "test": "node --test test/*.test.js", "check": "node scripts/check-site.js" }
+}

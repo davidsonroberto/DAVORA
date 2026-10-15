@@ -1,0 +1,113 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readiness, isPurchasable, normalizeItems, quote, verifyQuote, sign, verify, cpfValid, paymentMatches, products } from '../lib/store.js';
+import { restoreCart, filterProducts, summarizeCart } from '../assets/catalog-utils.js';
+import createPayment from '../api/create-store-payment.js';
+import paymentStatus from '../api/store-payment-status.js';
+
+const now = Date.now();
+const fixture = [{ id: 'verified-test-product', name: 'Produto de teste', priceCents: 2199, stock: 5, stockConfirmedAt: new Date(now).toISOString(), availability: 'available', supplierApproved: true, brand: 'Teste', category: 'Lábios', description: 'Teste' }];
+const env = {
+  DAVORA_CHECKOUT_ENABLED: 'true', DAVORA_SUPPLIER_APPROVED: 'true', DAVORA_MERCHANT_REVIEWED: 'true',
+  MP_ACCESS_TOKEN: 'TEST-NO-REAL-CREDENTIAL', DAVORA_CHECKOUT_SECRET: 'test-only-secret-with-at-least-32-characters',
+  DAVORA_STORE_ORIGIN: 'https://store.example', DAVORA_SHIPPING_RULES: JSON.stringify([{ cepStart: '30000000', cepEnd: '39999999', priceCents: 1250, days: 8 }])
+};
+const items = [{ id: fixture[0].id, quantity: 2, priceCents: 1 }];
+function response() { return { code: 200, headers: {}, setHeader(k, v) { this.headers[k] = v; }, status(v) { this.code = v; return this; }, json(v) { this.body = v; return this; } }; }
+const request = body => ({ method: 'POST', headers: { origin: env.DAVORA_STORE_ORIGIN, 'content-type': 'application/json' }, body });
+
+test('checkout fechado sem configuração, fornecedor aprovado e estoque recente', () => {
+  assert.equal(readiness({}), false);
+  assert.equal(readiness(env, products, now), false);
+  assert.equal(readiness(env, fixture, now), true);
+  for (const key of Object.keys(env)) assert.equal(readiness({ ...env, [key]: '' }, fixture, now), false, key);
+  assert.equal(isPurchasable({ ...fixture[0], stockConfirmedAt: new Date(now - 86400001).toISOString() }, now), false);
+  assert.equal(isPurchasable({ ...fixture[0], stockConfirmedAt: new Date(now + 1000).toISOString() }, now), false);
+});
+test('o servidor ignora preços enviados pelo navegador e soma em centavos', () => {
+  assert.equal(normalizeItems(items, fixture, now).subtotalCents, 4398);
+  const q = quote(items, '30000001', env, fixture, now);
+  assert.equal(q.shippingCents, 1250); assert.equal(q.totalCents, 5648);
+});
+test('quantidades duplicadas não ultrapassam o estoque', () => {
+  assert.throws(() => normalizeItems([{ id: fixture[0].id, quantity: 3 }, { id: fixture[0].id, quantity: 3 }], fixture, now), /estoque/);
+  for (const quantity of [0, -1, 1.5, '2', 99, NaN]) assert.throws(() => normalizeItems([{ id: fixture[0].id, quantity }], fixture, now));
+  assert.throws(() => normalizeItems([{ id: 'inexistente', quantity: 1 }], fixture, now));
+});
+test('produtos pendentes não viram cobrança mesmo com preço adulterado', () => {
+  assert.throws(() => normalizeItems([{ id: products[0].id, quantity: 1, priceCents: 500 }], products, now), /disponível/);
+  assert.equal(summarizeCart({ [products[0].id]: 1 }, products).purchasable, false);
+  assert.equal(summarizeCart({ [products[0].id]: 1 }, products).subtotalCents, null);
+});
+test('frete inexistente ou com faixas conflitantes impede pagamento', () => {
+  assert.throws(() => quote(items, '01000000', env, fixture, now), /frete/);
+  assert.throws(() => quote(items, '30000', env, fixture, now), /CEP/);
+  const rules = JSON.parse(env.DAVORA_SHIPPING_RULES);
+  assert.throws(() => quote(items, '30000001', { ...env, DAVORA_SHIPPING_RULES: JSON.stringify([...rules, ...rules]) }, fixture, now), /frete/);
+});
+test('cotação assinada rejeita adulteração, expiração e mudança no catálogo', () => {
+  const q = quote(items, '30000001', env, fixture, now);
+  assert.equal(verifyQuote(q.token, env, fixture, now).totalCents, 5648);
+  const [data, sig] = q.token.split('.');
+  const forged = JSON.parse(Buffer.from(data, 'base64url')); forged.totalCents = 1;
+  assert.throws(() => verifyQuote(Buffer.from(JSON.stringify(forged)).toString('base64url') + '.' + sig, env, fixture, now));
+  assert.throws(() => verifyQuote(q.token, env, fixture, now + 16 * 60000), /expirada/);
+  assert.throws(() => verifyQuote(q.token, env, [{ ...fixture[0], priceCents: 3000 }], now), /mudou/);
+});
+test('tipo de token e identificação do pagamento são conferidos', () => {
+  const data = { kind: 'payment', paymentId: '123', reference: 'DAVORA-test', totalCents: 5648, expiresAt: now + 60000 };
+  assert.throws(() => verify(sign(data, env.DAVORA_CHECKOUT_SECRET), env.DAVORA_CHECKOUT_SECRET, 'quote', now));
+  const p = { id: 123, external_reference: data.reference, currency_id: 'BRL', transaction_amount: 56.48 };
+  assert.equal(paymentMatches(p, data), true);
+  for (const patch of [{ id: 124 }, { currency_id: 'USD' }, { transaction_amount: 1 }, { external_reference: 'other' }]) assert.equal(paymentMatches({ ...p, ...patch }, data), false);
+  assert.equal(cpfValid('11111111111'), false); assert.equal(cpfValid('19119119100'), true);
+});
+test('seleção resiste a dados corrompidos e busca ignora acentos', () => {
+  assert.deepEqual(restoreCart('{invalid', products), {});
+  assert.deepEqual(restoreCart('null', products), {});
+  assert.deepEqual(restoreCart('[]', products), {});
+  assert.deepEqual(restoreCart(JSON.stringify({ missing: 2, [products[0].id]: -1 }), products), {});
+  assert.ok(filterProducts(products, 'labios', 'Todos').length > 0);
+  assert.equal(filterProducts(products, 'zzzinexistente', 'Todos').length, 0);
+  assert.ok(filterProducts(products, 'bitarra', 'Maquiagem').every(p => p.category === 'Maquiagem'));
+});
+test('fluxo API recusa origens externas e catálogo pendente sem chamar o provedor', async () => {
+  const prior = Object.fromEntries(Object.keys(env).map(key => [key, process.env[key]]));
+  const oldFetch = global.fetch; let calls = 0;
+  Object.assign(process.env, env); global.fetch = async () => { calls++; throw new Error('Não chamar'); };
+  try {
+    const disabled = response(); await createPayment(request({}), disabled); assert.equal(disabled.code, 503);
+    const foreign = request({}); foreign.headers.origin = 'https://other.example';
+    const denied = response(); await createPayment(foreign, denied); assert.equal(denied.code, 403); assert.equal(calls, 0);
+  } finally {
+    global.fetch = oldFetch;
+    for (const [key, value] of Object.entries(prior)) { if (value === undefined) delete process.env[key]; else process.env[key] = value; }
+  }
+});
+test('Pix interno usa valores oficiais, chave idempotente e confirmação autoritativa', async () => {
+  const oldProducts = products.slice(), oldFetch = global.fetch;
+  const prior = Object.fromEntries(Object.keys(env).map(key => [key, process.env[key]]));
+  Object.assign(process.env, env); products.splice(0, products.length, ...fixture);
+  let captured = [], storedPayment;
+  global.fetch = async (url, options) => {
+    if (options.method === 'POST') {
+      const body = JSON.parse(options.body); captured.push({ body, key: options.headers['X-Idempotency-Key'] });
+      storedPayment = { id: 123, status: 'pending', external_reference: body.external_reference, currency_id: 'BRL', transaction_amount: body.transaction_amount, metadata: body.metadata, point_of_interaction: { transaction_data: { qr_code: 'test-code', qr_code_base64: 'dGVzdA==' } } };
+    }
+    return { ok: true, json: async () => storedPayment };
+  };
+  try {
+    const q = quote(items, '30000001', env, fixture, Date.now());
+    const body = { attempt: '12345678-1234-1234-1234-123456789012', quoteToken: q.token, transaction_amount: 0.01, buyer: { name: 'Cliente Teste', email: 'cliente@example.com', cpf: '19119119100', phone: '31999999999', street: 'Rua Teste', number: '10', district: 'Centro', city: 'Cidade Teste', state: 'MG' } };
+    const res = response(); await createPayment(request(body), res); assert.equal(res.code, 200); assert.ok(res.body.token);
+    assert.equal(captured[0].body.transaction_amount, 56.48); assert.equal(captured[0].body.payment_method_id, 'pix');
+    const retry = response(); await createPayment(request(body), retry); assert.equal(captured[1].key, captured[0].key);
+    storedPayment.status = 'approved';
+    const status = response(); await paymentStatus(request({ token: res.body.token }), status); assert.equal(status.body.status, 'approved');
+    storedPayment.transaction_amount = 1;
+    const wrong = response(); await paymentStatus(request({ token: res.body.token }), wrong); assert.equal(wrong.code, 409);
+  } finally {
+    products.splice(0, products.length, ...oldProducts); global.fetch = oldFetch;
+    for (const [key, value] of Object.entries(prior)) { if (value === undefined) delete process.env[key]; else process.env[key] = value; }
+  }
+});
