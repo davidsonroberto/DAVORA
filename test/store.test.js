@@ -5,6 +5,7 @@ import { restoreCart, filterProducts, summarizeCart } from '../assets/catalog-ut
 import createPayment from '../api/create-store-payment.js';
 import paymentStatus from '../api/store-payment-status.js';
 import storeConfig from '../api/store-config.js';
+import legacyWebhook from '../api/webhook.js';
 import { sessionPayload } from '../lib/stripe.js';
 
 const now = Date.now();
@@ -134,4 +135,27 @@ test('Pix só entra na sessão depois de habilitação explícita', () => {
   assert.equal(normal.body.get('allowed_payment_method_types[1]'), null);
   assert.equal(pix.body.get('allowed_payment_method_types[1]'), 'pix');
   assert.equal(pix.body.get('payment_intent_data[shipping][address][country]'), 'BR');
+});
+
+test('repetição após atraso mantém todos os parâmetros da sessão idênticos', t => {
+  const clock = t.mock.method(Date, 'now', () => now);
+  const q = quote(items, '30000001', env, fixture, now);
+  const buyer = { email: 'cliente@example.com', name: 'Cliente Teste', phone: '31999999999', street: 'Rua Teste', number: '10', district: 'Centro', city: 'Cidade Teste', state: 'MG', cep: '30000001' };
+  const attempt = '12345678-1234-1234-1234-123456789012';
+  const first = sessionPayload(q, buyer, attempt, env);
+  clock.mock.mockImplementation(() => now + 5 * 60000);
+  const retry = sessionPayload(q, buyer, attempt, env);
+  assert.equal(retry.key, first.key);
+  assert.equal(retry.body.toString(), first.body.toString());
+  assert.match(first.body.get('integration_identifier'), /^davora_embedded_[a-z]{8}$/);
+  const expiresAt = Number(first.body.get('expires_at')) * 1000;
+  assert.ok(expiresAt - q.expiresAt > 30 * 60000);
+  assert.ok(expiresAt - now < 24 * 3600000);
+});
+
+test('webhook antigo não confirma o recebimento de eventos sem processá-los', async () => {
+  const res = response();
+  await legacyWebhook({ method: 'POST', body: { type: 'checkout.session.completed' } }, res);
+  assert.equal(res.code, 410);
+  assert.equal(res.body.received, undefined);
 });
