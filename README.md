@@ -26,7 +26,7 @@ Cada produto está com `supplierApproved: false`, `availability: pending_confirm
 
 O repositório pode continuar no GitHub. **GitHub Pages não permite hospedar uma operação de comércio eletrônico**, conforme https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits . O código usa funções Node para a parte de pagamento e precisa de hospedagem compatível, com plano que permita uso comercial.
 
-O projeto Vercel `davora` foi localizado, mas a consulta detalhada retornou 403 por falta de acesso ao escopo da conta. Não foi possível publicar ou verificar suas configurações. O Opera também retornou navegador desconectado. Nenhum domínio foi alterado.
+O projeto Vercel `davora` foi localizado. A consulta detalhada retornou 403 por falta de acesso ao escopo da conta, mas a conexão automática GitHub–Vercel gerou uma prévia ao receber esta branch. O status do commit confirmou a publicação como Ready. Prévia: https://davora-git-codex-davora-brasil-20261015-davidsonroberto.vercel.app . Não foi possível administrar as configurações do projeto. O Opera retornou navegador desconectado. O site principal e os domínios não foram alterados; a prévia permanece sem compras ativas.
 
 ## Dependências antes de vender
 
