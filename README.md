@@ -9,6 +9,8 @@ Versão de preparação de 16/10/2026, em português e BRL, com foco em eletrôn
 - Seleção persistida no navegador; dados pessoais não são guardados no localStorage.
 - Formulário de entrega e Stripe Checkout embutido na própria página, condicionado à ativação do servidor. Cartões e Google Pay dependem da conta/dispositivo; Pix só é incluído quando habilitado explicitamente.
 - APIs de cotação assinada, criação idempotente de sessão Stripe Checkout e consulta autoritativa do pagamento na Stripe. Valores são calculados no servidor, nunca aceitos do navegador.
+- Retomada da mesma sessão de pagamento após recarregar a página, na mesma aba e por até duas horas, sem criar outra cobrança. Só uma referência temporária e os itens da seleção ficam no sessionStorage; dados pessoais e client secret Stripe não são persistidos.
+- Cotações antigas são descartadas se o CEP ou a seleção mudar durante a consulta. O servidor também recusa um CEP de entrega diferente do CEP cotado.
 
 **As compras estão desativadas.** Produtos identificados em catálogos públicos não equivalem a acordo de fornecimento. Preços de revenda, variantes, estoque e regras comerciais ainda dependem do cadastro e da confirmação do fornecedor. Não houve contratação, importação para uma conta de lojista, pagamento nem pedido ao fornecedor. Não há comissão garantida de 50%.
 
@@ -38,7 +40,7 @@ Na consulta de 16/10/2026, a configuração **production** contém `STRIPE_SECRE
 3. Definir preços em `priceCents`, em centavos. Margem de 50% antes das demais despesas exige preço de venda igual a duas vezes o custo considerado; taxas, frete subsidiado, impostos, anúncios e devoluções diminuem o lucro. Fazer a conta com custos reais antes de escolher o preço.
 4. Conectar a hospedagem à Stripe por configuração segura do servidor. A conexão do ChatGPT foi verificada em 15/10/2026: conta brasileira em BRL, somente ambiente de teste disponível nesta sessão, cartões habilitados e sem exigências cadastrais pendentes na consulta. Isso não comprova a ativação da conta de produção. As três variáveis de credenciais foram cadastradas na configuração production da Vercel; valores e ambiente Stripe não foram inspecionados. Nenhuma chave deve ser enviada por mensagem ou incluída no GitHub.
 5. Completar identificação comercial da loja, condições de entrega, atendimento, privacidade, trocas e devoluções com dados reais do responsável.
-6. Integrar registro durável de pedidos, acompanhamento/recuperação de pagamento, controle de estoque e rotina de repasse ao fornecedor. Esta versão **não** envia pedidos automaticamente ao fornecedor nem reserva/decrementa estoque. As APIs são uma base de integração; não representam um sistema de pedidos concluído.
+6. Integrar registro durável de pedidos, recuperação de pedidos fora da aba original, controle de estoque e rotina de repasse ao fornecedor. A retomada temporária na mesma aba já existe, mas não substitui esse registro. Esta versão **não** envia pedidos automaticamente ao fornecedor nem reserva/decrementa estoque. As APIs são uma base de integração; não representam um sistema de pedidos concluído.
 7. Testar compra, atualização de estoque, cobrança repetida, indisponibilidade, expiração, reembolso, registro do pedido e despacho em ambiente de teste antes de liberar vendas reais.
 
 Depois destas etapas, a ativação exige todas as condições de `lib/store.js`, configurações explícitas de `.env.example`, produtos autorizados e preços/estoques confirmados. **Não ativar só preenchendo variáveis: o sistema de pedidos e as condições acima ainda precisam ser concluídos.**
@@ -55,7 +57,7 @@ npm run check
 git diff --check
 ```
 
-Os 15 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência inclusive em repetições após atraso, configuração de Pix, separação teste/produção, chave publicável gerenciada pela Vercel, confirmação autoritativa e recusa do webhook antigo. A chamada à Stripe é simulada; nenhuma cobrança foi realizada. A conferência da atualização de catálogo deve incluir o carregamento das 24 fotos e o fluxo de busca, filtros, detalhes e seleção em telas de computador e celular.
+Os 22 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência inclusive em repetições após atraso, configuração de Pix, separação teste/produção, chave publicável gerenciada pela Vercel, confirmação autoritativa, retomada da mesma sessão aberta e recusa do webhook antigo. A recuperação rejeita tokens adulterados ou expirados, divergência de valor/ambiente/referência, e não retorna formulário para pagamento já concluído. O armazenamento na aba exclui dados pessoais e client secret. As chamadas à Stripe são simuladas; nenhuma cobrança foi realizada. A conferência visual inclui o carregamento das 24 fotos e o fluxo de busca, filtros, detalhes e seleção em telas de computador e celular.
 
 Documentação do pagamento:
 - https://docs.stripe.com/checkout/embedded/quickstart

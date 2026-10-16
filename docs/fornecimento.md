@@ -13,6 +13,8 @@ O catálogo público no Dropi informa 53 produtos de acessórios mobile. Foram s
 
 O site oficial informa o CNPJ 30.519.402/0001-68, sediado em João Pessoa/PB, e orienta contato comercial pela opção Atacado do WhatsApp. A página pública não comprova atendimento manual em dropshipping fora do Dropi. Não existe integração direta implementada com esse fornecedor, acordo comercial ou autorização de uso comercial das fotos confirmados nesta sessão.
 
+Contato conferido em 16/10/2026: o botão WhatsApp da própria página Atacado aponta para https://api.whatsapp.com/send/?app_absent=0&phone=5583996835340&text=&type=phone_number (+55 83 99683-5340). O rodapé mostra outro número e seu link omite um dígito em relação ao texto; para a consulta comercial, usar o botão específico da página Atacado. Nenhuma mensagem foi enviada.
+
 Antes de escolher este fornecedor, confirmar:
 1. Aceite de CPF ou exigência de CNPJ/MEI e demais documentos.
 2. Pedido unitário manual, envio diretamente ao comprador e embalagem adequada.

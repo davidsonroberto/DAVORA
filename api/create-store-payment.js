@@ -14,7 +14,8 @@ export default async function handler(req, res) {
     const live = /^(sk|rk)_live_/.test(process.env.STRIPE_SECRET_KEY);
     if (!paymentMatches(payment, { paymentId: payment.id, reference, totalCents: order.totalCents, live }) || payment.metadata?.order_fingerprint !== fingerprint) throw new StoreError('Este pedido mudou. Recomece a confirmação antes de pagar.', 409);
     if (!/^cs_/.test(payment.id || '') || !payment.client_secret || payment.status !== 'open') throw new StoreError('Esta sessão de pagamento não está disponível. Confira o estado do pedido.', 409);
-    const token = sign({ kind: 'payment', paymentId: payment.id, reference, totalCents: order.totalCents, live, expiresAt: Date.now() + 2 * 3600000 }, process.env.DAVORA_CHECKOUT_SECRET);
-    return res.status(200).json({ provider: 'stripe', reference, token, clientSecret: payment.client_secret, publishableKey: stripePublishableKey() });
+    const expiresAt = Date.now() + 2 * 3600000;
+    const token = sign({ kind: 'payment', paymentId: payment.id, reference, totalCents: order.totalCents, live, expiresAt }, process.env.DAVORA_CHECKOUT_SECRET);
+    return res.status(200).json({ provider: 'stripe', reference, token, expiresAt, clientSecret: payment.client_secret, publishableKey: stripePublishableKey() });
   } catch (error) { return replyError(res, error); }
 }
