@@ -1,3 +1,13 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; script-src 'self' https://*.stripe.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.stripe.com https://*.link.com; font-src 'self'; connect-src 'self' https://*.stripe.com https://link.com https://*.link.com; frame-src https://*.stripe.com https://link.com https://*.link.com; form-action 'self'" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
 }
