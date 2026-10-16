@@ -2,17 +2,19 @@
 import base64
 import concurrent.futures
 import json
+import mimetypes
 import sys
-import urllib.request
 from pathlib import Path
 
 root = Path(__file__).resolve().parent.parent
 data = json.loads((root / 'data/catalog.json').read_text())
 
 def embed(product):
-    with urllib.request.urlopen(product['image'], timeout=25) as response:
-        mime = response.headers.get_content_type()
-        image = response.read(5 * 1024 * 1024)
+    source = (root / product['image']).resolve()
+    if not source.is_relative_to(root / 'assets' / 'products'):
+        raise ValueError('Product image must be a local catalog asset')
+    mime = mimetypes.guess_type(source)[0]
+    image = source.read_bytes()
     if mime not in ('image/png', 'image/jpeg', 'image/webp'):
         raise ValueError('Unsupported product image')
     return {**product, 'image': 'data:' + mime + ';base64,' + base64.b64encode(image).decode()}
