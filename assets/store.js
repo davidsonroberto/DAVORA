@@ -30,9 +30,18 @@ function renderProducts() {
   $('resultCount').textContent = list.length + (list.length === 1 ? ' produto' : ' produtos');
   $('emptyState').style.display = list.length ? 'none' : 'block';
 }
+function supplierConsultation(p) {
+  const value = p.supplierVariantVerifiedAt;
+  if (!value || !Number.isFinite(Date.parse(value))) return '';
+  const date = new Intl.DateTimeFormat('pt-BR', { timeZone: 'America/Sao_Paulo' }).format(new Date(value));
+  return `<p class="availability">Modelo consultado no fornecedor em ${safe(date)}. Frete e prazo finais em confirmação.</p>`;
+}
 function showDetail(id) {
   const p = products.find(p => p.id === id); if (!p) return;
   $('productDetail').innerHTML = `<div class="detail-image"><img src="${safe(p.image)}" alt="${safe(p.name)}" referrerpolicy="no-referrer"></div><div class="detail-copy"><span class="cat-label">${safe(p.category)}</span><h2 id="detailTitle">${safe(p.name)}</h2><p>${safe(p.description)}</p><p class="detail-size">${safe(p.size)}</p><div class="compatibility"><b>Confira a compatibilidade</b><p>${safe(p.compatibility || 'Confira o modelo, as medidas e as orientações do fabricante antes de comprar.')}</p></div><strong class="${p.priceCents ? 'price' : 'pending-price'}">${p.priceCents ? money(p.priceCents) : 'Preço em confirmação'}</strong><p class="availability">${p.availability === 'available' ? 'Consulte o frete antes de pagar.' : 'Frete, prazo e disponibilidade em confirmação. Compra ainda indisponível.'}</p><button class="primary" data-add="${safe(p.id)}">Adicionar à seleção</button><small>Acessório de terceiros. As marcas citadas identificam aparelhos compatíveis. Modelos, cores e medidas dependem de confirmação.</small></div>`;
+  $('productDetail').querySelector('.detail-copy').insertAdjacentHTML('beforeend', supplierConsultation(p));
+  const note = $('productDetail').querySelector('small');
+  if (p.supplierSku && note) note.textContent = 'Acessório de terceiros. As marcas citadas identificam aparelhos compatíveis. Foto ilustrativa: confira o modelo e a cor indicados nesta seleção.';
   modal('productDialog');
 }
 function invalidateQuote() { quoteRevision++; shippingQuote = null; attempt = null; $('payButton').disabled = true; $('quoteSummary').textContent = 'Calcule o frete para conferir o total antes do pagamento.'; }
@@ -179,7 +188,7 @@ $('checkPayment').addEventListener('click', async () => {
 });
 function showInfo(kind) {
   $('infoTitle').textContent = kind === 'privacy' ? 'Privacidade' : 'Entrega e disponibilidade';
-  $('infoContent').innerHTML = kind === 'privacy' ? '<p>Sua seleção de produtos é guardada apenas neste navegador para facilitar sua próxima visita. Você pode apagá-la pelo botão “Limpar seleção” ou pelas configurações do navegador.</p><p>Na etapa atual, as compras não estão disponíveis e nenhum dado de pagamento é solicitado. Quando as vendas forem liberadas, os dados de contato e entrega informados no pedido serão compartilhados com o processador de pagamento e com o responsável pelo envio, para atender à compra.</p><p>As fotos são carregadas do catálogo público do fornecedor, cujo servidor recebe os dados técnicos necessários ao carregamento. Ao abrir o WhatsApp, você acessa um serviço externo com suas próprias condições de privacidade.</p><p>Para solicitar atendimento sobre seus dados, fale com a DAVORA pelo WhatsApp indicado no rodapé.</p>' : '<p>Estamos preparando o catálogo para vendas no Brasil. Preços, disponibilidade, frete e prazos ainda dependem de confirmação. Nenhum pagamento é recebido nesta etapa.</p><p>Antes da abertura das vendas, publicaremos as condições de entrega, troca e devolução aplicáveis aos produtos.</p>';
+  $('infoContent').innerHTML = kind === 'privacy' ? '<p>Sua seleção de produtos é guardada apenas neste navegador para facilitar sua próxima visita. Você pode apagá-la pelo botão “Limpar seleção” ou pelas configurações do navegador.</p><p>Na etapa atual, as compras não estão disponíveis e nenhum dado de pagamento é solicitado. Quando as vendas forem liberadas, os dados de contato e entrega informados no pedido serão compartilhados com o processador de pagamento e com o responsável pelo envio, para atender à compra.</p><p>As fotos dos produtos são servidas pela própria DAVORA. Ao abrir o WhatsApp, você acessa um serviço externo com suas próprias condições de privacidade.</p><p>Para solicitar atendimento sobre seus dados, fale com a DAVORA pelo WhatsApp indicado no rodapé.</p>' : '<p>Estamos preparando o catálogo para vendas no Brasil. Preços, disponibilidade, frete e prazos ainda dependem de confirmação. Nenhum pagamento é recebido nesta etapa.</p><p>Antes da abertura das vendas, publicaremos as condições de entrega, troca e devolução aplicáveis aos produtos.</p>';
   if (kind === 'privacy') $('infoContent').insertAdjacentHTML('beforeend', '<p>Ao iniciar um pagamento, uma referência fica temporariamente nesta aba para você retomar o acompanhamento depois de recarregar a página. Essa referência não guarda seus dados pessoais nem dados de cartão e expira em até duas horas.</p>');
   modal('infoDialog');
 }

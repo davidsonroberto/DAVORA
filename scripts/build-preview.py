@@ -22,14 +22,15 @@ def embed(product):
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
     data['products'] = list(pool.map(embed, data['products']))
 
-utils = (root / 'assets/catalog-utils.js').read_text().replace('export ', '')
+inventory = (root / 'assets/inventory.js').read_text().replace('export ', '')
+utils = (root / 'assets/catalog-utils.js').read_text().replace('export ', '').replace("import { hasFreshInventory } from './inventory.js';", '')
 recovery = (root / 'assets/payment-recovery.js').read_text().replace('export ', '').replace("const STORAGE = 'davora-payment-session-v1';", "const PAYMENT_STORAGE = 'davora-payment-session-v1';").replace('storage.setItem(STORAGE', 'storage.setItem(PAYMENT_STORAGE').replace('storage.getItem(STORAGE', 'storage.getItem(PAYMENT_STORAGE').replace('storage.removeItem(STORAGE', 'storage.removeItem(PAYMENT_STORAGE')
 app = (root / 'assets/store.js').read_text()
 app = app.replace("import { money, filterProducts, restoreCart, summarizeCart } from './catalog-utils.js';", '')
 app = app.replace("import { validPaymentRecord, savePaymentRecord, restorePaymentRecord, clearPaymentRecord } from './payment-recovery.js';", '')
 app = app.replace("const response = await fetch('data/catalog.json', { cache: 'no-store' }); if (!response.ok) throw new Error();", 'const response = { ok: true, json: async () => DAVORA_PREVIEW_CATALOG };')
 app = app.replace("const config = await api('store-config').catch(() => ({ checkoutEnabled: false }));", 'const config = { checkoutEnabled: false };')
-code = 'const DAVORA_PREVIEW_CATALOG = ' + json.dumps(data, ensure_ascii=False) + ';\n' + utils + '\n' + recovery + '\n' + app
+code = 'const DAVORA_PREVIEW_CATALOG = ' + json.dumps(data, ensure_ascii=False) + ';\n' + inventory + '\n' + utils + '\n' + recovery + '\n' + app
 assert 'fetch(\'data/catalog.json\'' not in code
 html = (root / 'index.html').read_text()
 html = html.replace('<link rel="stylesheet" href="assets/store.css">', '<style>' + (root / 'assets/store.css').read_text() + '</style>')

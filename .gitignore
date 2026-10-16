@@ -4,3 +4,6 @@
 .vercel/
 node_modules/
 coverage/
+
+# Evidência completa de consulta ao fornecedor, mantida fora da vitrine pública.
+data/zendrop-verification.json

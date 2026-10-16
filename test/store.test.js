@@ -63,6 +63,34 @@ test('cotação assinada rejeita adulteração, expiração e mudança no catál
   assert.throws(() => verifyQuote(q.token, env, fixture, now + 16 * 60000), /expirada/);
   assert.throws(() => verifyQuote(q.token, env, [{ ...fixture[0], priceCents: 3000 }], now), /mudou/);
 });
+test('o pedido conserva o SKU consultado e recusa trocar de variante após a cotação', () => {
+  const supplier = { supplierPlatform: 'zendrop', supplierProductId: '123', supplierVariantId: 456, supplierSku: 'SKU-456' };
+  const catalog = [{ ...fixture[0], ...supplier }];
+  const q = quote([{ id: fixture[0].id, quantity: 1, supplierSku: 'SKU-ADULTERADO', supplierVariantId: 999 }], '30000001', env, catalog, now);
+  for (const [key, value] of Object.entries(supplier)) assert.equal(q.items[0][key], value);
+  assert.equal(verifyQuote(q.token, env, catalog, now).items[0].supplierSku, 'SKU-456');
+  assert.throws(() => verifyQuote(q.token, env, [{ ...catalog[0], supplierSku: 'SKU-OUTRO', supplierVariantId: 999 }], now), /mudou/);
+});
+test('disponibilidade sem contagem não vira estoque inventado nem libera consulta vencida', async () => {
+  const inventory = { inventoryLevel: 'In stock', available: null, tracked: false, verifiedAt: new Date(now).toISOString() };
+  const product = { ...fixture[0], inventoryMode: 'supplier_availability', stock: null, stockConfirmedAt: null,
+    supplierPlatform: 'zendrop', supplierProductId: '123', supplierVariantId: 456, supplierSku: 'SKU-456', supplierInventory: inventory };
+  const catalog = [product];
+  const q = quote([{ id: product.id, quantity: 2 }], '30000001', env, catalog, now);
+  assert.equal(q.items[0].quantity, 2);
+  assert.equal(product.stock, null);
+  assert.equal(summarizeCart({ [product.id]: 2 }, catalog).purchasable, true);
+  for (const patch of [{ inventoryLevel: 'Out of stock' }, { available: 0 }, { tracked: true },
+    { verifiedAt: new Date(now - 86400001).toISOString() }, { verifiedAt: new Date(now + 1000).toISOString() }]) {
+    assert.equal(isPurchasable({ ...product, supplierInventory: { ...inventory, ...patch } }, now), false);
+  }
+  assert.equal(isPurchasable({ ...product, supplierSku: null }, now), false);
+  assert.throws(() => normalizeItems([{ id: product.id, quantity: 11 }], catalog, now));
+  const store = createOrderStore(memoryLedger(), env, catalog);
+  const record = await store.reserve(q, { name: 'Teste' }, 'DAVORA-12345678-1234-1234-1234-123456789012', 'sku-fingerprint');
+  assert.equal(record.items[0].supplierSku, 'SKU-456');
+  assert.equal(record.fulfillment, 'not_paid');
+});
 test('tipo de token e identificação do pagamento são conferidos', () => {
   const data = { kind: 'payment', paymentId: '123', reference: 'DAVORA-test', totalCents: 5648, expiresAt: now + 60000 };
   assert.throws(() => verify(sign(data, env.DAVORA_CHECKOUT_SECRET), env.DAVORA_CHECKOUT_SECRET, 'quote', now));

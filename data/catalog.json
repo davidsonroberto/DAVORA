@@ -1,6 +1,6 @@
 {
   "currency": "BRL",
-  "verifiedAt": "2026-10-16",
+  "verifiedAt": "2026-10-16T20:45:46.070Z",
   "status": "preparation",
   "focus": "Eletrônicos e acessórios",
   "supplierPlatform": "zendrop",
@@ -22,7 +22,7 @@
       "category": "Mesa e setup",
       "tag": "SETUP",
       "description": "Suporte para organizar e apoiar seu headset na mesa. O catálogo apresenta bases preta, branca e transparente.",
-      "size": "Base e cor a confirmar",
+      "size": "Base preta",
       "compatibility": "Confira as dimensões do suporte e do arco do seu headset. Fones e consoles não acompanham o acessório.",
       "image": "assets/products/zendrop-2932951.png",
       "sourceUrl": "https://app.zendrop.com/product/2932951",
@@ -31,33 +31,58 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932951",
-      "supplierSku": null,
+      "supplierSku": "1773319276954943490",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 344,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 344
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/ce/15/84be0fd54a14b40676b17d01b589.png",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "bcd3ef5bef2dc0736ad608c0663edddf6783d97d58de611c75e37ac271c14e2e"
+      "imageSha256": "bcd3ef5bef2dc0736ad608c0663edddf6783d97d58de611c75e37ac271c14e2e",
+      "supplierVariantId": 27489901,
+      "supplierVariantName": "Black base",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 2066,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2933013",
-      "name": "Relógio digital RGB de mesa",
+      "name": "Relógio digital RGB para montar",
       "brand": "Acessório de terceiros",
       "category": "Mesa e setup",
       "tag": "RGB",
-      "description": "Relógio digital com iluminação RGB para compor seu espaço de trabalho ou setup.",
-      "size": "Alimentação e medidas a confirmar",
+      "description": "Kit de relógio digital RGB para compor sua mesa ou setup. A variante selecionada exige montagem; confira o conteúdo e a alimentação antes da compra.",
+      "size": "Kit RGB · montagem necessária",
       "compatibility": "Confira a fonte de alimentação, o formato de exibição e o conteúdo da embalagem antes de comprar.",
       "image": "assets/products/zendrop-2933013.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2933013",
@@ -66,24 +91,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2933013",
-      "supplierSku": null,
+      "supplierSku": "1773317385575497728",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 2443,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 2443
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/03/bb/306e6a4e4a7490ec6765fdf41c5d.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "837e7e7de82f23e1c71adda0bb7233a7406df90562724f2d1f70493cf3048115"
+      "imageSha256": "837e7e7de82f23e1c71adda0bb7233a7406df90562724f2d1f70493cf3048115",
+      "supplierVariantId": 27491000,
+      "supplierVariantName": "Finished products (assembly required)",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 3084,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932911",
@@ -92,7 +142,7 @@
       "category": "Áudio",
       "tag": "RETRÔ",
       "description": "Caixa de som de visual retrô. O catálogo informa conexão Bluetooth e rádio FM.",
-      "size": "Modelo AS19",
+      "size": "AS19 · acabamento Hua Li Jin",
       "compatibility": "Confira conexões, alimentação, idioma do manual e acessórios da variante escolhida.",
       "image": "assets/products/zendrop-2932911.png",
       "sourceUrl": "https://app.zendrop.com/product/2932911",
@@ -101,24 +151,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932911",
-      "supplierSku": null,
+      "supplierSku": "1773319380772356096",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 1698,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 1698
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/ef/fe/057f0087430db5d7033612369a25.png",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "a55b51af21bc98a2b8ccdb0f95f106e5b7c2ac0c593add75f03f9cf99bfcd175"
+      "imageSha256": "a55b51af21bc98a2b8ccdb0f95f106e5b7c2ac0c593add75f03f9cf99bfcd175",
+      "supplierVariantId": 27489227,
+      "supplierVariantName": "Hua Li Jin",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 2252,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2937460",
@@ -127,7 +202,7 @@
       "category": "Áudio",
       "tag": "GAMER",
       "description": "Headset com fio NUBWO N7, apresentado no catálogo para uso com PC e PS4.",
-      "size": "Modelo N7 · conectores a confirmar",
+      "size": "N7D · preto · plugue único de 3,5 mm",
       "compatibility": "Confira a conexão de áudio, o microfone e a necessidade de adaptadores para o seu equipamento.",
       "image": "assets/products/zendrop-2937460.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2937460",
@@ -136,24 +211,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2937460",
-      "supplierSku": null,
+      "supplierSku": "1773697222198788096",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 1394,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 1394
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/20/7c/c2b9196941fb998db4f04219640f.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "e1ef99d858093edd478c060a25633380bbb47fb36db5fee67b11adef0e403ab5"
+      "imageSha256": "e1ef99d858093edd478c060a25633380bbb47fb36db5fee67b11adef0e403ab5",
+      "supplierVariantId": 27506581,
+      "supplierVariantName": "N7D 3.5 single plug black",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 2203,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2933186",
@@ -162,7 +262,7 @@
       "category": "Áudio",
       "tag": "TWS",
       "description": "Fones sem fio modelo F9-5C. O catálogo apresenta conexão Bluetooth e controles por toque.",
-      "size": "Modelo F9-5C",
+      "size": "F9-5C · preto",
       "compatibility": "Confira a versão, o estojo, o cabo e as conexões incluídas na variante antes de comprar.",
       "image": "assets/products/zendrop-2933186.png",
       "sourceUrl": "https://app.zendrop.com/product/2933186",
@@ -171,33 +271,58 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2933186",
-      "supplierSku": null,
+      "supplierSku": "1773315321352978432",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 249,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 249
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/1a/23/2763bb00418ba7942e22e0d3e071.png",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "5b95b142c7552bbd2c6300073d8c04f1ee9b2f6a4237d434a6168fa3fc9c1c5e"
+      "imageSha256": "5b95b142c7552bbd2c6300073d8c04f1ee9b2f6a4237d434a6168fa3fc9c1c5e",
+      "supplierVariantId": 27493373,
+      "supplierVariantName": "F9-5C battery type Black",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1353,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932754",
-      "name": "Fones sem fio S109",
+      "name": "Fone sem fio S109",
       "brand": "Acessório de terceiros",
       "category": "Áudio",
       "tag": "SEM FIO",
-      "description": "Fones sem fio modelo S109 para a sua rotina de áudio. Recursos e conteúdo da embalagem dependem da variante.",
-      "size": "Modelo S109",
+      "description": "Fone Bluetooth S109 na variante preta com cabo de recarga, manual e caixa. Confira o formato e o conteúdo do kit antes da compra.",
+      "size": "Preto · com cabo, manual e caixa",
       "compatibility": "Confira a conexão Bluetooth, os comandos e os acessórios incluídos na variante.",
       "image": "assets/products/zendrop-2932754.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2932754",
@@ -206,24 +331,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932754",
-      "supplierSku": null,
+      "supplierSku": "1773319731403587594",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 96,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 96
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/8d/56/a51735ea4cea86a1a0c4c10eac29.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "219fd0a6c52130a2f5e089a374e0ca2d6415230ad114cadb03c05876d1449548"
+      "imageSha256": "219fd0a6c52130a2f5e089a374e0ca2d6415230ad114cadb03c05876d1449548",
+      "supplierVariantId": 27486897,
+      "supplierVariantName": "Black / Boxed (headset + charging cable + manual + packing box)",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1249,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932497",
@@ -232,7 +382,7 @@
       "category": "Áudio",
       "tag": "ÁUDIO",
       "description": "Fones TWS descritos no catálogo com condução aérea e conexão Bluetooth.",
-      "size": "Encaixe e cor a confirmar",
+      "size": "Preto",
       "compatibility": "Confira o formato de encaixe, as conexões e os acessórios da variante escolhida.",
       "image": "assets/products/zendrop-2932497.png",
       "sourceUrl": "https://app.zendrop.com/product/2932497",
@@ -241,24 +391,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932497",
-      "supplierSku": null,
+      "supplierSku": "1773322371810230272",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 743,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 743
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/53/e0/e15f8b4c4e2e989ce7c17a5884b5.png",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "279c56c0eea48336c3ea30ca33df084ab2f07f19c1453be4a4dca163f9b12fd9"
+      "imageSha256": "279c56c0eea48336c3ea30ca33df084ab2f07f19c1453be4a4dca163f9b12fd9",
+      "supplierVariantId": 27482896,
+      "supplierVariantName": "Black",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1384,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2931956",
@@ -267,7 +442,7 @@
       "category": "Áudio",
       "tag": "ESPORTE",
       "description": "Fones sem fio de formato esportivo, selecionados para acompanhar sua rotina de áudio.",
-      "size": "Modelo e encaixe a confirmar",
+      "size": "B101 · preto · com caixa",
       "compatibility": "Confira o encaixe, o método de transmissão do áudio, a alimentação e as orientações de uso do fornecedor.",
       "image": "assets/products/zendrop-2931956.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2931956",
@@ -276,24 +451,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2931956",
-      "supplierSku": null,
+      "supplierSku": "1773327147633508359",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 399,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 418
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/1d/c8/a1d49d4841c1ac3b444c7e716f2c.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "81b24c7cbe73497d4a281e55b361a6c6e9d59271d031f5523423e4c8b890f981"
+      "imageSha256": "81b24c7cbe73497d4a281e55b361a6c6e9d59271d031f5523423e4c8b890f981",
+      "supplierVariantId": 27475615,
+      "supplierVariantName": "Black / B101 color box",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1518,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2933399",
@@ -302,7 +502,7 @@
       "category": "Áudio",
       "tag": "COM MICROFONE",
       "description": "Fones com fio em formato de patinha, com microfone informado no catálogo.",
-      "size": "Rosa · conector a confirmar",
+      "size": "Rosa",
       "compatibility": "O catálogo cita aparelhos Android. Confira o conector e a necessidade de adaptador no seu aparelho.",
       "image": "assets/products/zendrop-2933399.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2933399",
@@ -311,24 +511,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2933399",
-      "supplierSku": null,
+      "supplierSku": "1775142122536603648",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 65,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 65
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/34/9e/dc85a1ab4f1897cbc9dbed69b5ff.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "17503dfb282b00337fee4b64282f1f2cde02862d9923766927fc1589d4bc2627"
+      "imageSha256": "17503dfb282b00337fee4b64282f1f2cde02862d9923766927fc1589d4bc2627",
+      "supplierVariantId": 27500022,
+      "supplierVariantName": "Pink",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1555,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2933398",
@@ -337,7 +562,7 @@
       "category": "Áudio",
       "tag": "GAMER",
       "description": "Fones sem fio com proposta gamer e comandos por toque apresentados no catálogo.",
-      "size": "Variante e cor a confirmar",
+      "size": "Preto",
       "compatibility": "Confira a conexão, o microfone, os controles e a compatibilidade com o seu equipamento.",
       "image": "assets/products/zendrop-2933398.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2933398",
@@ -346,24 +571,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2933398",
-      "supplierSku": null,
+      "supplierSku": "1775142124143030273",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 782,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 782
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/a5/b7/105ea30f4b4aaa07c5a7b8ac2359.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "2ff32b4f698fd83cb0904604592a3221f9c1c7f882fdab4b4999332264428237"
+      "imageSha256": "2ff32b4f698fd83cb0904604592a3221f9c1c7f882fdab4b4999332264428237",
+      "supplierVariantId": 27500025,
+      "supplierVariantName": "Black",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1279,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932823",
@@ -372,7 +622,7 @@
       "category": "Cabos e carga",
       "tag": "USB-C",
       "description": "Cabo de dados e recarga HOCO X20 com opções de comprimento no catálogo.",
-      "size": "Opções de 1 m, 2 m e 3 m",
+      "size": "Preto · USB-C · 1 m",
       "compatibility": "Confira os conectores das duas pontas, o comprimento e a potência suportada pelo cabo, carregador e aparelho.",
       "image": "assets/products/zendrop-2932823.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2932823",
@@ -381,33 +631,58 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932823",
-      "supplierSku": null,
+      "supplierSku": "1773319490453405716",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 84,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 105
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/87/10/d01f2a27496e833edc9b7d2fdb7c.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "e90fb5de6e08ed83378750281796db0a5f78b180cbeb69f687c440436681b799"
+      "imageSha256": "e90fb5de6e08ed83378750281796db0a5f78b180cbeb69f687c440436681b799",
+      "supplierVariantId": 27487749,
+      "supplierVariantName": "Black / Type-c 1m",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1592,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932584",
-      "name": "Cabo de recarga multiuso",
+      "name": "Cabo de recarga USB-C",
       "brand": "Acessório de terceiros",
       "category": "Cabos e carga",
       "tag": "MULTIUSO",
-      "description": "Cabo de recarga multiuso apresentado para aparelhos Android e Apple.",
-      "size": "Pontas e comprimento a confirmar",
+      "description": "Cabo de recarga na variante preta com conector USB-C e comprimento informado de 22,5 cm.",
+      "size": "Preto · USB-C · 22,5 cm",
       "compatibility": "Confira cada conector e a compatibilidade com seu aparelho. Potência e transferência de dados dependem da variante.",
       "image": "assets/products/zendrop-2932584.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2932584",
@@ -416,24 +691,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932584",
-      "supplierSku": null,
+      "supplierSku": "1773322170777239559",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 113,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 113
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/87/7f/1d7d02434e6d8806e72278e32b5e.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "b8a0336a962ee8dd8cf7b086d96d0b13b8623561430b6e9dd4ce4a3d686b5feb"
+      "imageSha256": "b8a0336a962ee8dd8cf7b086d96d0b13b8623561430b6e9dd4ce4a3d686b5feb",
+      "supplierVariantId": 27484076,
+      "supplierVariantName": "Black / Type C 22.5CM",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1249,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932750",
@@ -442,7 +742,7 @@
       "category": "Cabos e carga",
       "tag": "4 EM 1",
       "description": "Acessório de recarga em formato de chaveiro com quatro funções apresentadas no catálogo.",
-      "size": "Conectores e potência a confirmar",
+      "size": "Cinza-escuro · versão 4 em 1",
       "compatibility": "O catálogo informa PD e até 60 W. Confirme a variante e a combinação de aparelho, cabo e fonte necessária.",
       "image": "assets/products/zendrop-2932750.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2932750",
@@ -451,24 +751,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932750",
-      "supplierSku": null,
+      "supplierSku": "1773319668258340864",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 439,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 439
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/2c/7d/4fedc0044bc8843d3d517af84a64.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "48a39d1e4175bcecfb45a8882972ae26292491bf1cce4fc11bc2239c37e49d90"
+      "imageSha256": "48a39d1e4175bcecfb45a8882972ae26292491bf1cce4fc11bc2239c37e49d90",
+      "supplierVariantId": 27486788,
+      "supplierVariantName": "dark grey / WF-4-in-1 TYPE-C60W Apple 27W black gray",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1279,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932749",
@@ -477,7 +802,7 @@
       "category": "Cabos e carga",
       "tag": "MAGNÉTICO",
       "description": "Base de recarga magnética 4 em 1 apresentada para aparelhos iPhone e Apple Watch.",
-      "size": "Modelo 178",
+      "size": "Preto · base metálica",
       "compatibility": "Confira os modelos de celular, relógio e fones aceitos, a fonte necessária e os acessórios incluídos.",
       "image": "assets/products/zendrop-2932749.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2932749",
@@ -486,24 +811,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932749",
-      "supplierSku": null,
+      "supplierSku": "1773321711760998400",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 2057,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 2200
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/e4/b5/a8bd41684d12995c14de5eb80ba8.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "575b0e59f87db22544418b5abc063c51bfaea37c67120114aa2f9fb4154adee5"
+      "imageSha256": "575b0e59f87db22544418b5abc063c51bfaea37c67120114aa2f9fb4154adee5",
+      "supplierVariantId": 27486789,
+      "supplierVariantName": "Black / Metal bottom",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1623,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932570",
@@ -512,7 +862,7 @@
       "category": "Cabos e carga",
       "tag": "NO CARRO",
       "description": "Suporte veicular com recarga sem fio e sensor informado no catálogo.",
-      "size": "Modelo A7",
+      "size": "A7 · preto",
       "compatibility": "Confira a fixação no veículo, as dimensões do celular e o padrão de carregamento. Fonte veicular e cabo dependem da variante.",
       "image": "assets/products/zendrop-2932570.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2932570",
@@ -521,34 +871,59 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932570",
-      "supplierSku": null,
+      "supplierSku": "1773322076724166658",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 573,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 573
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/5c/62/337efdc34c3fb6ace4144eded131.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "39de1cbcbb4c96ca2857944888c9f5c4ceee36188ebd9e31ffaa1a7d48c67d21"
+      "imageSha256": "39de1cbcbb4c96ca2857944888c9f5c4ceee36188ebd9e31ffaa1a7d48c67d21",
+      "supplierVariantId": 27485913,
+      "supplierVariantName": "Black",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1526,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2938549",
-      "name": "Kit carregador com duas portas USB-C",
+      "name": "Kit USB-C de 4 peças para iPhone 15",
       "brand": "Acessório de terceiros",
       "category": "Cabos e carga",
       "tag": "DUAL USB-C",
-      "description": "Kit de acessórios de recarga com carregador de duas portas USB-C, apresentado para iPhone.",
-      "size": "Potência anunciada de 35 W a confirmar",
-      "compatibility": "Confira padrão do plugue, tensão de entrada, cabos incluídos e potência compartilhada entre as portas.",
+      "description": "A variante selecionada reúne carregador de duas portas USB-C de 35 W, cabo PD de 1 m, bateria portátil indicada como 5000 e capa para iPhone 15. A capacidade e as especificações elétricas da bateria e do carregador ainda precisam de confirmação. A foto do catálogo é ilustrativa dos kits disponíveis.",
+      "size": "4 peças · 35 W · iPhone 15",
+      "compatibility": "Variante indicada para iPhone 15. Confira o padrão do plugue, a alimentação, o conector do cabo e as especificações da bateria portátil antes da compra. Acessórios de terceiros; aparelho não incluso.",
       "image": "assets/products/zendrop-2938549.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2938549",
       "sourceName": "35W Dual C Fast Charger Accessories Set for iPhone",
@@ -556,24 +931,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2938549",
-      "supplierSku": null,
+      "supplierSku": "1773547747232776353",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 763,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 898
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/5f/48/3b70546f42359ce18d5e65be182d.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "ad614a7aaa9529b5f192165c1cd63d329a65d7de44456ef47296907071c811db"
+      "imageSha256": "ad614a7aaa9529b5f192165c1cd63d329a65d7de44456ef47296907071c811db",
+      "supplierVariantId": 27509626,
+      "supplierVariantName": "Four-piece set: 35W double C head +1 m PD line + charging treasure 5000 + ordinary shell / iPhone-15",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 2238,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2938582",
@@ -582,7 +982,7 @@
       "category": "Capinhas e proteção",
       "tag": "COM APOIO",
       "description": "Capa com brilho e suporte de apoio. O catálogo apresenta opção para iPhone 15 Pro Max.",
-      "size": "Modelo exato e cor a confirmar",
+      "size": "Branca · iPhone 15 Pro Max",
       "compatibility": "Selecione a versão correspondente ao modelo do aparelho. Outros tamanhos de iPhone podem ter recortes diferentes.",
       "image": "assets/products/zendrop-2938582.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2938582",
@@ -591,24 +991,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2938582",
-      "supplierSku": null,
+      "supplierSku": "1773547892728987701",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 249,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 249
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/3e/91/c6289814492bb327f0bec7c4a394.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "39f80613033961c569bccd42cffdb4bb5102cf1a5f1079405e774d03535d110e"
+      "imageSha256": "39f80613033961c569bccd42cffdb4bb5102cf1a5f1079405e774d03535d110e",
+      "supplierVariantId": 27509703,
+      "supplierVariantName": "White / Apple 15ProMax",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1635,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2935811",
@@ -617,7 +1042,7 @@
       "category": "Capinhas e proteção",
       "tag": "ARMOR",
       "description": "Capa de duas partes com moldura metálica apresentada para iPhone 14 Pro Max.",
-      "size": "Modelo exato a confirmar",
+      "size": "iPhone 14 Pro Max",
       "compatibility": "Confira o modelo do aparelho, os recortes e as peças incluídas na variante.",
       "image": "assets/products/zendrop-2935811.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2935811",
@@ -626,24 +1051,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2935811",
-      "supplierSku": null,
+      "supplierSku": "1774105832666103808",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 535,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 535
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/cc/75/b90b35bd46bea7e8d501254eaa02.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "17e1fc0395d6b9b21df9477551286c67fc6b544c84ea5ac9af33951f26e08af7"
+      "imageSha256": "17e1fc0395d6b9b21df9477551286c67fc6b544c84ea5ac9af33951f26e08af7",
+      "supplierVariantId": 27503825,
+      "supplierVariantName": "iPhone14promax",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1614,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2933219",
@@ -652,7 +1102,7 @@
       "category": "Capinhas e proteção",
       "tag": "COM APOIO",
       "description": "Capa rígida em PC com suporte de apoio, apresentada no catálogo para iPhone 15 Pro.",
-      "size": "Modelo exato e cor a confirmar",
+      "size": "Preta · iPhone 15 Pro",
       "compatibility": "Confira a variante para o seu iPhone. Modelos Pro, Pro Max e padrão usam dimensões diferentes.",
       "image": "assets/products/zendrop-2933219.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2933219",
@@ -661,24 +1111,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2933219",
-      "supplierSku": null,
+      "supplierSku": "1773315317473247306",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 96,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 96
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/06/46/a23b8c6d4d428d3e986ad1c2bf39.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "5f8e87da94770ed6f3b31306f9552ca62ea259737b75d8e742b7ef10ae0389a9"
+      "imageSha256": "5f8e87da94770ed6f3b31306f9552ca62ea259737b75d8e742b7ef10ae0389a9",
+      "supplierVariantId": 27496989,
+      "supplierVariantName": "Black / iPhone15pro",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1630,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2933383",
@@ -687,7 +1162,7 @@
       "category": "Capinhas e proteção",
       "tag": "PORTA-CARTÕES",
       "description": "Porta-cartões magnético apresentado para a linha iPhone 13 com compatibilidade MagSafe informada no catálogo.",
-      "size": "Fixação e cor a confirmar",
+      "size": "Preto · variante indicada para iPhone 12 a 14",
       "compatibility": "Confira a compatibilidade magnética do aparelho e da capa. Acessório de terceiros.",
       "image": "assets/products/zendrop-2933383.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2933383",
@@ -696,24 +1171,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2933383",
-      "supplierSku": null,
+      "supplierSku": "1773298874723602435",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 320,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 320
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/5b/39/be7bbca14ae689c586c9a6c8e045.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "5a3a97ba6b0b77fc19e67456e76ab917c3e843bdb4949cc6f6d6ff64c3567f72"
+      "imageSha256": "5a3a97ba6b0b77fc19e67456e76ab917c3e843bdb4949cc6f6d6ff64c3567f72",
+      "supplierVariantId": 27496264,
+      "supplierVariantName": "Black / Apple official magnetic card package 12-14 Universal",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1630,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932605",
@@ -722,7 +1222,7 @@
       "category": "Capinhas e proteção",
       "tag": "TRANSPARENTE",
       "description": "Capa transparente apresentada com opções para aparelhos Samsung Galaxy.",
-      "size": "Catálogo cita S23 Ultra e A54",
+      "size": "Transparente · Galaxy S24",
       "compatibility": "Confira o modelo exato antes de comprar. A foto de uma variante não indica compatibilidade com toda a linha Galaxy.",
       "image": "assets/products/zendrop-2932605.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2932605",
@@ -731,24 +1231,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932605",
-      "supplierSku": null,
+      "supplierSku": "1773322137503825920",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 52,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 52
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/10/2c/fb4d17ae40418d6d7b09dca8434c.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "8c79ebba4d249f3db08d539c216e2d86a3f17e95bd5f2dffec0ca915c00c72f3"
+      "imageSha256": "8c79ebba4d249f3db08d539c216e2d86a3f17e95bd5f2dffec0ca915c00c72f3",
+      "supplierVariantId": 27484478,
+      "supplierVariantName": "TR transparent / S24",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1604,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932448",
@@ -757,7 +1282,7 @@
       "category": "Capinhas e proteção",
       "tag": "FOSCA",
       "description": "Capa com acabamento fosco e acrílico informado no catálogo para modelos Galaxy.",
-      "size": "Catálogo cita S23 e A13",
+      "size": "Preta · Galaxy S24",
       "compatibility": "Confira o modelo exato, as dimensões e os recortes da variante.",
       "image": "assets/products/zendrop-2932448.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2932448",
@@ -766,24 +1291,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932448",
-      "supplierSku": null,
+      "supplierSku": "1773322469847892174",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 143,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 143
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/ed/31/b0a09f6d49e5b4e95118080cea4b.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "35a618642863910e330bda940e204c110861a7ac67e4267034e6d23dcc7b1c31"
+      "imageSha256": "35a618642863910e330bda940e204c110861a7ac67e4267034e6d23dcc7b1c31",
+      "supplierVariantId": 27492099,
+      "supplierVariantName": "Mysterious Black / s24",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1630,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2931926",
@@ -792,7 +1342,7 @@
       "category": "Capinhas e proteção",
       "tag": "MAGNÉTICA",
       "description": "Capa magnética apresentada para uso com suporte veicular compatível.",
-      "size": "Catálogo cita S24, A05s, A55 e A25",
+      "size": "Cinza · Galaxy A55 5G",
       "compatibility": "Confira a variante do aparelho e o suporte necessário. Fixação magnética não comprova carregamento sem fio.",
       "image": "assets/products/zendrop-2931926.png",
       "sourceUrl": "https://app.zendrop.com/product/2931926",
@@ -801,24 +1351,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2931926",
-      "supplierSku": null,
+      "supplierSku": "1773327187793969161",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 151,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 151
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/9c/a0/8fff7078482d974568bd59639e1a.png",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "f9f848d8a77ed3919755947cf8b29cad9ba415846249f5a574c4da19797272da"
+      "imageSha256": "f9f848d8a77ed3919755947cf8b29cad9ba415846249f5a574c4da19797272da",
+      "supplierVariantId": 27475257,
+      "supplierVariantName": "Galaxy Gray / Samsung A55 5G",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1592,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2935810",
@@ -827,7 +1402,7 @@
       "category": "Capinhas e proteção",
       "tag": "ANEL DE APOIO",
       "description": "Capa com anel de apoio apresentada no catálogo para modelos Galaxy.",
-      "size": "Catálogo cita S24 Ultra e A14 5G",
+      "size": "Preta · Galaxy S23 Ultra",
       "compatibility": "Confira o modelo exato, os recortes da capa e o funcionamento do anel de apoio.",
       "image": "assets/products/zendrop-2935810.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2935810",
@@ -836,24 +1411,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2935810",
-      "supplierSku": null,
+      "supplierSku": "1774134954079490048",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 143,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 143
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/d8/df/0e442d8543f2928899f8f6bec717.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "2bb2ea639ba2da6add10d93a280316742ca0da66d035a13154875ff1011efebd"
+      "imageSha256": "2bb2ea639ba2da6add10d93a280316742ca0da66d035a13154875ff1011efebd",
+      "supplierVariantId": 27503545,
+      "supplierVariantName": "Black / Samsung S23 Ultra",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1580,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932821",
@@ -862,7 +1462,7 @@
       "category": "Capinhas e proteção",
       "tag": "TEXTURA",
       "description": "Capa com acabamento texturizado apresentada para Galaxy S23 Ultra e S24.",
-      "size": "Modelo, material e cor a confirmar",
+      "size": "Preta · Galaxy S23 Ultra",
       "compatibility": "Confira o modelo do aparelho e o material da variante antes de comprar.",
       "image": "assets/products/zendrop-2932821.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2932821",
@@ -871,24 +1471,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932821",
-      "supplierSku": null,
+      "supplierSku": "1773319515048804352",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 325,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 325
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/88/52/c99f625c4e0d9a684d75028bd08c.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "6b53d3ece03af12374bb5f2e5efaced0c11ffd613e51588e65c723e69319dc68"
+      "imageSha256": "6b53d3ece03af12374bb5f2e5efaced0c11ffd613e51588e65c723e69319dc68",
+      "supplierVariantId": 27487610,
+      "supplierVariantName": "Black / Samsung S23 Ultra",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1592,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2933334",
@@ -897,7 +1522,7 @@
       "category": "Pulseiras",
       "tag": "MILANESA",
       "description": "Pulseira de malha metálica com fecho magnético apresentada para Apple Watch.",
-      "size": "Tamanho do encaixe a confirmar",
+      "size": "Preta · encaixe 38/40/41 mm",
       "compatibility": "O catálogo cita séries 5 a 9 e SE. Confira o tamanho da caixa, o encaixe e a medida do pulso. Relógio não incluso.",
       "image": "assets/products/zendrop-2933334.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2933334",
@@ -906,24 +1531,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2933334",
-      "supplierSku": null,
+      "supplierSku": "1773315231724896256",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 103,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 124
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/6e/a8/cbf83f6e43509ae0703110ba3c92.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "e80d495cf7a3f4eeeed68e34fed8d5d148722c67cedab85b8b99c0586c717517"
+      "imageSha256": "e80d495cf7a3f4eeeed68e34fed8d5d148722c67cedab85b8b99c0586c717517",
+      "supplierVariantId": 27495283,
+      "supplierVariantName": "01# Black / 38/40/41mm",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1264,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2933285",
@@ -932,7 +1582,7 @@
       "category": "Pulseiras",
       "tag": "COM FIVELA",
       "description": "Pulseira de malha metálica com fivela apresentada para Apple Watch.",
-      "size": "Tamanho e acabamento a confirmar",
+      "size": "Prateada · encaixe 38/40/41 mm",
       "compatibility": "Confira tamanho da caixa, encaixe e faixa de ajuste. Relógio não incluso.",
       "image": "assets/products/zendrop-2933285.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2933285",
@@ -941,24 +1591,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2933285",
-      "supplierSku": null,
+      "supplierSku": "1773315280223633413",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 86,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 120
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/1b/64/4327d2ae4cf589bf5ddada9ce824.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "3b1435b6a93c3d7fec04d7183069cb5d19f136ab96d84b0e65672a5d2eae76da"
+      "imageSha256": "3b1435b6a93c3d7fec04d7183069cb5d19f136ab96d84b0e65672a5d2eae76da",
+      "supplierVariantId": 27496346,
+      "supplierVariantName": "Silver / 38mm40mm41mm",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1654,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932579",
@@ -967,7 +1642,7 @@
       "category": "Pulseiras",
       "tag": "ELOS",
       "description": "Pulseira de elos em aço inoxidável informado no catálogo, apresentada para Apple Watch.",
-      "size": "Encaixe e ajuste a confirmar",
+      "size": "Preta · encaixe 38/40 mm",
       "compatibility": "Confira o tamanho da caixa, o comprimento e as peças necessárias para ajuste. Relógio não incluso.",
       "image": "assets/products/zendrop-2932579.png",
       "sourceUrl": "https://app.zendrop.com/product/2932579",
@@ -976,24 +1651,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932579",
-      "supplierSku": null,
+      "supplierSku": "1773322039231283200",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 477,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 477
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/8c/6f/25cd588f4ad3b909994702fdbc99.png",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "5b3089838396c27210228c52b27bff15ed76352da7a66822cef2889e6fdccf5a"
+      "imageSha256": "5b3089838396c27210228c52b27bff15ed76352da7a66822cef2889e6fdccf5a",
+      "supplierVariantId": 27486330,
+      "supplierVariantName": "Black / 38mm40mm",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1518,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2932310",
@@ -1002,7 +1702,7 @@
       "category": "Capinhas e proteção",
       "tag": "TPU",
       "description": "Capa em TPU transparente para proteger o estojo de fones compatível.",
-      "size": "Geração do estojo a confirmar",
+      "size": "TPU transparente · AirPods Pro 2 · sem alça",
       "compatibility": "O catálogo menciona diferentes AirPods e AirPods Pro. Confira o formato e a geração exata. Fones e estojo de recarga não inclusos.",
       "image": "assets/products/zendrop-2932310.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2932310",
@@ -1011,24 +1711,49 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932310",
-      "supplierSku": null,
+      "supplierSku": "1773324453984370726",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 23,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 29
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/76/72/1945d8a744d481392e9d45fdaba5.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "3b86dd241c40853ea97813b6e757a61c3aaba7a3c469ac57f06f0e6f346866c5"
+      "imageSha256": "3b86dd241c40853ea97813b6e757a61c3aaba7a3c469ac57f06f0e6f346866c5",
+      "supplierVariantId": 27480715,
+      "supplierVariantName": "Airpods Pro2 transparent TPU soft shell (without ears)",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1604,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     },
     {
       "id": "zendrop-2933400",
@@ -1037,7 +1762,7 @@
       "category": "Capinhas e proteção",
       "tag": "FLORAL",
       "description": "Capa com estampa floral e acabamento sintético apresentada para estojos de AirPods.",
-      "size": "Geração do estojo e cor a confirmar",
+      "size": "Preta floral · AirPods Pro 2",
       "compatibility": "Confira o formato e a geração exata do estojo. Fones e estojo de recarga não inclusos.",
       "image": "assets/products/zendrop-2933400.jpg",
       "sourceUrl": "https://app.zendrop.com/product/2933400",
@@ -1046,24 +1771,61 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2933400",
-      "supplierSku": null,
+      "supplierSku": "1775142124797341699",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 249,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16",
-        "variantConfirmed": false
+        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "variantConfirmed": true,
+        "variantCents": 249
       },
       "priceCents": null,
       "stock": null,
       "stockConfirmedAt": null,
       "shippingCountry": "BR",
-      "shippingStatus": "pending_confirmation",
-      "availability": "pending_confirmation",
+      "shippingStatus": "estimate_available",
+      "availability": "pending_launch",
       "sourceImageUrl": "https://file.zendrop.com/products/a1/63/1b0b1b6b4073834e78630e07dd4c.jpeg",
       "imageVerifiedAt": "2026-10-16",
-      "imageSha256": "2b1463243f46d3d36682203f4bc1aae19673911dda4490164a16974f05f71d33"
+      "imageSha256": "2b1463243f46d3d36682203f4bc1aae19673911dda4490164a16974f05f71d33",
+      "supplierVariantId": 27500035,
+      "supplierVariantName": "Black / Airpods Pro 2",
+      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierInventory": {
+        "inventoryLevel": "In stock",
+        "available": null,
+        "tracked": false,
+        "verifiedAt": "2026-10-16T20:35:59.064Z"
+      },
+      "inventoryMode": "supplier_availability",
+      "shippingEstimate": {
+        "currency": "USD",
+        "country": "BR",
+        "scope": "product_country_estimate",
+        "variantConfirmed": false,
+        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "options": [
+          {
+            "type": "regular",
+            "priceCents": 1555,
+            "estimatedDeliveryText": "21 days"
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "supplierVerification": {
+    "source": "Zendrop connected app",
+    "productCount": 30,
+    "variantsConsulted": 2082,
+    "shippingCountry": "BR",
+    "checkedAt": "2026-10-16T20:45:46.070Z"
+  },
+  "supplierConnection": {
+    "status": "connected",
+    "type": "assistant_tools",
+    "verifiedAt": "2026-10-16T20:45:46.070Z"
+  }
 }

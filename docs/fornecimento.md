@@ -1,71 +1,73 @@
 # Fornecimento Zendrop para DAVORA Brasil
 
-Seleção de 16/10/2026: 30 produtos consultados no catálogo autenticado da Zendrop, com foco em eletrônicos e acessórios. A vitrine é a DAVORA do repositório GitHub/Vercel, em português e BRL. A `davora.app` na Wix foi usada como referência e não foi alterada.
+Consulta oficial concluída em 16/10/2026: 30 produtos, 2.082 variantes e 30 estimativas de frete para o Brasil. A vitrine é a DAVORA do GitHub/Vercel. A Wix `davora.app` é somente referência e permanece sem alterações.
 
-## O que foi confirmado
+## Dados confirmados
 
-A conta Zendrop estava conectada à loja Wix de referência. A consulta foi somente de leitura: não houve importação para a Wix, pedido de amostra, cobrança, assinatura ou aceite de contrato.
+A autorização do app Zendrop funcionou. A consulta completa incluiu todas as páginas de variantes e conservou os valores originais de disponibilidade, custo e transporte para revisão local. O arquivo completo não integra a publicação da vitrine; o catálogo publicado contém apenas os 30 modelos selecionados. A vitrine escolhe um SKU por produto, com modelo e cor em português. A seleção de cabo HOCO usa USB-C de 1 m, e não o custo menor do cabo Micro-USB; a pulseira com fivela usa o encaixe Apple Watch escolhido, e não o encaixe genérico de 20 mm. O relógio informa montagem necessária; o kit USB-C informa as quatro peças da variante selecionada.
 
-Os 30 produtos têm ID, URL individual, nome de origem, foto e custo a partir de em USD registrados no catálogo. Distribuição: 8 itens de áudio, 6 de cabos e carga, 11 de capas/proteção, 3 pulseiras e 2 itens de mesa/setup. O custo USD é do produto no catálogo, sem frete, tributos, câmbio ou confirmação da variante. Não é comissão nem preço de revenda. As URLs de foto foram extraídas do DOM dos respectivos cartões. As 30 imagens foram recuperadas pelo navegador na vitrine e baixadas como arquivos reais. Os PNG/JPEG foram verificados e copiados sem alteração para `assets/products/`; o catálogo conserva origem, data e SHA-256. A exibição das fotos passa a depender dos arquivos da própria DAVORA, sem novas requisições ao CDN Zendrop.
+Os 30 SKUs selecionados estavam disponíveis, mas a Zendrop não controla uma contagem numérica para eles: `available` é `null`, `tracked` é `false` e o status é `In stock`. Não interpretar `null` como zero nem fabricar uma quantidade. O código diferencia essa disponibilidade do estoque com contagem. A consulta expira em 24 horas para fins de aceitação de pedidos, e não é uma reserva no fornecedor.
 
-No produto 2932951 (suporte de headset), foi possível selecionar Brazil. A tela apresentou média de envio de 21 days e custo de produto de US$ 3,44. Não informou custo de frete confirmado. Esses dados não foram aplicados aos outros produtos nem tratados como prazo contratual. A consulta de Todos os SKUs abriu uma verificação Cloudflare que permaneceu bloqueando este navegador; não foi tentado contornar o bloqueio. SKU, estoque e cotação por variante ficaram pendentes. Em nova abertura pelo navegador, a página inicial do produto carregou normalmente; selecionar uma variação voltou a abrir a verificação de segurança. O bloqueio permanece restrito à consulta operacional, e não foi contornado para consultar SKUs ou pedidos.
+As 30 fotos reais são arquivos locais em `assets/products/`, com origem e SHA-256 conservados. As fotos são ilustrativas das variações do catálogo; o modelo e a cor da seleção são informados no produto.
 
-## Integração e envio
+## Frete e preço
 
-A Zendrop documenta integrações nativas com Shopify, TikTok Shop US, ClickFunnels e Wix. Não há integração direta GitHub/Vercel implementada nem API pública confirmada para usar nesta loja. Solicitar uma integração é uma proposta de recurso, não uma conexão pronta.
+O frete retornado pelo app é uma **estimativa por produto e país**, em USD. Não existe parâmetro de variante, quantidade, CEP ou endereço nesta ferramenta. Portanto, estes valores não foram usados como regra contratada de frete nem como custo final de um carrinho. Os valores retornados variam de US$ 12,49 a US$ 30,84. Todas as consultas retornaram o texto original `21 days`; isso não foi convertido em prazo garantido nem em dias úteis.
 
-A documentação de pedidos externos descreve um fluxo manual de pedido de amostra com plano pago e conexão a plataforma suportada. Não é uma automação gratuita e não autoriza presumir que a conexão Wix existente atenda a esse fluxo. Nenhum plano foi contratado.
+Produto mais frete estimado ainda não inclui tributos, conversão cambial, processador de pagamento, publicidade, devoluções ou mensalidades. Frete grátis ao consumidor teria de ser custeado pela DAVORA e incorporado ao preço. A Zendrop não promete comissão de 50%. Preço de venda igual a duas vezes o custo considerado representa margem de 50% antes das despesas excluídas, sem garantia de lucro líquido.
 
-A Zendrop documenta envio ao Brasil e necessidade de CPF/CNPJ do destinatário. Frete e tributos de importação não devem ser presumidos como incluídos. A média geral publicada para o país não substitui a cotação e as condições do SKU escolhido.
+O preço final em BRL continua pendente. Não foi inventada cotação de câmbio, alíquota ou gratuidade de frete para liberar vendas.
 
-Fontes oficiais consultadas:
+## Integração de pedidos
 
+A conexão do app autoriza o assistente a operar a conta Zendrop. Ela não instala um processo permanente na hospedagem da DAVORA. O conjunto de ferramentas disponível consulta produtos e gerencia pedidos já existentes, mas não cria pedidos externos nem cadastra uma loja GitHub/Vercel. A única loja encontrada é a Wix de referência; nenhum produto foi importado nela e suas configurações não foram alteradas.
+
+`supplierConnection.status` registra a conexão do assistente como `connected`. `fulfillmentIntegration.status` continua `not_connected`: o servidor da DAVORA ainda não encaminha pedidos à Zendrop. A documentação lista integrações nativas com Shopify, TikTok Shop US, ClickFunnels e Wix. Pedidos externos são descritos como um fluxo manual de amostra, e não uma conexão automática gratuita. Escolher e conectar um backend suportado ou aprovar um fluxo manual real continua necessário antes da primeira venda.
+
+A conta foi consultada somente para este trabalho: não houve compra, nova assinatura, despacho, ativação de cobrança automática ou alteração da Wix. Valores e situação de faturamento da conta não são publicados neste documento.
+
+## Seleção e custos de referência
+
+| Produto | Variante selecionada | SKU | Produto (USD) | Frete estimado (USD) |
+| --- | --- | --- | ---: | ---: |
+| Suporte de mesa para headset | Base preta | 1773319276954943490 | 3.44 | 20.66 |
+| Relógio digital RGB para montar | Kit RGB · montagem necessária | 1773317385575497728 | 24.43 | 30.84 |
+| Caixa de som retrô AS19 | AS19 · acabamento Hua Li Jin | 1773319380772356096 | 16.98 | 22.52 |
+| Headset gamer NUBWO N7 com fio | N7D · preto · plugue único de 3,5 mm | 1773697222198788096 | 13.94 | 22.03 |
+| Fones sem fio TWS F9-5C | F9-5C · preto | 1773315321352978432 | 2.49 | 13.53 |
+| Fone sem fio S109 | Preto · com cabo, manual e caixa | 1773319731403587594 | 0.96 | 12.49 |
+| Fones TWS de condução aérea | Preto | 1773322371810230272 | 7.43 | 13.84 |
+| Fones sem fio esportivos | B101 · preto · com caixa | 1773327147633508359 | 4.18 | 15.18 |
+| Fones com fio Patinha Rosa | Rosa | 1775142122536603648 | 0.65 | 15.55 |
+| Fones gamer sem fio com toque | Preto | 1775142124143030273 | 7.82 | 12.79 |
+| Cabo USB-C HOCO X20 | Preto · USB-C · 1 m | 1773319490453405716 | 1.05 | 15.92 |
+| Cabo de recarga USB-C | Preto · USB-C · 22,5 cm | 1773322170777239559 | 1.13 | 12.49 |
+| Cabo chaveiro 4 em 1 USB-C | Cinza-escuro · versão 4 em 1 | 1773319668258340864 | 4.39 | 12.79 |
+| Carregador magnético 4 em 1 | Preto · base metálica | 1773321711760998400 | 22.00 | 16.23 |
+| Suporte carregador veicular A7 | A7 · preto | 1773322076724166658 | 5.73 | 15.26 |
+| Kit USB-C de 4 peças para iPhone 15 | 4 peças · 35 W · iPhone 15 | 1773547747232776353 | 8.98 | 22.38 |
+| Capa com brilho e apoio para iPhone | Branca · iPhone 15 Pro Max | 1773547892728987701 | 2.49 | 16.35 |
+| Capa Armor com moldura para iPhone | iPhone 14 Pro Max | 1774105832666103808 | 5.35 | 16.14 |
+| Capa rígida com apoio para iPhone | Preta · iPhone 15 Pro | 1773315317473247306 | 0.96 | 16.30 |
+| Porta-cartões magnético para iPhone | Preto · variante indicada para iPhone 12 a 14 | 1773298874723602435 | 3.20 | 16.30 |
+| Capa transparente para Galaxy | Transparente · Galaxy S24 | 1773322137503825920 | 0.52 | 16.04 |
+| Capa fosca em acrílico para Galaxy | Preta · Galaxy S24 | 1773322469847892174 | 1.43 | 16.30 |
+| Capa magnética para Galaxy | Cinza · Galaxy A55 5G | 1773327187793969161 | 1.51 | 15.92 |
+| Capa com anel de apoio para Galaxy | Preta · Galaxy S23 Ultra | 1774134954079490048 | 1.43 | 15.80 |
+| Capa texturizada para Galaxy | Preta · Galaxy S23 Ultra | 1773319515048804352 | 3.25 | 15.92 |
+| Pulseira milanesa magnética | Preta · encaixe 38/40/41 mm | 1773315231724896256 | 1.24 | 12.64 |
+| Pulseira milanesa com fivela | Prateada · encaixe 38/40/41 mm | 1773315280223633413 | 1.20 | 16.54 |
+| Pulseira de elos em aço | Preta · encaixe 38/40 mm | 1773322039231283200 | 4.77 | 15.18 |
+| Capa transparente para estojo de fones | TPU transparente · AirPods Pro 2 · sem alça | 1773324453984370726 | 0.29 | 16.04 |
+| Capa floral para estojo de fones | Preta floral · AirPods Pro 2 | 1775142124797341699 | 2.49 | 15.55 |
+
+## Fontes oficiais
+
+- Conexão MCP: https://support.zendrop.com/en/articles/15349416-connect-zendrop-mcp-to-your-ai-assistant
+- Referência técnica MCP: https://support.zendrop.com/en/articles/14461568-zendrop-mcp-developer-documentation
 - Integrações: https://support.zendrop.com/en/articles/8176418-zendrop-e-commerce-platform-integrations
-- Solicitação de novas integrações: https://support.zendrop.com/en/articles/12582165-requesting-new-store-integrations-on-zendrop
 - Pedidos externos: https://support.zendrop.com/en/articles/8176420-how-to-fulfill-orders-received-outside-of-zendrop
 - Requisitos internacionais: https://support.zendrop.com/en/articles/9492634-international-shipping-considerations-with-zendrop
-- Médias de transporte por país: https://support.zendrop.com/en/articles/8487356-zendrop-shipping-times-by-country
 - Tributos e alfândega: https://support.zendrop.com/en/articles/16100468-how-do-tariffs-and-customs-duties-affect-my-zendrop-orders
 
-## Preço e lançamento
-
-A DAVORA mantém as compras desativadas. Cada produto depende de SKU exato, custo total, estoque, condições de uso das fotos e envio ao Brasil confirmados. O repasse de pedidos precisa de um fluxo operacional compatível e testado antes da primeira venda.
-
-O preço de revenda é uma decisão da DAVORA. Margem de 50% sobre a receita antes das demais despesas exige vender por duas vezes o custo considerado; taxas, câmbio, frete subsidiado, tributos, anúncios e devoluções reduzem o lucro. Não há percentual garantido pela Zendrop.
-
-Além do fornecimento, continuam pendentes a verificação remota do registro durável de pedidos, configuração e entrega do webhook Stripe e dados comerciais da loja. Consulte `docs/pedidos.md`. A alteração de catálogo não libera o checkout nem faz pagamentos ao fornecedor.
-
-## Produtos selecionados
-
-| ID Zendrop | Produto na DAVORA | Custo de catálogo a partir de (USD) |
-| --- | --- | ---: |
-| 2932951 | Suporte de mesa para headset | 3.44 |
-| 2933013 | Relógio digital RGB de mesa | 24.43 |
-| 2932911 | Caixa de som retrô AS19 | 16.98 |
-| 2937460 | Headset gamer NUBWO N7 com fio | 13.94 |
-| 2933186 | Fones sem fio TWS F9-5C | 2.49 |
-| 2932754 | Fones sem fio S109 | 0.96 |
-| 2932497 | Fones TWS de condução aérea | 7.43 |
-| 2931956 | Fones sem fio esportivos | 3.99 |
-| 2933399 | Fones com fio Patinha Rosa | 0.65 |
-| 2933398 | Fones gamer sem fio com toque | 7.82 |
-| 2932823 | Cabo USB-C HOCO X20 | 0.84 |
-| 2932584 | Cabo de recarga multiuso | 1.13 |
-| 2932750 | Cabo chaveiro 4 em 1 USB-C | 4.39 |
-| 2932749 | Carregador magnético 4 em 1 | 20.57 |
-| 2932570 | Suporte carregador veicular A7 | 5.73 |
-| 2938549 | Kit carregador com duas portas USB-C | 7.63 |
-| 2938582 | Capa com brilho e apoio para iPhone | 2.49 |
-| 2935811 | Capa Armor com moldura para iPhone | 5.35 |
-| 2933219 | Capa rígida com apoio para iPhone | 0.96 |
-| 2933383 | Porta-cartões magnético para iPhone | 3.20 |
-| 2932605 | Capa transparente para Galaxy | 0.52 |
-| 2932448 | Capa fosca em acrílico para Galaxy | 1.43 |
-| 2931926 | Capa magnética para Galaxy | 1.51 |
-| 2935810 | Capa com anel de apoio para Galaxy | 1.43 |
-| 2932821 | Capa texturizada para Galaxy | 3.25 |
-| 2933334 | Pulseira milanesa magnética | 1.03 |
-| 2933285 | Pulseira milanesa com fivela | 0.86 |
-| 2932579 | Pulseira de elos em aço | 4.77 |
-| 2932310 | Capa transparente para estojo de fones | 0.23 |
-| 2933400 | Capa floral para estojo de fones | 2.49 |
+A configuração Stripe, verificação remota do registro durável, webhook e condições comerciais continuam documentadas em `docs/pedidos.md`. Nenhum dos dados acima, isoladamente, libera o checkout.
