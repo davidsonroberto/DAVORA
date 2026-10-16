@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111827">
-  <meta name="description" content="Conheça a seleção de maquiagem e cuidados com a pele da DAVORA. Catálogo em preparação para o Brasil.">
-  <title>DAVORA Store | Beleza e autocuidado</title>
+  <meta name="description" content="Conheça os acessórios para celular, cabos, carregadores e pulseiras da DAVORA. Catálogo em preparação para o Brasil.">
+  <title>DAVORA Store | Eletrônicos e acessórios</title>
   <link rel="stylesheet" href="assets/store.css">
   <script type="module" src="assets/store.js"></script>
 </head>
@@ -20,34 +20,35 @@
     </div>
     <nav class="categories" id="categoryBar" aria-label="Categorias de produtos">
       <button class="category active" data-category="Todos" aria-pressed="true">Todos</button>
-      <button class="category" data-category="Maquiagem" aria-pressed="false">Maquiagem</button>
-      <button class="category" data-category="Lábios" aria-pressed="false">Lábios</button>
-      <button class="category" data-category="Cuidados com a pele" aria-pressed="false">Cuidados com a pele</button>
+      <button class="category" data-category="Cabos e carga" aria-pressed="false">Cabos e carga</button>
+      <button class="category" data-category="Capinhas e proteção" aria-pressed="false">Capinhas e proteção</button>
+      <button class="category" data-category="Pulseiras" aria-pressed="false">Pulseiras</button>
+      <button class="category" data-category="Acessórios" aria-pressed="false">Acessórios</button>
     </nav>
   </header>
   <main id="inicio">
     <section class="hero">
-      <div class="hero-copy"><span class="eyebrow">BELEZA · AUTOCUIDADO · DAVORA</span><h1>Seu momento.<br>Sua beleza.</h1><p>Maquiagem e cuidados com a pele para conhecer, escolher e fazer parte da sua rotina.</p><div class="hero-actions"><a class="primary" href="#produtos">Explorar a seleção ↗</a><a class="secondary" href="#sobre">Conheça a DAVORA</a></div><span class="hero-note">Uma nova seleção de beleza está chegando.</span></div>
-      <div class="hero-art" aria-hidden="true"><div class="hero-halo"></div><div class="hero-product hero-product-back"><img id="heroBack" alt="" loading="eager" referrerpolicy="no-referrer"></div><div class="hero-product hero-product-front"><img id="heroFront" alt="" loading="eager" referrerpolicy="no-referrer"></div><div class="hero-tag">BELEZA NOS<br>PEQUENOS CUIDADOS.</div></div>
+      <div class="hero-copy"><span class="eyebrow">TECNOLOGIA · ACESSÓRIOS · DAVORA</span><h1>Seu mundo.<br>Mais conectado.</h1><p>Cabos, carregadores, proteção e acessórios para acompanhar o seu dia. Encontre o que combina com você e com o seu aparelho.</p><div class="hero-actions"><a class="primary" href="#produtos">Explorar a seleção ↗</a><a class="secondary" href="#sobre">Conheça a DAVORA</a></div><span class="hero-note">Uma nova seleção de acessórios está chegando.</span></div>
+      <div class="hero-art" aria-hidden="true"><div class="hero-halo"></div><div class="hero-product hero-product-back"><img id="heroBack" alt="" loading="eager" referrerpolicy="no-referrer"></div><div class="hero-product hero-product-front"><img id="heroFront" alt="" loading="eager" referrerpolicy="no-referrer"></div><div class="hero-tag">PEQUENOS DETALHES.<br>NOVAS POSSIBILIDADES.</div></div>
     </section>
     <section class="trust" aria-label="Sobre a seleção">
-      <div class="trust-card"><div class="trust-icon" aria-hidden="true">01</div><div><b>Marcas brasileiras</b><span>Bitarra Beauty e Vitamédica</span></div></div>
-      <div class="trust-card"><div class="trust-icon" aria-hidden="true">02</div><div><b>Beleza do seu jeito</b><span>Maquiagem, lábios e cuidados faciais</span></div></div>
+      <div class="trust-card"><div class="trust-icon" aria-hidden="true">01</div><div><b>Sua conexão diária</b><span>Cabos e acessórios para recarga</span></div></div>
+      <div class="trust-card"><div class="trust-icon" aria-hidden="true">02</div><div><b>Do seu jeito</b><span>Capinhas, proteção e pulseiras</span></div></div>
       <div class="trust-card"><div class="trust-icon" aria-hidden="true">03</div><div><b>Atendimento próximo</b><span>Fale com a DAVORA pelo WhatsApp</span></div></div>
       <div class="trust-card"><div class="trust-icon" aria-hidden="true">04</div><div><b>Feita para o Brasil</b><span>Em português, com valores em reais</span></div></div>
     </section>
     <section id="produtos" aria-labelledby="productsHeading">
-      <div class="section-head"><div><span class="section-kicker">ESCOLHA SEU PRÓXIMO CUIDADO</span><h2 id="productsHeading">Conheça nossa seleção</h2><p>Produtos reais. Preços e disponibilidade serão publicados após a confirmação do catálogo.</p></div><div class="result-count" id="resultCount" aria-live="polite"></div></div>
+      <div class="section-head"><div><span class="section-kicker">TECNOLOGIA PARA A SUA ROTINA</span><h2 id="productsHeading">Encontre seu próximo acessório</h2><p>Catálogo em preparação. Preços, modelos e disponibilidade serão confirmados antes da abertura das vendas.</p></div><div class="result-count" id="resultCount" aria-live="polite"></div></div>
       <div class="grid" id="productGrid" aria-busy="true"><p class="loading-copy">Carregando o catálogo…</p></div>
       <div class="empty" id="emptyState" role="status"><p>Nenhum produto encontrado.</p><button class="primary" id="resetFilters">Limpar busca e filtros</button></div>
       <noscript><p>Ative o JavaScript para consultar os produtos e montar sua seleção. Para atendimento, use o WhatsApp no rodapé.</p></noscript>
     </section>
     <section class="info-section" id="sobre">
-      <div class="info-box"><span class="section-kicker">BEM-VINDA À DAVORA</span><h3>Cuidar de você pode começar com uma escolha.</h3><p>Estamos preparando uma seleção de maquiagem e cuidados com a pele para o seu dia a dia. Conheça os produtos, veja os detalhes e reúna seus favoritos em uma só seleção.</p></div>
+      <div class="info-box"><span class="section-kicker">BEM-VINDO À DAVORA</span><h3>Pequenos acessórios. Novas possibilidades.</h3><p>Estamos preparando uma seleção de eletrônicos e acessórios para a sua rotina. Explore as opções, veja os detalhes e reúna seus favoritos. A compatibilidade de cada modelo será informada antes da compra.</p><p>Acessórios de terceiros. As marcas citadas identificam os aparelhos compatíveis e pertencem aos seus respectivos titulares.</p></div>
       <div class="info-box"><span class="section-kicker">SOBRE AS COMPRAS</span><h3>Catálogo em preparação</h3><p id="purchaseInfo">A compra ainda não está disponível. Preço, estoque, frete e prazo serão confirmados antes da abertura das vendas. Nenhum pagamento é recebido nesta etapa.</p><a class="text-link" href="https://wa.me/5531991339648?text=Oi%2C%20quero%20tirar%20uma%20d%C3%BAvida%20sobre%20a%20DAVORA." target="_blank" rel="noopener noreferrer">Precisa de ajuda? Fale com a gente ↗</a></div>
     </section>
   </main>
-  <footer><div class="footer-inner"><div><div class="footer-title">DAVORA<span>.</span></div><p>Beleza, autocuidado e escolhas para a sua rotina.</p><small>© <span id="year">2026</span> DAVORA Store</small></div><div class="footer-col"><b>Atendimento</b><a href="https://wa.me/5531991339648" target="_blank" rel="noopener noreferrer">Fale com a gente pelo WhatsApp</a><p>Atendimento em português.</p></div><div class="footer-col"><b>Informações</b><button class="footer-link" data-info="delivery">Entrega e disponibilidade</button><button class="footer-link" data-info="privacy">Privacidade</button><p id="footerStatus">Catálogo em preparação. Venda ainda não liberada.</p></div></div></footer>
+  <footer><div class="footer-inner"><div><div class="footer-title">DAVORA<span>.</span></div><p>Eletrônicos, acessórios e novas conexões.</p><small>© <span id="year">2026</span> DAVORA Store</small></div><div class="footer-col"><b>Atendimento</b><a href="https://wa.me/5531991339648" target="_blank" rel="noopener noreferrer">Fale com a gente pelo WhatsApp</a><p>Atendimento em português.</p></div><div class="footer-col"><b>Informações</b><button class="footer-link" data-info="delivery">Entrega e disponibilidade</button><button class="footer-link" data-info="privacy">Privacidade</button><p id="footerStatus">Catálogo em preparação. Venda ainda não liberada.</p></div></div></footer>
   <a class="wa-float" href="https://wa.me/5531991339648?text=Oi%2C%20vim%20pela%20DAVORA%20Store." target="_blank" rel="noopener noreferrer">Precisa de ajuda?</a>
   <dialog class="detail-dialog" id="productDialog" aria-labelledby="detailTitle"><button class="close dialog-close" data-close="productDialog" aria-label="Fechar detalhes">×</button><div id="productDetail"></div></dialog>
   <dialog class="cart-dialog" id="cartDialog" aria-labelledby="cartTitle"><div class="drawer-head"><h2 id="cartTitle">Sua seleção</h2><button class="close" data-close="cartDialog" aria-label="Fechar seleção">×</button></div><div class="cart-items" id="cartItems"></div><div class="drawer-foot"><div class="total-row"><span>Produtos</span><strong id="cartTotal">A confirmar</strong></div><p class="foot-note" id="cartNote">Compras ainda indisponíveis. Nenhum pagamento é recebido nesta etapa.</p><button class="checkout" id="checkoutBtn" disabled>Pagamento ainda indisponível</button><button class="plain-button" id="clearCart">Limpar seleção</button></div></dialog>

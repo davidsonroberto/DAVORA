@@ -1,6 +1,6 @@
 # DAVORA Brasil
 
-Versão de preparação de 15/10/2026, em português e BRL. Conserva as cores e a estrutura visual da DAVORA do GitHub e substitui a vitrine incompleta de afiliados por 16 produtos reais de beleza.
+Versão de preparação de 16/10/2026, em português e BRL, com foco em eletrônicos e acessórios para o Brasil. Conserva as cores e a estrutura visual da DAVORA do GitHub. A vitrine reúne 24 acessórios reais encontrados no catálogo público da Infinito Loja: cabos, carregadores, capinhas, películas, pulseiras e acessórios de uso diário. Não há parceria ou disponibilidade comercial confirmada.
 
 ## O que funciona
 
@@ -10,15 +10,16 @@ Versão de preparação de 15/10/2026, em português e BRL. Conserva as cores e 
 - Formulário de entrega e Stripe Checkout embutido na própria página, condicionado à ativação do servidor. Cartões e Google Pay dependem da conta/dispositivo; Pix só é incluído quando habilitado explicitamente.
 - APIs de cotação assinada, criação idempotente de sessão Stripe Checkout e consulta autoritativa do pagamento na Stripe. Valores são calculados no servidor, nunca aceitos do navegador.
 
-**As compras estão desativadas.** Produtos identificados em catálogos públicos não equivalem a acordo de fornecimento. Preços de revenda, estoque e regras comerciais são ocultos sem acesso à conta Dropi. Não houve contratação, importação para uma conta de lojista, pagamento nem pedido ao fornecedor. Não há comissão garantida de 50%.
+**As compras estão desativadas.** Produtos identificados em catálogos públicos não equivalem a acordo de fornecimento. Preços de revenda, variantes, estoque e regras comerciais ainda dependem do cadastro e da confirmação do fornecedor. Não houve contratação, importação para uma conta de lojista, pagamento nem pedido ao fornecedor. Não há comissão garantida de 50%.
 
 ## Catálogo e origem das fotos
 
-`data/catalog.json` registra marca, SKU, referência do produto e imagem pública de cada item. Foram selecionados produtos Bitarra Beauty e Vitamédica dos catálogos públicos abaixo, consultados em 15/10/2026. As descrições são curtas e sem promessas terapêuticas.
+`data/catalog.json` registra SKU de referência, nome de origem, URL do produto, foto pública e observações de compatibilidade. Os nomes de aparelhos indicam compatibilidade; os acessórios não são anunciados como originais das fabricantes. Fotos e especificações deverão ser aprovadas para o uso comercial antes do lançamento. Opções de cor, medida, modelo e comprimento não são tratadas como variantes compráveis antes da confirmação do SKU exato.
 
-- https://app.dropi.com.br/marketplace/fornecedor/bitarra-beauty
-- https://app.dropi.com.br/marketplace/fornecedor/vitamedica
-- https://dropi.sak.com.br/como-funciona-o-dropnacional
+- https://app.dropi.com.br/marketplace/fornecedor/infinitoLoja
+- https://infinitoloja.com.br/atacado
+
+A presença do fornecedor no Dropi não comprova integração direta com Vercel nem aceite de pedidos manuais fora do Dropi. A pesquisa das alternativas e as perguntas comerciais pendentes estão em `docs/fornecimento.md`.
 
 Cada produto está com `supplierApproved: false`, `availability: pending_confirmation`, `priceCents: null`, `stock: null`. Fotos são carregadas do CDN de origem. Estoque anunciado só é aceito se confirmado há menos de 24 horas.
 
@@ -26,16 +27,18 @@ Cada produto está com `supplierApproved: false`, `availability: pending_confirm
 
 O repositório pode continuar no GitHub. **GitHub Pages não permite hospedar uma operação de comércio eletrônico**, conforme https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits . O código usa funções Node para a parte de pagamento e precisa de hospedagem compatível, com plano que permita uso comercial.
 
-O projeto Vercel `davora` está acessível pela conexão. O erro 403 anterior foi resolvido usando a consulta direta ao projeto, sem o parâmetro de escopo que falhava. A listagem de variáveis foi consultada sem descriptografar valores: as chaves Stripe ainda não estão cadastradas. A conexão automática GitHub–Vercel gerou a prévia desta branch, com status Ready: https://davora-git-codex-davora-brasil-20261015-davidsonroberto.vercel.app . O Opera retornou navegador desconectado. O site principal e os domínios não foram alterados; a prévia permanece sem compras ativas.
+O projeto Vercel é `davora`, ID `prj_pkUMXGi8V0YpztNbJUUegJQc0EoT`. A branch de trabalho continua sendo `codex/davora-brasil-20261015`. A integração GitHub–Vercel gera a prévia em https://davora-git-codex-davora-brasil-20261015-davidsonroberto.vercel.app . A consulta ao projeto funciona sem o parâmetro de escopo que retorna 403; o ID do projeto identifica o destino exato.
+
+Na consulta de 16/10/2026, a configuração **production** contém `STRIPE_SECRET_KEY`, `STRIPE_PUBLISHABLE_KEY` e `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`, gerenciadas pela integração Stripe–Vercel. Foram consultados somente nomes e metadados, sem descriptografar valores. O ambiente das credenciais não foi inferido a partir do nome **production**: essa é a configuração da hospedagem, não uma prova de chave Stripe live. As chaves não estão disponíveis na prévia, o que é compatível com a manutenção das compras desativadas.
 
 ## Dependências antes de vender
 
-1. Acessar a conta Dropi/DropNacional e obter a autorização de revenda dos fornecedores, confirmando SKU, cor, quantidade, custo, estoque e uso de fotos.
+1. Confirmar se a Infinito Loja atende à DAVORA por pedido manual com envio direto ao cliente fora do Dropi, quais documentos exige e quais são os custos. Se não atender, escolher outro fornecedor antes de ativar qualquer produto. Obter autorização comercial e de uso das fotos, com SKU exato, modelo, cor, medida, quantidade, custo e estoque.
 2. Confirmar frete e prazo por pedido completo, inclusive pedidos com fornecedores diferentes. Não copiar custos do AliExpress antigo.
 3. Definir preços em `priceCents`, em centavos. Margem de 50% antes das demais despesas exige preço de venda igual a duas vezes o custo considerado; taxas, frete subsidiado, impostos, anúncios e devoluções diminuem o lucro. Fazer a conta com custos reais antes de escolher o preço.
-4. Conectar a hospedagem à Stripe por configuração segura do servidor. A conexão do ChatGPT foi verificada em 15/10/2026: conta brasileira em BRL, somente ambiente de teste disponível nesta sessão, cartões habilitados e sem exigências cadastrais pendentes na consulta. Isso não comprova a ativação da conta de produção. As credenciais da hospedagem continuam sem configuração. Nenhuma chave deve ser enviada por mensagem ou incluída no GitHub.
+4. Conectar a hospedagem à Stripe por configuração segura do servidor. A conexão do ChatGPT foi verificada em 15/10/2026: conta brasileira em BRL, somente ambiente de teste disponível nesta sessão, cartões habilitados e sem exigências cadastrais pendentes na consulta. Isso não comprova a ativação da conta de produção. As três variáveis de credenciais foram cadastradas na configuração production da Vercel; valores e ambiente Stripe não foram inspecionados. Nenhuma chave deve ser enviada por mensagem ou incluída no GitHub.
 5. Completar identificação comercial da loja, condições de entrega, atendimento, privacidade, trocas e devoluções com dados reais do responsável.
-6. Integrar registro durável de pedidos, acompanhamento/recuperação de pagamento, controle de estoque e rotina de repasse ao fornecedor. Esta versão **não** envia pedidos automaticamente ao Dropi nem reserva/decrementa estoque. As APIs são uma base de integração; não representam um sistema de pedidos concluído.
+6. Integrar registro durável de pedidos, acompanhamento/recuperação de pagamento, controle de estoque e rotina de repasse ao fornecedor. Esta versão **não** envia pedidos automaticamente ao fornecedor nem reserva/decrementa estoque. As APIs são uma base de integração; não representam um sistema de pedidos concluído.
 7. Testar compra, atualização de estoque, cobrança repetida, indisponibilidade, expiração, reembolso, registro do pedido e despacho em ambiente de teste antes de liberar vendas reais.
 
 Depois destas etapas, a ativação exige todas as condições de `lib/store.js`, configurações explícitas de `.env.example`, produtos autorizados e preços/estoques confirmados. **Não ativar só preenchendo variáveis: o sistema de pedidos e as condições acima ainda precisam ser concluídos.**
@@ -52,7 +55,7 @@ npm run check
 git diff --check
 ```
 
-Os 15 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência inclusive em repetições após atraso, configuração de Pix, separação teste/produção, chave publicável gerenciada pela Vercel, confirmação autoritativa e recusa do webhook antigo. A chamada à Stripe é simulada; nenhuma cobrança foi realizada. As 16 imagens retornaram HTTP 200 na conferência de 15/10/2026. Sem teste visual em navegador nesta sessão.
+Os 15 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência inclusive em repetições após atraso, configuração de Pix, separação teste/produção, chave publicável gerenciada pela Vercel, confirmação autoritativa e recusa do webhook antigo. A chamada à Stripe é simulada; nenhuma cobrança foi realizada. A conferência da atualização de catálogo deve incluir o carregamento das 24 fotos e o fluxo de busca, filtros, detalhes e seleção em telas de computador e celular.
 
 Documentação do pagamento:
 - https://docs.stripe.com/checkout/embedded/quickstart
@@ -75,4 +78,4 @@ Os endpoints antigos de currículo, consulta de pagamento e webhook estão desat
 - A sugestão de adicionar a Stripe ao ChatGPT permite autorizar a conexão à conta; isso não transfere credenciais secretas para a hospedagem nem ativa o site automaticamente.
 - A sessão usa `ui_mode: embedded_page`, `redirect_on_completion: never` e somente as formas permitidas por `allowed_payment_method_types`. A confirmação exibida pela loja depende da consulta ao servidor e exige `status: complete` e `payment_status: paid`, com valor, moeda, referência e ambiente compatíveis.
 - A expiração deriva da cotação assinada para manter o corpo da requisição idêntico nas repetições com a mesma chave idempotente. `integration_identifier` identifica este fluxo no painel Stripe. A configuração Vercel inclui uma política de segurança de conteúdo compatível com Stripe.js e Checkout embutido.
-- Nenhuma chave real foi adicionada e nenhuma sessão real de pagamento foi criada nesta alteração. Manter compras bloqueadas até concluir as dependências comerciais e operacionais acima.
+- As chaves foram cadastradas anteriormente pelo usuário na integração nativa da Vercel. Esta alteração não lê nem altera credenciais e não cria sessões reais de pagamento. Manter compras bloqueadas até concluir as dependências comerciais e operacionais acima.

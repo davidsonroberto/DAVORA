@@ -9,7 +9,7 @@ import legacyWebhook from '../api/webhook.js';
 import { sessionPayload } from '../lib/stripe.js';
 
 const now = Date.now();
-const fixture = [{ id: 'verified-test-product', name: 'Produto de teste', priceCents: 2199, stock: 5, stockConfirmedAt: new Date(now).toISOString(), availability: 'available', supplierApproved: true, brand: 'Teste', category: 'Lábios', description: 'Teste' }];
+const fixture = [{ id: 'verified-test-product', name: 'Produto de teste', priceCents: 2199, stock: 5, stockConfirmedAt: new Date(now).toISOString(), availability: 'available', supplierApproved: true, brand: 'Teste', category: 'Cabos e carga', description: 'Teste' }];
 const env = {
   DAVORA_CHECKOUT_ENABLED: 'true', DAVORA_SUPPLIER_APPROVED: 'true', DAVORA_MERCHANT_REVIEWED: 'true',
   STRIPE_SECRET_KEY: 'sk_test_NOT_A_REAL_CREDENTIAL', STRIPE_PUBLISHABLE_KEY: 'pk_test_NOT_A_REAL_CREDENTIAL', DAVORA_CHECKOUT_SECRET: 'test-only-secret-with-at-least-32-characters',
@@ -70,9 +70,11 @@ test('seleção resiste a dados corrompidos e busca ignora acentos', () => {
   assert.deepEqual(restoreCart('null', products), {});
   assert.deepEqual(restoreCart('[]', products), {});
   assert.deepEqual(restoreCart(JSON.stringify({ missing: 2, [products[0].id]: -1 }), products), {});
-  assert.ok(filterProducts(products, 'labios', 'Todos').length > 0);
+  assert.ok(filterProducts(products, 'protecao', 'Todos').length > 0);
   assert.equal(filterProducts(products, 'zzzinexistente', 'Todos').length, 0);
-  assert.ok(filterProducts(products, 'bitarra', 'Maquiagem').every(p => p.category === 'Maquiagem'));
+  const filtered = filterProducts(products, 'iphone', 'Capinhas e proteção');
+  assert.ok(filtered.length > 0);
+  assert.ok(filtered.every(p => p.category === 'Capinhas e proteção'));
 });
 test('fluxo API recusa origens externas e catálogo pendente sem chamar o provedor', async () => {
   const prior = Object.fromEntries(Object.keys(env).map(key => [key, process.env[key]]));

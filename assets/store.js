@@ -19,7 +19,7 @@ function renderProducts() {
   const list = filterProducts(products, $('searchInput').value, activeCategory);
   $('productGrid').innerHTML = list.map(p => `
     <article class="card">
-      <button class="img-wrap image-button" data-detail="${safe(p.id)}" aria-label="Ver detalhes de ${safe(p.name)}"><img src="${safe(p.image)}" alt="${safe(p.name)} — ${safe(p.brand)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="badge">${safe(p.brand)}</span></button>
+      <button class="img-wrap image-button" data-detail="${safe(p.id)}" aria-label="Ver detalhes de ${safe(p.name)}"><img src="${safe(p.image)}" alt="${safe(p.name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="badge">${safe(p.tag || p.category)}</span></button>
       <div class="card-body"><span class="cat-label">${safe(p.category)}</span><h3>${safe(p.name)}</h3><div class="micro">${safe(p.size)}</div><div class="${p.priceCents ? 'price' : 'pending-price'}">${p.priceCents ? money(p.priceCents) : 'Preço em confirmação'}</div><div class="availability">${p.availability === 'available' ? 'Confira frete e disponibilidade no pedido' : 'Em breve · venda ainda não liberada'}</div><div class="card-actions"><button class="buy" data-detail="${safe(p.id)}">Ver detalhes</button><button class="add" data-add="${safe(p.id)}" aria-label="Adicionar ${safe(p.name)} à seleção">+</button></div></div>
     </article>`).join('');
   $('productGrid').setAttribute('aria-busy', 'false');
@@ -28,7 +28,7 @@ function renderProducts() {
 }
 function showDetail(id) {
   const p = products.find(p => p.id === id); if (!p) return;
-  $('productDetail').innerHTML = `<div class="detail-image"><img src="${safe(p.image)}" alt="${safe(p.name)}" referrerpolicy="no-referrer"></div><div class="detail-copy"><span class="cat-label">${safe(p.brand)}</span><h2 id="detailTitle">${safe(p.name)}</h2><p>${safe(p.description)}</p><p class="detail-size">${safe(p.size)}</p><strong class="${p.priceCents ? 'price' : 'pending-price'}">${p.priceCents ? money(p.priceCents) : 'Preço em confirmação'}</strong><p class="availability">${p.availability === 'available' ? 'Consulte o frete antes de pagar.' : 'A compra deste produto ainda não foi liberada.'}</p><button class="primary" data-add="${safe(p.id)}">Adicionar à seleção</button><small>Confira sempre o rótulo, a composição e as orientações de uso do fabricante.</small></div>`;
+  $('productDetail').innerHTML = `<div class="detail-image"><img src="${safe(p.image)}" alt="${safe(p.name)}" referrerpolicy="no-referrer"></div><div class="detail-copy"><span class="cat-label">${safe(p.category)}</span><h2 id="detailTitle">${safe(p.name)}</h2><p>${safe(p.description)}</p><p class="detail-size">${safe(p.size)}</p><div class="compatibility"><b>Confira a compatibilidade</b><p>${safe(p.compatibility || 'Confira o modelo, as medidas e as orientações do fabricante antes de comprar.')}</p></div><strong class="${p.priceCents ? 'price' : 'pending-price'}">${p.priceCents ? money(p.priceCents) : 'Preço em confirmação'}</strong><p class="availability">${p.availability === 'available' ? 'Consulte o frete antes de pagar.' : 'A compra deste produto ainda não foi liberada.'}</p><button class="primary" data-add="${safe(p.id)}">Adicionar à seleção</button><small>Acessório de terceiros. As marcas citadas identificam aparelhos compatíveis. Modelos, cores e medidas dependem de confirmação.</small></div>`;
   modal('productDialog');
 }
 function invalidateQuote() { shippingQuote = null; attempt = null; $('payButton').disabled = true; $('quoteSummary').textContent = 'Calcule o frete para conferir o total antes do pagamento.'; }
@@ -138,9 +138,12 @@ async function init() {
     const data = await response.json(); products = data.products;
     try { cart = restoreCart(localStorage.getItem(STORAGE), products); } catch { cart = {}; }
     renderProducts(); renderCart();
-    $('heroBack').src = products.find(p => p.id === 'bitarra-7908496403905').image; $('heroFront').src = products.find(p => p.id === 'vitamedica-3146').image;
+    for (const [index, target] of ['heroBack', 'heroFront'].entries()) {
+      const featured = products.find(p => p.id === data.featuredProducts?.[index]) || products[index];
+      if (featured) $(target).src = featured.image;
+    }
     const config = await api('store-config').catch(() => ({ checkoutEnabled: false })); checkoutEnabled = config.checkoutEnabled === true;
-    if (checkoutEnabled) { $('storeNotice').textContent = config.testMode ? 'AMBIENTE DE TESTE · Pagamentos de teste, sem venda real' : 'DAVORA Store · Beleza e autocuidado para o Brasil'; $('purchaseInfo').textContent = 'Escolha os produtos disponíveis, confira o frete e faça o pagamento pela Stripe na DAVORA. Consulte o total e o prazo antes de pagar.'; $('footerStatus').textContent = 'Valores em reais. Frete calculado antes do pagamento.'; }
+    if (checkoutEnabled) { $('storeNotice').textContent = config.testMode ? 'AMBIENTE DE TESTE · Pagamentos de teste, sem venda real' : 'DAVORA Store · Eletrônicos e acessórios para o Brasil'; $('purchaseInfo').textContent = 'Escolha os produtos disponíveis, confira o frete e faça o pagamento pela Stripe na DAVORA. Consulte o total e o prazo antes de pagar.'; $('footerStatus').textContent = 'Valores em reais. Frete calculado antes do pagamento.'; }
     renderCart();
   } catch { $('productGrid').setAttribute('aria-busy', 'false'); $('productGrid').innerHTML = '<div class="catalog-error"><h3>O catálogo não carregou.</h3><p>Recarregue a página ou fale com a DAVORA pelo WhatsApp.</p></div>'; }
 }

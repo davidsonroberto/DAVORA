@@ -72,3 +72,4 @@
   
 
     .stripe-panel{padding:20px}.stripe-reference{font-size:12px;overflow-wrap:anywhere;color:var(--muted)}#stripeCheckout{min-height:260px;background:#fff}.stripe-panel #paymentMessage{font-size:14px;line-height:1.6}.stripe-panel .checkout{margin-top:18px}
+    .compatibility{padding:13px 14px;margin:16px 0;background:var(--soft);border:1px solid var(--line);border-radius:12px}.compatibility b{font-size:12px}.compatibility p{margin:5px 0 0;font-size:12px;line-height:1.6}.hero-product img{padding:8px}.hero-tag{max-width:185px;font-size:10px;letter-spacing:1.2px}.card .micro{line-height:1.5;min-height:36px}

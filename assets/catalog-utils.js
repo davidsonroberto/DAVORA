@@ -2,7 +2,7 @@ export const money = cents => new Intl.NumberFormat('pt-BR', { style: 'currency'
 export const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 export function filterProducts(products, query, category) {
   const terms = normalize(query).split(/\s+/).filter(Boolean);
-  return products.filter(p => (category === 'Todos' || p.category === category) && terms.every(term => normalize([p.name, p.brand, p.category, p.description].join(' ')).includes(term)));
+  return products.filter(p => (category === 'Todos' || p.category === category) && terms.every(term => normalize([p.name, p.brand, p.category, p.description, p.tag, p.size, p.compatibility].join(' ')).includes(term)));
 }
 export function restoreCart(raw, products) {
   let parsed;
