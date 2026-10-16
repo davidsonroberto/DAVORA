@@ -6,9 +6,15 @@
   "supplierPlatform": "zendrop",
   "expectedProductCount": 30,
   "fulfillmentIntegration": {
-    "status": "not_connected",
-    "mode": null,
-    "supportedDirectly": false
+    "status": "pending_authorization",
+    "mode": "wix_orders",
+    "supportedDirectly": false,
+    "backendProvider": "wix",
+    "wixSiteId": "d8b1d97c-b1cf-4548-8dae-3c9f70ec2baa",
+    "wixClientId": "b71b81f1-6b07-4c93-a555-63200812560f",
+    "zendropStoreId": 3668910,
+    "expectedMappings": 30,
+    "verifiedMappings": 0
   },
   "featuredProducts": [
     "zendrop-2937460",

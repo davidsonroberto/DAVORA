@@ -1,6 +1,6 @@
 # Fornecimento Zendrop para DAVORA Brasil
 
-Consulta oficial concluída em 16/10/2026: 30 produtos, 2.082 variantes e 30 estimativas de frete para o Brasil. A vitrine é a DAVORA do GitHub/Vercel. A Wix `davora.app` é somente referência e permanece sem alterações.
+Consulta oficial concluída em 16/10/2026: 30 produtos, 2.082 variantes e 30 estimativas de frete para o Brasil. A vitrine é a DAVORA do GitHub/Vercel. A Wix `davora.app` é outra loja do proprietário, em inglês. O usuário autorizou avaliar seu uso como backend da DAVORA Brasil. Foi criado um cliente de integração exclusivo; nenhum produto foi criado ou alterado nela.
 
 ## Dados confirmados
 
@@ -24,11 +24,11 @@ A fórmula é `(custo USD do SKU selecionado + frete USD estimado para Brasil) �
 
 ## Integração de pedidos
 
-A conexão do app autoriza o assistente a operar a conta Zendrop. Ela não instala um processo permanente na hospedagem da DAVORA. O conjunto de ferramentas disponível consulta produtos e gerencia pedidos já existentes, mas não cria pedidos externos nem cadastra uma loja GitHub/Vercel. A única loja encontrada é a Wix de referência; nenhum produto foi importado nela e suas configurações não foram alteradas.
+A conexão do app autoriza o assistente a operar a conta Zendrop. Ela não instala um processo permanente na hospedagem da DAVORA. O conjunto de ferramentas disponível consulta produtos e gerencia pedidos já existentes, mas não cria pedidos externos nem cadastra uma loja GitHub/Vercel. A única loja encontrada é a Wix em inglês; nenhum produto foi importado nela e suas configurações comerciais não foram alteradas. O cliente OAuth exclusivo criado para a DAVORA Brasil ainda não tem chave privada no servidor.
 
-`supplierConnection.status` registra a conexão do assistente como `connected`. `fulfillmentIntegration.status` continua `not_connected`: o servidor da DAVORA ainda não encaminha pedidos à Zendrop. A documentação lista integrações nativas com Shopify, TikTok Shop US, ClickFunnels e Wix. Pedidos externos são descritos como um fluxo manual de amostra, e não uma conexão automática gratuita. Escolher e conectar um backend suportado ou aprovar um fluxo manual real continua necessário antes da primeira venda.
+`supplierConnection.status` registra a conexão do assistente como `connected`. `fulfillmentIntegration.status` agora é `pending_authorization`: a ponte Wix está implementada em preparação, mas ainda não envia pedidos. Falta a credencial privada do cliente e o vínculo dos 30 produtos. A documentação lista integrações nativas com Shopify, TikTok Shop US, ClickFunnels e Wix. Pedidos externos são descritos como um fluxo manual de amostra, e não uma conexão automática gratuita. O backend escolhido é a Wix existente; sua autorização privada, os vínculos dos 30 modelos e o recebimento dos pedidos na Zendrop precisam ser validados antes da primeira venda.
 
-A conta foi consultada somente para este trabalho: não houve compra, nova assinatura, despacho, ativação de cobrança automática ou alteração da Wix. Valores e situação de faturamento da conta não são publicados neste documento.
+Na conta Zendrop, este trabalho foi somente de consulta: não houve compra, nova assinatura, despacho, ativação de cobrança automática ou alteração da Wix. Valores e situação de faturamento da conta não são publicados neste documento.
 
 ## Seleção e custos de referência
 

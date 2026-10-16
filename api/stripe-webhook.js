@@ -2,11 +2,12 @@ import Stripe from 'stripe';
 import { getOrderStore, ordersConfigured } from '../lib/orders.js';
 import { stripeRequest, STRIPE_API_VERSION } from '../lib/stripe.js';
 import { StoreError, replyError } from '../lib/store.js';
+import { sendPaidOrderToWix } from '../lib/wix-orders.js';
 
 export const config = { api: { bodyParser: false } };
 const TYPES = new Set(['checkout.session.completed', 'checkout.session.async_payment_succeeded', 'checkout.session.async_payment_failed', 'checkout.session.expired']);
 
-export function createStripeWebhookHandler({ orders = getOrderStore, retrieve = stripeRequest } = {}) {
+export function createStripeWebhookHandler({ orders = getOrderStore, retrieve = stripeRequest, syncSupplier = sendPaidOrderToWix } = {}) {
   return async function handler(req, res) {
     res.setHeader('Cache-Control', 'no-store');
     try {
@@ -27,7 +28,10 @@ export function createStripeWebhookHandler({ orders = getOrderStore, retrieve = 
       const payment = await retrieve('/v1/checkout/sessions/' + event.data.object.id);
       const store = orders();
       if (event.type === 'checkout.session.async_payment_failed') await store.failPayment(payment, event.id);
-      else await store.reconcile(payment, event.id);
+      else {
+        const order = await store.reconcile(payment, event.id);
+        if (order.status === 'paid') await syncSupplier(store, order, payment);
+      }
       return res.status(200).json({ received: true });
     } catch (error) { return replyError(res, error); }
   };

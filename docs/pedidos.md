@@ -40,3 +40,7 @@ O código não efetua compras no fornecedor, reembolsos, reserva no sistema do f
 - Os 30 SKUs, custos, disponibilidade sem contagem e estimativas de frete foram consultados pelo app Zendrop. Continuam pendentes a integração de pedidos com a DAVORA, a revisão comercial das fotos e especificações, preço final, frete por pedido e demais condições de venda. Conectar o app ao assistente não conecta o servidor da loja ao fornecedor. Nenhum preço, prazo ou autorização deve ser inventado para abrir as vendas.
 
 `npm test` cobre concorrência na última unidade, repetição de pedidos, criptografia e vínculo do destinatário, expiração e confirmações atrasadas, eventos repetidos/fora de ordem, pagamento divergente, assinatura alterada, consulta autoritativa à Stripe e recusa de cobrança quando a gravação falha. O adaptador do ledger e a Stripe são simulados nesses testes; eles não substituem a verificação remota.
+
+## Ponte de pedidos Wix/Zendrop
+
+`docs/integracao-wix.md` registra o cliente exclusivo preparado para a DAVORA Brasil e os requisitos ainda pendentes. O webhook pode transferir um pedido pago para a Wix, mas somente com autorização privada, habilitação e validação explícitas. Produtos Zendrop exigem mapeamento Wix confirmado para liberar o checkout. As cotações guardam os IDs de produto e variante vinculados; a criação remota é protegida por registro atômico. Uma resposta incerta exige conferência antes de repetir. Nenhuma configuração de auto-fulfillment foi ativada.
