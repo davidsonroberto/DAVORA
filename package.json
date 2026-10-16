@@ -3,6 +3,15 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "engines": { "node": ">=22 <25" },
-  "scripts": { "test": "node --test test/*.test.js", "check": "node scripts/check-site.js" }
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "node scripts/check-site.js"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.8.2",
+    "stripe": "23.0.0"
+  }
 }

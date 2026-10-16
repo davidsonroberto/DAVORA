@@ -2,7 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readiness, isPurchasable, normalizeItems, quote, verifyQuote, sign, verify, cpfValid, paymentMatches, products, stripeKeysMatch, stripePublishableKey } from '../lib/store.js';
 import { restoreCart, filterProducts, summarizeCart } from '../assets/catalog-utils.js';
-import createPayment from '../api/create-store-payment.js';
+import { createPaymentHandler } from '../api/create-store-payment.js';
+import { createOrderStore } from '../lib/orders.js';
+import { memoryLedger } from './order-memory.js';
 import paymentStatus from '../api/store-payment-status.js';
 import storeConfig from '../api/store-config.js';
 import legacyWebhook from '../api/webhook.js';
@@ -13,9 +15,13 @@ const fixture = [{ id: 'verified-test-product', name: 'Produto de teste', priceC
 const env = {
   DAVORA_CHECKOUT_ENABLED: 'true', DAVORA_SUPPLIER_APPROVED: 'true', DAVORA_MERCHANT_REVIEWED: 'true',
   STRIPE_SECRET_KEY: 'sk_test_NOT_A_REAL_CREDENTIAL', STRIPE_PUBLISHABLE_KEY: 'pk_test_NOT_A_REAL_CREDENTIAL', DAVORA_CHECKOUT_SECRET: 'test-only-secret-with-at-least-32-characters',
+  DAVORA_ORDERS_ENABLED: 'true', DAVORA_ORDER_ENCRYPTION_KEY: 'a'.repeat(64), DAVORA_ORDER_NAMESPACE: 'test',
+  BLOB_READ_WRITE_TOKEN: 'TEST_ONLY_NOT_REAL', STRIPE_WEBHOOK_SECRET: 'whsec_TEST_ONLY_NOT_REAL', DAVORA_WEBHOOK_VERIFIED: 'true',
   DAVORA_STORE_ORIGIN: 'https://store.example', DAVORA_SHIPPING_RULES: JSON.stringify([{ cepStart: '30000000', cepEnd: '39999999', priceCents: 1250, days: 8 }])
 };
 const items = [{ id: fixture[0].id, quantity: 2, priceCents: 1 }];
+const ledger = memoryLedger();
+const createPayment = createPaymentHandler({ orders: () => createOrderStore(ledger, process.env, products) });
 function response() { return { code: 200, headers: {}, setHeader(k, v) { this.headers[k] = v; }, status(v) { this.code = v; return this; }, json(v) { this.body = v; return this; } }; }
 const request = body => ({ method: 'POST', headers: { origin: env.DAVORA_STORE_ORIGIN, 'content-type': 'application/json' }, body });
 

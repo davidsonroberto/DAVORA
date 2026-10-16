@@ -52,4 +52,4 @@ As três variáveis Stripe estão cadastradas na configuração production da Ve
 
 Revenda com preço definido pela DAVORA gera diferença entre receita e despesas; não é comissão de afiliado. Nenhum fornecedor confirmou comissão ou lucro de 50%. A margem só pode ser calculada depois de obter custo, frete, taxas e demais despesas reais.
 
-Além do fornecimento, permanecem pendentes o registro durável de pedidos, o webhook Stripe com verificação de assinatura, o controle/reserva de estoque e a confirmação dos dados comerciais e condições de atendimento da DAVORA. O cadastro do fornecedor, sozinho, não conclui o lançamento.
+Além do fornecimento, permanecem pendentes a validação remota do registro de pedidos e das reservas implementados, o cadastro e a verificação da entrega do webhook Stripe e a confirmação dos dados comerciais e condições de atendimento da DAVORA. A implementação e seus limites estão em `docs/pedidos.md`. O cadastro do fornecedor, sozinho, não conclui o lançamento.
