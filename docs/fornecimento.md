@@ -1,55 +1,71 @@
-# Fornecimento para DAVORA Brasil
+# Fornecimento Zendrop para DAVORA Brasil
 
-Pesquisa em 16/10/2026. Foco escolhido: eletrônicos e acessórios para o Brasil, na própria DAVORA, com Stripe e valores em reais. A loja não depende de redirecionar o comprador para outro comércio.
+Seleção de 16/10/2026: 30 produtos consultados no catálogo autenticado da Zendrop, com foco em eletrônicos e acessórios. A vitrine é a DAVORA do repositório GitHub/Vercel, em português e BRL. A `davora.app` na Wix foi usada como referência e não foi alterada.
 
-## Infinito Loja — catálogo preliminar
+## O que foi confirmado
 
-Fontes:
-- https://app.dropi.com.br/marketplace/fornecedor/infinitoLoja
-- https://infinitoloja.com.br/
-- https://infinitoloja.com.br/atacado
+A conta Zendrop estava conectada à loja Wix de referência. A consulta foi somente de leitura: não houve importação para a Wix, pedido de amostra, cobrança, assinatura ou aceite de contrato.
 
-O catálogo público no Dropi informa 53 produtos de acessórios mobile. Foram selecionadas 24 referências para a vitrine preliminar. Fotos e referências correspondem aos itens publicados, sem criar preços, quantidades de estoque ou especificações não confirmadas.
+Os 30 produtos têm ID, URL individual, nome de origem, foto e custo a partir de em USD registrados no catálogo. Distribuição: 8 itens de áudio, 6 de cabos e carga, 11 de capas/proteção, 3 pulseiras e 2 itens de mesa/setup. O custo USD é do produto no catálogo, sem frete, tributos, câmbio ou confirmação da variante. Não é comissão nem preço de revenda. As URLs de foto foram extraídas do DOM dos respectivos cartões. O CDN retornou HTTP 403 na conferência local; o carregamento externo das fotos ainda não foi validado e não deve ser descrito como concluído.
 
-O site oficial informa o CNPJ 30.519.402/0001-68, sediado em João Pessoa/PB, e orienta contato comercial pela opção Atacado do WhatsApp. A página pública não comprova atendimento manual em dropshipping fora do Dropi. Não existe integração direta implementada com esse fornecedor, acordo comercial ou autorização de uso comercial das fotos confirmados nesta sessão.
+No produto 2932951 (suporte de headset), foi possível selecionar Brazil. A tela apresentou média de envio de 21 days e custo de produto de US$ 3,44. Não informou custo de frete confirmado. Esses dados não foram aplicados aos outros produtos nem tratados como prazo contratual. A consulta de Todos os SKUs abriu uma verificação Cloudflare que permaneceu bloqueando este navegador; não foi tentado contornar o bloqueio. SKU, estoque e cotação por variante ficaram pendentes.
 
-Contato conferido em 16/10/2026: o botão WhatsApp da própria página Atacado aponta para https://api.whatsapp.com/send/?app_absent=0&phone=5583996835340&text=&type=phone_number (+55 83 99683-5340). O rodapé mostra outro número e seu link omite um dígito em relação ao texto; para a consulta comercial, usar o botão específico da página Atacado. Nenhuma mensagem foi enviada.
+## Integração e envio
 
-Antes de escolher este fornecedor, confirmar:
-1. Aceite de CPF ou exigência de CNPJ/MEI e demais documentos.
-2. Pedido unitário manual, envio diretamente ao comprador e embalagem adequada.
-3. Possibilidade de usar o checkout próprio com Stripe, sem plataforma intermediária obrigatória.
-4. Custo por variante e quantidade, mínimo de compra, embalagem e eventuais taxas.
-5. Estoque consultável e reserva para cada pedido, com SKU exato para modelo, medida, comprimento e cor.
-6. CEP de origem, peso/dimensões e cotação do carrinho completo, prazo de preparação, transporte e rastreio.
-7. Autorização para usar fotos e nomes dos produtos na DAVORA.
-8. Condições de devolução, defeitos, nota fiscal e reembolso.
+A Zendrop documenta integrações nativas com Shopify, TikTok Shop US, ClickFunnels e Wix. Não há integração direta GitHub/Vercel implementada nem API pública confirmada para usar nesta loja. Solicitar uma integração é uma proposta de recurso, não uma conexão pronta.
 
-Mensagem preparada, sem envio:
+A documentação de pedidos externos descreve um fluxo manual de pedido de amostra com plano pago e conexão a plataforma suportada. Não é uma automação gratuita e não autoriza presumir que a conexão Wix existente atenda a esse fluxo. Nenhum plano foi contratado.
 
-> Olá! Tenho a loja DAVORA, de acessórios para celular. Quero vender no meu próprio site, com checkout Stripe. Vocês aceitam pedido manual por unidade, fora do Dropi, e enviam direto ao meu cliente? Podem informar os documentos exigidos, custos, estoque, frete e autorização de uso das fotos?
+A Zendrop documenta envio ao Brasil e necessidade de CPF/CNPJ do destinatário. Frete e tributos de importação não devem ser presumidos como incluídos. A média geral publicada para o país não substitui a cotação e as condições do SKU escolhido.
 
-## Outras opções pesquisadas
+Fontes oficiais consultadas:
 
-| Opção | Evidência pública | Implicação para a DAVORA |
-| --- | --- | --- |
-| Hayamax / DSLite | A operação de dropshipping encerrou em 31/08/2026. O crossdocking entrega ao endereço cadastrado do revendedor. | Não atende ao objetivo de envio direto sem manuseio pelo lojista. Não usar listagens antigas de fornecedores como prova de dropshipping vigente. |
-| Hayonik | FAQ confirma dropshipping, mas exige CNPJ. Preços dependem de login; as condições do programa precisam ser verificadas. | Alternativa a avaliar apenas com cadastro comercial compatível e condições confirmadas. |
-| C7 Drop | Página Quem Somos descreve venda na própria loja e envio mediante etiqueta. Os termos restringem a reprodução das fotos. | Potencial operação manual; não copiar fotos para a DAVORA sem autorização. Cadastro, custos e fluxo sem etiqueta de marketplace ainda precisam de confirmação. |
-| DM Fornecedor | Página pública aceita CPF, descreve pedido manual após a venda e etiqueta própria; informa ausência de pedido mínimo. O catálogo não ficou legível na consulta pública. | Alternativa a avaliar com acesso ao catálogo e condições comerciais verificadas. Os números de vendas e promessas do anúncio não foram tratados como prova de resultados. |
+- Integrações: https://support.zendrop.com/en/articles/8176418-zendrop-e-commerce-platform-integrations
+- Solicitação de novas integrações: https://support.zendrop.com/en/articles/12582165-requesting-new-store-integrations-on-zendrop
+- Pedidos externos: https://support.zendrop.com/en/articles/8176420-how-to-fulfill-orders-received-outside-of-zendrop
+- Requisitos internacionais: https://support.zendrop.com/en/articles/9492634-international-shipping-considerations-with-zendrop
+- Médias de transporte por país: https://support.zendrop.com/en/articles/8487356-zendrop-shipping-times-by-country
+- Tributos e alfândega: https://support.zendrop.com/en/articles/16100468-how-do-tariffs-and-customs-duties-affect-my-zendrop-orders
 
-Fontes das alternativas:
-- https://app.dslite.com.br/faq/10/86
-- https://origin.hayamax.com.br/crossdocking
-- https://origin.hayonik.com.br/faq
-- https://www.c7drop.com.br/quem-somos
-- https://www.c7drop.com.br/termos-de-uso
-- https://www.dmfornecedor.com/
+## Preço e lançamento
 
-## Pagamento e margem
+A DAVORA mantém as compras desativadas. Cada produto depende de SKU exato, custo total, estoque, condições de uso das fotos e envio ao Brasil confirmados. O repasse de pedidos precisa de um fluxo operacional compatível e testado antes da primeira venda.
 
-As três variáveis Stripe estão cadastradas na configuração production da Vercel. Isso não prova que as chaves sejam live nem que o fornecedor esteja conectado. O checkout continua fechado. Não foi efetuada cobrança, compra, contratação ou mensagem ao fornecedor.
+O preço de revenda é uma decisão da DAVORA. Margem de 50% sobre a receita antes das demais despesas exige vender por duas vezes o custo considerado; taxas, câmbio, frete subsidiado, tributos, anúncios e devoluções reduzem o lucro. Não há percentual garantido pela Zendrop.
 
-Revenda com preço definido pela DAVORA gera diferença entre receita e despesas; não é comissão de afiliado. Nenhum fornecedor confirmou comissão ou lucro de 50%. A margem só pode ser calculada depois de obter custo, frete, taxas e demais despesas reais.
+Além do fornecimento, continuam pendentes a verificação remota do registro durável de pedidos, configuração e entrega do webhook Stripe e dados comerciais da loja. Consulte `docs/pedidos.md`. A alteração de catálogo não libera o checkout nem faz pagamentos ao fornecedor.
 
-Além do fornecimento, permanecem pendentes a validação remota do registro de pedidos e das reservas implementados, o cadastro e a verificação da entrega do webhook Stripe e a confirmação dos dados comerciais e condições de atendimento da DAVORA. A implementação e seus limites estão em `docs/pedidos.md`. O cadastro do fornecedor, sozinho, não conclui o lançamento.
+## Produtos selecionados
+
+| ID Zendrop | Produto na DAVORA | Custo de catálogo a partir de (USD) |
+| --- | --- | ---: |
+| 2932951 | Suporte de mesa para headset | 3.44 |
+| 2933013 | Relógio digital RGB de mesa | 24.43 |
+| 2932911 | Caixa de som retrô AS19 | 16.98 |
+| 2937460 | Headset gamer NUBWO N7 com fio | 13.94 |
+| 2933186 | Fones sem fio TWS F9-5C | 2.49 |
+| 2932754 | Fones sem fio S109 | 0.96 |
+| 2932497 | Fones TWS de condução aérea | 7.43 |
+| 2931956 | Fones sem fio esportivos | 3.99 |
+| 2933399 | Fones com fio Patinha Rosa | 0.65 |
+| 2933398 | Fones gamer sem fio com toque | 7.82 |
+| 2932823 | Cabo USB-C HOCO X20 | 0.84 |
+| 2932584 | Cabo de recarga multiuso | 1.13 |
+| 2932750 | Cabo chaveiro 4 em 1 USB-C | 4.39 |
+| 2932749 | Carregador magnético 4 em 1 | 20.57 |
+| 2932570 | Suporte carregador veicular A7 | 5.73 |
+| 2938549 | Kit carregador com duas portas USB-C | 7.63 |
+| 2938582 | Capa com brilho e apoio para iPhone | 2.49 |
+| 2935811 | Capa Armor com moldura para iPhone | 5.35 |
+| 2933219 | Capa rígida com apoio para iPhone | 0.96 |
+| 2933383 | Porta-cartões magnético para iPhone | 3.20 |
+| 2932605 | Capa transparente para Galaxy | 0.52 |
+| 2932448 | Capa fosca em acrílico para Galaxy | 1.43 |
+| 2931926 | Capa magnética para Galaxy | 1.51 |
+| 2935810 | Capa com anel de apoio para Galaxy | 1.43 |
+| 2932821 | Capa texturizada para Galaxy | 3.25 |
+| 2933334 | Pulseira milanesa magnética | 1.03 |
+| 2933285 | Pulseira milanesa com fivela | 0.86 |
+| 2932579 | Pulseira de elos em aço | 4.77 |
+| 2932310 | Capa transparente para estojo de fones | 0.23 |
+| 2933400 | Capa floral para estojo de fones | 2.49 |

@@ -1,6 +1,6 @@
 # DAVORA Brasil
 
-Versão de preparação de 16/10/2026, em português e BRL, com foco em eletrônicos e acessórios para o Brasil. Conserva as cores e a estrutura visual da DAVORA do GitHub. A vitrine reúne 24 acessórios reais encontrados no catálogo público da Infinito Loja: cabos, carregadores, capinhas, películas, pulseiras e acessórios de uso diário. Não há parceria ou disponibilidade comercial confirmada.
+Versão de preparação de 16/10/2026, em português e BRL, com foco em eletrônicos e acessórios para o Brasil. Conserva as cores e a estrutura visual da DAVORA do GitHub. A vitrine reúne 30 produtos reais consultados na conta Zendrop: áudio, cabos, carregadores, capinhas, pulseiras e acessórios de mesa. A seleção anterior da Infinito Loja foi substituída. A disponibilidade comercial e o envio por variante ainda dependem de confirmação.
 
 ## O que funciona
 
@@ -12,18 +12,17 @@ Versão de preparação de 16/10/2026, em português e BRL, com foco em eletrôn
 - Retomada da mesma sessão de pagamento após recarregar a página, na mesma aba e por até duas horas, sem criar outra cobrança. Só uma referência temporária e os itens da seleção ficam no sessionStorage; dados pessoais e client secret Stripe não são persistidos.
 - Cotações antigas são descartadas se o CEP ou a seleção mudar durante a consulta. O servidor também recusa um CEP de entrega diferente do CEP cotado.
 
-**As compras estão desativadas.** Produtos identificados em catálogos públicos não equivalem a acordo de fornecimento. Preços de revenda, variantes, estoque e regras comerciais ainda dependem do cadastro e da confirmação do fornecedor. Não houve contratação, importação para uma conta de lojista, pagamento nem pedido ao fornecedor. Não há comissão garantida de 50%.
+**As compras estão desativadas.** Os 30 produtos foram consultados com login na Zendrop, sem importar itens para a loja Wix de referência vinculada à conta. Preços de revenda, variantes, estoque e frete por produto continuam pendentes. Não houve assinatura paga, pagamento nem pedido ao fornecedor. Não há comissão garantida de 50%.
 
 ## Catálogo e origem das fotos
 
-`data/catalog.json` registra SKU de referência, nome de origem, URL do produto, foto pública e observações de compatibilidade. Os nomes de aparelhos indicam compatibilidade; os acessórios não são anunciados como originais das fabricantes. Fotos e especificações deverão ser aprovadas para o uso comercial antes do lançamento. Opções de cor, medida, modelo e comprimento não são tratadas como variantes compráveis antes da confirmação do SKU exato.
+`data/catalog.json` registra os 30 IDs de produto Zendrop, títulos de origem, URLs, fotos, categorias e textos em português. O ID da página não é um SKU de variante: `supplierProductId` contém o ID consultado e `supplierSku` permanece `null` até a confirmação do modelo/cor exatos.
 
-- https://app.dropi.com.br/marketplace/fornecedor/infinitoLoja
-- https://infinitoloja.com.br/atacado
+Os custos vistos no catálogo estão em `supplierCost`, em centavos de USD e com escopo `catalog_product_only`. São valores a partir de, não incluem frete, tributos ou conversão e não equivalem ao preço de venda em BRL. Não são exibidos como preço ao consumidor. Cada produto permanece com `supplierApproved: false`, `availability: pending_confirmation`, `priceCents: null` e `stock: null`.
 
-A presença do fornecedor no Dropi não comprova integração direta com Vercel nem aceite de pedidos manuais fora do Dropi. A pesquisa das alternativas e as perguntas comerciais pendentes estão em `docs/fornecimento.md`.
+As fotos são carregadas de `file.zendrop.com`, domínio específico permitido pela CSP. As marcas citadas identificam produtos ou aparelhos compatíveis. O uso comercial das imagens e as especificações exatas devem ser confirmados antes do lançamento. Estoque anunciado só é aceito se confirmado há menos de 24 horas.
 
-Cada produto está com `supplierApproved: false`, `availability: pending_confirmation`, `priceCents: null`, `stock: null`. Fotos são carregadas do CDN de origem. Estoque anunciado só é aceito se confirmado há menos de 24 horas.
+A Zendrop lista integrações com Shopify, TikTok Shop US, ClickFunnels e Wix. GitHub/Vercel e API pública para uma loja própria não foram confirmados como integração disponível. `fulfillmentIntegration.status` permanece `not_connected`; o catálogo preparado não automatiza o envio de pedidos. Fontes oficiais e estado da consulta estão em `docs/fornecimento.md`.
 
 ## Hospedagem e situação da publicação
 
@@ -37,8 +36,8 @@ O login no painel Vercel foi concluído. O token Blob de preparação foi conver
 
 ## Dependências antes de vender
 
-1. Confirmar se a Infinito Loja atende à DAVORA por pedido manual com envio direto ao cliente fora do Dropi, quais documentos exige e quais são os custos. Se não atender, escolher outro fornecedor antes de ativar qualquer produto. Obter autorização comercial e de uso das fotos, com SKU exato, modelo, cor, medida, quantidade, custo e estoque.
-2. Confirmar frete e prazo por pedido completo, inclusive pedidos com fornecedores diferentes. Não copiar custos do AliExpress antigo.
+1. Concluir o fluxo de fornecimento Zendrop compatível com a DAVORA. A conta está conectada à Wix de referência, que não foi alterada. A loja GitHub/Vercel não tem integração direta confirmada; definir um backend suportado ou um fluxo manual aceito antes de vender. Confirmar SKU exato, custo, estoque e uso das fotos.
+2. Confirmar envio e custo por variante e por pedido completo para o Brasil, incluindo processamento, rastreio e tributos. A média de transporte mostrada para um produto não é uma promessa para os demais. Não há frete grátis presumido.
 3. Definir preços em `priceCents`, em centavos. Margem de 50% antes das demais despesas exige preço de venda igual a duas vezes o custo considerado; taxas, frete subsidiado, impostos, anúncios e devoluções diminuem o lucro. Fazer a conta com custos reais antes de escolher o preço.
 4. Conectar a hospedagem à Stripe por configuração segura do servidor. A conexão do ChatGPT foi verificada em 15/10/2026: conta brasileira em BRL, somente ambiente de teste disponível nesta sessão, cartões habilitados e sem exigências cadastrais pendentes na consulta. Isso não comprova a ativação da conta de produção. As três variáveis de credenciais foram cadastradas na configuração production da Vercel; valores e ambiente Stripe não foram inspecionados. Nenhuma chave deve ser enviada por mensagem ou incluída no GitHub.
 5. Completar identificação comercial da loja, condições de entrega, atendimento, privacidade, trocas e devoluções com dados reais do responsável.
@@ -59,7 +58,7 @@ npm run check
 git diff --check
 ```
 
-Os 30 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência inclusive em repetições após atraso, configuração de Pix, separação teste/produção, chave publicável gerenciada pela Vercel, confirmação autoritativa, retomada da mesma sessão aberta e recusa do webhook antigo. A recuperação rejeita tokens adulterados ou expirados, divergência de valor/ambiente/referência, e não retorna formulário para pagamento já concluído. O armazenamento na aba exclui dados pessoais e client secret. As chamadas à Stripe são simuladas; nenhuma cobrança foi realizada. A conferência visual inclui o carregamento das 24 fotos e o fluxo de busca, filtros, detalhes e seleção em telas de computador e celular.
+Os 30 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência inclusive em repetições após atraso, configuração de Pix, separação teste/produção, chave publicável gerenciada pela Vercel, confirmação autoritativa, retomada da mesma sessão aberta e recusa do webhook antigo. A recuperação rejeita tokens adulterados ou expirados, divergência de valor/ambiente/referência, e não retorna formulário para pagamento já concluído. O armazenamento na aba exclui dados pessoais e client secret. As chamadas à Stripe são simuladas; nenhuma cobrança foi realizada. A conferência local em Chromium verificou 30 cartões, cinco categorias, busca sem acentos, detalhes, seleção persistida, bloqueio do pagamento e ausência de rolagem horizontal na página em celular. As 30 URLs de imagens foram extraídas dos cartões Zendrop; o carregamento das fotos retornou HTTP 403 neste ambiente. O tratamento de imagem indisponível funciona, mas a exibição das fotos em navegador de cliente ainda precisa ser confirmada. A disponibilidade no fornecedor e o frete continuam pendentes.
 
 Documentação do pagamento:
 - https://docs.stripe.com/checkout/embedded/quickstart
