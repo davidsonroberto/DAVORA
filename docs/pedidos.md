@@ -4,7 +4,9 @@ Implementação de preparação em 16/10/2026. As compras permanecem desativadas
 
 ## Armazenamento
 
-Foi criado o Vercel Blob privado `davora-orders`, ID `store_CVtTIkSdocv9d9RW`, na região iad1, conectado ao projeto davora. A conexão adicionou `BLOB_READ_WRITE_TOKEN` aos ambientes da Vercel; valores não foram lidos. As chaves de criptografia e assinatura criadas para esta preparação ficam somente em variáveis sensíveis de preview. Não perder ou trocar a chave de criptografia com pedidos existentes sem migrar os dados.
+Foi criado o Vercel Blob privado `davora-orders`, ID `store_CVtTIkSdocv9d9RW`, na região iad1, conectado ao projeto davora. Em 16/10/2026, `BLOB_READ_WRITE_TOKEN` foi restringido a **preview** e convertido em variável **sensitive**, preservando o valor sem lê-lo nem rotacioná-lo. A API e o painel autenticado confirmaram o novo tipo e escopo. As chaves de criptografia e assinatura criadas para esta preparação também ficam somente em variáveis sensíveis de preview. Não perder ou trocar a chave de criptografia com pedidos existentes sem migrar os dados.
+
+O novo escopo vale para publicações futuras. Não revoga o token nem remove cópias já incorporadas a deploys antigos; não considerar isso uma revogação completa de acesso de produção. Antes de dados reais, criar armazenamento e credenciais separados e revisar os deploys antigos.
 
 O ledger é privado e separado por namespace e ambiente Stripe. Dados de contato, CPF e endereço ficam criptografados com AES-256-GCM, com autenticação vinculada à referência do pedido. Nenhum dado de cartão é armazenado. Preços e quantidades continuam validados no servidor.
 
@@ -28,11 +30,13 @@ O código não efetua compras no fornecedor, reembolsos, reserva no sistema do f
 
 ## Ativação pendente
 
-- Manter o armazenamento de teste separado do armazenamento de pedidos reais antes de habilitar produção. A tentativa de restringir a variável automática Blob por API não foi concluída; conferir o vínculo dos ambientes na Vercel.
+- Manter o armazenamento de teste separado do armazenamento de pedidos reais antes de habilitar produção. O token de teste foi restringido a preview e protegido como sensitive; deploys antigos precisam ser considerados na revisão de acesso.
 - A prévia ainda não tem credenciais Stripe de teste; as credenciais gerenciadas existentes estão apenas em production. Não copiar chaves de produção para o preview.
 - Cadastrar um endpoint HTTPS alcançável pela Stripe em `/api/stripe-webhook`, com eventos `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `checkout.session.async_payment_failed` e `checkout.session.expired`.
 - Cadastrar o segredo específico do endpoint em `STRIPE_WEBHOOK_SECRET` por configuração segura e verificar a entrega de um evento de teste antes de mudar `DAVORA_WEBHOOK_VERIFIED` para true.
-- O login/proteção da Vercel ainda impede verificar o endpoint remoto. `/api/order-system-health` faz apenas uma leitura de conexão e não retorna pedidos nem dados pessoais. A criação do recurso e das variáveis foi confirmada; a leitura/gravação real por esse deploy ainda precisa ser verificada.
+- O login na Vercel foi concluído. A abertura do endpoint remoto no navegador desta sessão retornou `net::ERR_BLOCKED_BY_CLIENT`, tanto no deploy quanto no alias estável. Isso não demonstra falha no Blob nem identifica bloqueio por robô. `/api/order-system-health` faz apenas uma leitura de conexão e não retorna pedidos nem dados pessoais. O recurso está disponível segundo a API da Vercel; a leitura/gravação real por esse deploy ainda precisa ser verificada. A proteção de acesso da prévia foi mantida.
+- A conta Stripe conectada ao ChatGPT foi consultada novamente: país BR, moeda brl, cartões e boleto ativos no contexto de teste autorizado. Não há endpoints webhook cadastrados nesse contexto. Isso não comprova a natureza das chaves da Vercel nem a ativação de produção. A criação rápida de sandbox da integração Vercel exibe somente US/CA e USD/CAD; nenhum sandbox com país ou moeda diferentes foi criado.
+- O painel da Vercel identifica o plano atual como Hobby. Antes da operação comercial, definir uma hospedagem/plano que permita esse uso. A política oficial exige Pro ou Enterprise para uso comercial na Vercel: https://vercel.com/docs/limits/fair-use-guidelines . Nenhuma assinatura paga foi contratada.
 - Aprovar fornecimento, SKU, fotos, custos, estoque, preço final, frete e condições comerciais. Nenhum preço, prazo ou autorização deve ser inventado para abrir as vendas.
 
 `npm test` cobre concorrência na última unidade, repetição de pedidos, criptografia e vínculo do destinatário, expiração e confirmações atrasadas, eventos repetidos/fora de ordem, pagamento divergente, assinatura alterada, consulta autoritativa à Stripe e recusa de cobrança quando a gravação falha. O adaptador do ledger e a Stripe são simulados nesses testes; eles não substituem a verificação remota.
