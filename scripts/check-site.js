@@ -2,6 +2,7 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
+import { calculatePricingDraft } from '../lib/pricing-draft.js';
 const html = readFileSync('index.html', 'utf8');
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
 assert.equal(ids.length, new Set(ids).size, 'IDs HTML duplicados');
@@ -38,6 +39,14 @@ for (const p of data.products) {
   assert.equal(p.shippingEstimate.country, 'BR');
   assert.equal(p.shippingEstimate.variantConfirmed, false, 'Estimativa por produto não confirma a variante');
   for (const option of p.shippingEstimate.options) { assert.ok(Number.isSafeInteger(option.priceCents) && option.priceCents > 0); assert.ok(typeof option.estimatedDeliveryText === 'string'); }
+  if (data.pricingPolicy?.status === 'draft') {
+    const option = p.shippingEstimate.options.find(o => o.type === p.pricingDraft?.shippingType);
+    assert.ok(option, 'Previsão sem frete de origem: ' + p.id);
+    assert.deepEqual(p.pricingDraft, { ...calculatePricingDraft(p.supplierCost.variantCents, option.priceCents, data.pricingPolicy), shippingType: option.type, estimatedDeliveryText: option.estimatedDeliveryText });
+    assert.equal(p.priceCents, null, 'Previsão não pode virar preço de cobrança');
+    assert.equal(p.supplierApproved, false);
+    assert.equal(p.availability, 'pending_launch');
+  }
   if (evidence) {
     const original = evidence.products.find(source => String(source.id) === p.supplierProductId);
     assert.ok(original?.variantsComplete, 'Consulta parcial de variantes: ' + p.id);

@@ -73,6 +73,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 24590,
+        "shippingReferenceCents": 10501,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -133,6 +143,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 56190,
+        "shippingReferenceCents": 15675,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -193,6 +213,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 40190,
+        "shippingReferenceCents": 11447,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -253,6 +283,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 36590,
+        "shippingReferenceCents": 11197,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -313,6 +353,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 16290,
+        "shippingReferenceCents": 6877,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -373,6 +423,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 13690,
+        "shippingReferenceCents": 6348,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -433,6 +493,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 21690,
+        "shippingReferenceCents": 7035,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -493,6 +563,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 19690,
+        "shippingReferenceCents": 7716,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -553,6 +633,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 16490,
+        "shippingReferenceCents": 7904,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -613,6 +703,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 20990,
+        "shippingReferenceCents": 6501,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -673,6 +773,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 17290,
+        "shippingReferenceCents": 8092,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -733,6 +843,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 13890,
+        "shippingReferenceCents": 6348,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -793,6 +913,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 17490,
+        "shippingReferenceCents": 6501,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -853,6 +983,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 38890,
+        "shippingReferenceCents": 8249,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -913,6 +1053,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 21390,
+        "shippingReferenceCents": 7756,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -973,6 +1123,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 31890,
+        "shippingReferenceCents": 11375,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1033,6 +1193,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 19190,
+        "shippingReferenceCents": 8310,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1093,6 +1263,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 21890,
+        "shippingReferenceCents": 8204,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1153,6 +1333,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 17590,
+        "shippingReferenceCents": 8285,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1213,6 +1403,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 19890,
+        "shippingReferenceCents": 8285,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1273,6 +1473,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 16890,
+        "shippingReferenceCents": 8153,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1333,6 +1543,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 18090,
+        "shippingReferenceCents": 8285,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1393,6 +1613,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 17790,
+        "shippingReferenceCents": 8092,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1453,6 +1683,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 17590,
+        "shippingReferenceCents": 8031,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1513,6 +1753,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 19490,
+        "shippingReferenceCents": 8092,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1573,6 +1823,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 14190,
+        "shippingReferenceCents": 6425,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1633,6 +1893,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 18090,
+        "shippingReferenceCents": 8407,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1693,6 +1963,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 20290,
+        "shippingReferenceCents": 7716,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1753,6 +2033,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 16690,
+        "shippingReferenceCents": 8153,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     },
     {
@@ -1813,6 +2103,16 @@
             "estimatedDeliveryText": "21 days"
           }
         ]
+      },
+      "pricingDraft": {
+        "status": "draft",
+        "currency": "BRL",
+        "scope": "one_unit_product_country_estimate",
+        "totalCents": 18390,
+        "shippingReferenceCents": 7904,
+        "shippingIncludedInEstimate": true,
+        "shippingType": "regular",
+        "estimatedDeliveryText": "21 days"
       }
     }
   ],
@@ -1827,5 +2127,31 @@
     "status": "connected",
     "type": "assistant_tools",
     "verifiedAt": "2026-10-16T20:45:46.070Z"
+  },
+  "pricingPolicy": {
+    "status": "draft",
+    "currency": "BRL",
+    "targetGrossMarginBasisPoints": 5000,
+    "basis": "selected_variant_plus_one_unit_shipping_estimate",
+    "rounding": "up_to_next_90_cents",
+    "fxReference": {
+      "source": "European Central Bank",
+      "date": "2026-10-16",
+      "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+      "eurUSD": "1.1253",
+      "eurBRL": "5.7197",
+      "brlNumerator": 57197,
+      "usdDenominator": 11253,
+      "purpose": "budget_reference_only"
+    },
+    "excludedCosts": [
+      "taxes_and_duties",
+      "payment_processing",
+      "fx_spread",
+      "advertising",
+      "returns",
+      "subscriptions"
+    ],
+    "note": "Meta de margem bruta antes das despesas excluídas; não é comissão nem promessa de lucro líquido."
   }
 }

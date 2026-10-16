@@ -1,4 +1,4 @@
-import { money, filterProducts, restoreCart, summarizeCart } from './catalog-utils.js';
+import { money, displayPrice, filterProducts, restoreCart, summarizeCart } from './catalog-utils.js';
 import { validPaymentRecord, savePaymentRecord, restorePaymentRecord, clearPaymentRecord } from './payment-recovery.js';
 
 const $ = id => document.getElementById(id);
@@ -19,12 +19,25 @@ function showToast(text) {
   clearTimeout(toastTimer); toastTimer = setTimeout(() => $('toast').classList.remove('show'), 2800);
 }
 function modal(id) { if (!$(id).open) $(id).showModal(); }
+function priceMarkup(product) {
+  const value = displayPrice(product);
+  if (!value) return '<span class="pending-price">Preço em confirmação</span>';
+  return `${value.draft ? '<span class="price-label">Preço previsto</span>' : ''}<span class="price">${money(value.cents)}</span>`;
+}
+function shippingPreview(product, detail = false) {
+  const draft = product.pricingDraft;
+  if (!draft || draft.status !== 'draft' || draft.shippingIncludedInEstimate !== true) return '';
+  const delivery = /^(\d+) days$/.exec(draft.estimatedDeliveryText || '');
+  const days = delivery ? `${delivery[1]} dias estimados` : 'Prazo em confirmação';
+  if (!detail) return `<div class="shipping-preview">Frete incluído na previsão<br>${safe(days)}</div>`;
+  return `<div class="shipping-preview detail-shipping"><b>Frete previsto: ${money(draft.shippingReferenceCents)}, já incluído</b><p>${safe(days)} de transporte. Estimativa para 1 unidade e destino Brasil; modelo, quantidade e endereço ainda precisam de cotação final. Processamento, alfândega e tributos não estão confirmados.</p></div>`;
+}
 function renderProducts() {
   const list = filterProducts(products, $('searchInput').value, activeCategory);
   $('productGrid').innerHTML = list.map(p => `
     <article class="card">
       <button class="img-wrap image-button" data-detail="${safe(p.id)}" aria-label="Ver detalhes de ${safe(p.name)}"><img src="${safe(p.image)}" alt="${safe(p.name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="badge">${safe(p.tag || p.category)}</span></button>
-      <div class="card-body"><span class="cat-label">${safe(p.category)}</span><h3>${safe(p.name)}</h3><div class="micro">${safe(p.size)}</div><div class="${p.priceCents ? 'price' : 'pending-price'}">${p.priceCents ? money(p.priceCents) : 'Preço em confirmação'}</div><div class="availability">${p.availability === 'available' ? 'Confira frete e disponibilidade no pedido' : 'Em breve · venda ainda não liberada'}</div><div class="card-actions"><button class="buy" data-detail="${safe(p.id)}">Ver detalhes</button><button class="add" data-add="${safe(p.id)}" aria-label="Adicionar ${safe(p.name)} à seleção">+</button></div></div>
+      <div class="card-body"><span class="cat-label">${safe(p.category)}</span><h3>${safe(p.name)}</h3><div class="micro">${safe(p.size)}</div><div class="product-price">${priceMarkup(p)}</div>${shippingPreview(p)}<div class="availability">${p.availability === 'available' ? 'Confira frete e disponibilidade no pedido' : 'Em breve · venda ainda não liberada'}</div><div class="card-actions"><button class="buy" data-detail="${safe(p.id)}">Ver detalhes</button><button class="add" data-add="${safe(p.id)}" aria-label="Adicionar ${safe(p.name)} à seleção">+</button></div></div>
     </article>`).join('');
   $('productGrid').setAttribute('aria-busy', 'false');
   $('resultCount').textContent = list.length + (list.length === 1 ? ' produto' : ' produtos');
@@ -38,7 +51,7 @@ function supplierConsultation(p) {
 }
 function showDetail(id) {
   const p = products.find(p => p.id === id); if (!p) return;
-  $('productDetail').innerHTML = `<div class="detail-image"><img src="${safe(p.image)}" alt="${safe(p.name)}" referrerpolicy="no-referrer"></div><div class="detail-copy"><span class="cat-label">${safe(p.category)}</span><h2 id="detailTitle">${safe(p.name)}</h2><p>${safe(p.description)}</p><p class="detail-size">${safe(p.size)}</p><div class="compatibility"><b>Confira a compatibilidade</b><p>${safe(p.compatibility || 'Confira o modelo, as medidas e as orientações do fabricante antes de comprar.')}</p></div><strong class="${p.priceCents ? 'price' : 'pending-price'}">${p.priceCents ? money(p.priceCents) : 'Preço em confirmação'}</strong><p class="availability">${p.availability === 'available' ? 'Consulte o frete antes de pagar.' : 'Frete, prazo e disponibilidade em confirmação. Compra ainda indisponível.'}</p><button class="primary" data-add="${safe(p.id)}">Adicionar à seleção</button><small>Acessório de terceiros. As marcas citadas identificam aparelhos compatíveis. Modelos, cores e medidas dependem de confirmação.</small></div>`;
+  $('productDetail').innerHTML = `<div class="detail-image"><img src="${safe(p.image)}" alt="${safe(p.name)}" referrerpolicy="no-referrer"></div><div class="detail-copy"><span class="cat-label">${safe(p.category)}</span><h2 id="detailTitle">${safe(p.name)}</h2><p>${safe(p.description)}</p><p class="detail-size">${safe(p.size)}</p><div class="compatibility"><b>Confira a compatibilidade</b><p>${safe(p.compatibility || 'Confira o modelo, as medidas e as orientações do fabricante antes de comprar.')}</p></div><div class="product-price">${priceMarkup(p)}</div>${shippingPreview(p, true)}<p class="availability">${p.availability === 'available' ? 'Consulte o frete antes de pagar.' : 'Valores previstos para o lançamento. Compra ainda indisponível.'}</p><button class="primary" data-add="${safe(p.id)}">Adicionar à seleção</button><small>Acessório de terceiros. As marcas citadas identificam aparelhos compatíveis. Modelos, cores e medidas dependem de confirmação.</small></div>`;
   $('productDetail').querySelector('.detail-copy').insertAdjacentHTML('beforeend', supplierConsultation(p));
   const note = $('productDetail').querySelector('small');
   if (p.supplierSku && note) note.textContent = 'Acessório de terceiros. As marcas citadas identificam aparelhos compatíveis. Foto ilustrativa: confira o modelo e a cor indicados nesta seleção.';
@@ -55,16 +68,17 @@ function add(id) {
   cart[id] = (cart[id] || 0) + 1; persist(); showToast('Produto adicionado à sua seleção.');
 }
 function renderCart() {
-  const { entries, count, subtotalCents, purchasable } = summarizeCart(cart, products);
+  const { entries, count, subtotalCents, referenceTotalCents, purchasable } = summarizeCart(cart, products);
   $('cartCount').textContent = count;
   $('openCart').setAttribute('aria-label', `Abrir sua seleção, ${count} ${count === 1 ? 'item' : 'itens'}`);
-  $('cartTotal').textContent = count ? (subtotalCents === null ? 'A confirmar' : money(subtotalCents)) : money(0);
+  $('cartTotalLabel').textContent = count && subtotalCents === null && referenceTotalCents !== null ? 'Previsão da seleção' : 'Produtos';
+  $('cartTotal').textContent = count ? (subtotalCents !== null ? money(subtotalCents) : referenceTotalCents !== null ? money(referenceTotalCents) : 'A confirmar') : money(0);
   $('checkoutBtn').disabled = hasPayment() || !checkoutEnabled || !purchasable;
   $('checkoutBtn').textContent = checkoutEnabled ? 'Continuar para pagamento' : 'Pagamento ainda indisponível';
-  $('cartNote').textContent = hasPayment() ? 'Confira o pagamento em andamento antes de iniciar outro pedido.' : checkoutEnabled ? 'O frete e o total serão conferidos antes de gerar o pagamento.' : 'Compras ainda indisponíveis. Nenhum pagamento é recebido nesta etapa.';
+  $('cartNote').textContent = hasPayment() ? 'Confira o pagamento em andamento antes de iniciar outro pedido.' : checkoutEnabled ? 'O frete e o total serão conferidos antes de gerar o pagamento.' : 'Previsão por unidade com frete estimado incluído. O total final do pedido será confirmado antes da abertura das vendas. Nenhum pagamento é recebido nesta etapa.';
   $('paymentRecovery').hidden = !hasPayment();
   $('clearCart').disabled = !count;
-  $('cartItems').innerHTML = entries.length ? entries.map(({ product: p, quantity }) => `<div class="cart-item"><img src="${safe(p.image)}" alt="${safe(p.name)}" referrerpolicy="no-referrer"><div><h3>${safe(p.name)}</h3><small>${p.priceCents ? money(p.priceCents) : 'Preço em confirmação'}</small><div class="qty"><button data-quantity="${safe(p.id)}" data-delta="-1" aria-label="Diminuir quantidade de ${safe(p.name)}">−</button><span>${quantity}</span><button data-quantity="${safe(p.id)}" data-delta="1" aria-label="Aumentar quantidade de ${safe(p.name)}" ${quantity >= 10 ? 'disabled' : ''}>+</button></div></div><button class="remove" data-remove="${safe(p.id)}" aria-label="Remover ${safe(p.name)}">Remover</button></div>`).join('') : '<div class="cart-empty"><h3>Sua seleção está vazia.</h3><p>Explore os produtos e escolha seus favoritos.</p><button class="primary" data-close="cartDialog">Explorar produtos</button></div>';
+  $('cartItems').innerHTML = entries.length ? entries.map(({ product: p, quantity }) => `<div class="cart-item"><img src="${safe(p.image)}" alt="${safe(p.name)}" referrerpolicy="no-referrer"><div><h3>${safe(p.name)}</h3><small>${displayPrice(p) ? money(displayPrice(p).cents) + (displayPrice(p).draft ? ' · previsto com frete' : '') : 'Preço em confirmação'}</small><div class="qty"><button data-quantity="${safe(p.id)}" data-delta="-1" aria-label="Diminuir quantidade de ${safe(p.name)}">−</button><span>${quantity}</span><button data-quantity="${safe(p.id)}" data-delta="1" aria-label="Aumentar quantidade de ${safe(p.name)}" ${quantity >= 10 ? 'disabled' : ''}>+</button></div></div><button class="remove" data-remove="${safe(p.id)}" aria-label="Remover ${safe(p.name)}">Remover</button></div>`).join('') : '<div class="cart-empty"><h3>Sua seleção está vazia.</h3><p>Explore os produtos e escolha seus favoritos.</p><button class="primary" data-close="cartDialog">Explorar produtos</button></div>';
 }
 document.addEventListener('click', event => {
   const button = event.target.closest('button'); if (!button || button.disabled) return;
@@ -188,7 +202,7 @@ $('checkPayment').addEventListener('click', async () => {
 });
 function showInfo(kind) {
   $('infoTitle').textContent = kind === 'privacy' ? 'Privacidade' : 'Entrega e disponibilidade';
-  $('infoContent').innerHTML = kind === 'privacy' ? '<p>Sua seleção de produtos é guardada apenas neste navegador para facilitar sua próxima visita. Você pode apagá-la pelo botão “Limpar seleção” ou pelas configurações do navegador.</p><p>Na etapa atual, as compras não estão disponíveis e nenhum dado de pagamento é solicitado. Quando as vendas forem liberadas, os dados de contato e entrega informados no pedido serão compartilhados com o processador de pagamento e com o responsável pelo envio, para atender à compra.</p><p>As fotos dos produtos são servidas pela própria DAVORA. Ao abrir o WhatsApp, você acessa um serviço externo com suas próprias condições de privacidade.</p><p>Para solicitar atendimento sobre seus dados, fale com a DAVORA pelo WhatsApp indicado no rodapé.</p>' : '<p>Estamos preparando o catálogo para vendas no Brasil. Preços, disponibilidade, frete e prazos ainda dependem de confirmação. Nenhum pagamento é recebido nesta etapa.</p><p>Antes da abertura das vendas, publicaremos as condições de entrega, troca e devolução aplicáveis aos produtos.</p>';
+  $('infoContent').innerHTML = kind === 'privacy' ? '<p>Sua seleção de produtos é guardada apenas neste navegador para facilitar sua próxima visita. Você pode apagá-la pelo botão “Limpar seleção” ou pelas configurações do navegador.</p><p>Na etapa atual, as compras não estão disponíveis e nenhum dado de pagamento é solicitado. Quando as vendas forem liberadas, os dados de contato e entrega informados no pedido serão compartilhados com o processador de pagamento e com o responsável pelo envio, para atender à compra.</p><p>As fotos dos produtos são servidas pela própria DAVORA. Ao abrir o WhatsApp, você acessa um serviço externo com suas próprias condições de privacidade.</p><p>Para solicitar atendimento sobre seus dados, fale com a DAVORA pelo WhatsApp indicado no rodapé.</p>' : '<p>Estamos preparando o catálogo para vendas no Brasil. Os preços previstos incluem uma estimativa de frete por unidade para o Brasil. O transporte informado é de 21 dias estimados; processamento e alfândega podem acrescentar tempo. O frete do pedido, o prazo final, os tributos e a disponibilidade serão confirmados antes da abertura das vendas. Nenhum pagamento é recebido nesta etapa.</p><p>Antes da abertura das vendas, publicaremos as condições de entrega, troca e devolução aplicáveis aos produtos.</p>';
   if (kind === 'privacy') $('infoContent').insertAdjacentHTML('beforeend', '<p>Ao iniciar um pagamento, uma referência fica temporariamente nesta aba para você retomar o acompanhamento depois de recarregar a página. Essa referência não guarda seus dados pessoais nem dados de cartão e expira em até duas horas.</p>');
   modal('infoDialog');
 }

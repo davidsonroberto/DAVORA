@@ -16,7 +16,11 @@ O frete retornado pelo app é uma **estimativa por produto e país**, em USD. N�
 
 Produto mais frete estimado ainda não inclui tributos, conversão cambial, processador de pagamento, publicidade, devoluções ou mensalidades. Frete grátis ao consumidor teria de ser custeado pela DAVORA e incorporado ao preço. A Zendrop não promete comissão de 50%. Preço de venda igual a duas vezes o custo considerado representa margem de 50% antes das despesas excluídas, sem garantia de lucro líquido.
 
-O preço final em BRL continua pendente. Não foi inventada cotação de câmbio, alíquota ou gratuidade de frete para liberar vendas.
+Foram preenchidos preços **previstos em BRL para os 30 produtos**, com frete estimado por unidade incluído na previsão. O câmbio de orçamento usa a referência do Banco Central Europeu de 16/10/2026: EUR/USD 1,1253 e EUR/BRL 5,7197, equivalentes a USD/BRL = 5,7197 ÷ 1,1253. É referência informativa, não taxa de liquidação do cartão. Fonte: https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html .
+
+A fórmula é `(custo USD do SKU selecionado + frete USD estimado para Brasil) × câmbio ÷ (1 − 0,50)`, arredondada para cima ao próximo preço terminado em R$ 0,90. O cálculo usa inteiros e razão cambial exata; não usa o menor preço de outra variante. A meta é margem bruta de pelo menos 50% sobre os dois custos considerados, antes das despesas excluídas acima. Os preços elevados de frete tornam alguns acessórios caros; isso não constitui validação de competitividade ou rentabilidade.
+
+`pricingPolicy` registra a origem e as premissas. Cada `pricingDraft` contém o total previsto e a referência de frete incluída, com escopo de uma unidade e país. Somar essas previsões na seleção não calcula frete consolidado por pedido. A vitrine identifica preço e prazo como estimativas e informa que processamento, alfândega e tributos dependem de confirmação. `priceCents` permanece nulo; não houve criação de regra de frete contratado nem liberação de cobrança. `npm run price:preview` reproduz o cálculo com a referência registrada, sem atualizar automaticamente o câmbio.
 
 ## Integração de pedidos
 
