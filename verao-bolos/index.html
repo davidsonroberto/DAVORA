@@ -179,10 +179,39 @@
       body{padding-bottom:18px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+    /* Montagem personalizada */
+    .topbar strong{color:#fff5c9}
+    .custom-invite{margin:0 0 28px;padding:28px 31px;display:flex;align-items:center;justify-content:space-between;gap:24px;border:1px solid #eed8db;border-radius:24px;background:linear-gradient(110deg,#fff1e6,#ffe9f1);box-shadow:0 8px 30px rgba(81,39,60,.04)}
+    .custom-invite h3{font:700 clamp(28px,3.3vw,38px)/1.12 Georgia,serif;color:var(--berry-dark);margin:9px 0 9px}
+    .custom-invite p{font-size:14px;max-width:600px;color:#66515c;margin-bottom:6px}
+    .custom-invite small{font-weight:800;font-size:12px;color:var(--berry-dark)}
+    .custom-invite .button{flex-shrink:0}
+    .order-alert{padding:13px 15px;border-radius:13px;background:#fff1db;color:#704519;margin:0 0 21px;font-size:13px;line-height:1.55}
+    .extra-field{border:0;margin:4px 0 20px;padding:0;min-width:0}
+    .extra-field legend{font-weight:800;font-size:14px;color:var(--berry-dark);margin-bottom:14px}
+    .extra-field legend small{font-weight:400;color:var(--muted)}
+    .extras-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .extra-choice{display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:12px;border-radius:11px;cursor:pointer;font-size:12px;background:#fff}
+    .extra-choice:hover{border-color:#c696aa;background:#fff9f8}
+    .extra-choice:has(input:checked){background:#fff0ed;border-color:#be839b}
+    .extra-choice input{width:17px;height:17px;accent-color:var(--berry);flex-shrink:0}
+    .extra-choice span{flex:1}
+    .extra-choice strong{white-space:nowrap;color:var(--berry);font-size:11px}
+    .estimate{padding:16px 17px;background:#fff5f3;border:1px solid #efdbdc;border-radius:15px;margin-bottom:14px}
+    .estimate>div{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .estimate small{font-size:12px;font-weight:800;color:var(--berry-dark)}
+    .estimate strong{color:var(--berry);font-size:22px}
+    .estimate p{font-size:11px;line-height:1.5;margin:7px 0 0;color:#705f66!important}
+    .combine{border-left:3px solid #b95b7d;padding:10px 13px;background:#fdf6f8;margin-bottom:18px}
+    .combine b{display:block;color:var(--berry-dark);font-size:13px;margin-bottom:7px}
+    .combine span{font-size:12px;line-height:1.65;color:#66525e}
+    @media(max-width:830px){.custom-invite{flex-direction:column;align-items:flex-start}}
+    @media(max-width:570px){.custom-invite{padding:22px 17px}.custom-invite .button{width:100%}.extras-grid{grid-template-columns:1fr}.estimate>div{align-items:start;flex-direction:column;gap:4px}}
   </style>
 </head>
 <body>
-  <div class="topbar">✦ Encomendas com 1 semana de antecedência &nbsp; • &nbsp; Belo Horizonte e região</div>
+  <div class="topbar">📅 IMPORTANTE: Encomendas com <strong>pelo menos 1 semana de antecedência</strong> &nbsp; • &nbsp; Belo Horizonte e região</div>
   <header>
     <div class="container nav-wrap">
       <a class="brand" href="#inicio" aria-label="Verão Bolos, voltar ao início">
@@ -191,11 +220,11 @@
       </a>
       <nav class="desktop-nav" aria-label="Menu principal">
         <a href="#catalogo">Catálogo</a><a href="#valores">Valores</a><a href="#recheios">Recheios</a><a href="#como-pedir">Como pedir</a><a href="#duvidas">Dúvidas</a>
-        <a href="#pedido" class="button">Fazer encomenda ↗</a>
+        <a href="#pedido" class="button">Monte seu bolo ↗</a>
       </nav>
       <details class="mobile-menu">
         <summary aria-label="Abrir menu de navegação">☰ Menu</summary>
-        <nav class="mobile-links" aria-label="Menu no celular"><a href="#catalogo">Catálogo</a><a href="#valores">Valores</a><a href="#recheios">Recheios</a><a href="#como-pedir">Como pedir</a><a href="#duvidas">Dúvidas</a><a href="#pedido">Fazer encomenda ↗</a></nav>
+        <nav class="mobile-links" aria-label="Menu no celular"><a href="#catalogo">Catálogo</a><a href="#valores">Valores</a><a href="#recheios">Recheios</a><a href="#como-pedir">Como pedir</a><a href="#duvidas">Dúvidas</a><a href="#pedido">Monte seu bolo ↗</a></nav>
       </details>
     </div>
   </header>
@@ -205,10 +234,10 @@
         <div>
           <span class="eyebrow">Bolos personalizados em Belo Horizonte</span>
           <h1 id="hero-title">Um doce detalhe. <em>Uma grande celebração.</em></h1>
-          <p class="lead">Aniversário, uma conquista ou aquela data especial: escolha seu tema, veja nossas inspirações e encomende um bolo pensado para o seu momento.</p>
+          <p class="lead">Aniversário ou uma data especial? Você pode escolher um modelo do catálogo <strong>ou montar um bolo do seu jeito</strong>, com os sabores que mais gosta. O tema e a entrega são combinados pelo WhatsApp. <strong>Peça com pelo menos 1 semana de antecedência.</strong></p>
           <div class="hero-actions">
-            <a href="#pedido" class="button">Quero encomendar <span aria-hidden="true">↗</span></a>
-            <a href="#catalogo" class="button light">Conhecer os modelos</a>
+            <a href="#pedido" class="button">🎂 Montar meu bolo <span aria-hidden="true">↗</span></a>
+            <a href="#catalogo" class="button light">Ver inspirações</a>
           </div>
           <div class="hero-notes"><span>Personalização por tema</span><span>Encomendas antecipadas</span><span>Atendimento pelo WhatsApp</span></div>
         </div>
@@ -228,7 +257,8 @@
     <section class="section" id="catalogo" aria-labelledby="catalog-title">
       <div class="container">
         <div class="section-header"><span class="eyebrow">Inspirações para seu evento</span><h2 id="catalog-title">Cada festa tem seu próprio sabor de felicidade.</h2>
-          <p class="muted">Explore modelos e temas para se inspirar. As fotos são referências do catálogo; cores, decoração e disponibilidade devem ser confirmadas no orçamento.</p></div>
+          <p class="muted">As fotos são apenas inspirações. <strong>Você não precisa escolher nenhum destes bolos:</strong> também pode montar sua própria combinação de tamanho, massa, recheio e adicionais. Tema, decoração e entrega são combinados no WhatsApp.</p></div>
+        <div class="custom-invite"><div><span class="eyebrow">Quer criar algo diferente?</span><h3>Seu bolo, do seu jeito.</h3><p>Escolha os sabores no site. Depois converse com a Verão Bolos sobre tema, decoração, entrega e disponibilidade da data.</p><small>📅 Faça a encomenda com pelo menos 1 semana de antecedência.</small></div><a class="button" href="#pedido">Montar meu bolo personalizado ↗</a></div>
         <div class="gallery-grid"><article class="cake-card">
   <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Stitch%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Stitch">
     <img src="assets/bolo1.svg" alt="Bolo personalizado — Stitch" loading="eager" width="900" height="1100" decoding="async">
@@ -443,12 +473,12 @@
         <div class="section-header center"><span class="eyebrow">Simples de encomendar</span><h2 id="how-title">Três passos para escolher seu bolo.</h2>
           <p class="muted">Tudo é combinado diretamente com a Verão Bolos pelo WhatsApp.</p></div>
         <div class="steps-grid">
-          <div class="step"><div class="step-number">01</div><h3>Escolha a inspiração</h3><p>Veja nossos modelos, pense no tema da festa e decida para quantas pessoas será o bolo.</p></div>
-          <div class="step"><div class="step-number">02</div><h3>Conte o que deseja</h3><p>Envie a data, o tamanho, o tema, o recheio e uma imagem de referência, caso tenha.</p></div>
-          <div class="step"><div class="step-number">03</div><h3>Confirme a encomenda</h3><p>Receba o orçamento, verifique a disponibilidade da data e confirme o pedido com o sinal.</p></div>
+          <div class="step"><div class="step-number">01</div><h3>Monte seu bolo</h3><p>Escolha tamanho, massa, recheio e adicionais. Você não precisa copiar nenhum modelo do catálogo.</p></div>
+          <div class="step"><div class="step-number">02</div><h3>Envie suas escolhas</h3><p>O site prepara sua mensagem para o WhatsApp. Lá você conversa sobre o tema, fotos de referência e a entrega ou retirada.</p></div>
+          <div class="step"><div class="step-number">03</div><h3>Confirme com antecedência</h3><p>Encomende com pelo menos 1 semana de antecedência. Confirme orçamento, disponibilidade, entrega e o sinal de 50% pelo WhatsApp.</p></div>
         </div>
         <div class="payment-strip">
-          <div><strong>📅 Prazo de encomenda</strong><span>Faça seu pedido com 1 semana de antecedência.</span></div>
+          <div><strong>📅 Atenção ao prazo</strong><span>Pedidos com <b>pelo menos 1 semana de antecedência</b>. A data depende de disponibilidade confirmada no WhatsApp.</span></div>
           <div><strong>💳 Formas de pagamento</strong><span>Pix, débito ou crédito (com taxa da máquina). Sinal de 50% no momento da encomenda.</span></div>
         </div>
       </div>
@@ -459,31 +489,41 @@
           <p class="muted">Se ainda restar alguma dúvida, chame pelo WhatsApp para conversar.</p>
           <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20quero%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener noreferrer" class="text-link">Tirar uma dúvida pelo WhatsApp ↗</a></div>
         <div class="faq-list">
-          <details><summary>Quanto tempo antes preciso pedir?</summary><p>A orientação é encomendar com 1 semana de antecedência. Consulte a disponibilidade da data pelo WhatsApp antes de confirmar.</p></details>
-          <details><summary>Posso pedir um tema diferente dos modelos?</summary><p>Sim, o catálogo serve de inspiração. Envie uma foto ou descreva o tema desejado para verificar as possibilidades de personalização.</p></details>
+          <details><summary>Quanto tempo antes preciso pedir?</summary><p>Faça o pedido com <strong>pelo menos 1 semana de antecedência</strong>. A data da festa precisa ser confirmada com a Verão Bolos pelo WhatsApp, conforme disponibilidade.</p></details>
+          <details><summary>Posso montar um bolo que não está nas fotos?</summary><p>Sim! Clique em “Monte seu bolo” para escolher tamanho, massa, recheio e adicionais. O tema e a decoração são combinados pelo WhatsApp, com uma foto de referência se desejar.</p></details>
           <details><summary>Como funciona o pagamento?</summary><p>É solicitado 50% do valor no momento da encomenda. São aceitos Pix, débito e crédito; no cartão de crédito há taxa da máquina.</p></details>
           <details><summary>Os preços da tabela são o valor final?</summary><p>A tabela apresenta os preços por tamanho. Adicionais e detalhes de decoração podem mudar o total. Você recebe um orçamento conforme seu pedido.</p></details>
-          <details><summary>Vocês fazem entrega ou retirada?</summary><p>Consulte diretamente pelo WhatsApp as opções disponíveis para sua região e data. O atendimento é em Belo Horizonte e região.</p></details>
+          <details><summary>Como funciona a entrega ou retirada?</summary><p>Entrega ou retirada, disponibilidade para sua região, taxa de entrega e detalhes do tema são combinados diretamente no WhatsApp após montar o bolo.</p></details>
         </div>
       </div>
     </section>
     <section class="order-section" id="pedido" aria-labelledby="order-title">
       <div class="container order-layout">
-        <div><span class="eyebrow">Seu próximo momento especial começa aqui</span><h2 id="order-title">Vamos escolher o bolo da sua comemoração?</h2>
-          <p>Preencha o básico para preparar uma mensagem. Ao tocar em “Pedir orçamento”, você será direcionado ao WhatsApp e poderá conversar antes de fechar a encomenda.</p>
-          <div class="order-benefits"><span>Sem pagamento pelo site</span><span>Atendimento direto pelo WhatsApp</span><span>Orçamento confirmado antes do pedido</span></div></div>
+        <div><span class="eyebrow">Monte seu bolo personalizado</span><h2 id="order-title">Seu bolo, suas escolhas.</h2>
+          <p>Não precisa escolher nenhuma foto. Selecione o tamanho, a massa, o recheio e os adicionais. Você receberá uma mensagem pronta para encaminhar ao WhatsApp da Verão Bolos.</p>
+          <div class="order-benefits"><span>Tema e decoração: combinar no WhatsApp</span><span>Entrega ou retirada: combinar no WhatsApp</span><span>Peça com pelo menos 1 semana de antecedência</span><span>Orçamento e disponibilidade antes da confirmação</span></div></div>
         <div class="order-card">
-          <h3>Monte seu pedido</h3><p>Os campos com * são obrigatórios. Você pode enviar mais detalhes e fotos no WhatsApp.</p>
+          <h3>Monte seu bolo 🎂</h3>
+          <p>Escolha os sabores e adicionais. <strong>Não precisa escolher um modelo da galeria.</strong></p>
+          <div class="order-alert" role="note">📅 <strong>Pedidos com pelo menos 1 semana de antecedência.</strong> A data será confirmada no WhatsApp.</div>
           <form id="order-form">
             <div class="form-grid">
-              <div class="field"><label for="size">Para quantas pessoas? *</label>
-                <select id="size" name="size" required><option value="">Selecione o tamanho</option><option value="15 pessoas">15 pessoas — R$ 200,00</option><option value="20 a 25 pessoas">20 a 25 pessoas — R$ 230,00</option><option value="30 a 35 pessoas">30 a 35 pessoas — R$ 260,00</option><option value="40 a 45 pessoas">40 a 45 pessoas — R$ 300,00</option><option value="50 a 55 pessoas">50 a 55 pessoas — R$ 350,00</option><option value="60 a 70 pessoas">60 a 70 pessoas — R$ 400,00</option></select></div>
-              <div class="field"><label for="date">Data da festa</label><input type="date" name="date" id="date"></div>
-              <div class="field full"><label for="theme">Tema ou modelo desejado</label><input id="theme" name="theme" maxlength="120" placeholder="Ex.: floral lilás, Stitch, rosa e dourado"></div>
-              <div class="field full"><label for="filling">Recheio preferido</label><select name="filling" id="filling"><option value="">Ainda vou decidir</option><option value="Brigadeiro">Brigadeiro</option><option value="Brigadeiro branco">Brigadeiro branco</option><option value="Brigadeiro branco com Bis">Brigadeiro branco com Bis</option><option value="Brigadeiro de Oreo">Brigadeiro de Oreo</option><option value="Brigadeiro de leite Ninho">Brigadeiro de leite Ninho</option><option value="Brigadeiro de Nesquik">Brigadeiro de Nesquik</option><option value="Brigadeiro de Ovo Maltine">Brigadeiro de Ovo Maltine</option><option value="Creme Belga com abacaxi">Creme Belga com abacaxi</option><option value="Creme Belga com pêssego">Creme Belga com pêssego</option><option value="Doce de leite">Doce de leite</option><option value="Doce de leite com coco">Doce de leite com coco</option><option value="Doce de leite com abacaxi">Doce de leite com abacaxi</option><option value="Ninho com abacaxi">Ninho com abacaxi</option><option value="Ninho com pêssego">Ninho com pêssego</option><option value="Mousse de Ninho">Mousse de Ninho</option><option value="Mousse de chocolate">Mousse de chocolate</option><option value="Mousse de doce de leite">Mousse de doce de leite</option><option value="Prestígio">Prestígio</option><option value="Prestígio com abacaxi">Prestígio com abacaxi</option><option value="Sensação com raspas de chocolate">Sensação com raspas de chocolate</option></select></div>
+              <div class="field"><label for="size">1. Tamanho do bolo *</label><select id="size" name="size" required><option value="">Selecione o tamanho</option><option value="15 pessoas" data-price="200">15 pessoas — R$ 200,00</option><option value="20 a 25 pessoas" data-price="230">20 a 25 pessoas — R$ 230,00</option><option value="30 a 35 pessoas" data-price="260">30 a 35 pessoas — R$ 260,00</option><option value="40 a 45 pessoas" data-price="300">40 a 45 pessoas — R$ 300,00</option><option value="50 a 55 pessoas" data-price="350">50 a 55 pessoas — R$ 350,00</option><option value="60 a 70 pessoas" data-price="400">60 a 70 pessoas — R$ 400,00</option></select></div>
+              <div class="field"><label for="date">Data da festa *</label><input type="date" name="date" id="date" required></div>
+              <div class="field"><label for="mass">2. Massa do bolo *</label><select id="mass" name="mass" required><option value="Baunilha" data-price="0">Baunilha (sem acréscimo)</option><option value="Chocolate" data-price="8">Chocolate (+ R$ 8,00)</option></select></div>
+              <div class="field"><label for="filling">3. Recheio *</label><select name="filling" id="filling" required><option value="">Selecione um recheio</option><option value="Brigadeiro">Brigadeiro</option><option value="Brigadeiro branco">Brigadeiro branco</option><option value="Brigadeiro branco com Bis">Brigadeiro branco com Bis</option><option value="Brigadeiro de Oreo">Brigadeiro de Oreo</option><option value="Brigadeiro de leite Ninho">Brigadeiro de leite Ninho</option><option value="Brigadeiro de Nesquik">Brigadeiro de Nesquik</option><option value="Brigadeiro de Ovo Maltine">Brigadeiro de Ovo Maltine</option><option value="Creme Belga com abacaxi">Creme Belga com abacaxi</option><option value="Creme Belga com pêssego">Creme Belga com pêssego</option><option value="Doce de leite">Doce de leite</option><option value="Doce de leite com coco">Doce de leite com coco</option><option value="Doce de leite com abacaxi">Doce de leite com abacaxi</option><option value="Ninho com abacaxi">Ninho com abacaxi</option><option value="Ninho com pêssego">Ninho com pêssego</option><option value="Mousse de Ninho">Mousse de Ninho</option><option value="Mousse de chocolate">Mousse de chocolate</option><option value="Mousse de doce de leite">Mousse de doce de leite</option><option value="Prestígio">Prestígio</option><option value="Prestígio com abacaxi">Prestígio com abacaxi</option><option value="Sensação com raspas de chocolate">Sensação com raspas de chocolate</option></select></div>
             </div>
-            <p class="form-help">O envio abre o WhatsApp com as informações preenchidas. Nenhum pedido é confirmado automaticamente.</p>
-            <button class="button" type="submit">Pedir orçamento no WhatsApp ↗</button>
+            <fieldset class="extra-field"><legend>4. Adicionais <small>(opcional)</small></legend><div class="extras-grid"><label class="extra-choice"><input type="checkbox" name="extras" value="Leite Ninho" data-price="13"><span>Leite Ninho</span><strong>+ R$ 13,00</strong></label>
+<label class="extra-choice"><input type="checkbox" name="extras" value="Doce de leite" data-price="13"><span>Doce de leite</span><strong>+ R$ 13,00</strong></label>
+<label class="extra-choice"><input type="checkbox" name="extras" value="Bis" data-price="13"><span>Bis</span><strong>+ R$ 13,00</strong></label>
+<label class="extra-choice"><input type="checkbox" name="extras" value="Ovo Maltine" data-price="13"><span>Ovo Maltine</span><strong>+ R$ 13,00</strong></label>
+<label class="extra-choice"><input type="checkbox" name="extras" value="Bolo com fruta" data-price="13"><span>Bolo com fruta</span><strong>+ R$ 13,00</strong></label>
+<label class="extra-choice"><input type="checkbox" name="extras" value="Bolo dourado" data-price="13"><span>Bolo dourado</span><strong>+ R$ 13,00</strong></label>
+<label class="extra-choice"><input type="checkbox" name="extras" value="Bolo retangular" data-price="18"><span>Bolo retangular</span><strong>+ R$ 18,00</strong></label></div></fieldset>
+            <div class="estimate" aria-live="polite"><div><small>Estimativa parcial</small><strong id="estimate-price">Selecione o tamanho</strong></div><p>Inclui apenas tamanho, massa e adicionais selecionados. Recheio, tema, decoração, entrega e disponibilidade devem ser confirmados no WhatsApp.</p></div>
+            <div class="combine"><b>💬 Vamos combinar no WhatsApp:</b><span>O <strong>tema, a decoração e a entrega ou retirada</strong> serão conversados diretamente com a Verão Bolos. Se quiser, você pode mandar uma foto de inspiração no WhatsApp.</span></div>
+            <p class="form-help">O botão abre o WhatsApp da Verão Bolos com uma mensagem pronta. Confira e toque em enviar. Nenhum pedido ou pagamento é confirmado automaticamente.</p>
+            <button class="button" type="submit">Enviar meu bolo para o WhatsApp ↗</button>
           </form>
         </div>
       </div>
@@ -505,25 +545,58 @@
   <script>
     (function () {
       var menu=document.querySelector(".mobile-menu");
-      if(menu)menu.querySelectorAll("nav a").forEach(function(a){a.addEventListener("click",function(){menu.open=false;});});
-      document.querySelectorAll("[data-size]").forEach(function(a){
-        a.addEventListener("click",function(){document.getElementById("size").value=a.getAttribute("data-size");});
-      });
+      if(menu) menu.querySelectorAll("nav a").forEach(function(a){a.addEventListener("click",function(){menu.open=false;});});
       var form=document.getElementById("order-form");
+      var size=document.getElementById("size");
+      var date=document.getElementById("date");
+      var mass=document.getElementById("mass");
+      var filling=document.getElementById("filling");
+      var estimate=document.getElementById("estimate-price");
+      var extras=Array.prototype.slice.call(form.querySelectorAll('input[name="extras"]'));
+      function dateToLocalIso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+      var earliest=new Date(); earliest.setHours(12,0,0,0);earliest.setDate(earliest.getDate()+7);
+      date.min=dateToLocalIso(earliest);
+      function money(amount){return amount.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});}
+      function currentTotal(){
+        if(!size.value) return null;
+        var base=Number(size.options[size.selectedIndex].dataset.price||0);
+        var dough=Number(mass.options[mass.selectedIndex].dataset.price||0);
+        var additions=extras.filter(function(e){return e.checked;}).reduce(function(total,e){return total+Number(e.dataset.price||0);},0);
+        return base+dough+additions;
+      }
+      function refreshTotal(){var sum=currentTotal();estimate.textContent=sum===null?"Selecione o tamanho":money(sum);}
+      size.addEventListener("change",refreshTotal);
+      mass.addEventListener("change",refreshTotal);
+      extras.forEach(function(item){item.addEventListener("change",refreshTotal);});
+      document.querySelectorAll("[data-size]").forEach(function(a){
+        a.addEventListener("click",function(){size.value=a.getAttribute("data-size");refreshTotal();});
+      });
+      refreshTotal();
       form.addEventListener("submit",function(event){
         event.preventDefault();
-        if(!form.reportValidity())return;
-        var size=document.getElementById("size").value;
-        var date=document.getElementById("date").value;
-        var theme=document.getElementById("theme").value.trim();
-        var filling=document.getElementById("filling").value;
-        var message="Olá! Vim pelo site da Verão Bolos e gostaria de um orçamento.\n\nTamanho: "+size;
-        if(date){var t=date.split("-");message+="\nData da festa: "+t[2]+"/"+t[1]+"/"+t[0];}
-        if(theme)message+="\nTema/modelo: "+theme;
-        if(filling)message+="\nRecheio: "+filling;
-        message+="\n\nPodem me informar a disponibilidade e o valor final?";
+        if(!form.reportValidity()) return;
+        if(date.value<date.min){date.setCustomValidity("Encomende com pelo menos 1 semana de antecedência.");date.reportValidity();return;}
+        date.setCustomValidity("");
+        var t=date.value.split("-");
+        var chosen=extras.filter(function(e){return e.checked;}).map(function(e){return e.value;});
+        var message=[
+          "Olá! Montei meu bolo no site da Verão Bolos e gostaria de um orçamento.",
+          "",
+          "🎂 Tamanho: "+size.value,
+          "📅 Data da festa: "+t[2]+"/"+t[1]+"/"+t[0],
+          "🍰 Massa: "+mass.value,
+          "🥄 Recheio: "+filling.value,
+          "✨ Adicionais: "+(chosen.length?chosen.join(", "):"Nenhum"),
+          "💰 Estimativa parcial do site: "+money(currentTotal()),
+          "",
+          "🎨 Tema e decoração: quero combinar pelo WhatsApp.",
+          "🚚 Entrega ou retirada: quero combinar pelo WhatsApp.",
+          "",
+          "Podem confirmar disponibilidade e valor final? Obrigado!"
+        ].join("\n");
         window.location.href="https://wa.me/5531975788516?text="+encodeURIComponent(message);
       });
+      date.addEventListener("change",function(){date.setCustomValidity("");});
     }());
   </script>
 </body>
