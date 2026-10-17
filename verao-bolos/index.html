@@ -216,6 +216,31 @@
     .combine span{font-size:12px;line-height:1.65;color:#66525e}
     @media(max-width:830px){.custom-invite{flex-direction:column;align-items:flex-start}}
     @media(max-width:570px){.custom-invite{padding:22px 17px}.custom-invite .button{width:100%}.extras-grid{grid-template-columns:1fr}.estimate>div{align-items:start;flex-direction:column;gap:4px}}
+
+    .ebook-ad{padding:72px 0;background:linear-gradient(155deg,#fff5ef 0%,#fce9ef 100%)}
+    .ebook-ad-inner{display:grid;grid-template-columns:.86fr 1.14fr;gap:clamp(24px,5vw,75px);align-items:center;background:linear-gradient(132deg,#47223b,#783856);border-radius:32px;padding:clamp(24px,5vw,56px);color:white;box-shadow:0 24px 55px #511b3e30;overflow:hidden}
+    .ebook-art{max-width:360px;width:100%;margin:auto;padding:17px;position:relative}
+    .ebook-book{aspect-ratio:3.75/5;position:relative;background:#513149;border:6px solid #fef9f6;transform:rotate(-4deg);border-radius:7px 18px 18px 7px;overflow:hidden;box-shadow:24px 26px 36px #1d101990}
+    .ebook-book:before{content:"";position:absolute;z-index:2;top:0;bottom:0;left:0;width:14px;background:linear-gradient(90deg,#2c172ca8,#fff5,#2c172c88)}
+    .ebook-book img{height:100%;width:100%;object-fit:cover;filter:brightness(.82)}
+    .ebook-cover-words{position:absolute;inset:auto 0 0;padding:45px 22px 24px;background:linear-gradient(transparent,#38172feF 24%,#38172f 100%);color:white}
+    .ebook-cover-words small{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#ffe4d4}
+    .ebook-cover-words h3{font:700 clamp(27px,3.7vw,42px)/1.05 Georgia,serif;letter-spacing:-.8px;margin:10px 0}
+    .ebook-cover-words p{font-size:12px;color:#ffe2ee;line-height:1.5;margin:0}
+    .ebook-tag{display:inline-block;border:1px solid #ffe4e177;color:#ffe4de;border-radius:99px;padding:8px 13px;font-weight:800;font-size:11px;letter-spacing:.7px;text-transform:uppercase}
+    .ebook-copy h2{color:white;font-size:clamp(36px,5vw,60px);line-height:1.03;margin:16px 0}.ebook-copy h2 em{font-style:normal;color:#ffcfae}
+    .ebook-lead{color:#fae2ed;line-height:1.7;font-size:15px;margin:0 0 20px}
+    .ebook-benefits{list-style:none;margin:0 0 25px;padding:0;display:grid;gap:12px}
+    .ebook-benefits li{font-size:14px;line-height:1.45;color:#fff0f3;display:flex;gap:11px}.ebook-benefits li:before{content:"✓";font-weight:900;color:#ffe0aa}
+    .ebook-buy-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:19px}
+    .ebook-cost small{display:block;color:#ffdeed;font-size:12px}.ebook-cost strong{display:block;font-size:clamp(36px,4vw,52px);letter-spacing:-1px;line-height:1.1}
+    .ebook-buy-button{color:#422039!important;background:#ffd1af!important;font-size:14px;box-shadow:0 10px 24px #1a09185c}
+    .ebook-buy-button:hover{background:#ffe2cd!important}
+    .ebook-how{border-top:1px solid #ffffff3b;padding-top:15px;font-size:12px;color:#f5e0e8;line-height:1.7}
+    .ebook-disclaimer{color:#f0cfdc;font-size:11px;line-height:1.55;margin:11px 0 0}
+    @media(max-width:830px){.ebook-ad-inner{grid-template-columns:1fr}.ebook-art{max-width:255px}.ebook-ad{padding:55px 0}}
+    @media(max-width:570px){.ebook-ad-inner{border-radius:22px;padding:24px 19px}.ebook-buy-row{align-items:stretch;flex-direction:column}.ebook-buy-button{width:100%}.ebook-cover-words h3{font-size:29px}}
+
   </style>
 </head>
 <body>
@@ -227,12 +252,12 @@
         <div><b>Verão Bolos</b><span>Momentos doces, feitos para celebrar</span></div>
       </a>
       <nav class="desktop-nav" aria-label="Menu principal">
-        <a href="#catalogo">Catálogo</a><a href="#valores">Valores</a><a href="#recheios">Recheios</a><a href="#como-pedir">Como pedir</a><a href="#duvidas">Dúvidas</a>
+        <a href="#catalogo">Catálogo</a><a href="#valores">Valores</a><a href="#recheios">Recheios</a><a href="#ebook">E-book</a><a href="#como-pedir">Como pedir</a><a href="#duvidas">Dúvidas</a>
         <a href="#pedido" class="button">Monte seu bolo ↗</a>
       </nav>
       <details class="mobile-menu">
         <summary aria-label="Abrir menu de navegação">☰ Menu</summary>
-        <nav class="mobile-links" aria-label="Menu no celular"><a href="#catalogo">Catálogo</a><a href="#valores">Valores</a><a href="#recheios">Recheios</a><a href="#como-pedir">Como pedir</a><a href="#duvidas">Dúvidas</a><a href="#pedido">Monte seu bolo ↗</a></nav>
+        <nav class="mobile-links" aria-label="Menu no celular"><a href="#catalogo">Catálogo</a><a href="#valores">Valores</a><a href="#recheios">Recheios</a><a href="#ebook">E-book</a><a href="#como-pedir">Como pedir</a><a href="#duvidas">Dúvidas</a><a href="#pedido">Monte seu bolo ↗</a></nav>
       </details>
     </div>
   </header>
@@ -262,6 +287,34 @@
         <div class="advantage"><i aria-hidden="true">📅</i><div><strong>Planeje sua data</strong><small>Peça com 1 semana de antecedência.</small></div></div>
       </div>
     </div>
+    <section class="ebook-ad" id="ebook" aria-labelledby="ebook-title">
+      <div class="container">
+        <div class="ebook-ad-inner">
+          <div class="ebook-art"><div class="ebook-book">
+            <img src="assets/bolo6.svg" loading="lazy" width="900" height="1100" alt="Fotografia de bolo floral da Verão Bolos na apresentação do e-book">
+            <div class="ebook-cover-words"><small>E-book digital em PDF</small><h3>Aprenda a fazer e vender bolos</h3><p>Receitas • Decoração • Vendas online</p></div>
+          </div></div>
+          <div class="ebook-copy">
+            <span class="ebook-tag">✨ E-book ilustrado • Acesso em PDF</span>
+            <h2 id="ebook-title">Faça bolos lindos. <em>Aprenda a vender também.</em></h2>
+            <p class="ebook-lead">Aprenda os fundamentos para fazer bolos personalizados e descubra como divulgar seu trabalho na internet, conquistar encomendas e precificar com mais organização.</p>
+            <ul class="ebook-benefits">
+              <li>Receitas-base de massa e recheios</li>
+              <li>Montagem e decoração de bolos personalizados</li>
+              <li>Como calcular custos e definir o preço de venda</li>
+              <li>Estratégias para vender pelo Instagram, WhatsApp e por um site</li>
+              <li>Orientações sobre divulgação e como contar com a DAVORA para ter seu site</li>
+            </ul>
+            <div class="ebook-buy-row">
+              <div class="ebook-cost"><small>Pagamento único</small><strong>R$ 49,90</strong></div>
+              <a class="button ebook-buy-button" href="https://wa.me/5531991339648?text=Ol%C3%A1!%20Quero%20comprar%20o%20e-book%20Aprenda%20a%20Fazer%20e%20Vender%20Bolos%20por%20R%2449%2C90%20que%20vi%20no%20site%20Ver%C3%A3o%20Bolos.%20Pode%20me%20orientar%20sobre%20o%20pagamento%20via%20Pix%3F%20Vou%20enviar%20o%20comprovante%20para%20receber%20o%20PDF." target="_blank" rel="noopener noreferrer" aria-label="Comprar e-book por R$49,90 no WhatsApp do vendedor">💬 Comprar e-book pelo WhatsApp ↗</a>
+            </div>
+            <div class="ebook-how"><strong>Como funciona:</strong> clique no botão, combine o pagamento por Pix com o vendedor, envie o comprovante no WhatsApp e receba seu e-book em PDF após a confirmação do pagamento.</div>
+            <p class="ebook-disclaimer">Produto digital independente dos bolos. O envio do PDF é manual, pelo vendedor, após conferência do pagamento. Receitas didáticas, não receitas exclusivas da Verão Bolos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section" id="catalogo" aria-labelledby="catalog-title">
       <div class="container">
         <div class="section-header"><span class="eyebrow">Inspirações para seu evento</span><h2 id="catalog-title">Cada festa tem seu próprio sabor de felicidade.</h2>
