@@ -1,33 +1,530 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Verão Bolos | Bolos personalizados em Belo Horizonte</title>
-<meta name="description" content="Bolos personalizados para aniversários e datas especiais. Todos os temas. Faça sua encomenda pelo WhatsApp.">
-<style>
-:root{--bg:#fff8f3;--paper:#fff;--ink:#43261f;--muted:#765b52;--red:#c72d3b;--red2:#ee6d8c;--line:#efdcd4;--brown:#3a201b}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}.wrap{width:min(1160px,92vw);margin:auto}
-.top{background:var(--brown);color:#fff;text-align:center;padding:10px 14px;font-size:14px;font-weight:700}
-nav{position:sticky;top:0;z-index:20;background:#fff8f3ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:20px}.brand img{width:58px;height:58px;border-radius:50%;object-fit:cover;box-shadow:0 8px 20px #0002}.brand small{display:block;font-size:12px;color:var(--muted);font-weight:600;margin-top:3px}.links{display:flex;gap:22px;font-weight:700;font-size:14px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;background:linear-gradient(135deg,var(--red),#e04b60);color:#fff;font-weight:800;box-shadow:0 12px 26px #c72d3b35}
-.hero{padding:62px 0 50px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}.kicker{display:inline-flex;padding:9px 14px;border-radius:999px;background:#fff0e9;color:#9c4d44;font-weight:800;font-size:13px;margin-bottom:16px}h1{font:700 clamp(44px,6vw,76px)/.98 Georgia,serif;letter-spacing:-2px;margin:0 0 20px;color:#4b251d}h1 span{color:var(--red)}.lead{font-size:18px;line-height:1.7;color:var(--muted);max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}.hero-card{background:#fff;border-radius:30px;padding:8px;box-shadow:0 24px 60px #5a281b24;transform:rotate(1deg)}.hero-card img{width:100%;height:560px;object-fit:cover;border-radius:24px}.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.chips span{background:#fff;border:1px solid var(--line);padding:9px 12px;border-radius:999px;font-size:13px;font-weight:700;color:#695149}
-section{padding:76px 0}.title{text-align:center;max-width:760px;margin:0 auto 38px}.title small{color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:1.4px}.title h2{font:700 clamp(34px,4.5vw,54px)/1.06 Georgia,serif;margin:8px 0 13px}.title p{color:var(--muted);font-size:17px;line-height:1.65;margin:0}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 12px 30px #43261f12}.card img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#f3e9e4}.body{padding:17px}.body h3{font-size:20px;margin:0 0 7px}.body p{margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.55}.body a{display:block;text-align:center;background:#fff0e9;color:var(--red);font-weight:800;padding:11px 14px;border-radius:999px}
-.price-section{background:#fff1ea}.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.price-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 12px 30px #43261f12}.price-card h3{font:700 30px/1.1 Georgia,serif;margin:0 0 18px;color:var(--brown)}.price-list{display:grid;gap:10px}.price-row{display:flex;justify-content:space-between;gap:18px;padding-bottom:9px;border-bottom:1px dashed #dec9bf;font-size:16px}.price-row strong{white-space:nowrap}.spec-list{margin:0;padding-left:20px;color:var(--muted);line-height:1.75}.price-note{margin-top:22px;background:#44231d;color:#fff;border-radius:24px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:22px}.price-note strong{display:block;font-size:18px;margin-bottom:6px}.price-note p{margin:0;color:#f3dfd7;line-height:1.6}.price-actions{display:flex;justify-content:center;margin-top:26px}.info{background:#fff1ea}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#fff;padding:26px;border-radius:22px;border:1px solid var(--line)}.n{width:44px;height:44px;border-radius:14px;background:#ffe6dd;color:var(--red);display:grid;place-items:center;font-weight:900;font-size:20px;margin-bottom:15px}.step h3{margin:0 0 8px}.step p{margin:0;color:var(--muted);line-height:1.6}
-.cta{padding-bottom:84px}.box{background:linear-gradient(135deg,#44231d,#71352c);color:#fff;border-radius:32px;padding:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.box h2{font:700 clamp(34px,4vw,48px)/1.06 Georgia,serif;margin:0 0 12px}.box p{margin:0;color:#f1ddd6;line-height:1.65;font-size:17px}.box .right{display:flex;justify-content:flex-end}
-footer{background:#2f1915;color:#e8d7d1;padding:32px 0}.foot{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.foot strong{color:#fff}.wa{position:fixed;right:20px;bottom:20px;z-index:30;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:29px;box-shadow:0 14px 30px #0004}
-@media(max-width:900px){.links{display:none}.hero-grid,.box,.price-grid,.price-note{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.box .right{justify-content:flex-start}.hero-card img{height:470px}}
-@media(max-width:560px){nav .btn{display:none}.hero{padding-top:42px}.gallery{grid-template-columns:1fr}.hero-card img{height:430px}.box{padding:32px 24px}.btn{width:100%}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#51273c">
+  <meta name="description" content="Verão Bolos: bolos personalizados para aniversários e comemorações em Belo Horizonte. Veja modelos, tamanhos, recheios e peça seu orçamento pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Verão Bolos | Celebre com um bolo especial">
+  <meta property="og:description" content="Bolos personalizados sob encomenda em Belo Horizonte. Escolha seu modelo, confira os valores e faça seu pedido pelo WhatsApp.">
+  <meta property="og:url" content="https://verao-bolos.vercel.app/">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="canonical" href="https://verao-bolos.vercel.app/">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <title>Verão Bolos | Bolos personalizados em Belo Horizonte</title>
+  <style>
+    :root{--ink:#31232b;--muted:#75666d;--berry:#812e51;--berry-dark:#51273c;--peach:#f4bd9e;--cream:#fff9f5;--blush:#fff0ec;--line:#eadfdd;--white:#fff;--shadow:0 18px 48px rgba(76,35,51,.08)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button,a,summary{ -webkit-tap-highlight-color:transparent }
+    :focus-visible{outline:3px solid #e08a6c;outline-offset:4px}
+    .container{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+    .eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--berry)}
+    .section-header{max-width:670px;margin-bottom:34px}
+    .section-header.center{text-align:center;margin-inline:auto}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,.display{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.035em}
+    h2{font-size:clamp(32px,4.4vw,55px);line-height:1.07;margin:12px 0 15px}
+    p{line-height:1.65}
+    .muted{color:var(--muted)}
+    .button{display:inline-flex;justify-content:center;align-items:center;gap:11px;min-height:50px;padding:13px 23px;border:1px solid transparent;border-radius:999px;background:var(--berry);color:#fff;font-weight:800;font-size:14px;transition:transform .18s,background .18s,box-shadow .18s}
+    .button:hover{background:var(--berry-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(81,39,60,.2)}
+    .button.light{color:var(--berry-dark);background:#fff;border-color:var(--line)}.button.light:hover{background:#fff7f5}
+    .button.outline{background:transparent;border-color:#e6c0c4;color:#fff}.button.outline:hover{background:#ffffff16}
+    .topbar{background:var(--berry-dark);color:#fcebea;padding:9px 18px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.25px}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,249,245,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(234,223,221,.8)}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:25px;min-height:78px}
+    .brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+    .brand img{width:54px;height:54px;border:2px solid #fff;border-radius:50%;object-fit:cover;box-shadow:0 3px 12px #51273c19;background:white}
+    .brand b{font:700 24px/1.05 Georgia,serif;color:var(--berry-dark);display:block;white-space:nowrap}
+    .brand span{display:block;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.35px;margin-top:5px}
+    .desktop-nav{display:flex;align-items:center;gap:25px}
+    .desktop-nav a:not(.button){font-size:13px;font-weight:700;color:#58464e}
+    .desktop-nav a:not(.button):hover{color:var(--berry)}
+    .desktop-nav .button{min-height:43px;padding:11px 17px;font-size:12px}
+    .mobile-menu{display:none;position:relative}
+    .mobile-menu summary{list-style:none;padding:11px 15px;border:1px solid var(--line);border-radius:100px;font-size:13px;font-weight:800;cursor:pointer;background:#fff}
+    .mobile-menu summary::-webkit-details-marker{display:none}
+    .mobile-menu[open] .mobile-links{display:flex}
+    .mobile-links{position:absolute;right:0;top:48px;min-width:215px;background:white;box-shadow:var(--shadow);padding:12px;border:1px solid var(--line);border-radius:18px;flex-direction:column;gap:5px}
+    .mobile-links a{padding:12px;font-weight:700;font-size:14px;border-radius:10px}.mobile-links a:hover{background:var(--blush)}
+    .hero{background:radial-gradient(circle at 85% 10%,#ffe7df 0,transparent 35%),linear-gradient(135deg,#fff9f5 30%,#fff0e9);padding:65px 0 76px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:clamp(32px,5vw,72px)}
+    .hero h1{font-size:clamp(48px,6vw,82px);line-height:.99;margin:20px 0 25px;color:var(--berry-dark)}
+    .hero h1 em{font-style:normal;color:#bf5573}
+    .hero .lead{font-size:17px;line-height:1.75;color:#68575d;max-width:535px;margin-bottom:25px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-notes{display:flex;flex-wrap:wrap;gap:14px 23px;padding-top:28px;font-size:12px;font-weight:800;color:#63515b}
+    .hero-notes span::before{content:"✓";margin-right:7px;color:var(--berry)}
+    .hero-visual{position:relative;padding:18px 13px 23px 20px}
+    .hero-visual::before{content:"";position:absolute;inset:2% -4% 1% 11%;border:1px solid #ddbbc2;border-radius:47% 47% 27px 27px;transform:rotate(7deg)}
+    .hero-photo{position:relative;overflow:hidden;border-radius:48% 48% 25px 25px;border:8px solid white;box-shadow:0 25px 72px rgba(81,39,60,.18);background:#e6c7c1;aspect-ratio:4/4.6}
+    .hero-photo img{width:100%;height:100%;object-fit:cover}
+    .hero-stamp{position:absolute;bottom:8px;left:-14px;background:white;padding:16px 19px;border-radius:17px;box-shadow:0 12px 36px #51273c25;max-width:205px}
+    .hero-stamp b{display:block;color:var(--berry-dark);font-family:Georgia,serif;font-size:18px;line-height:1.15}
+    .hero-stamp span{font-size:11px;color:var(--muted);display:block;margin-top:5px;line-height:1.5}
+    .advantages{background:white;border-block:1px solid var(--line)}
+    .advantage-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .advantage{display:flex;gap:15px;align-items:center;padding:23px 12px 23px 0}
+    .advantage:not(:last-child){border-right:1px solid var(--line);margin-right:26px}
+    .advantage i{font-style:normal;font-size:23px;width:45px;height:45px;border-radius:14px;background:#fff0ec;display:grid;place-items:center;flex-shrink:0}
+    .advantage strong{display:block;color:var(--berry-dark);font-size:14px;margin-bottom:4px}
+    .advantage small{display:block;color:var(--muted);font-size:12px;line-height:1.5}
+    section.section{padding:90px 0}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
+    .cake-card{overflow:hidden;border-radius:21px;background:#fff;border:1px solid #f0e6e2;box-shadow:0 10px 25px #51273c0a;transition:transform .2s,box-shadow .2s}
+    .cake-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+    .cake-photo{position:relative;display:block;aspect-ratio:4/4.25;overflow:hidden;background:#f1ded9}
+    .cake-photo img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+    .cake-card:hover .cake-photo img{transform:scale(1.035)}
+    .photo-arrow{position:absolute;right:15px;bottom:15px;width:37px;height:37px;display:grid;place-items:center;background:white;border-radius:50%;font-size:22px;color:var(--berry-dark);box-shadow:0 5px 15px #0002}
+    .cake-info{padding:18px 20px 21px}.cake-info h3{color:var(--berry-dark);font:700 22px Georgia,serif;margin-bottom:6px}
+    .cake-info p{font-size:13px;color:var(--muted);margin-bottom:13px;min-height:21px}
+    .text-link{font-size:13px;color:var(--berry);font-weight:800}.text-link:hover{text-decoration:underline}
+    .more-gallery{margin-top:24px}.more-gallery summary{cursor:pointer;list-style:none;display:table;margin:0 auto;padding:14px 27px;border:1px solid #e2cbd2;border-radius:999px;font-weight:800;font-size:14px;color:var(--berry);background:white}
+    .more-gallery summary::-webkit-details-marker{display:none}.more-gallery[open] summary{margin-bottom:26px}.more-gallery summary:hover{background:var(--blush)}
+    .pricing{background:var(--blush);border-block:1px solid #f5e2df}
+    .pricing-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch}
+    .panel{background:#fff;padding:30px;border-radius:25px;border:1px solid #f0e4e0;box-shadow:0 10px 30px rgba(56,22,36,.045)}
+    .panel h3{font:700 27px Georgia,serif;color:var(--berry-dark);margin-bottom:8px}
+    .panel .intro{font-size:13px;color:var(--muted);margin-bottom:24px}
+    .price-item{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:15px 0}
+    .price-item:first-child{padding-top:3px}.price-item:last-child{border-bottom:0}
+    .price-item strong{font-size:17px;color:var(--berry-dark);white-space:nowrap}
+    .size-num{display:block;font-weight:800;font-size:14px}.popular{display:block;color:var(--berry);font-size:10px;font-weight:700;margin-top:4px}
+    .price-item a{background:#fff2ee;color:var(--berry);border-radius:100px;padding:9px 10px;font-weight:800;font-size:11px;white-space:nowrap}
+    .price-item a:hover{background:#f8dede}
+    .price-item.featured{background:#fff8f6;border-radius:12px;padding:14px 9px;margin-inline:-9px}
+    .extra-row{display:flex;justify-content:space-between;align-items:start;gap:14px;font-size:13px;padding:10px 0;border-bottom:1px dashed #eadedb}
+    .extra-row b{font-size:13px;white-space:nowrap;color:var(--berry-dark)}
+    .panel-subtitle{font-size:12px;text-transform:uppercase;letter-spacing:1.3px;font-weight:800;color:var(--berry);margin:20px 0 8px}
+    .vanilla{padding:10px 12px;background:#fff5ef;border-radius:12px;font-size:13px}
+    .price-disclaimer{font-size:12px;color:#745c65;line-height:1.65;margin:19px 0 0}
+    .flavors-layout{display:grid;grid-template-columns:.65fr 1.35fr;gap:38px;align-items:start}
+    .flavor-chips{display:flex;flex-wrap:wrap;gap:10px}
+    .flavor-chips span{border:1px solid var(--line);background:white;border-radius:100px;padding:11px 15px;font-size:13px;color:#49343d}
+    .flavor-note{font-size:12px;color:var(--muted);margin-top:20px}
+    .how{background:white}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .step{background:var(--cream);padding:28px;border:1px solid #f0e4e0;border-radius:22px}
+    .step-number{width:48px;height:48px;display:grid;place-items:center;background:#f8e2dc;color:var(--berry);border-radius:14px;font:700 23px Georgia,serif;margin-bottom:21px}
+    .step h3{font:700 23px Georgia,serif;margin-bottom:10px;color:var(--berry-dark)}
+    .step p{font-size:14px;color:var(--muted);margin-bottom:0}
+    .payment-strip{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:23px 27px;background:#f8eeeb;border-radius:18px}
+    .payment-strip strong{display:block;color:var(--berry-dark);font-size:14px;margin-bottom:6px}.payment-strip span{font-size:13px;color:#67565f;line-height:1.55}
+    .faq-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px}
+    .faq-list{display:grid;gap:10px}
+    .faq-list details{background:white;border:1px solid var(--line);border-radius:15px;padding:0 20px}
+    .faq-list summary{cursor:pointer;list-style:none;font-weight:800;color:var(--berry-dark);font-size:14px;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:20px 0}
+    .faq-list summary::-webkit-details-marker{display:none}.faq-list summary::after{content:"+";font-size:24px;font-weight:400}
+    .faq-list details[open] summary::after{content:"−"}
+    .faq-list p{font-size:13px;color:var(--muted);margin:0;padding-bottom:20px}
+    .order-section{padding:90px 0;background:linear-gradient(130deg,#442036,#743950);color:white}
+    .order-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+    .order-section .eyebrow{color:#f3c9c1}.order-section h2{color:white}.order-section p{color:#f4dedf;font-size:15px}
+    .order-benefits{margin-top:26px;display:grid;gap:12px;color:#f4e5e8;font-size:13px}.order-benefits span::before{content:"✓";margin-right:11px;color:#ffd2b5}
+    .order-card{background:white;border-radius:25px;padding:30px;color:var(--ink);box-shadow:0 25px 55px #250c1938}
+    .order-card h3{font:700 27px Georgia,serif;color:var(--berry-dark);margin-bottom:7px}.order-card>p{font-size:13px;color:var(--muted);margin-bottom:22px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}
+    .field.full{grid-column:1/-1}
+    .field label{font-weight:800;font-size:12px;color:#55424d}
+    .field input,.field select{width:100%;height:48px;background:#fffdfa;color:var(--ink);border:1px solid #e3d4d8;border-radius:12px;padding:0 13px;font-size:14px}
+    .field input:focus,.field select:focus{outline:2px solid #f7bfaa;outline-offset:0;border-color:var(--berry)}
+    .form-help{font-size:11px;color:#86747c;line-height:1.5;margin:1px 0 17px}.order-card .button{width:100%;cursor:pointer}
+    footer{background:#2d1d28;color:#f1e9eb;padding:40px 0}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .footer-inner strong{font:700 26px Georgia,serif}.footer-inner small{display:block;font-size:12px;color:#d5c2c8;margin-top:8px}
+    .footer-links{display:flex;align-items:center;gap:22px;flex-wrap:wrap;font-size:13px;font-weight:700}.footer-links a:hover{text-decoration:underline}
+    .float-whatsapp{position:fixed;right:21px;bottom:21px;z-index:49;width:57px;height:57px;display:grid;place-items:center;background:#22ba62;border-radius:50%;box-shadow:0 10px 26px #17683d55;color:white;transition:transform .2s}
+    .float-whatsapp:hover{transform:scale(1.06);background:#159f52}
+    .float-whatsapp svg{width:27px;height:27px;fill:currentColor}
+    @media(max-width:1020px){.desktop-nav{gap:14px}.desktop-nav a:not(.button){font-size:12px}.hero h1{font-size:61px}}
+    @media(max-width:830px){
+      .desktop-nav{display:none}.mobile-menu{display:block}
+      .hero-grid,.pricing-layout,.flavors-layout,.faq-layout,.order-layout{grid-template-columns:1fr}
+      .hero{padding:40px 0 65px}.hero-grid{gap:35px}.hero h1{font-size:clamp(45px,9vw,65px)}
+      .hero-visual{max-width:510px;width:100%;margin-inline:auto}
+      .gallery-grid,.steps-grid{grid-template-columns:repeat(2,1fr)}
+      .advantage-grid{gap:12px}.advantage{padding-right:0}.advantage:not(:last-child){margin-right:0;padding-right:12px}
+      .faq-layout{gap:22px}.flavors-layout{gap:20px}.order-layout{gap:25px}
+    }
+    @media(max-width:570px){
+      .container{width:min(100% - 30px,1160px)}
+      .topbar{font-size:10px;padding:9px 10px}
+      .nav-wrap{min-height:69px}
+      .brand img{width:44px;height:44px}.brand b{font-size:21px}.brand span{font-size:9px}
+      .hero{padding:37px 0 50px}.hero h1{font-size:clamp(44px,11vw,59px);line-height:1.02}
+      .hero .lead{font-size:15px}.hero-actions{display:grid}.hero-actions .button{width:100%}
+      .hero-notes{gap:9px 14px;padding-top:22px}
+      .hero-visual{padding:6px 12px 12px}.hero-stamp{left:-3px;bottom:1px;padding:12px 14px}
+      .hero-stamp b{font-size:16px}
+      .advantage-grid{grid-template-columns:1fr;gap:0;padding:4px 0}
+      .advantage{padding:15px 0!important;border:0!important;margin:0!important}
+      .advantage:not(:last-child){border-bottom:1px solid var(--line)!important}
+      section.section,.order-section{padding:64px 0}
+      .section-header{margin-bottom:25px}
+      .gallery-grid,.steps-grid{grid-template-columns:1fr}
+      .cake-photo{aspect-ratio:4/3.7}
+      .panel{padding:22px 18px}
+      .price-item{grid-template-columns:minmax(0,1fr) auto;gap:6px}
+      .price-item a{grid-column:1/-1;justify-self:start}.price-item strong{font-size:16px}
+      .payment-strip,.form-grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .order-card{padding:22px 18px}
+      .footer-inner{align-items:start}.footer-links{gap:13px}
+      .float-whatsapp{width:52px;height:52px;right:15px;bottom:14px}
+      body{padding-bottom:18px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+  </style>
 </head>
 <body>
-<div class="top">🍰 Bolos personalizados • Todos os temas • Encomendas com antecedência</div>
-<nav><div class="wrap nav"><a class="brand" href="#inicio"><img src="assets/logo.svg" alt="Verão Bolos"><span>Verão Bolos<small>Belo Horizonte • pedidos pelo WhatsApp</small></span></a><div class="links"><a href="#catalogo">Catálogo</a><a href="#precos">Preços</a><a href="#como">Como pedir</a><a href="#contato">Contato</a></div><a class="btn" target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20quero%20fazer%20um%20pedido.">Pedir no WhatsApp</a></div></nav>
-<main id="inicio">
-<section class="hero"><div class="wrap hero-grid"><div><div class="kicker">🎂 Bolos sob encomenda e personalizados</div><h1>Um bolo <span>especial</span> para cada comemoração.</h1><p class="lead">Bolos personalizados para aniversários, datas especiais e todos os temas. Escolha uma inspiração, conte sua ideia e peça seu orçamento diretamente pelo WhatsApp.</p><div class="actions"><a class="btn" target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20bolo%20personalizado.">Quero um orçamento</a><a class="btn ghost" href="#catalogo">Ver catálogo</a></div><div class="chips"><span>✓ Todos os temas</span><span>✓ Feito sob encomenda</span><span>✓ Atendimento pelo WhatsApp</span></div></div><div class="hero-card"><img src="assets/bolo1.svg" alt="Bolo personalizado Stitch"></div></div></section>
-<section id="catalogo"><div class="wrap"><div class="title"><small>Catálogo</small><h2>Catálogo de bolos da Verão Bolos</h2><p>Veja alguns modelos e escolha sua inspiração. Para encomendar, fale diretamente pelo WhatsApp.</p></div><div class="gallery"><article class="card"><img loading="lazy" src="assets/bolo1.svg" alt="Bolo personalizado Stitch"><div class="body"><h3>Stitch</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Stitch.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo4.svg" alt="Bolo personalizado Odontologia"><div class="body"><h3>Odontologia</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Odontologia.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo5.svg" alt="Bolo personalizado Homem-Aranha"><div class="body"><h3>Homem-Aranha</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Homem-Aranha.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo6.svg" alt="Bolo personalizado Floral lilás"><div class="body"><h3>Floral lilás</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Floral%20lil%C3%A1s.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo2.svg" alt="Bolo personalizado Dourado premium"><div class="body"><h3>Dourado premium</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Dourado%20premium.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo7.svg" alt="Bolo personalizado Rosa com drip"><div class="body"><h3>Rosa com drip</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Rosa%20com%20drip.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo8.svg" alt="Bolo personalizado Amarelo com drip"><div class="body"><h3>Amarelo com drip</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Amarelo%20com%20drip.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo3.svg" alt="Bolo personalizado Rosa e dourado"><div class="body"><h3>Rosa e dourado</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Rosa%20e%20dourado.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo9.svg" alt="Bolo personalizado Tema Brasil"><div class="body"><h3>Tema Brasil</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Tema%20Brasil.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo10.svg" alt="Bolo personalizado Tema Shadow"><div class="body"><h3>Tema Shadow</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Tema%20Shadow.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo11.svg" alt="Bolo personalizado Tema Mercado Livre"><div class="body"><h3>Tema Mercado Livre</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Tema%20Mercado%20Livre.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo12.svg" alt="Bolo personalizado Festa colorida"><div class="body"><h3>Festa colorida</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Festa%20colorida.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo13.svg" alt="Bolo personalizado Vermelho clássico"><div class="body"><h3>Vermelho clássico</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Vermelho%20cl%C3%A1ssico.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article><article class="card"><img loading="lazy" src="assets/bolo14.svg" alt="Bolo personalizado Homenagem especial"><div class="body"><h3>Homenagem especial</h3><p>Modelo personalizado. Cores, tema e detalhes podem ser combinados pelo WhatsApp.</p><a target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostei%20do%20modelo%20Homenagem%20especial.%20Quero%20um%20or%C3%A7amento.">Pedir orçamento</a></div></article></div></div></section>
-<section class="price-section" id="precos"><div class="wrap"><div class="title"><small>Preços e especificações</small><h2>Tabela da Verão Bolos</h2><p>Confira os tamanhos, valores, recheios, massas e adicionais disponíveis.</p></div><div class="price-grid"><div class="price-card"><h3>Tamanhos e valores</h3><div class="price-list"><div class="price-row"><span>15 pessoas</span><strong>R$ 200,00</strong></div><div class="price-row"><span>20 a 25 pessoas</span><strong>R$ 230,00</strong></div><div class="price-row"><span>30 a 35 pessoas</span><strong>R$ 260,00</strong></div><div class="price-row"><span>40 a 45 pessoas</span><strong>R$ 300,00</strong></div><div class="price-row"><span>50 a 55 pessoas</span><strong>R$ 350,00</strong></div><div class="price-row"><span>60 a 70 pessoas</span><strong>R$ 400,00</strong></div></div></div><div class="price-card"><h3>Massas e adicionais</h3><ul class="spec-list"><li>Baunilha</li><li>Chocolate: + R$ 8,00</li><li>Leite Ninho: + R$ 13,00</li><li>Doce de leite: + R$ 13,00</li><li>Bis: + R$ 13,00</li><li>Ovo Maltine: + R$ 13,00</li><li>Bolo com fruta: + R$ 13,00</li><li>Bolo dourado: + R$ 13,00</li><li>Bolo retangular: + R$ 18,00</li></ul></div><div class="price-card"><h3>Recheios</h3><ul class="spec-list"><li>Brigadeiro</li><li>Brigadeiro branco</li><li>Brigadeiro branco com Bis</li><li>Brigadeiro de Oreo</li><li>Brigadeiro de leite Ninho</li><li>Brigadeiro de Nesquik</li><li>Brigadeiro de Ovo Maltine</li><li>Creme Belga com abacaxi</li><li>Creme Belga com pêssego</li><li>Doce de leite</li><li>Doce de leite com coco</li><li>Doce de leite com abacaxi</li></ul></div><div class="price-card"><h3>Mais opções de recheio</h3><ul class="spec-list"><li>Ninho com abacaxi</li><li>Ninho com pêssego</li><li>Mousse de Ninho</li><li>Mousse de chocolate</li><li>Mousse de doce de leite</li><li>Prestígio</li><li>Prestígio com abacaxi</li><li>Sensação com raspas de chocolate</li></ul></div></div><div class="price-note"><div><strong>Encomendas</strong><p>Faça seu pedido com 1 semana de antecedência.</p></div><div><strong>Pagamento</strong><p>Aceitamos Pix, débito e crédito com taxa da máquina. Pagamento de 50% no momento da encomenda.</p></div></div><div class="price-actions"><a class="btn" target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vi%20a%20tabela%20de%20pre%C3%A7os%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20quero%20fazer%20uma%20encomenda.">Fazer encomenda</a></div></div></section><section class="info" id="como"><div class="wrap"><div class="title"><small>Como encomendar</small><h2>Seu pedido em 3 passos</h2></div><div class="steps"><div class="step"><div class="n">1</div><h3>Envie sua ideia</h3><p>Informe a data da festa, o tema, o tamanho ou quantidade de pessoas e uma foto de referência, se tiver.</p></div><div class="step"><div class="n">2</div><h3>Receba o orçamento</h3><p>O valor é informado de acordo com os detalhes do seu pedido.</p></div><div class="step"><div class="n">3</div><h3>Reserve sua data</h3><p>Como os bolos são personalizados, faça sua encomenda com antecedência.</p></div></div></div></section>
-<section class="cta" id="contato"><div class="wrap"><div class="box"><div><h2>Já imaginou o seu bolo?</h2><p>Fale com a Verão Bolos pelo WhatsApp e conte como será sua comemoração. Atendimento pelo WhatsApp.</p></div><div class="right"><a class="btn" target="_blank" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos.%20Data%20da%20festa%3A%20____.%20Tema%3A%20____.%20Quantidade%20de%20pessoas%3A%20____.">Falar no WhatsApp</a></div></div></div></section>
-</main>
-<footer><div class="wrap foot"><div><strong>Verão Bolos</strong><br><small>Bolos personalizados • Belo Horizonte e região</small></div><div>Instagram: <a target="_blank" href="https://www.instagram.com/verao_bolos/"><strong>@verao_bolos</strong></a> • WhatsApp: <strong>(31) 97578-8516</strong></div></div></footer>
-<a class="wa" target="_blank" aria-label="WhatsApp" href="https://wa.me/5531975788516?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos.">✆</a>
-</body></html>
+  <div class="topbar">✦ Encomendas com 1 semana de antecedência &nbsp; • &nbsp; Belo Horizonte e região</div>
+  <header>
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Verão Bolos, voltar ao início">
+        <img src="assets/logo.svg" alt="" width="54" height="54">
+        <div><b>Verão Bolos</b><span>Momentos doces, feitos para celebrar</span></div>
+      </a>
+      <nav class="desktop-nav" aria-label="Menu principal">
+        <a href="#catalogo">Catálogo</a><a href="#valores">Valores</a><a href="#recheios">Recheios</a><a href="#como-pedir">Como pedir</a><a href="#duvidas">Dúvidas</a>
+        <a href="#pedido" class="button">Fazer encomenda ↗</a>
+      </nav>
+      <details class="mobile-menu">
+        <summary aria-label="Abrir menu de navegação">☰ Menu</summary>
+        <nav class="mobile-links" aria-label="Menu no celular"><a href="#catalogo">Catálogo</a><a href="#valores">Valores</a><a href="#recheios">Recheios</a><a href="#como-pedir">Como pedir</a><a href="#duvidas">Dúvidas</a><a href="#pedido">Fazer encomenda ↗</a></nav>
+      </details>
+    </div>
+  </header>
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Bolos personalizados em Belo Horizonte</span>
+          <h1 id="hero-title">Um doce detalhe. <em>Uma grande celebração.</em></h1>
+          <p class="lead">Aniversário, uma conquista ou aquela data especial: escolha seu tema, veja nossas inspirações e encomende um bolo pensado para o seu momento.</p>
+          <div class="hero-actions">
+            <a href="#pedido" class="button">Quero encomendar <span aria-hidden="true">↗</span></a>
+            <a href="#catalogo" class="button light">Conhecer os modelos</a>
+          </div>
+          <div class="hero-notes"><span>Personalização por tema</span><span>Encomendas antecipadas</span><span>Atendimento pelo WhatsApp</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo"><img src="assets/bolo1.svg" alt="Bolo personalizado com tema Stitch, referência do catálogo" width="900" height="1100" fetchpriority="high"></div>
+          <div class="hero-stamp"><b>Seu tema, seu momento</b><span>Compartilhe uma inspiração e peça um orçamento.</span></div>
+        </div>
+      </div>
+    </section>
+    <div class="advantages">
+      <div class="container advantage-grid">
+        <div class="advantage"><i aria-hidden="true">🎂</i><div><strong>Do seu jeito</strong><small>Escolha tema, cores e detalhes com a confeitaria.</small></div></div>
+        <div class="advantage"><i aria-hidden="true">💬</i><div><strong>Orçamento direto</strong><small>Converse pelo WhatsApp antes de confirmar.</small></div></div>
+        <div class="advantage"><i aria-hidden="true">📅</i><div><strong>Planeje sua data</strong><small>Peça com 1 semana de antecedência.</small></div></div>
+      </div>
+    </div>
+    <section class="section" id="catalogo" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="section-header"><span class="eyebrow">Inspirações para seu evento</span><h2 id="catalog-title">Cada festa tem seu próprio sabor de felicidade.</h2>
+          <p class="muted">Explore modelos e temas para se inspirar. As fotos são referências do catálogo; cores, decoração e disponibilidade devem ser confirmadas no orçamento.</p></div>
+        <div class="gallery-grid"><article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Stitch%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Stitch">
+    <img src="assets/bolo1.svg" alt="Bolo personalizado — Stitch" loading="eager" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Stitch</h3><p>Um tema divertido e cheio de cor.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Stitch%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Odontologia%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Odontologia">
+    <img src="assets/bolo4.svg" alt="Bolo personalizado — Odontologia" loading="eager" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Odontologia</h3><p>Uma ideia especial para comemorações.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Odontologia%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Homem-Aranha%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Homem-Aranha">
+    <img src="assets/bolo5.svg" alt="Bolo personalizado — Homem-Aranha" loading="eager" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Homem-Aranha</h3><p>Inspiração para festas temáticas.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Homem-Aranha%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Floral%20lil%C3%A1s%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Floral lilás">
+    <img src="assets/bolo6.svg" alt="Bolo personalizado — Floral lilás" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Floral lilás</h3><p>Delicadeza em tons de lilás.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Floral%20lil%C3%A1s%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Dourado%20premium%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Dourado premium">
+    <img src="assets/bolo2.svg" alt="Bolo personalizado — Dourado premium" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Dourado premium</h3><p>Detalhes dourados para celebrar.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Dourado%20premium%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Rosa%20com%20drip%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Rosa com drip">
+    <img src="assets/bolo7.svg" alt="Bolo personalizado — Rosa com drip" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Rosa com drip</h3><p>Um toque delicado e moderno.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Rosa%20com%20drip%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article></div>
+        <details class="more-gallery">
+          <summary>Ver mais 8 modelos de bolos ↓</summary>
+          <div class="gallery-grid"><article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Amarelo%20com%20drip%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Amarelo com drip">
+    <img src="assets/bolo8.svg" alt="Bolo personalizado — Amarelo com drip" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Amarelo com drip</h3><p>Cor e alegria para a ocasião.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Amarelo%20com%20drip%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Rosa%20e%20dourado%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Rosa e dourado">
+    <img src="assets/bolo3.svg" alt="Bolo personalizado — Rosa e dourado" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Rosa e dourado</h3><p>Combinação clássica e elegante.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Rosa%20e%20dourado%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Tema%20Brasil%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Tema Brasil">
+    <img src="assets/bolo9.svg" alt="Bolo personalizado — Tema Brasil" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Tema Brasil</h3><p>Cores vibrantes e personalidade.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Tema%20Brasil%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Tema%20Shadow%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Tema Shadow">
+    <img src="assets/bolo10.svg" alt="Bolo personalizado — Tema Shadow" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Tema Shadow</h3><p>Uma inspiração para fãs do personagem.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Tema%20Shadow%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Tema%20Mercado%20Livre%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Tema Mercado Livre">
+    <img src="assets/bolo11.svg" alt="Bolo personalizado — Tema Mercado Livre" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Tema Mercado Livre</h3><p>Uma ideia criativa e personalizada.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Tema%20Mercado%20Livre%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Festa%20colorida%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Festa colorida">
+    <img src="assets/bolo12.svg" alt="Bolo personalizado — Festa colorida" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Festa colorida</h3><p>Celebração com muitas cores.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Festa%20colorida%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Vermelho%20cl%C3%A1ssico%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Vermelho clássico">
+    <img src="assets/bolo13.svg" alt="Bolo personalizado — Vermelho clássico" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Vermelho clássico</h3><p>Vermelho marcante e elegante.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Vermelho%20cl%C3%A1ssico%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<article class="cake-card">
+  <a class="cake-photo" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Homenagem%20especial%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento do modelo Homenagem especial">
+    <img src="assets/bolo14.svg" alt="Bolo personalizado — Homenagem especial" loading="lazy" width="900" height="1100" decoding="async">
+    <span class="photo-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="cake-info"><div><h3>Homenagem especial</h3><p>Um bolo para recordar um momento.</p></div>
+    <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vi%20o%20modelo%20Homenagem%20especial%20no%20site%20da%20Ver%C3%A3o%20Bolos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="text-link">Consultar modelo <span aria-hidden="true">↗</span></a>
+  </div>
+</article></div>
+        </details>
+      </div>
+    </section>
+    <section class="section pricing" id="valores" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-header center"><span class="eyebrow">Transparência na escolha</span><h2 id="pricing-title">Encontre o tamanho ideal para a sua festa.</h2>
+          <p class="muted">Confira a tabela por quantidade aproximada de pessoas. Depois, escolha recheio, massa e detalhes da decoração.</p></div>
+        <div class="pricing-layout">
+          <div class="panel">
+            <h3>Tamanhos e preços</h3><p class="intro">Selecione um tamanho para preencher seu pedido.</p>
+            <div class="price-item">
+  <div class="price-label"><span class="size-num">15 pessoas</span></div>
+  <strong>R$ 200,00</strong><a href="#pedido" data-size="15 pessoas" aria-label="Selecionar bolo para 15 pessoas">Escolher <span aria-hidden="true">↗</span></a>
+</div>
+<div class="price-item">
+  <div class="price-label"><span class="size-num">20 a 25 pessoas</span></div>
+  <strong>R$ 230,00</strong><a href="#pedido" data-size="20 a 25 pessoas" aria-label="Selecionar bolo para 20 a 25 pessoas">Escolher <span aria-hidden="true">↗</span></a>
+</div>
+<div class="price-item featured">
+  <div class="price-label"><span class="size-num">30 a 35 pessoas</span><small class="popular">Boa opção para festas</small></div>
+  <strong>R$ 260,00</strong><a href="#pedido" data-size="30 a 35 pessoas" aria-label="Selecionar bolo para 30 a 35 pessoas">Escolher <span aria-hidden="true">↗</span></a>
+</div>
+<div class="price-item">
+  <div class="price-label"><span class="size-num">40 a 45 pessoas</span></div>
+  <strong>R$ 300,00</strong><a href="#pedido" data-size="40 a 45 pessoas" aria-label="Selecionar bolo para 40 a 45 pessoas">Escolher <span aria-hidden="true">↗</span></a>
+</div>
+<div class="price-item">
+  <div class="price-label"><span class="size-num">50 a 55 pessoas</span></div>
+  <strong>R$ 350,00</strong><a href="#pedido" data-size="50 a 55 pessoas" aria-label="Selecionar bolo para 50 a 55 pessoas">Escolher <span aria-hidden="true">↗</span></a>
+</div>
+<div class="price-item">
+  <div class="price-label"><span class="size-num">60 a 70 pessoas</span></div>
+  <strong>R$ 400,00</strong><a href="#pedido" data-size="60 a 70 pessoas" aria-label="Selecionar bolo para 60 a 70 pessoas">Escolher <span aria-hidden="true">↗</span></a>
+</div>
+            <p class="price-disclaimer">A quantidade de porções é uma estimativa. Decoração, detalhes e adicionais podem alterar o orçamento final, que será confirmado pelo WhatsApp.</p>
+          </div>
+          <div class="panel">
+            <h3>Massas e adicionais</h3><p class="intro">Personalize os sabores e o acabamento do bolo.</p>
+            <div class="panel-subtitle">Massa de baunilha</div><div class="vanilla">Baunilha — opção disponível na tabela</div>
+            <div class="panel-subtitle">Outras opções e acréscimos</div>
+            <div class="extra-row"><span>Chocolate</span><b>+ R$ 8,00</b></div>
+<div class="extra-row"><span>Leite Ninho</span><b>+ R$ 13,00</b></div>
+<div class="extra-row"><span>Doce de leite</span><b>+ R$ 13,00</b></div>
+<div class="extra-row"><span>Bis</span><b>+ R$ 13,00</b></div>
+<div class="extra-row"><span>Ovo Maltine</span><b>+ R$ 13,00</b></div>
+<div class="extra-row"><span>Bolo com fruta</span><b>+ R$ 13,00</b></div>
+<div class="extra-row"><span>Bolo dourado</span><b>+ R$ 13,00</b></div>
+<div class="extra-row"><span>Bolo retangular</span><b>+ R$ 18,00</b></div>
+            <p class="price-disclaimer">Os adicionais são cobrados conforme as escolhas feitas. Confirme a combinação desejada ao pedir o orçamento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="recheios" aria-labelledby="fillings-title">
+      <div class="container flavors-layout">
+        <div><span class="eyebrow">Sabores para escolher</span><h2 id="fillings-title">Qual recheio combina com sua comemoração?</h2>
+          <p class="muted">Há opções de chocolate, frutas, doce de leite, Ninho e muito mais. Informe seu preferido na hora de solicitar o bolo.</p>
+          <a class="button light" href="#pedido">Escolher meu bolo ↗</a></div>
+        <div><div class="flavor-chips"><span>Brigadeiro</span>
+<span>Brigadeiro branco</span>
+<span>Brigadeiro branco com Bis</span>
+<span>Brigadeiro de Oreo</span>
+<span>Brigadeiro de leite Ninho</span>
+<span>Brigadeiro de Nesquik</span>
+<span>Brigadeiro de Ovo Maltine</span>
+<span>Creme Belga com abacaxi</span>
+<span>Creme Belga com pêssego</span>
+<span>Doce de leite</span>
+<span>Doce de leite com coco</span>
+<span>Doce de leite com abacaxi</span>
+<span>Ninho com abacaxi</span>
+<span>Ninho com pêssego</span>
+<span>Mousse de Ninho</span>
+<span>Mousse de chocolate</span>
+<span>Mousse de doce de leite</span>
+<span>Prestígio</span>
+<span>Prestígio com abacaxi</span>
+<span>Sensação com raspas de chocolate</span></div>
+          <p class="flavor-note">Consulte disponibilidade e possíveis acréscimos na combinação escolhida.</p></div>
+      </div>
+    </section>
+    <section class="section how" id="como-pedir" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-header center"><span class="eyebrow">Simples de encomendar</span><h2 id="how-title">Três passos para escolher seu bolo.</h2>
+          <p class="muted">Tudo é combinado diretamente com a Verão Bolos pelo WhatsApp.</p></div>
+        <div class="steps-grid">
+          <div class="step"><div class="step-number">01</div><h3>Escolha a inspiração</h3><p>Veja nossos modelos, pense no tema da festa e decida para quantas pessoas será o bolo.</p></div>
+          <div class="step"><div class="step-number">02</div><h3>Conte o que deseja</h3><p>Envie a data, o tamanho, o tema, o recheio e uma imagem de referência, caso tenha.</p></div>
+          <div class="step"><div class="step-number">03</div><h3>Confirme a encomenda</h3><p>Receba o orçamento, verifique a disponibilidade da data e confirme o pedido com o sinal.</p></div>
+        </div>
+        <div class="payment-strip">
+          <div><strong>📅 Prazo de encomenda</strong><span>Faça seu pedido com 1 semana de antecedência.</span></div>
+          <div><strong>💳 Formas de pagamento</strong><span>Pix, débito ou crédito (com taxa da máquina). Sinal de 50% no momento da encomenda.</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="duvidas" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div><span class="eyebrow">Dúvidas frequentes</span><h2 id="faq-title">Antes de encomendar, saiba como funciona.</h2>
+          <p class="muted">Se ainda restar alguma dúvida, chame pelo WhatsApp para conversar.</p>
+          <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20quero%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener noreferrer" class="text-link">Tirar uma dúvida pelo WhatsApp ↗</a></div>
+        <div class="faq-list">
+          <details><summary>Quanto tempo antes preciso pedir?</summary><p>A orientação é encomendar com 1 semana de antecedência. Consulte a disponibilidade da data pelo WhatsApp antes de confirmar.</p></details>
+          <details><summary>Posso pedir um tema diferente dos modelos?</summary><p>Sim, o catálogo serve de inspiração. Envie uma foto ou descreva o tema desejado para verificar as possibilidades de personalização.</p></details>
+          <details><summary>Como funciona o pagamento?</summary><p>É solicitado 50% do valor no momento da encomenda. São aceitos Pix, débito e crédito; no cartão de crédito há taxa da máquina.</p></details>
+          <details><summary>Os preços da tabela são o valor final?</summary><p>A tabela apresenta os preços por tamanho. Adicionais e detalhes de decoração podem mudar o total. Você recebe um orçamento conforme seu pedido.</p></details>
+          <details><summary>Vocês fazem entrega ou retirada?</summary><p>Consulte diretamente pelo WhatsApp as opções disponíveis para sua região e data. O atendimento é em Belo Horizonte e região.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="order-section" id="pedido" aria-labelledby="order-title">
+      <div class="container order-layout">
+        <div><span class="eyebrow">Seu próximo momento especial começa aqui</span><h2 id="order-title">Vamos escolher o bolo da sua comemoração?</h2>
+          <p>Preencha o básico para preparar uma mensagem. Ao tocar em “Pedir orçamento”, você será direcionado ao WhatsApp e poderá conversar antes de fechar a encomenda.</p>
+          <div class="order-benefits"><span>Sem pagamento pelo site</span><span>Atendimento direto pelo WhatsApp</span><span>Orçamento confirmado antes do pedido</span></div></div>
+        <div class="order-card">
+          <h3>Monte seu pedido</h3><p>Os campos com * são obrigatórios. Você pode enviar mais detalhes e fotos no WhatsApp.</p>
+          <form id="order-form">
+            <div class="form-grid">
+              <div class="field"><label for="size">Para quantas pessoas? *</label>
+                <select id="size" name="size" required><option value="">Selecione o tamanho</option><option value="15 pessoas">15 pessoas — R$ 200,00</option><option value="20 a 25 pessoas">20 a 25 pessoas — R$ 230,00</option><option value="30 a 35 pessoas">30 a 35 pessoas — R$ 260,00</option><option value="40 a 45 pessoas">40 a 45 pessoas — R$ 300,00</option><option value="50 a 55 pessoas">50 a 55 pessoas — R$ 350,00</option><option value="60 a 70 pessoas">60 a 70 pessoas — R$ 400,00</option></select></div>
+              <div class="field"><label for="date">Data da festa</label><input type="date" name="date" id="date"></div>
+              <div class="field full"><label for="theme">Tema ou modelo desejado</label><input id="theme" name="theme" maxlength="120" placeholder="Ex.: floral lilás, Stitch, rosa e dourado"></div>
+              <div class="field full"><label for="filling">Recheio preferido</label><select name="filling" id="filling"><option value="">Ainda vou decidir</option><option value="Brigadeiro">Brigadeiro</option><option value="Brigadeiro branco">Brigadeiro branco</option><option value="Brigadeiro branco com Bis">Brigadeiro branco com Bis</option><option value="Brigadeiro de Oreo">Brigadeiro de Oreo</option><option value="Brigadeiro de leite Ninho">Brigadeiro de leite Ninho</option><option value="Brigadeiro de Nesquik">Brigadeiro de Nesquik</option><option value="Brigadeiro de Ovo Maltine">Brigadeiro de Ovo Maltine</option><option value="Creme Belga com abacaxi">Creme Belga com abacaxi</option><option value="Creme Belga com pêssego">Creme Belga com pêssego</option><option value="Doce de leite">Doce de leite</option><option value="Doce de leite com coco">Doce de leite com coco</option><option value="Doce de leite com abacaxi">Doce de leite com abacaxi</option><option value="Ninho com abacaxi">Ninho com abacaxi</option><option value="Ninho com pêssego">Ninho com pêssego</option><option value="Mousse de Ninho">Mousse de Ninho</option><option value="Mousse de chocolate">Mousse de chocolate</option><option value="Mousse de doce de leite">Mousse de doce de leite</option><option value="Prestígio">Prestígio</option><option value="Prestígio com abacaxi">Prestígio com abacaxi</option><option value="Sensação com raspas de chocolate">Sensação com raspas de chocolate</option></select></div>
+            </div>
+            <p class="form-help">O envio abre o WhatsApp com as informações preenchidas. Nenhum pedido é confirmado automaticamente.</p>
+            <button class="button" type="submit">Pedir orçamento no WhatsApp ↗</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>Verão Bolos</strong><small>Bolos personalizados para comemorações • Belo Horizonte e região</small></div>
+      <nav class="footer-links" aria-label="Contatos">
+        <a href="https://www.instagram.com/verao_bolos/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+        <a href="#inicio">Voltar ao topo ↑</a>
+      </nav>
+    </div>
+  </footer>
+  <a class="float-whatsapp" href="https://wa.me/5531975788516?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Ver%C3%A3o%20Bolos%20e%20quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener noreferrer" aria-label="Falar com Verão Bolos pelo WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.1 3.2A12.6 12.6 0 0 0 3.5 15.8c0 2.2.6 4.3 1.6 6.2L3.3 28.8l7-1.8a12.6 12.6 0 1 0 5.8-23.8Zm0 22.9c-2 0-3.8-.5-5.4-1.5l-.4-.2-4.2 1.1 1.1-4-.3-.4a10.3 10.3 0 1 1 9.2 5Zm5.6-7.7c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.5 8.5 0 0 1-4.2-3.7c-.3-.5.3-.5.9-1.8.1-.2.1-.4 0-.6l-1-2.3c-.2-.5-.4-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.3 3.3 1.5 3.5c.2.2 2.6 4 6.2 5.5 2.3 1 3.3 1 4.5.8.7-.1 1.8-.8 2-1.7.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.6-.5Z"/></svg>
+  </a>
+  <script>
+    (function () {
+      var menu=document.querySelector(".mobile-menu");
+      if(menu)menu.querySelectorAll("nav a").forEach(function(a){a.addEventListener("click",function(){menu.open=false;});});
+      document.querySelectorAll("[data-size]").forEach(function(a){
+        a.addEventListener("click",function(){document.getElementById("size").value=a.getAttribute("data-size");});
+      });
+      var form=document.getElementById("order-form");
+      form.addEventListener("submit",function(event){
+        event.preventDefault();
+        if(!form.reportValidity())return;
+        var size=document.getElementById("size").value;
+        var date=document.getElementById("date").value;
+        var theme=document.getElementById("theme").value.trim();
+        var filling=document.getElementById("filling").value;
+        var message="Olá! Vim pelo site da Verão Bolos e gostaria de um orçamento.\n\nTamanho: "+size;
+        if(date){var t=date.split("-");message+="\nData da festa: "+t[2]+"/"+t[1]+"/"+t[0];}
+        if(theme)message+="\nTema/modelo: "+theme;
+        if(filling)message+="\nRecheio: "+filling;
+        message+="\n\nPodem me informar a disponibilidade e o valor final?";
+        window.location.href="https://wa.me/5531975788516?text="+encodeURIComponent(message);
+      });
+    }());
+  </script>
+</body>
+</html>
