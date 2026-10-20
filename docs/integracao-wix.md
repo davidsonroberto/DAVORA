@@ -6,7 +6,7 @@ O proprietário autorizou usar sua Wix existente como sistema de pedidos e escla
 
 Foi criado o cliente OAuth `DAVORA Brasil - pedidos`, ID público `b71b81f1-6b07-4c93-a555-63200812560f`, ligado somente ao site Wix `d8b1d97c-b1cf-4548-8dae-3c9f70ec2baa`. A loja conectada na Zendrop é `3668910`. Um cliente OAuth público não equivale à autorização administrativa do servidor: a chave privada ainda falta.
 
-A criação dos 30 cadastros no catálogo Wix está pendente de autorização específica para essa loja separada. Nenhum dos 30 produtos foi criado, importado ou vinculado. Os produtos existentes, a vitrine, idioma, moeda e configurações de despacho da loja em inglês foram preservados. Os cadastros destinados à integração devem começar ocultos e indisponíveis.
+A continuidade da integração foi solicitada novamente pelo proprietário. A criação dos 30 cadastros internos está preparada em `docs/wix-catalog-plan.json`, com revisão dos valores em `docs/precos-brasil-revisao.md`; aguarda aceitação explícita dos preços provisórios, exigida pelo fluxo Catalog V3 antes de criar produtos. Nenhum dos 30 produtos foi criado, importado ou vinculado. Os produtos existentes, a vitrine, idioma, moeda e configurações de despacho da loja em inglês foram preservados. Os cadastros destinados à integração devem começar ocultos e indisponíveis.
 
 ## Código preparado
 
@@ -20,7 +20,7 @@ A criação dos 30 cadastros no catálogo Wix está pendente de autorização es
 
 ## Condições antes de ativar
 
-1. Obter autorização específica para criar os 30 cadastros ocultos e indisponíveis no catálogo Wix separado. Os preços são os previstos do catálogo, sem prometer disponibilidade comercial.
+1. Obter aceitação dos 30 valores provisórios apresentados em `docs/precos-brasil-revisao.md`. O lote usa os preços previstos do catálogo e cria somente registros ocultos e indisponíveis, sem prometer disponibilidade comercial. A Wix existente usa Catalog V3; não chamar endpoints V1.
 2. Criar e vincular os produtos, preservando um único SKU selecionado por item. Registrar `fulfillmentMapping` com `provider`, `siteId`, `productId`, `variantId`, `zendropLinked`, `supplierSku` e `supplierVariantId`. Nunca mapear variantes por posição ou por menor preço.
 3. Gerar a chave do cliente nas configurações Headless da Wix e guardá-la como `WIX_CLIENT_SECRET` nas variáveis protegidas do servidor. Não colocar a chave em chat, repositório, HTML ou catálogo. `WIX_CLIENT_ID` é público; a chave privada não é retornada pela API de clientes.
 4. Validar autorização, recebimento do pedido na Wix, moeda/valores/CPF/endereço e criação correspondente na Zendrop. Pedidos de teste Stripe são bloqueados para a loja real, salvo habilitação específica de `DAVORA_WIX_ALLOW_TEST_ORDERS` em ambiente de revisão. Não simular recebimento de dinheiro real.
@@ -39,3 +39,11 @@ A API Create Order informa limite de cinco chamadas por hora/site para apps aind
 - Registrar pagamento existente: https://dev.wix.com/docs/api-reference/business-solutions/e-commerce/orders/order-transactions/add-payments
 
 Os testes automatizados usam Stripe/Wix e armazenamento simulados; a validação real continua pendente.
+
+## Continuidade de configuração em 20/10/2026
+
+- Painel Wix acessível, site e versão V3 confirmados. Nenhum produto desta integração foi criado ou vinculado.
+- A conta Zendrop informa plano por uso de até 500 produtos por US$ 29/mês. Nenhum upgrade foi solicitado. Não há forma de pagamento de fornecimento cadastrada.
+- A Stripe exige login adicional para acessar produção. A entrada segura ofereceu Google; a inspeção da tela seguinte foi bloqueada pela revisão automática por falta de autorização de uma conta Google específica.
+- A revisão automática também rejeitou abrir e capturar a página de credenciais OAuth porque o snapshot poderia expor o segredo. Nenhum segredo foi obtido. Retomar apenas com autorização adequada e leitura restrita, ou com o proprietário configurando a credencial diretamente no campo protegido da hospedagem.
+- Os bloqueios de revisão não foram contornados. Checkout, envio à Wix e compras de fornecedor seguem desativados.

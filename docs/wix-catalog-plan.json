@@ -1,0 +1,1046 @@
+{
+  "status": "awaiting_price_approval",
+  "executed": false,
+  "siteId": "d8b1d97c-b1cf-4548-8dae-3c9f70ec2baa",
+  "zendropStoreId": 3668910,
+  "currency": "BRL",
+  "priceScope": "provisional_internal_catalog_only",
+  "selectedVariants": [
+    {
+      "catalogId": "zendrop-2932951",
+      "supplierProductId": "2932951",
+      "supplierVariantId": 27489901,
+      "supplierSku": "1773319276954943490",
+      "draftPriceCents": 24590
+    },
+    {
+      "catalogId": "zendrop-2933013",
+      "supplierProductId": "2933013",
+      "supplierVariantId": 27491000,
+      "supplierSku": "1773317385575497728",
+      "draftPriceCents": 56190
+    },
+    {
+      "catalogId": "zendrop-2932911",
+      "supplierProductId": "2932911",
+      "supplierVariantId": 27489227,
+      "supplierSku": "1773319380772356096",
+      "draftPriceCents": 40190
+    },
+    {
+      "catalogId": "zendrop-2937460",
+      "supplierProductId": "2937460",
+      "supplierVariantId": 27506581,
+      "supplierSku": "1773697222198788096",
+      "draftPriceCents": 36590
+    },
+    {
+      "catalogId": "zendrop-2933186",
+      "supplierProductId": "2933186",
+      "supplierVariantId": 27493373,
+      "supplierSku": "1773315321352978432",
+      "draftPriceCents": 16290
+    },
+    {
+      "catalogId": "zendrop-2932754",
+      "supplierProductId": "2932754",
+      "supplierVariantId": 27486897,
+      "supplierSku": "2932754_jqr003",
+      "draftPriceCents": 13690
+    },
+    {
+      "catalogId": "zendrop-2932497",
+      "supplierProductId": "2932497",
+      "supplierVariantId": 27482896,
+      "supplierSku": "1773322371810230272",
+      "draftPriceCents": 21690
+    },
+    {
+      "catalogId": "zendrop-2931956",
+      "supplierProductId": "2931956",
+      "supplierVariantId": 27475615,
+      "supplierSku": "1773327147633508359",
+      "draftPriceCents": 19690
+    },
+    {
+      "catalogId": "zendrop-2933399",
+      "supplierProductId": "2933399",
+      "supplierVariantId": 27500022,
+      "supplierSku": "1775142122536603648",
+      "draftPriceCents": 16490
+    },
+    {
+      "catalogId": "zendrop-2933398",
+      "supplierProductId": "2933398",
+      "supplierVariantId": 27500025,
+      "supplierSku": "1775142124143030273",
+      "draftPriceCents": 20990
+    },
+    {
+      "catalogId": "zendrop-2932823",
+      "supplierProductId": "2932823",
+      "supplierVariantId": 27487749,
+      "supplierSku": "1773319490453405716",
+      "draftPriceCents": 17290
+    },
+    {
+      "catalogId": "zendrop-2932584",
+      "supplierProductId": "2932584",
+      "supplierVariantId": 27484076,
+      "supplierSku": "1773322170777239559",
+      "draftPriceCents": 13890
+    },
+    {
+      "catalogId": "zendrop-2932750",
+      "supplierProductId": "2932750",
+      "supplierVariantId": 27486788,
+      "supplierSku": "1773319668258340864",
+      "draftPriceCents": 17490
+    },
+    {
+      "catalogId": "zendrop-2932749",
+      "supplierProductId": "2932749",
+      "supplierVariantId": 27486789,
+      "supplierSku": "1773321711760998400",
+      "draftPriceCents": 38890
+    },
+    {
+      "catalogId": "zendrop-2932570",
+      "supplierProductId": "2932570",
+      "supplierVariantId": 27485913,
+      "supplierSku": "1773322076724166658",
+      "draftPriceCents": 21390
+    },
+    {
+      "catalogId": "zendrop-2938549",
+      "supplierProductId": "2938549",
+      "supplierVariantId": 27509626,
+      "supplierSku": "1773547747232776353",
+      "draftPriceCents": 31890
+    },
+    {
+      "catalogId": "zendrop-2938582",
+      "supplierProductId": "2938582",
+      "supplierVariantId": 27509703,
+      "supplierSku": "1773547892728987701",
+      "draftPriceCents": 19190
+    },
+    {
+      "catalogId": "zendrop-2935811",
+      "supplierProductId": "2935811",
+      "supplierVariantId": 27503825,
+      "supplierSku": "1774105832666103808",
+      "draftPriceCents": 21890
+    },
+    {
+      "catalogId": "zendrop-2933219",
+      "supplierProductId": "2933219",
+      "supplierVariantId": 27496989,
+      "supplierSku": "1773315317473247306",
+      "draftPriceCents": 17590
+    },
+    {
+      "catalogId": "zendrop-2933383",
+      "supplierProductId": "2933383",
+      "supplierVariantId": 27496264,
+      "supplierSku": "1773298874723602435",
+      "draftPriceCents": 19890
+    },
+    {
+      "catalogId": "zendrop-2932605",
+      "supplierProductId": "2932605",
+      "supplierVariantId": 27484478,
+      "supplierSku": "1773322137503825920",
+      "draftPriceCents": 16890
+    },
+    {
+      "catalogId": "zendrop-2932448",
+      "supplierProductId": "2932448",
+      "supplierVariantId": 27492099,
+      "supplierSku": "1773322469847892174",
+      "draftPriceCents": 18090
+    },
+    {
+      "catalogId": "zendrop-2931926",
+      "supplierProductId": "2931926",
+      "supplierVariantId": 27475257,
+      "supplierSku": "1773327187793969161",
+      "draftPriceCents": 17790
+    },
+    {
+      "catalogId": "zendrop-2935810",
+      "supplierProductId": "2935810",
+      "supplierVariantId": 27503545,
+      "supplierSku": "1774134954079490048",
+      "draftPriceCents": 17590
+    },
+    {
+      "catalogId": "zendrop-2932821",
+      "supplierProductId": "2932821",
+      "supplierVariantId": 27487610,
+      "supplierSku": "1773319515048804352",
+      "draftPriceCents": 19490
+    },
+    {
+      "catalogId": "zendrop-2933334",
+      "supplierProductId": "2933334",
+      "supplierVariantId": 27495283,
+      "supplierSku": "1773315231724896256",
+      "draftPriceCents": 14190
+    },
+    {
+      "catalogId": "zendrop-2933285",
+      "supplierProductId": "2933285",
+      "supplierVariantId": 27496346,
+      "supplierSku": "1773315280223633413",
+      "draftPriceCents": 18090
+    },
+    {
+      "catalogId": "zendrop-2932579",
+      "supplierProductId": "2932579",
+      "supplierVariantId": 27486330,
+      "supplierSku": "1773322039231283200",
+      "draftPriceCents": 20290
+    },
+    {
+      "catalogId": "zendrop-2932310",
+      "supplierProductId": "2932310",
+      "supplierVariantId": 27480715,
+      "supplierSku": "1773324453984370726",
+      "draftPriceCents": 16690
+    },
+    {
+      "catalogId": "zendrop-2933400",
+      "supplierProductId": "2933400",
+      "supplierVariantId": 27500035,
+      "supplierSku": "1775142124797341699",
+      "draftPriceCents": 18390
+    }
+  ],
+  "sourceDocUrls": [
+    "https://www.wix.com/skills/wix-manage/references/stores/create-product-catalog-v3.md",
+    "https://dev.wix.com/docs/api-reference/business-solutions/stores/catalog-v3/products-v3/bulk-create-products-with-inventory"
+  ],
+  "request": {
+    "method": "POST",
+    "url": "https://www.wixapis.com/stores/v3/bulk/products-with-inventory/create",
+    "body": {
+      "products": [
+        {
+          "name": "DAVORA BR · Suporte de mesa para headset",
+          "slug": "davora-br-2932951",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Base preta</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773319276954943490",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "245.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Relógio digital RGB para montar",
+          "slug": "davora-br-2933013",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Kit RGB · montagem necessária</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773317385575497728",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "561.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Caixa de som retrô AS19",
+          "slug": "davora-br-2932911",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>AS19 · acabamento Hua Li Jin</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773319380772356096",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "401.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Headset gamer NUBWO N7 com fio",
+          "slug": "davora-br-2937460",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>N7D · preto · plugue único de 3,5 mm</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773697222198788096",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "365.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Fones sem fio TWS F9-5C",
+          "slug": "davora-br-2933186",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>F9-5C · preto</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773315321352978432",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "162.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Fone sem fio S109",
+          "slug": "davora-br-2932754",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preto · com cabo, manual e caixa</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "2932754_jqr003",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "136.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Fones TWS de condução aérea",
+          "slug": "davora-br-2932497",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preto</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773322371810230272",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "216.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Fones sem fio esportivos",
+          "slug": "davora-br-2931956",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>B101 · preto · com caixa</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773327147633508359",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "196.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Fones com fio Patinha Rosa",
+          "slug": "davora-br-2933399",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Rosa</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1775142122536603648",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "164.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Fones gamer sem fio com toque",
+          "slug": "davora-br-2933398",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preto</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1775142124143030273",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "209.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Cabo USB-C HOCO X20",
+          "slug": "davora-br-2932823",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preto · USB-C · 1 m</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773319490453405716",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "172.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Cabo de recarga USB-C",
+          "slug": "davora-br-2932584",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preto · USB-C · 22,5 cm</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773322170777239559",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "138.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Cabo chaveiro 4 em 1 USB-C",
+          "slug": "davora-br-2932750",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Cinza-escuro · versão 4 em 1</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773319668258340864",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "174.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Carregador magnético 4 em 1",
+          "slug": "davora-br-2932749",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preto · base metálica</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773321711760998400",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "388.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Suporte carregador veicular A7",
+          "slug": "davora-br-2932570",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>A7 · preto</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773322076724166658",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "213.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Kit USB-C de 4 peças para iPhone 15",
+          "slug": "davora-br-2938549",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>4 peças · 35 W · iPhone 15</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773547747232776353",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "318.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Capa com brilho e apoio para iPhone",
+          "slug": "davora-br-2938582",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Branca · iPhone 15 Pro Max</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773547892728987701",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "191.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Capa Armor com moldura para iPhone",
+          "slug": "davora-br-2935811",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>iPhone 14 Pro Max</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1774105832666103808",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "218.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Capa rígida com apoio para iPhone",
+          "slug": "davora-br-2933219",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preta · iPhone 15 Pro</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773315317473247306",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "175.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Porta-cartões magnético para iPhone",
+          "slug": "davora-br-2933383",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preto · variante indicada para iPhone 12 a 14</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773298874723602435",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "198.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Capa transparente para Galaxy",
+          "slug": "davora-br-2932605",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Transparente · Galaxy S24</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773322137503825920",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "168.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Capa fosca em acrílico para Galaxy",
+          "slug": "davora-br-2932448",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preta · Galaxy S24</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773322469847892174",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "180.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Capa magnética para Galaxy",
+          "slug": "davora-br-2931926",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Cinza · Galaxy A55 5G</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773327187793969161",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "177.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Capa com anel de apoio para Galaxy",
+          "slug": "davora-br-2935810",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preta · Galaxy S23 Ultra</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1774134954079490048",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "175.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Capa texturizada para Galaxy",
+          "slug": "davora-br-2932821",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preta · Galaxy S23 Ultra</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773319515048804352",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "194.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Pulseira milanesa magnética",
+          "slug": "davora-br-2933334",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preta · encaixe 38/40/41 mm</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773315231724896256",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "141.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Pulseira milanesa com fivela",
+          "slug": "davora-br-2933285",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Prateada · encaixe 38/40/41 mm</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773315280223633413",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "180.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Pulseira de elos em aço",
+          "slug": "davora-br-2932579",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preta · encaixe 38/40 mm</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773322039231283200",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "202.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Capa transparente para estojo de fones",
+          "slug": "davora-br-2932310",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>TPU transparente · AirPods Pro 2 · sem alça</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1773324453984370726",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "166.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAVORA BR · Capa floral para estojo de fones",
+          "slug": "davora-br-2933400",
+          "plainDescription": "<p>Cadastro interno DAVORA Brasil. Preço provisório; venda desativada.</p><p>Preta floral · AirPods Pro 2</p>",
+          "visible": false,
+          "visibleInPos": false,
+          "productType": "PHYSICAL",
+          "physicalProperties": {},
+          "variantsInfo": {
+            "variants": [
+              {
+                "productType": "PHYSICAL",
+                "physicalProperties": {},
+                "sku": "1775142124797341699",
+                "visible": true,
+                "price": {
+                  "actualPrice": {
+                    "amount": "183.90"
+                  }
+                },
+                "inventoryItem": {
+                  "inStock": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "returnEntity": true,
+      "fields": [
+        "CURRENCY"
+      ]
+    }
+  }
+}

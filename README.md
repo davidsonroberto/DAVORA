@@ -45,11 +45,13 @@ A conexão do app Zendrop ao ChatGPT permite consultar catálogo, variações, d
 
 O repositório pode continuar no GitHub. **GitHub Pages não permite hospedar uma operação de comércio eletrônico**, conforme https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits . O código usa funções Node para a parte de pagamento e precisa de hospedagem compatível, com plano que permita uso comercial.
 
-O projeto Vercel é `davora`, ID `prj_pkUMXGi8V0YpztNbJUUegJQc0EoT`. A branch de trabalho continua sendo `codex/davora-brasil-20261015`. A integração GitHub–Vercel gera a prévia em https://davora-git-codex-davora-brasil-20261015-davidsonroberto.vercel.app . A consulta ao projeto funciona sem o parâmetro de escopo que retorna 403; o ID do projeto identifica o destino exato.
+O projeto Vercel é `davora`, ID `prj_pkUMXGi8V0YpztNbJUUegJQc0EoT`. A branch de trabalho atual é `codex/davora-brasil-final-20261020`. A prévia com catálogo e acompanhamento de pedidos foi publicada em https://davora-a2usiib2p-davidsonroberto.vercel.app/ e seu deploy foi confirmado como `READY`. O endereço está sujeito à proteção de acesso da Vercel. A consulta ao projeto funciona sem o parâmetro de escopo que retorna 403; o ID do projeto identifica o destino exato.
 
 Na consulta de 16/10/2026, a configuração **production** contém `STRIPE_SECRET_KEY`, `STRIPE_PUBLISHABLE_KEY` e `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`, gerenciadas pela integração Stripe–Vercel. Foram consultados somente nomes e metadados, sem descriptografar valores. O ambiente das credenciais não foi inferido a partir do nome **production**: essa é a configuração da hospedagem, não uma prova de chave Stripe live. As chaves não estão disponíveis na prévia, o que é compatível com a manutenção das compras desativadas.
 
 O login no painel Vercel foi concluído. O token Blob de preparação foi convertido em variável sensível e restringido a preview, sem ler ou substituir seu valor. O novo escopo não revoga cópias de deploys antigos. A verificação do endpoint remoto ainda não foi concluída: este navegador retornou `net::ERR_BLOCKED_BY_CLIENT`. O painel indica plano Hobby; a [política de uso da Vercel](https://vercel.com/docs/limits/fair-use-guidelines) exige Pro ou Enterprise para operação comercial. Nenhuma assinatura paga foi contratada. Detalhes e próximos requisitos estão em `docs/pedidos.md`.
+
+Os 30 valores provisórios e o lote de cadastros ocultos estão prontos para revisão em [docs/precos-brasil-revisao.md](docs/precos-brasil-revisao.md). O lote ainda não foi executado: exige aceitação dos preços e configuração privada da autenticação.
 
 ## Dependências antes de vender
 
