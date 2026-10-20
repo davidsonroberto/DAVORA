@@ -1,6 +1,6 @@
 {
   "currency": "BRL",
-  "verifiedAt": "2026-10-16T20:45:46.070Z",
+  "verifiedAt": "2026-10-20T22:00:20.224Z",
   "status": "preparation",
   "focus": "Eletrônicos e acessórios",
   "supplierPlatform": "zendrop",
@@ -43,7 +43,7 @@
         "currency": "USD",
         "fromCents": 344,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:30.643Z",
         "variantConfirmed": true,
         "variantCents": 344
       },
@@ -58,12 +58,12 @@
       "imageSha256": "bcd3ef5bef2dc0736ad608c0663edddf6783d97d58de611c75e37ac271c14e2e",
       "supplierVariantId": 27489901,
       "supplierVariantName": "Black base",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:30.643Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:30.643Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -71,7 +71,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:57:38.498Z",
         "options": [
           {
             "type": "regular",
@@ -113,7 +113,7 @@
         "currency": "USD",
         "fromCents": 2443,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:32.637Z",
         "variantConfirmed": true,
         "variantCents": 2443
       },
@@ -128,12 +128,12 @@
       "imageSha256": "837e7e7de82f23e1c71adda0bb7233a7406df90562724f2d1f70493cf3048115",
       "supplierVariantId": 27491000,
       "supplierVariantName": "Finished products (assembly required)",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:32.637Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:32.637Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -141,7 +141,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:57:38.904Z",
         "options": [
           {
             "type": "regular",
@@ -183,7 +183,7 @@
         "currency": "USD",
         "fromCents": 1698,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:32.527Z",
         "variantConfirmed": true,
         "variantCents": 1698
       },
@@ -198,12 +198,12 @@
       "imageSha256": "a55b51af21bc98a2b8ccdb0f95f106e5b7c2ac0c593add75f03f9cf99bfcd175",
       "supplierVariantId": 27489227,
       "supplierVariantName": "Hua Li Jin",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:32.527Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:32.527Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -211,7 +211,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:57:38.542Z",
         "options": [
           {
             "type": "regular",
@@ -253,7 +253,7 @@
         "currency": "USD",
         "fromCents": 1394,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:32.783Z",
         "variantConfirmed": true,
         "variantCents": 1394
       },
@@ -268,12 +268,12 @@
       "imageSha256": "e1ef99d858093edd478c060a25633380bbb47fb36db5fee67b11adef0e403ab5",
       "supplierVariantId": 27506581,
       "supplierVariantName": "N7D 3.5 single plug black",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:32.783Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:32.783Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -281,7 +281,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:57:39.276Z",
         "options": [
           {
             "type": "regular",
@@ -323,7 +323,7 @@
         "currency": "USD",
         "fromCents": 249,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:32.576Z",
         "variantConfirmed": true,
         "variantCents": 249
       },
@@ -338,12 +338,12 @@
       "imageSha256": "5b95b142c7552bbd2c6300073d8c04f1ee9b2f6a4237d434a6168fa3fc9c1c5e",
       "supplierVariantId": 27493373,
       "supplierVariantName": "F9-5C battery type Black",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:32.576Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:32.576Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -351,7 +351,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:57:38.445Z",
         "options": [
           {
             "type": "regular",
@@ -387,13 +387,13 @@
       "supplierName": "Zendrop Fulfillment",
       "supplierUrl": "https://app.zendrop.com/product?supplier=13",
       "supplierProductId": "2932754",
-      "supplierSku": "1773319731403587594",
+      "supplierSku": "2932754_jqr003",
       "supplierApproved": false,
       "supplierCost": {
         "currency": "USD",
         "fromCents": 96,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:34.565Z",
         "variantConfirmed": true,
         "variantCents": 96
       },
@@ -408,12 +408,12 @@
       "imageSha256": "219fd0a6c52130a2f5e089a374e0ca2d6415230ad114cadb03c05876d1449548",
       "supplierVariantId": 27486897,
       "supplierVariantName": "Black / Boxed (headset + charging cable + manual + packing box)",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:34.565Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:34.565Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -421,7 +421,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:58:36.898Z",
         "options": [
           {
             "type": "regular",
@@ -463,7 +463,7 @@
         "currency": "USD",
         "fromCents": 743,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:34.310Z",
         "variantConfirmed": true,
         "variantCents": 743
       },
@@ -478,12 +478,12 @@
       "imageSha256": "279c56c0eea48336c3ea30ca33df084ab2f07f19c1453be4a4dca163f9b12fd9",
       "supplierVariantId": 27482896,
       "supplierVariantName": "Black",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:34.310Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:34.310Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -491,7 +491,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:58:36.945Z",
         "options": [
           {
             "type": "regular",
@@ -533,7 +533,7 @@
         "currency": "USD",
         "fromCents": 399,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:34.382Z",
         "variantConfirmed": true,
         "variantCents": 418
       },
@@ -548,12 +548,12 @@
       "imageSha256": "81b24c7cbe73497d4a281e55b361a6c6e9d59271d031f5523423e4c8b890f981",
       "supplierVariantId": 27475615,
       "supplierVariantName": "Black / B101 color box",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:34.382Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:34.382Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -561,7 +561,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:58:37.053Z",
         "options": [
           {
             "type": "regular",
@@ -603,7 +603,7 @@
         "currency": "USD",
         "fromCents": 65,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:34.384Z",
         "variantConfirmed": true,
         "variantCents": 65
       },
@@ -618,12 +618,12 @@
       "imageSha256": "17503dfb282b00337fee4b64282f1f2cde02862d9923766927fc1589d4bc2627",
       "supplierVariantId": 27500022,
       "supplierVariantName": "Pink",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:34.384Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:34.384Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -631,7 +631,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:58:36.844Z",
         "options": [
           {
             "type": "regular",
@@ -673,7 +673,7 @@
         "currency": "USD",
         "fromCents": 782,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:34.445Z",
         "variantConfirmed": true,
         "variantCents": 782
       },
@@ -688,12 +688,12 @@
       "imageSha256": "2ff32b4f698fd83cb0904604592a3221f9c1c7f882fdab4b4999332264428237",
       "supplierVariantId": 27500025,
       "supplierVariantName": "Black",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:34.445Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:34.445Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -701,7 +701,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:58:36.971Z",
         "options": [
           {
             "type": "regular",
@@ -743,7 +743,7 @@
         "currency": "USD",
         "fromCents": 84,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:35.924Z",
         "variantConfirmed": true,
         "variantCents": 105
       },
@@ -758,12 +758,12 @@
       "imageSha256": "e90fb5de6e08ed83378750281796db0a5f78b180cbeb69f687c440436681b799",
       "supplierVariantId": 27487749,
       "supplierVariantName": "Black / Type-c 1m",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:35.924Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:35.924Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -771,7 +771,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:58:38.734Z",
         "options": [
           {
             "type": "regular",
@@ -813,7 +813,7 @@
         "currency": "USD",
         "fromCents": 113,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:36.054Z",
         "variantConfirmed": true,
         "variantCents": 113
       },
@@ -828,12 +828,12 @@
       "imageSha256": "b8a0336a962ee8dd8cf7b086d96d0b13b8623561430b6e9dd4ce4a3d686b5feb",
       "supplierVariantId": 27484076,
       "supplierVariantName": "Black / Type C 22.5CM",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:36.054Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:36.054Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -841,7 +841,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:58:38.766Z",
         "options": [
           {
             "type": "regular",
@@ -883,7 +883,7 @@
         "currency": "USD",
         "fromCents": 439,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:35.881Z",
         "variantConfirmed": true,
         "variantCents": 439
       },
@@ -898,12 +898,12 @@
       "imageSha256": "48a39d1e4175bcecfb45a8882972ae26292491bf1cce4fc11bc2239c37e49d90",
       "supplierVariantId": 27486788,
       "supplierVariantName": "dark grey / WF-4-in-1 TYPE-C60W Apple 27W black gray",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:35.881Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:35.881Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -911,7 +911,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:58:39.082Z",
         "options": [
           {
             "type": "regular",
@@ -953,7 +953,7 @@
         "currency": "USD",
         "fromCents": 2057,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:36.272Z",
         "variantConfirmed": true,
         "variantCents": 2200
       },
@@ -968,12 +968,12 @@
       "imageSha256": "575b0e59f87db22544418b5abc063c51bfaea37c67120114aa2f9fb4154adee5",
       "supplierVariantId": 27486789,
       "supplierVariantName": "Black / Metal bottom",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:36.272Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:36.272Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -981,7 +981,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:58:38.510Z",
         "options": [
           {
             "type": "regular",
@@ -1023,7 +1023,7 @@
         "currency": "USD",
         "fromCents": 573,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:47:36.446Z",
         "variantConfirmed": true,
         "variantCents": 573
       },
@@ -1038,12 +1038,12 @@
       "imageSha256": "39de1cbcbb4c96ca2857944888c9f5c4ceee36188ebd9e31ffaa1a7d48c67d21",
       "supplierVariantId": 27485913,
       "supplierVariantName": "Black",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:47:36.446Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:47:36.446Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1051,7 +1051,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:58:38.933Z",
         "options": [
           {
             "type": "regular",
@@ -1093,7 +1093,7 @@
         "currency": "USD",
         "fromCents": 763,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:50:31.370Z",
         "variantConfirmed": true,
         "variantCents": 898
       },
@@ -1108,12 +1108,12 @@
       "imageSha256": "ad614a7aaa9529b5f192165c1cd63d329a65d7de44456ef47296907071c811db",
       "supplierVariantId": 27509626,
       "supplierVariantName": "Four-piece set: 35W double C head +1 m PD line + charging treasure 5000 + ordinary shell / iPhone-15",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:50:31.370Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:50:31.370Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1121,7 +1121,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:59:36.869Z",
         "options": [
           {
             "type": "regular",
@@ -1163,7 +1163,7 @@
         "currency": "USD",
         "fromCents": 249,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:50:31.650Z",
         "variantConfirmed": true,
         "variantCents": 249
       },
@@ -1178,12 +1178,12 @@
       "imageSha256": "39f80613033961c569bccd42cffdb4bb5102cf1a5f1079405e774d03535d110e",
       "supplierVariantId": 27509703,
       "supplierVariantName": "White / Apple 15ProMax",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:50:31.650Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:50:31.650Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1191,7 +1191,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:59:36.945Z",
         "options": [
           {
             "type": "regular",
@@ -1233,7 +1233,7 @@
         "currency": "USD",
         "fromCents": 535,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:50:33.275Z",
         "variantConfirmed": true,
         "variantCents": 535
       },
@@ -1248,12 +1248,12 @@
       "imageSha256": "17e1fc0395d6b9b21df9477551286c67fc6b544c84ea5ac9af33951f26e08af7",
       "supplierVariantId": 27503825,
       "supplierVariantName": "iPhone14promax",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:50:33.275Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:50:33.275Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1261,7 +1261,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:59:35.997Z",
         "options": [
           {
             "type": "regular",
@@ -1303,7 +1303,7 @@
         "currency": "USD",
         "fromCents": 96,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:50:36.390Z",
         "variantConfirmed": true,
         "variantCents": 96
       },
@@ -1318,12 +1318,12 @@
       "imageSha256": "5f8e87da94770ed6f3b31306f9552ca62ea259737b75d8e742b7ef10ae0389a9",
       "supplierVariantId": 27496989,
       "supplierVariantName": "Black / iPhone15pro",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:50:36.390Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:50:36.390Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1331,7 +1331,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:59:37.276Z",
         "options": [
           {
             "type": "regular",
@@ -1373,7 +1373,7 @@
         "currency": "USD",
         "fromCents": 320,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:50:37.734Z",
         "variantConfirmed": true,
         "variantCents": 320
       },
@@ -1388,12 +1388,12 @@
       "imageSha256": "5a3a97ba6b0b77fc19e67456e76ab917c3e843bdb4949cc6f6d6ff64c3567f72",
       "supplierVariantId": 27496264,
       "supplierVariantName": "Black / Apple official magnetic card package 12-14 Universal",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:50:37.734Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:50:37.734Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1401,7 +1401,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:59:35.840Z",
         "options": [
           {
             "type": "regular",
@@ -1443,7 +1443,7 @@
         "currency": "USD",
         "fromCents": 52,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:52:50.781Z",
         "variantConfirmed": true,
         "variantCents": 52
       },
@@ -1458,12 +1458,12 @@
       "imageSha256": "8c79ebba4d249f3db08d539c216e2d86a3f17e95bd5f2dffec0ca915c00c72f3",
       "supplierVariantId": 27484478,
       "supplierVariantName": "TR transparent / S24",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:52:50.781Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:52:50.781Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1471,7 +1471,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:59:35.730Z",
         "options": [
           {
             "type": "regular",
@@ -1513,7 +1513,7 @@
         "currency": "USD",
         "fromCents": 143,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:52:52.972Z",
         "variantConfirmed": true,
         "variantCents": 143
       },
@@ -1528,12 +1528,12 @@
       "imageSha256": "35a618642863910e330bda940e204c110861a7ac67e4267034e6d23dcc7b1c31",
       "supplierVariantId": 27492099,
       "supplierVariantName": "Mysterious Black / s24",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:52:52.972Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:52:52.972Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1541,7 +1541,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:59:36.794Z",
         "options": [
           {
             "type": "regular",
@@ -1583,7 +1583,7 @@
         "currency": "USD",
         "fromCents": 151,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:52:57.282Z",
         "variantConfirmed": true,
         "variantCents": 151
       },
@@ -1598,12 +1598,12 @@
       "imageSha256": "f9f848d8a77ed3919755947cf8b29cad9ba415846249f5a574c4da19797272da",
       "supplierVariantId": 27475257,
       "supplierVariantName": "Galaxy Gray / Samsung A55 5G",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:52:57.282Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:52:57.282Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1611,7 +1611,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:59:36.545Z",
         "options": [
           {
             "type": "regular",
@@ -1653,7 +1653,7 @@
         "currency": "USD",
         "fromCents": 143,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:52:56.566Z",
         "variantConfirmed": true,
         "variantCents": 143
       },
@@ -1668,12 +1668,12 @@
       "imageSha256": "2bb2ea639ba2da6add10d93a280316742ca0da66d035a13154875ff1011efebd",
       "supplierVariantId": 27503545,
       "supplierVariantName": "Black / Samsung S23 Ultra",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:52:56.566Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:52:56.566Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1681,7 +1681,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:59:37.002Z",
         "options": [
           {
             "type": "regular",
@@ -1723,7 +1723,7 @@
         "currency": "USD",
         "fromCents": 325,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:52:59.414Z",
         "variantConfirmed": true,
         "variantCents": 325
       },
@@ -1738,12 +1738,12 @@
       "imageSha256": "6b53d3ece03af12374bb5f2e5efaced0c11ffd613e51588e65c723e69319dc68",
       "supplierVariantId": 27487610,
       "supplierVariantName": "Black / Samsung S23 Ultra",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:52:59.414Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:52:59.414Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1751,7 +1751,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:59:36.354Z",
         "options": [
           {
             "type": "regular",
@@ -1793,7 +1793,7 @@
         "currency": "USD",
         "fromCents": 103,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:57:33.532Z",
         "variantConfirmed": true,
         "variantCents": 124
       },
@@ -1808,12 +1808,12 @@
       "imageSha256": "e80d495cf7a3f4eeeed68e34fed8d5d148722c67cedab85b8b99c0586c717517",
       "supplierVariantId": 27495283,
       "supplierVariantName": "01# Black / 38/40/41mm",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:57:33.532Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:57:33.532Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1821,7 +1821,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:57:33.533Z",
         "options": [
           {
             "type": "regular",
@@ -1863,7 +1863,7 @@
         "currency": "USD",
         "fromCents": 86,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:57:32.969Z",
         "variantConfirmed": true,
         "variantCents": 120
       },
@@ -1878,12 +1878,12 @@
       "imageSha256": "3b1435b6a93c3d7fec04d7183069cb5d19f136ab96d84b0e65672a5d2eae76da",
       "supplierVariantId": 27496346,
       "supplierVariantName": "Silver / 38mm40mm41mm",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:57:32.969Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:57:32.969Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1891,7 +1891,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:57:32.969Z",
         "options": [
           {
             "type": "regular",
@@ -1933,7 +1933,7 @@
         "currency": "USD",
         "fromCents": 477,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:57:34.820Z",
         "variantConfirmed": true,
         "variantCents": 477
       },
@@ -1948,12 +1948,12 @@
       "imageSha256": "5b3089838396c27210228c52b27bff15ed76352da7a66822cef2889e6fdccf5a",
       "supplierVariantId": 27486330,
       "supplierVariantName": "Black / 38mm40mm",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:57:34.820Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:57:34.820Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -1961,7 +1961,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:57:34.821Z",
         "options": [
           {
             "type": "regular",
@@ -2003,7 +2003,7 @@
         "currency": "USD",
         "fromCents": 23,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:57:35.308Z",
         "variantConfirmed": true,
         "variantCents": 29
       },
@@ -2018,12 +2018,12 @@
       "imageSha256": "3b86dd241c40853ea97813b6e757a61c3aaba7a3c469ac57f06f0e6f346866c5",
       "supplierVariantId": 27480715,
       "supplierVariantName": "Airpods Pro2 transparent TPU soft shell (without ears)",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:57:35.308Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:57:35.308Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -2031,7 +2031,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:57:35.309Z",
         "options": [
           {
             "type": "regular",
@@ -2073,7 +2073,7 @@
         "currency": "USD",
         "fromCents": 249,
         "scope": "catalog_product_only",
-        "verifiedAt": "2026-10-16T20:35:59.064Z",
+        "verifiedAt": "2026-10-20T21:57:37.163Z",
         "variantConfirmed": true,
         "variantCents": 249
       },
@@ -2088,12 +2088,12 @@
       "imageSha256": "2b1463243f46d3d36682203f4bc1aae19673911dda4490164a16974f05f71d33",
       "supplierVariantId": 27500035,
       "supplierVariantName": "Black / Airpods Pro 2",
-      "supplierVariantVerifiedAt": "2026-10-16T20:35:59.064Z",
+      "supplierVariantVerifiedAt": "2026-10-20T21:57:37.163Z",
       "supplierInventory": {
         "inventoryLevel": "In stock",
         "available": null,
         "tracked": false,
-        "verifiedAt": "2026-10-16T20:35:59.064Z"
+        "verifiedAt": "2026-10-20T21:57:37.163Z"
       },
       "inventoryMode": "supplier_availability",
       "shippingEstimate": {
@@ -2101,7 +2101,7 @@
         "country": "BR",
         "scope": "product_country_estimate",
         "variantConfirmed": false,
-        "quotedAt": "2026-10-16T20:35:59.064Z",
+        "quotedAt": "2026-10-20T21:57:37.163Z",
         "options": [
           {
             "type": "regular",
@@ -2127,12 +2127,12 @@
     "productCount": 30,
     "variantsConsulted": 2082,
     "shippingCountry": "BR",
-    "checkedAt": "2026-10-16T20:45:46.070Z"
+    "checkedAt": "2026-10-20T22:00:20.224Z"
   },
   "supplierConnection": {
     "status": "connected",
     "type": "assistant_tools",
-    "verifiedAt": "2026-10-16T20:45:46.070Z"
+    "verifiedAt": "2026-10-20T22:00:20.224Z"
   },
   "pricingPolicy": {
     "status": "draft",
@@ -2158,6 +2158,7 @@
       "returns",
       "subscriptions"
     ],
-    "note": "Meta de margem bruta antes das despesas excluídas; não é comissão nem promessa de lucro líquido."
+    "note": "Meta de margem bruta antes das despesas excluídas; não é comissão nem promessa de lucro líquido.",
+    "calculatedAt": "2026-10-20T22:00:20.224Z"
   }
 }

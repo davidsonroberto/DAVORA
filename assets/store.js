@@ -157,12 +157,15 @@ function setCheckoutBusy(busy) {
 }
 $('checkoutDialog').addEventListener('cancel', event => { if (checkoutBusy) event.preventDefault(); });
 async function displayPayment(payment) {
-  $('checkoutForm').hidden = true; $('stripePanel').hidden = false;
+  $('checkoutForm').hidden = true; $('stripePanel').hidden = false; $('orderTrackingLink').hidden = true;
   $('paymentReference').textContent = 'Pedido ' + payment.reference;
   if (stripeController) { stripeController.destroy(); stripeController = null; }
   $('stripeCheckout').hidden = !payment.clientSecret;
   $('paymentMessage').textContent = 'O pagamento ainda não foi confirmado. Confira novamente em instantes.';
-  if (payment.status && payment.status !== 'pending') return displayPaymentStatus(payment);
+  if (payment.status && payment.status !== 'pending') {
+    if (payment.status === 'approved' && !payment.trackingPath && paymentRecord?.token) payment = await api('store-payment-status', { token: paymentRecord.token });
+    return displayPaymentStatus(payment);
+  }
   if (!payment.clientSecret) return;
   await loadStripeScript();
   const stripe = window.Stripe(payment.publishableKey, { locale: 'pt-BR' });
@@ -173,6 +176,11 @@ async function displayPayment(payment) {
 function displayPaymentStatus(payment) {
   const messages = { approved: 'Pagamento confirmado. Seu pedido foi recebido para processamento.', pending: 'O pagamento ainda não foi confirmado. Confira novamente em instantes.', cancelled: 'Sessão de pagamento expirada. Entre em contato com a DAVORA se já pagou.' };
   $('paymentMessage').textContent = messages[payment.status] || messages.pending;
+  const trackingLink = $('orderTrackingLink');
+  trackingLink.hidden = true;
+  if (payment.status === 'approved' && typeof payment.trackingPath === 'string' && payment.trackingPath.startsWith('/acompanhar?token=')) {
+    trackingLink.href = payment.trackingPath; trackingLink.hidden = false;
+  }
   if (payment.status === 'approved' || payment.status === 'cancelled') {
     const sameSelection = JSON.stringify(selection()) === JSON.stringify(paymentRecord?.selection);
     clearPaymentRecord(tabStorage()); paymentRecord = null;

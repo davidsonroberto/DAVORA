@@ -1,6 +1,6 @@
 # DAVORA Brasil
 
-Versão de preparação de 16/10/2026, em português e BRL, com foco em eletrônicos e acessórios para o Brasil. Conserva as cores e a estrutura visual da DAVORA do GitHub. A vitrine reúne 30 produtos reais consultados na conta Zendrop: áudio, cabos, carregadores, capinhas, pulseiras e acessórios de mesa. A seleção anterior da Infinito Loja foi substituída. Cada produto tem um modelo com SKU e custo consultados pela conexão oficial Zendrop. A ponte de pedidos Wix–Zendrop está implementada em preparação, com autorização privada e vínculos dos produtos ainda pendentes. As condições comerciais finais também precisam ser concluídas.
+Versão de preparação atualizada em 20/10/2026, em português e BRL, com foco em eletrônicos e acessórios para o Brasil. Conserva as cores e a estrutura visual da DAVORA do GitHub. A vitrine reúne 30 produtos reais consultados na conta Zendrop: áudio, cabos, carregadores, capinhas, pulseiras e acessórios de mesa. A seleção anterior da Infinito Loja foi substituída. Cada produto tem um modelo com SKU e custo consultados pela conexão oficial Zendrop. A ponte de pedidos Wix–Zendrop está implementada em preparação, com autorização privada e vínculos dos produtos ainda pendentes. As condições comerciais finais também precisam ser concluídas.
 
 ## O que funciona
 
@@ -13,6 +13,21 @@ Versão de preparação de 16/10/2026, em português e BRL, com foco em eletrôn
 - Cotações antigas são descartadas se o CEP ou a seleção mudar durante a consulta. O servidor também recusa um CEP de entrega diferente do CEP cotado.
 
 **As compras estão desativadas.** A conexão oficial Zendrop foi autorizada e verificada. Foram consultados os 30 produtos, suas 2.082 variantes e estimativas de frete para o Brasil. Foi selecionado um SKU exato por produto. Foi criado um cliente OAuth exclusivo para a DAVORA Brasil na Wix existente. O catálogo da loja em inglês não foi alterado; a criação e o vínculo dos 30 itens ocultos continuam pendentes. Não houve contratação de planos, cobrança nem pedido ao fornecedor. Os 30 preços previstos em BRL incluem frete estimado por unidade e buscam 50% de margem bruta antes de taxas e demais despesas. Cotação final por pedido, integração de despacho e validação do pagamento continuam pendentes. Não há comissão garantida de 50%.
+
+## Acompanhamento de pedidos
+
+Após a confirmação autoritativa do pagamento em BRL, a loja fornece um link privado em `/acompanhar`. O link vale até 90 dias, é assinado no servidor e vinculado à referência, sessão Stripe, ambiente e total do pedido. A consulta não divulga endereço, CPF, e-mail, custos ou dados de cartão.
+
+A página diferencia preparo, conferência e despacho registrado. Quando a ponte Wix estiver habilitada e validada, consulta os códigos associados ao pedido remoto exato pela API oficial `List Fulfillments For Single Order`. Uma etiqueta de rastreio não é tratada como prova de entrega ou de envio de todo o pedido; pacotes separados são mostrados individualmente. Sem autorização, vínculo ou código real, a página não inventa transportadora nem rastreamento. O acesso à Wix real permanece desligado nesta preparação.
+
+## Situação confirmada em 20/10/2026
+
+- Catálogo em português e BRL para clientes no Brasil. Os 30 produtos, as 2.082 variantes e as estimativas de transporte para `BR` foram novamente consultados. O SKU canônico do mesmo modelo S109 selecionado foi atualizado conforme a consulta atual.
+- Preços da vitrine continuam previstos: custos e fretes foram reconferidos, mas o câmbio de referência permanece o BCE de 16/10/2026. Não são preços finais de cobrança nem promessa de lucro líquido. Os produtos não foram liberados para venda.
+- A única conexão Zendrop identificada é a Wix `www.davora.app`. Não foi criado ou alterado catálogo nessa outra loja. Não há método de pagamento cadastrado na Zendrop; o processamento automático está desligado.
+- A conexão Stripe do assistente oferece apenas teste. Na Vercel, as chaves gerenciadas estão limitadas a `production`; a existência dessas variáveis não comprova seu ambiente Stripe. `STRIPE_WEBHOOK_SECRET` e `WIX_CLIENT_SECRET` estão ausentes na configuração consultada.
+- A leitura da equipe Vercel retorna `403` por falta de concessão ao escopo da equipe. Leitura do projeto e metadados das variáveis funciona sem informar escopo. As credenciais não foram descriptografadas, copiadas ou expostas.
+- Nenhuma cobrança, compra de fornecedor, contratação de plano ou envio a cliente foi realizado. Os testes automatizados usam serviços simulados; a compra completa real ainda não foi validada.
 
 ## Catálogo e origem das fotos
 
@@ -60,7 +75,7 @@ npm run check
 git diff --check
 ```
 
-Os 32 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência inclusive em repetições após atraso, configuração de Pix, separação teste/produção, chave publicável gerenciada pela Vercel, confirmação autoritativa, retomada da mesma sessão aberta e recusa do webhook antigo. A recuperação rejeita tokens adulterados ou expirados, divergência de valor/ambiente/referência, e não retorna formulário para pagamento já concluído. O armazenamento na aba exclui dados pessoais e client secret. As chamadas à Stripe são simuladas; nenhuma cobrança foi realizada. A conferência local em Chromium verificou 30 cartões, cinco categorias, busca sem acentos, detalhes, seleção persistida, bloqueio do pagamento e ausência de rolagem horizontal na página em celular. As 30 imagens foram baixadas no navegador, verificadas como PNG/JPEG válidos e copiadas sem alteração para os arquivos do site. A validação confere a existência e o SHA-256 de cada foto. O carregamento por solicitações diretas ao CDN retornou HTTP 403 antes dessa alteração; a vitrine agora usa os arquivos locais. A consulta pontual ao fornecedor e as estimativas por produto/país estão registradas; falta seleção do SKU na loja, controle operacional e cotação final por pedido.
+Os 49 testes exercitam bloqueio de produtos pendentes, adulteração de preço/frete, estoque vencido, limites de quantidade, idempotência inclusive em repetições após atraso, configuração de Pix, separação teste/produção, chave publicável gerenciada pela Vercel, confirmação autoritativa, retomada da mesma sessão aberta e recusa do webhook antigo. A recuperação rejeita tokens adulterados ou expirados, divergência de valor/ambiente/referência, e não retorna formulário para pagamento já concluído. O armazenamento na aba exclui dados pessoais e client secret. As chamadas à Stripe são simuladas; nenhuma cobrança foi realizada. A conferência local em Chromium verificou 30 cartões, cinco categorias, busca sem acentos, detalhes, seleção persistida, bloqueio do pagamento e ausência de rolagem horizontal na página em celular. As 30 imagens foram baixadas no navegador, verificadas como PNG/JPEG válidos e copiadas sem alteração para os arquivos do site. A validação confere a existência e o SHA-256 de cada foto. O carregamento por solicitações diretas ao CDN retornou HTTP 403 antes dessa alteração; a vitrine agora usa os arquivos locais. A consulta pontual ao fornecedor e as estimativas por produto/país estão registradas; falta seleção do SKU na loja, controle operacional e cotação final por pedido.
 
 Documentação do pagamento:
 - https://docs.stripe.com/checkout/embedded/quickstart

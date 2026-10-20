@@ -69,4 +69,11 @@ for (const dir of ['assets', 'api', 'lib', 'scripts', 'test']) for (const file o
   const r = spawnSync(process.execPath, ['--check', dir + '/' + file], { encoding: 'utf8' });
   assert.equal(r.status, 0, r.stderr);
 }
-console.log('HTML, referências, catálogo BRL e sintaxe JavaScript verificados.');
+const trackingHtml = readFileSync('acompanhar.html', 'utf8');
+const trackingIds = [...trackingHtml.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+assert.equal(trackingIds.length, new Set(trackingIds).size, 'IDs duplicados no acompanhamento');
+for (const path of ['assets/tracking.css', 'assets/tracking.js']) assert.ok(existsSync(path), path);
+for (const match of readFileSync('assets/tracking.js', 'utf8').matchAll(/\$\('([^']+)'\)/g)) assert.ok(trackingIds.includes(match[1]), 'Elemento de acompanhamento ausente: ' + match[1]);
+assert.ok(trackingHtml.includes('noindex,nofollow'));
+assert.ok(trackingHtml.includes('no-referrer'));
+console.log('HTML, acompanhamento privado, catálogo BRL e sintaxe JavaScript verificados.');

@@ -44,3 +44,12 @@ O código não efetua compras no fornecedor, reembolsos, reserva no sistema do f
 ## Ponte de pedidos Wix/Zendrop
 
 `docs/integracao-wix.md` registra o cliente exclusivo preparado para a DAVORA Brasil e os requisitos ainda pendentes. O webhook pode transferir um pedido pago para a Wix, mas somente com autorização privada, habilitação e validação explícitas. Produtos Zendrop exigem mapeamento Wix confirmado para liberar o checkout. As cotações guardam os IDs de produto e variante vinculados; a criação remota é protegida por registro atômico. Uma resposta incerta exige conferência antes de repetir. Nenhuma configuração de auto-fulfillment foi ativada.
+
+
+## Acompanhamento privado do comprador — 20/10/2026
+
+`GET /api/order-tracking?token=...` recebe somente um token assinado de acompanhamento. O token é emitido após a confirmação Stripe, não a partir de uma referência pública. A resposta usa `no-store`, `noindex,nofollow` e `no-referrer`; não traz dados pessoais. Um link adulterado, de outra sessão, de outro ambiente ou expirado é recusado.
+
+A leitura dos envios Wix exige credenciais configuradas, integração habilitada e validada, pedido pago e `supplierSync.state: payment_recorded` para o ID remoto canônico. A API consultada é `GET /ecom/v1/fulfillments/orders/{orderId}`. Retornos de outro pedido são recusados. Sem acesso, o cliente vê o estado local; indisponibilidade temporária do provedor não se transforma em confirmação de envio. Etiquetas são apresentadas como códigos disponíveis, sem inferir despacho completo ou entrega. Pedidos reais e sincronização ao vivo permanecem pendentes.
+
+Fonte: https://dev.wix.com/docs/api-reference/business-solutions/e-commerce/orders/order-fulfillments/list-fulfillments-for-single-order

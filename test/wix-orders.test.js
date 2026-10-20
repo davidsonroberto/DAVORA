@@ -129,3 +129,21 @@ test('status público da integração não expõe a chave privada', () => {
     assert.ok(!JSON.stringify(res.data).includes(env.WIX_CLIENT_SECRET));
   } finally { if (before === undefined) delete process.env.WIX_CLIENT_SECRET; else process.env.WIX_CLIENT_SECRET = before; }
 });
+
+test('rastreio Wix consulta apenas o pedido pago vinculado e não transforma etiqueta em despacho', async () => {
+  const { readWixShipments } = await import('../lib/wix-orders.js');
+  const order = { status: 'paid', live: false, supplierSync: { provider: 'wix', state: 'payment_recorded', orderId: remoteId } };
+  let calls = 0;
+  const request = async path => { calls++; assert.equal(path, '/ecom/v1/fulfillments/orders/' + remoteId); return {
+    orderWithFulfillments: { orderId: remoteId, fulfillments: [
+      { status: 'Ready', trackingInfo: { trackingNumber: 'BR123456789XX', shippingProvider: 'Transportadora teste', trackingLink: 'https://external.invalid/' } },
+      { trackingInfo: { trackingNumber: 'BR123456789XX', shippingProvider: 'Transportadora teste' } },
+      { customInfo: { fieldsData: { email: 'private@example.com' } } }
+    ] }
+  }; };
+  assert.deepEqual(await readWixShipments(order, { env, request }), [{ tracking: 'BR123456789XX', carrier: 'Transportadora teste' }]);
+  for (const patch of [{ status: 'open' }, { supplierSync: null }]) assert.deepEqual(await readWixShipments({ ...order, ...patch }, { env, request }), []);
+  assert.deepEqual(await readWixShipments(order, { env: { ...env, DAVORA_WIX_ALLOW_TEST_ORDERS: 'false' }, request }), []);
+  assert.equal(calls, 1); assert.equal(order.status, 'paid');
+  await assert.rejects(() => readWixShipments(order, { env, request: async () => ({ orderWithFulfillments: { orderId: productId, fulfillments: [] } }) }));
+});

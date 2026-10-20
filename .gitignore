@@ -7,3 +7,6 @@ coverage/
 
 # Evidência completa de consulta ao fornecedor, mantida fora da vitrine pública.
 data/zendrop-verification.json
+
+# Dependências também podem ser ligadas localmente por symlink.
+node_modules
