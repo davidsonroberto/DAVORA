@@ -84,7 +84,7 @@ Documentação do pagamento:
 - https://docs.stripe.com/payments/pix
 - https://docs.stripe.com/api/versioning
 
-Os endpoints antigos de currículo, consulta de pagamento e webhook estão desativados (HTTP 410). A loja não usa Mercado Pago. O webhook antigo recusa notificações e não deve ser cadastrado como destino. O webhook Stripe em `/api/stripe-webhook` foi implementado com verificação de assinatura e processamento idempotente; registrar o endpoint e testar a entrega é obrigatório antes do lançamento: tratar `checkout.session.completed` e `checkout.session.async_payment_succeeded` somente com `payment_status: paid`, além das falhas assíncronas. O registro privado e as reservas foram implementados; a verificação remota, a configuração do webhook e o repasse ao fornecedor permanecem pendentes antes de vendas reais.
+Os endpoints antigos de currículo, consulta de pagamento e webhook estão desativados (HTTP 410), atendidos pela mesma função de encerramento via rewrites no `vercel.json`. A prévia usa 10 funções, dentro do limite de 12 do plano Hobby observado nesta publicação. A loja não usa Mercado Pago. O webhook antigo recusa notificações e não deve ser cadastrado como destino. O webhook Stripe em `/api/stripe-webhook` foi implementado com verificação de assinatura e processamento idempotente; registrar o endpoint e testar a entrega é obrigatório antes do lançamento: tratar `checkout.session.completed` e `checkout.session.async_payment_succeeded` somente com `payment_status: paid`, além das falhas assíncronas. O registro privado e as reservas foram implementados; a verificação remota, a configuração do webhook e o repasse ao fornecedor permanecem pendentes antes de vendas reais.
 
 
 ## Ativação da Stripe

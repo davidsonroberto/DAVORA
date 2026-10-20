@@ -63,6 +63,7 @@ for (const p of data.products) {
   }
   if (p.availability === 'available') assert.ok(p.supplierSku, 'SKU da variante não confirmado');
 }
+assert.ok(readdirSync('api').filter(n => n.endsWith('.js')).length <= 12, 'Prévia excede o limite de funções do plano atual');
 const csp = JSON.parse(readFileSync('vercel.json')).headers.flatMap(h => h.headers).find(h => h.key === 'Content-Security-Policy').value;
 assert.ok(csp.includes("img-src 'self' data:"), 'CSP deve permitir as fotos da própria loja');
 for (const dir of ['assets', 'api', 'lib', 'scripts', 'test']) for (const file of readdirSync(dir).filter(n => n.endsWith('.js'))) {
